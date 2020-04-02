@@ -1,0 +1,12 @@
+---
+layout: post
+title: Azure Key Vault
+date: '2019-09-20T16:56:00.002-04:00'
+author: Rick Wilson
+tags: 
+modified_time: '2019-09-21T13:27:55.568-04:00'
+blogger_id: tag:blogger.com,1999:blog-8675696861245191896.post-4981536202574598776
+blogger_orig_url: https://www.blogger.com/comment.g?blogID=8675696861245191896&postID=4981536202574598776
+---
+
+Useful Links<br /><a href="https://prod.liveshare.vsengsaas.visualstudio.com/join?2F9409644AF57798AE33DD76B191AEE7C640" target="_blank">Allow apps to access Azure Stack Key Vault secrets</a><br /><a href="https://daniel-krzyczkowski.github.io/How-to-inject-Azure-Key-Vault-secrets-in-the-Azure-DevOps-CICD-pipelines/" target="_blank">How to inject Azure Key Vault secrets in the Azure DevOps CI/CD pipelines</a><br /><a href="http://raaviblog.com/how-to-get-access-to-the-secrets-saved-in-azure-key-vault-using-rest-api-with-postman/" target="_blank">How to get access to the secrets saved in Azure Key Vault using REST API with POSTMAN</a><br /><a href="https://peterbozso.github.io/2019/03/18/key-vault-asp-net.html" target="_blank">Using Azure Key Vault in ASP.NET</a><br />The whole premise of this tutorial is to show you how to take an existing ASP.NET application running in Azure App Service and without touching the C# code, configure it in a way that it will retrieve its sensitive configuration values from a Key Vault instead of its Web.config file. So when you’d write for example ConfigurationManager.AppSettings["StorageConnectionString"] somewhere in your application, that value would come directly from a secret in Key Vault. All without modifying anything in the actual source code of your app.<br /><br />I will also describe a more advanced scenario which will make your Web App integrated with Key Vault very easily redeployable into new environments.
