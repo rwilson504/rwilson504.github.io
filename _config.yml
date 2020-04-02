@@ -49,6 +49,12 @@ url: http://rwilson504.github.io
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+staticman_url: https://raw-staticman.herokuapp.com/v3/entry/github/rwilson504/rwilson504.github.io/master/comments
+
+reCaptcha:
+  siteKey: 6Ld0Q-YUAAAAAGPUEElYV_dxMeDNTyjPsfDFF51N
+  secret: Ch5GPyeorh2nUASzhJeh/cml9/fltkppXlThoah4O/e5WF8Ww8kIf+5nv5qp3heU4OQinqzNybScGsohqFtKNRPlyhWyAV2oOC22IxCTYg8hLZxHv19cJp9qqPvzG9XetPfBN/6Ax41VNwo0TgDrOXVis/IHTPdkZwXvm1WHwPSNytY5r/0z4f0Bmx3efeshth2azfniRpWXataQ9gpxebw3tQZWKBdujKSNGdpwTLAuBsP50IUB1LNH5eN53rG0lBiLFotM4J8kUxJ7A+yicsd8w+4S7Dq3fndaWvxG61Y257dR7s+Lkrl71iY4sAfsMYdaLp2bW892ym/UxngYZg==
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #

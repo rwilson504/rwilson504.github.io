@@ -12,6 +12,9 @@ layout: default
         {{ post.excerpt }}
       </div>
 
+      {% if post.thumbnail %}
+      <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.thumbnail }}" /></a>
+      {% endif %}
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}

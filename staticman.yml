@@ -1,0 +1,21 @@
+# all of these fields are nested under the comments key, which corresponds to the final element
+# of the API bridge enpoint, i.e., you can different configurations even within the same staticman.yml
+# file all under different keys
+comments:
+
+  # There are many more required config values here, not shown:
+  # use the file linked above as a template
+
+  # I guess used only for email notifications?
+  name: "Richard Wilson Blog"
+
+  # You may want a different set of "required fields". Staticman will
+  # reject posts without all of these fields
+  requiredFields: ["name", "email", "message"]
+
+  # you are going to want reCaptcha set up, but for now leave it disabled because we need the API
+  # bridge up and running in order to encrypt the secrets that go in this section
+  reCaptcha:
+    enabled: false
+    siteKey: 6Ld0Q-YUAAAAAGPUEElYV_dxMeDNTyjPsfDFF51N
+    secret: Ch5GPyeorh2nUASzhJeh/cml9/fltkppXlThoah4O/e5WF8Ww8kIf+5nv5qp3heU4OQinqzNybScGsohqFtKNRPlyhWyAV2oOC22IxCTYg8hLZxHv19cJp9qqPvzG9XetPfBN/6Ax41VNwo0TgDrOXVis/IHTPdkZwXvm1WHwPSNytY5r/0z4f0Bmx3efeshth2azfniRpWXataQ9gpxebw3tQZWKBdujKSNGdpwTLAuBsP50IUB1LNH5eN53rG0lBiLFotM4J8kUxJ7A+yicsd8w+4S7Dq3fndaWvxG61Y257dR7s+Lkrl71iY4sAfsMYdaLp2bW892ym/UxngYZg==
