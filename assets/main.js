@@ -12,9 +12,35 @@
       );
       $(form).addClass('disabled');
   
+    //   var request = new XMLHttpRequest();
+    //   request.open($(this).attr('method'), $(this).attr('action'), true);
+    //   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    //   request.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/rwilson504/rwilson504.github.io/pulls">pending</a>. It will appear when approved.');
+  
+    //         $("#comment-form-submit")
+    //           .html("Submit");
+    
+    //         $(form)[0].reset();
+    //         $(form).removeClass('disabled');
+    //         grecaptcha.reset();
+    //     }
+    //     else{
+    //         var err = this.responseText;
+    //         console.log(err);
+    //         var ecode = (err.responseJSON || {}).errorCode || "unknown";
+    //         showModal('Error', 'An error occured.<br>[' + ecode + ']');
+    //         $("#comment-form-submit").html("Submit")
+    //         $(form).removeClass('disabled');
+    //         grecaptcha.reset(); 
+    //     }
+    //   };
+    //   request.send($(this).serialize());
       $.ajax({
         type: $(this).attr('method'),
         url:  $(this).attr('action'),
+        crossDomain: true,
         data: $(this).serialize(),
         headers: {"X-My-Custom-Header": "some value"},
         contentType: 'application/x-www-form-urlencoded',
