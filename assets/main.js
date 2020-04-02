@@ -16,6 +16,7 @@
         type: $(this).attr('method'),
         url:  $(this).attr('action'),
         data: $(this).serialize(),
+        headers: {"X-My-Custom-Header": "some value"},
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
           showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/rwilson504/rwilson504.github.io/pulls">pending</a>. It will appear when approved.');
