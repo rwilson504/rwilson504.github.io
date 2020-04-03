@@ -37,6 +37,8 @@
     //     }
     //   };
     //   request.send($(this).serialize());
+
+    
       $.ajax({
         type: $(this).attr('method'),
         url:  $(this).attr('action'),
