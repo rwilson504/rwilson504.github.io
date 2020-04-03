@@ -44,11 +44,7 @@
         url:  $(this).attr('action'),
         crossDomain: true,
         data: $(this).serialize(),
-        headers: [
-          {"Access-Control-Allow-Origin": "*"},
-          {"Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT"},
-          {"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"}
-        ],        
+        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT", "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"},                
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
           showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/rwilson504/rwilson504.github.io/pulls">pending</a>. It will appear when approved.');
