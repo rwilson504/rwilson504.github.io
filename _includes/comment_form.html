@@ -1,5 +1,5 @@
 <!-- <form class="js-form form" method="post" action="{{ site.staticman_url }}"> -->
-<form class="js-form form" method="post" action="{{ site.staticman_url }}"></form>
+<form method="post" action="{{ site.staticman_url }}">
     <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
     <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
     <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
@@ -40,15 +40,18 @@
       </div>
     </fieldset> -->
   
-    <fieldset>
+    <!-- <fieldset> -->
       <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
-    </fieldset>
+    <!-- </fieldset> -->
   
-    <fieldset>
+    <input type="hidden" name="options[redirect]" value="https://rwilson504.github.io/comment-thanks">
+    <input type="hidden" name="options[redirectError]" value="https://rwilson504.github.io/comment-error">
+
+    <!-- <fieldset> -->
       <button class="button" id="comment-form-submit">
         Submit
       </button>
-    </fieldset>
+    <!-- </fieldset> -->
   
   </form>
   
