@@ -11,15 +11,24 @@ const grid = rest.slice(0, 11); // 1 featured + 11 compact = 12 on the home page
 ---
 
 <BaseLayout title="Richard A. Wilson" wide>
-  <section class="intro">
-    <h1>Hi, I'm Rick.</h1>
-    <p>
-      Principal Consultant at Microsoft writing about Power Platform, AI,
-      3D printing, and side projects. Blogging since 2009.
-    </p>
+  <section class="home-hero">
+    <div class="home-hero-inner">
+      <p class="home-hero-eyebrow">PowerApps RAW! — since 2009</p>
+      <h1>Hi, I'm Rick.</h1>
+      <p class="home-hero-lead">
+        Principal Consultant at Microsoft writing about <strong>Power Platform</strong>,
+        <strong>AI</strong>, <strong>3D printing</strong>, and the occasional side project gone
+        sideways.
+      </p>
+      <div class="home-hero-cta">
+        <a class="btn-primary" href="/blog/">Read the blog</a>
+        <a class="btn-ghost" href="/about/">About me</a>
+      </div>
+    </div>
+    <div class="home-hero-decoration" aria-hidden="true"></div>
   </section>
 
-  <section>
+  <section class="home-content">
     <h2 class="section-heading">Recent posts</h2>
 
     <PostCard
