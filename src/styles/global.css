@@ -219,6 +219,8 @@ hr {
 
 .site-nav .brand {
   font-size: 1.1rem;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .site-nav-actions {
@@ -238,6 +240,35 @@ hr {
 .site-nav a:hover,
 .site-nav .dropdown-trigger:hover {
   color: var(--color-accent);
+}
+
+/* ---------- Mobile header ----------
+   Two-row layout below 700px:
+     Row 1: brand on the left, search + theme toggle on the right
+     Row 2: nav links centered, full-width
+   This stops the brand text from vertically wrapping into
+   "Richard / A. / Wilson" when flex tries to shrink it. */
+@media (max-width: 700px) {
+  .site-nav {
+    flex-wrap: wrap;
+    padding: 0.75em var(--space);
+    row-gap: 0.5em;
+    gap: 0.6em;
+  }
+  .site-nav .brand {
+    flex: 1 1 auto;
+    font-size: 1.05rem;
+  }
+  .site-nav-actions {
+    order: 1;
+    flex: 0 0 auto;
+  }
+  .site-nav > ul {
+    order: 2;
+    flex: 1 1 100%;
+    justify-content: center;
+    gap: 1.2em;
+  }
 }
 
 /* ---------- Post list / cards ---------- */
