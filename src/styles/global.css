@@ -269,6 +269,23 @@ hr {
     justify-content: center;
     gap: 1.2em;
   }
+
+  /* Hero: force true viewport-width breakout on mobile. The desktop
+     'margin-left: calc(50% - 50vw)' approach is sensitive to the
+     parent's content-box math, and on small screens it was leaving a
+     visible gutter on both sides where the page background showed
+     through. Force it explicitly. */
+  .home-hero {
+    width: 100vw;
+    margin-left: 50%;
+    margin-right: 0;
+    transform: translateX(-50%);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-top: calc(var(--space) * -2);
+  }
 }
 
 /* ---------- Post list / cards ---------- */
