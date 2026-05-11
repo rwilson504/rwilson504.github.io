@@ -2,7 +2,7 @@
 title: "Move from using Xrm.Page to formContex in UCI form based PowerApps WebResources"
 description: "The usage of Xrm.Page is currently deprecated, still available due to it’s high usage, but still deprecated. When will it go away, we don’t really know yet.…"
 pubDate: 2020-05-05
-heroImage: "https://img.youtube.com/vi/uWDiMv82iSM/sddefault.jpg"
+heroImage: "/heroes/move-from-using-xrmpage-to-formcontex.jpg"
 heroImageAlt: "Canvas App Video"
 category: power-apps
 tags:

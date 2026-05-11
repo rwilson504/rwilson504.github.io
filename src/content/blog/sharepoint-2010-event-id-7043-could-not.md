@@ -2,7 +2,7 @@
 title: "SharePoint 2010, Event ID 7043: Could not load type 'Microsoft.SharePoint.Portal.WebControls.TaxonomyPicker'"
 description: "PROBLEM: Every time the application pool is reset the following error appears in the application log."
 pubDate: 2011-05-31
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKXnE5956oxXCgDAiPqFgpzNJypnwpFpXMIz0FPew114a1Dr4Msv2FdEyFmxdYn3QpvZ9tv8VjH0GVPbfLlkPO8_DiL7q0cRT4IgMYvApanefiYBSMW9-1GKBlJRy8WhPihtOkk9SVRxw/s400/TaxonomyPickerError1.png"
+heroImage: "/heroes/sharepoint-2010-event-id-7043-could-not.png"
 category: power-apps
 tags:
   - "error"

@@ -2,7 +2,7 @@
 title: "ADFS 2.0 Default Claims Provider"
 description: "In situation where you have multiple Claims Providers the HomeRealDiscovery.aspx page may confuse users."
 pubDate: 2012-06-07
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVFb-38g22syLXf2fCiJsstVWecff24PMZ9L2Sy9LYqn7wqmwadQOGKfA_LA9vBRzd-2HAac-_Fw2pyPQKSO9A4TAR3H2vox-RA6r4vpLdyYvCksRW0ZsojEviEx7S7hSx5rvA1mK_hMo/?imgmax=800"
+heroImage: "/heroes/adfs-20-default-claims-provider.png"
 heroImageAlt: "image"
 category: power-apps
 tags:

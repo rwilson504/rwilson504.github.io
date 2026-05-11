@@ -2,7 +2,7 @@
 title: "Evil Dead The Musical"
 description: "Evil Dead The Musical"
 pubDate: 2010-05-25
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiANp1VF_KBI3NjgKIzp-6Vg8jNebWrVkCGfQqBOJERPvGtQvTTxXN9J90flazFLurJ_u1VLS9zeC1bFFrJauTtY7XAoW1bO07S8Iq6J9MaPqC36x1xE3PWcQtdVRU8IabuTjRYFn9P-HE/s400/evildead.jpg"
+heroImage: "/heroes/evil-dead-musical.jpg"
 category: misc
 tags:
   - "theatre"

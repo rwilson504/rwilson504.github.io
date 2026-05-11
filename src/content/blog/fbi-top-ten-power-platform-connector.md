@@ -2,7 +2,7 @@
 title: "FBI Top Ten Power Platform Connector"
 description: "Today’s digital landscape offers unprecedented opportunities to leverage technology in the service of public safety.…"
 pubDate: 2025-02-24
-heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/cfe0d57b-f2c7-4f86-9224-4f127c35aaea"
+heroImage: "/heroes/fbi-top-ten-power-platform-connector.png"
 heroImageAlt: "Powering Justice: Unveil the FBI Most Wanted with the Power Platform Custom Connector"
 category: power-apps
 tags:

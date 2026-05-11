@@ -2,7 +2,7 @@
 title: "Locking Down a Logic App (Consumption) with OAuth for Calls from Dataverse Plug-ins using Managed Identity"
 description: "I’m using managed identity to let a Dataverse plug-in call Azure resources without storing secrets. One of those calls hits a Logic App (Consumption) via the When an HTTP request is received trigger.…"
 pubDate: 2025-08-22
-heroImage: "https://github.com/user-attachments/assets/473e9312-febc-44c9-a391-a2d94abeef8c"
+heroImage: "/heroes/locking-down-logic-app-consumption-with.png"
 heroImageAlt: "Locking Down a Logic App (Consumption) with OAuth for Calls from Dataverse Plug-ins using Managed Identity"
 category: power-apps
 tags:

@@ -2,7 +2,7 @@
 title: "WebApi - Execute Bound Function (RetrievePrincipalAccess) in PCF"
 description: "I am current building PCF component that required me to determine if the user has specific rights to an entity before attempting to modify it.…"
 pubDate: 2020-10-09
-heroImage: "https://github.com/rwilson504/Blogger/blob/master/WebApi-Execute-Bound-Function-PCF/RetrievePrincipalAccessMetadata.png?raw=true"
+heroImage: "/heroes/webapi-execute-bound-function.png"
 heroImageAlt: "CDS Metadata Doc"
 category: power-apps
 tags:

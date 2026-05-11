@@ -2,7 +2,7 @@
 title: "Install/Configure Power Apps Mobile for U.S. Government and DoD User"
 description: "For those working in the U.S.…"
 pubDate: 2021-02-06
-heroImage: "http://img.youtube.com/vi/beWOKp0Xq4E/0.jpg"
+heroImage: "/heroes/installconfigure-power-apps-mobile-for.jpg"
 heroImageAlt: "Install PowerApps Mobile for U.S. Government and DoD"
 category: power-apps
 tags:

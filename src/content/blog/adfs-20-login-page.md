@@ -3,7 +3,7 @@ title: "Display ADFS 2.0 Forms Authentication Login Page Instead of Windows Auth
 description: "After installing ADFS 2.0 for SharePoint a Windows login prompt was shown when the SharePoint site forwarded to the ADFS server instead of the ADFS Forms Authentication login screen."
 pubDate: 2010-10-23
 updatedDate: 2010-11-05
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhxLEkZEkBRAyLgzL0u2ZWx_l_pyX5uw7gy0HlNVXuU-GyknLrYGcLzhRruAzUBC-UzuovXHzHT92ZqsjbCCpSwcigzvl93LzR6I2RfpvXoHoXtNY2v_KwkionFKDnLmqTrjIseWFj7TE/s320/adfsloginprompt.png"
+heroImage: "/heroes/adfs-20-login-page.png"
 category: power-apps
 tags:
   - "adfs-2"

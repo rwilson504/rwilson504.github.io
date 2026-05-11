@@ -2,7 +2,7 @@
 title: "Bridging Clouds: Secure Pipelines from Azure DevOps to GCC High"
 description: "The goal of this setup is to allow an Azure DevOps pipeline running in the Commercial cloud to move files (e.g., build artifacts, documentation, or deployment packages) into a Storage Account in GCC…"
 pubDate: 2025-08-25
-heroImage: "https://github.com/user-attachments/assets/334ce5c9-e2db-474b-a453-c46db56d8726"
+heroImage: "/heroes/bridging-clouds-secure-pipelines-from.png"
 heroImageAlt: "Bridging Clouds: Secure Pipelines from Azure DevOps to GCC High"
 category: power-apps
 tags:

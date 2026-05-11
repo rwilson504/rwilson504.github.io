@@ -2,7 +2,7 @@
 title: "Govee and Power Platform: Transforming Smart Lighting Automation"
 description: "In the evolving world of smart home technology, the integration of lighting solutions with sophisticated automation platforms is gaining significant traction.…"
 pubDate: 2024-03-06
-heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/bb05d532-19a7-4236-bb4e-e91e169a1997"
+heroImage: "/heroes/govee-and-power-platform-transforming.png"
 heroImageAlt: "Govee and Power Platform: Transforming Smart Lighting Automation"
 category: power-apps
 tags:

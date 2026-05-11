@@ -2,7 +2,7 @@
 title: "Passing Parameters Between Web Part and User Control"
 description: "When creating a web part which encapsulates a custom user control the following is one way to utilize the custom attributes for the web part within the user control."
 pubDate: 2011-05-18
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2anSIJjtzCOM0b8VelawNSdBGTDSqkgFS_TFaRfmShBwd2HWKBnbcR9kPbBaq7iWVzdPYbtH7C2cQsCS_bQ-ui-lmCEz54igJITIL0sZoDt1j6r1f1oBBIysVMEKpHoIuXhL2qV4CCw4/s400/UserControl.png"
+heroImage: "/heroes/passing-parameters-between-web-part-and.png"
 category: power-apps
 tags:
   - "sharepoint-2007-development"

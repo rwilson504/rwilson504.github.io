@@ -2,7 +2,7 @@
 title: "Connecting to Dataverse from Azure Data Factory"
 description: "Azure Data Factory (ADF) provides versatile ways to connect and interact with Dataverse.…"
 pubDate: 2025-04-13
-heroImage: "https://github.com/user-attachments/assets/d5f7a240-e1a7-472c-af1f-d62cde8fff8c"
+heroImage: "/heroes/connecting-to-dataverse-from-azure-data.png"
 heroImageAlt: "Connecting to Dataverse from Azure Data Factory"
 category: power-apps
 tags:

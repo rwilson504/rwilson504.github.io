@@ -2,7 +2,7 @@
 title: "Fixing PAC CLI “non-recoverable error” in GCC High and DoD by enabling telemetry"
 description: "If you use the Power Platform CLI (PAC CLI) in GCC High or DoD environments, you may run into a sudden crash that looks like this:"
 pubDate: 2026-02-01
-heroImage: "https://github.com/user-attachments/assets/9104ef03-e3cc-4582-b8a3-dbc0cf2d3d2a"
+heroImage: "/heroes/fixing-pac-cli-non-recoverable-error-in.png"
 heroImageAlt: "Fixing PAC CLI “non-recoverable error” in GCC High and DoD by enabling telemetry"
 category: power-apps
 tags:

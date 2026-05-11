@@ -2,7 +2,7 @@
 title: "Deletion State Codes Fields Preventing Solution Import"
 description: "If you have upgraded a CRM database from 4.0. to 2011 you may have some leftover fields that end in dsc.…"
 pubDate: 2013-01-31
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVUEKn4XHxMAlNA4nlw2zm7XaI1R8vsPkRx6zKN_59a32WUrBpNuTKDH0r6ANNsdjNIS7_AXxXSdNe0iElQK_pg2keeonEtpAIiv_XFmDT8BNIutk-p-pUV5xZwHPVFZb5SEvj7EflneU/?imgmax=800"
+heroImage: "/heroes/deletion-state-codes-fields-preventing.png"
 heroImageAlt: "image"
 category: power-apps
 tags:

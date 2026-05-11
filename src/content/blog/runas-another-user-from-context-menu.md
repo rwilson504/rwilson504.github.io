@@ -3,8 +3,6 @@ title: "RunAs Another User from Context Menu"
 description: "If you would like a quick way to run programs as another user there is a utility from Sysinternals called Shell RunAs. This utility will allow you to access the RunAs command from a context menu."
 pubDate: 2011-01-06
 updatedDate: 2011-02-21
-heroImage: "http://i.technet.microsoft.com/cc300361.ShellRunas(en-us,MSDN.10).jpg"
-heroImageAlt: "ShellRunas"
 category: misc
 tags:
   - "tools"

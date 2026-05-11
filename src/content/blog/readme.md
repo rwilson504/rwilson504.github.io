@@ -2,7 +2,7 @@
 title: "Power Automate Blueprint Accessing Azure Portal Backend APIs and the Intricacies of main.iam.ad.ext.azure.com"
 description: "In the realms of digital infrastructure management, automation emerges as a pivotal ally, especially when confronting repetitive and time-sensitive tasks.…"
 pubDate: 2024-02-29
-heroImage: "https://github.com/rwilson504/power-automate-azure-portal-hidden-api/assets/7444929/6f67a1f1-2456-48d0-8638-93fa3cabb301"
+heroImage: "/heroes/readme.png"
 heroImageAlt: "Power Automate Blueprint Accessing Azure Portal Backend APIs and the Intricacies of main.iam.ad.ext.azure.com"
 category: power-apps
 tags: []

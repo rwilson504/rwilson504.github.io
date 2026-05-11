@@ -2,7 +2,7 @@
 title: "Convert Markdown Documents to PDF Using md-to-pdf"
 description: "Azure DevOps now has an option to link your Wiki to a repo).…"
 pubDate: 2019-11-06
-heroImage: "https://github.com/rwilson504/Blogger/blob/master/Convert-Markdown-to-PDF/images/create-folder-npm-init.gif?raw=true"
+heroImage: "/heroes/article.gif"
 heroImageAlt: "Create Folder and Run init"
 category: misc
 tags: []

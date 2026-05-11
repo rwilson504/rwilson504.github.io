@@ -2,7 +2,7 @@
 title: "PowerApps Portal - Users Can See More Than Their Assigned Web Roles Allow"
 description: "Anyone who has configured the PowerApps/Adx Portal before can tell you how complicated the security mechanisms can be to configure. It’s both easy to give users to much permission or not enough."
 pubDate: 2020-07-24
-heroImage: "https://github.com/rwilson504/Blogger/blob/master/dynamics-portal-authenticated-user-role/portal-editing.png?raw=true"
+heroImage: "/heroes/powerapps-portal-users-can-see-more.png"
 heroImageAlt: "Everyone Is An Admin"
 category: power-apps
 tags:

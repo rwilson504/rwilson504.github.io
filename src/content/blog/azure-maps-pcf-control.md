@@ -2,7 +2,7 @@
 title: "Azure Maps PCF Control"
 description: "This PCF control allows you to display information for a view that contains latitude and longitude information within Azure Maps.…"
 pubDate: 2020-03-22
-heroImage: "https://github.com/rwilson504/Blogger/blob/master/Azure-Maps-Control/images/azuremapcontrol.gif?raw=true?raw=true"
+heroImage: "/heroes/azure-maps-pcf-control.gif"
 heroImageAlt: "Azure Maps Control Demonstration"
 category: power-apps
 tags: []

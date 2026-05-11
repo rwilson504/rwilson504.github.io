@@ -2,7 +2,7 @@
 title: "Xrm.Page.ui Not Available on Primary Grid"
 description: "While developing an EnableRule for some new functionality I decided to use an Async call. Here is a great link on how to use Async calls with EnableRule."
 pubDate: 2011-09-01
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxPuFE8VibSMUU8k2a6068DxASsmK2Uqke_APclUz_0-QSX_T_oolkDiQzrvBgzuOqOcwyLHOg-4z6FapMr6nfGct6eOy9HMG2TPxx2yoJE55x66HWDM6OFnbiReaX9Ha48cwQbugU7Sc/?imgmax=800"
+heroImage: "/heroes/xrmpageui-not-available-on-primary-grid.png"
 heroImageAlt: "test"
 category: power-apps
 tags:

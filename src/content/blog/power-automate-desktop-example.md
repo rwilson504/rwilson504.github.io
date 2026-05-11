@@ -2,7 +2,7 @@
 title: "Power Automate Desktop Example - Downloading Image From Email To Network Drive"
 description: "After watching the RPA (Robotic Process Automation) demo from Steve Winward Real-Life Use case using AI Builder Form Processing with Power Automate Desktop I have been looking for ways to utilize…"
 pubDate: 2021-06-29
-heroImage: "https://user-images.githubusercontent.com/7444929/123496929-b928da00-d5f8-11eb-991b-e216185ec8dc.png"
+heroImage: "/heroes/power-automate-desktop-example.png"
 heroImageAlt: "2021-06-25_20-38-09"
 category: power-apps
 tags:

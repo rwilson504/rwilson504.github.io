@@ -2,7 +2,7 @@
 title: "Plugin Set to Use Offline but Entity Offline Settings Not Configured"
 description: "While attempting to deploy a solution to CRM 2011 I received the following error during the import."
 pubDate: 2011-06-28
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2eZmvDLiBRFZVbCsT2BQoYFJ8aRmzVLnbBXL5G-3AHfuz5P6C0UlJY1Ko6cbidSpmItQqXm4HROLAalW9MkLv7dV7rfQH3qBkSKOeGK0Ld6p0htT7sKXEwBkbH6nazvYuJ6D7WsKDel0/?imgmax=800"
+heroImage: "/heroes/plugin-set-to-use-offline-but-entity.png"
 heroImageAlt: "image"
 category: power-apps
 tags:
