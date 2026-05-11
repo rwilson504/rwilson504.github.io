@@ -2,7 +2,7 @@
 title: "Installing PowerShell Modules in Firewalled and Air-Gapped Systems"
 description: "Managing IT environments with limited or no internet access, such as firewalled systems or air-gapped setups, presents unique challenges.…"
 pubDate: 2024-06-14
-heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/c2927200-441b-4645-9689-d82038fb3a5e"
+heroImage: "/heroes/installing-powershell-modules-in.png"
 heroImageAlt: "Installing PowerShell Modules in Firewalled and Air-Gapped Systems"
 category: power-apps
 tags:

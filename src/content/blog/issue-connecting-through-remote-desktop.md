@@ -2,7 +2,7 @@
 title: "Issue Connecting Through Remote Desktop Gateway"
 description: "While attempting to connect to a remote desktop though a Remote Desktop Gateway (RDG) the connection would ask for credentials but then just drop. After some searching I found the answer to the issue."
 pubDate: 2021-08-16
-heroImage: "https://user-images.githubusercontent.com/7444929/127191752-48ce74f1-2b7e-463c-b30f-8cf40b72ba4b.png"
+heroImage: "/heroes/issue-connecting-through-remote-desktop.png"
 heroImageAlt: "Set RDGClientTransport Key"
 category: misc
 tags:

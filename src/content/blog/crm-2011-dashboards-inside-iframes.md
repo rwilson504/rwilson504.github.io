@@ -2,7 +2,7 @@
 title: "CRM 2011 Dashboards Inside IFrames"
 description: "If you are going to place CRM 2011 Dashboards within an IFrame make sure your URL points to:"
 pubDate: 2012-03-16
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheFAj2KXxTfPxg5CYslytd51VUrG_ytsrqGNsC-x6Axusu5zMO1-Vlz7CP_FaDqQZe-vV5mzSlmJgGbssImQsBlUllACWe-HqrcvWsakMCjRbJXG7Hxa9XaCjNRK-pB7pFjP8A9Ac9Uag/?imgmax=800"
+heroImage: "/heroes/crm-2011-dashboards-inside-iframes.png"
 heroImageAlt: "image"
 category: power-apps
 tags:

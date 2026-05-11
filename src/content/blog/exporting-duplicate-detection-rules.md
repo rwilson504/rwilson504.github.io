@@ -2,7 +2,7 @@
 title: "Exporting Duplicate Detection Rules Using CRM Configuration Migration (Data Migration Tool)"
 description: "In order to move Duplicate Detection Rules to another system utilizing the CRM Configuration Migration tool make sure to add the Duplicate Detection Rule and Duplicate Rule Condition entities to the…"
 pubDate: 2019-03-05
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAgvZmY8l-A5piu9nTC44CTUG2U4QyKQlqck-5NGM309EIzEoYrMfwteT4bIKSouss7UnjPGhyVWd1copJ6jUsW325Yf7rXtp6P8dK_Bqrl7ZHRMXQk29sZMBNHr-cwR4LK9Q1llD9icU/s400/DuplicateRules.PNG"
+heroImage: "/heroes/exporting-duplicate-detection-rules.png"
 category: power-apps
 tags: []
 draft: false

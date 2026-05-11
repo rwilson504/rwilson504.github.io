@@ -2,7 +2,7 @@
 title: "Step-by-Step to Success: Run AutoGPT using Azure OpenAI on Docker"
 description: "Integrating AutoGPT with Azure OpenAI through Docker offers a direct path to unlocking advanced AI capabilities.…"
 pubDate: 2024-02-29
-heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/105d93ce-4983-4c37-9fc2-bbf9dbc6be3e"
+heroImage: "/heroes/step-by-step-to-success-run-autogpt.png"
 heroImageAlt: "Step-by-Step to Success: Run AutoGPT using Azure OpenAI on Docker"
 category: ai
 tags:

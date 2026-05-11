@@ -2,7 +2,7 @@
 title: "Model App Access Checker for Dataverse"
 description: "Want to know which model applications your users have access to in Dataverse? Check out the app access checker that is available within the Power Platform admin center.…"
 pubDate: 2021-06-28
-heroImage: "https://user-images.githubusercontent.com/7444929/123683732-91b15780-d81a-11eb-9ae8-badf315269e1.png"
+heroImage: "/heroes/model-app-access-checker-for-dataverse.png"
 heroImageAlt: "2021-06-28_13-53-22"
 category: power-apps
 tags:

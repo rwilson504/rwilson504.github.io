@@ -2,7 +2,7 @@
 title: "CRM 2011 Email Router Configuration Wizard might fail during “loading data”"
 description: "PROBLEM 1"
 pubDate: 2015-06-29
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigdDjgvFXnbNrZTSjDZ_Hcog1MEDZd_ryLVtRqUYJMeu_OsI2PKIExOP5Wq-WD42fdUSJBL2zieF5HZ7sP352YaKD0QZnZAsIDXIVZ0mvCFcq81642JoOQ2hWf2Sq0Jb8caDrGjuHhSFU/?imgmax=800"
+heroImage: "/heroes/crm-2011-email-router-configuration.png"
 heroImageAlt: "022412_1608_CRM2011Emai1"
 category: power-apps
 tags: []

@@ -3,7 +3,7 @@ title: "SQL Statements to Get Basic Info About Tables"
 description: "Here are two scripts I found that will help you generate basic info about your database. This data can be useful when beginning the level of effort for a data migration. NUMBER OF COLUMNS PER TABLE"
 pubDate: 2013-05-21
 updatedDate: 2013-11-04
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAE8PVLqIjQsqscDbM2BhMKVka3jbHBeunRZ-rZ_KNAykqfQp-1yy8RX8kzxexwYvwil6odgZJnkKhS6lji0VLXB9V0g0f5_pFqQW1wAKEtG5MBlJ94aU2DcdzkmbeQ7Qq0lN7QwzV0iY/?imgmax=800"
+heroImage: "/heroes/sql-statements-to-get-basic-info-about.png"
 heroImageAlt: "image"
 category: power-apps
 tags:

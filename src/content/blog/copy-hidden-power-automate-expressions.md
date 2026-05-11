@@ -3,7 +3,7 @@ title: "Copy Hidden Power Automate Expressions"
 description: "While recently walking a colleague through Power Automate, I was reminded of one of my long-standing frustrations: how difficult it is to copy expressions once they’ve been inserted into actions like…"
 pubDate: 2025-04-14
 updatedDate: 2025-04-20
-heroImage: "https://github.com/user-attachments/assets/47b4c591-c27b-4594-b84e-c0b01e1b22b2"
+heroImage: "/heroes/copy-hidden-power-automate-expressions.png"
 heroImageAlt: "Copy Hidden Power Automate Expressions"
 category: power-apps
 tags:

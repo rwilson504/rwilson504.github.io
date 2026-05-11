@@ -2,7 +2,7 @@
 title: "Utilize Customized npm Package from GitHub Branch"
 description: "When working with npm libraries there are times you find bugs or want to add functionality to a library.…"
 pubDate: 2020-03-24
-heroImage: "https://github.com/rwilson504/Blogger/blob/master/Npm-Install-From-GitHub/npm-fork.png?raw=true"
+heroImage: "/heroes/utilize-customized-npm-package-from.png"
 heroImageAlt: "enter image description here"
 category: power-apps
 tags:

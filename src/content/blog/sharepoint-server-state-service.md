@@ -3,7 +3,7 @@ title: "SharePoint Server State Service"
 description: "After adding the SharePoint 2010 Chart Web Part to a page I received an error that the Server State Service had not been configured.…"
 pubDate: 2010-07-22
 updatedDate: 2010-11-05
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu2wYVLplzfPKa-GsLk1LSKxvGFxkbCk5A3RhxgXpz4QefRqvppH5m26TFtD_UYWpZHJ13D5693vJnArqzD9FgfL9ZzDZKLmgnQ6f0qEsu_eB7-H0KCjoGeprAXBWitHJFEXuTFmuxnsQ/s400/New+Picture.bmp"
+heroImage: "/heroes/sharepoint-server-state-service.jpg"
 category: power-apps
 tags:
   - "powershell"

@@ -2,7 +2,7 @@
 title: "Connecting the Paconn CLI Tool to GCC, GCCH, and DoD Environments for Power Platform Connectors"
 description: "When working with the paconn CLI tool to create and manage custom connectors in the Power Platform, it’s essential to configure your environment settings properly, especially when targeting different…"
 pubDate: 2024-08-21
-heroImage: "https://github.com/user-attachments/assets/5a2755aa-9b80-4627-b02f-e2d78c8d996b"
+heroImage: "/heroes/connecting-paconn-cli-tool-to-gcc-gcch.png"
 heroImageAlt: "Connecting the Paconn CLI Tool to GCC, GCCH, and DoD Environments for Power Platform Connectors"
 category: power-apps
 tags:

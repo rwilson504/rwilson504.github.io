@@ -2,7 +2,7 @@
 title: "Moving a secondary site collection to a root site collection"
 description: "I was recently tasked with migrating a secondary site collection to a new SharePoint server and making it the primary site collection."
 pubDate: 2009-09-01
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFAXsv6Wu94yKqGpgso1KBLTrXCr4b9RSJJXPkxL29LHp3cTT4VIFjlkxY1n71L8_TGVttDwQHpZ7-JrZRJ5zQcK_4IzqEOnkqETOGiLmA-h44jdFqXVdk8qHAy-aLn9FNj-NcUVk_6EY/s400/navigationheading.jpg"
+heroImage: "/heroes/moving-secondary-site-collection-to.jpg"
 category: power-apps
 tags:
   - "migration"

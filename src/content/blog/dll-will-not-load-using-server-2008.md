@@ -2,7 +2,7 @@
 title: "DLL Will Not Load in FxCop on Windows Server 2008"
 description: "I was attempting to install the SharePoint dispose checker into my FxCop program using the rules dll found here, <http://spdisposecheckstatic.codeplex.com/>.…"
 pubDate: 2010-08-27
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmg66YPnofvVoGbVjmQ2_Z5qGXM05WWsOJL0goJnW7JQTdFWZCRr_qzqxCM9kXuvIGefhFLwdFQfqNGvSxyLBtMQQdXN6l-YdTOEaGfxfCDiUW43xzv2sFTnvnkfm1dJp_z0V1tIGo8rQ/s400/dllnoload1.jpg"
+heroImage: "/heroes/dll-will-not-load-using-server-2008.jpg"
 category: power-apps
 tags:
   - "development"

@@ -3,7 +3,7 @@ title: "Move Shelveset from One Branch to Another "
 description: "This can be useful if you start working on the wrong branch and need to move your uncommitted code to the correct branch."
 pubDate: 2018-02-16
 updatedDate: 2018-03-15
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigwMJpSbht500aNCdZnRjA9d9tbSIoY4h-4FwiTnOBrbawD6mD7EJ7SEObA_iLsRI-k76uJVH1xkVFRLxNK-_zznptXvKcM_TIgS1Pajk-59oWkcAFza1IEbdYCstbhVmA7RuPBBt3Sok/s320/2018-02-16+09_39_47-rick.anycom.us+-+Remote+Desktop+Connection+Manager+v2.7.png"
+heroImage: "/heroes/move-shelveset-from-one-branch-to.png"
 category: power-apps
 tags:
   - "tfs"

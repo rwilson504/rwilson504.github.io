@@ -2,7 +2,7 @@
 title: "Install XPS Viewer for Windows Server 2008R2"
 description: "If you need to install the XPS viewer on Windows Server 2008R2 just follow these directions."
 pubDate: 2010-10-21
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkTSNpRCQImN4fUsskvI6FM3QvsdMT7UZb-EBtqjJzCSHxojhoO5NVyHnvpP3Itvd4XGWF3ajVFcPcZ2sIFCtots1XcVCMLmTz-SyXqy0K2KDK8mn2RuFLC1JU-gC-7gMmf-rJZXsiT1A/s320/XPS1.png"
+heroImage: "/heroes/install-xps-viewer-for-windows-server.png"
 category: misc
 tags:
   - "windows-server-2008r2"

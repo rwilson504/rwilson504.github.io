@@ -2,7 +2,7 @@
 title: "How to View DLP Policies Applied to a Power Platform Environment"
 description: "To quickly see which Data Loss Prevention (DLP) policies are applied to a specific Power Platform environment, you can use a direct URL. This article shows you how to:"
 pubDate: 2025-05-07
-heroImage: "https://github.com/user-attachments/assets/08b245a4-c6f0-48e5-a497-d9032fef2feb"
+heroImage: "/heroes/how-to-view-dlp-policies-applied-to.png"
 heroImageAlt: "How to View DLP Policies Applied to a Power Platform Environment"
 category: power-apps
 tags:

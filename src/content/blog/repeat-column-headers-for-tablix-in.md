@@ -3,7 +3,7 @@ title: "Repeat Column Headers for Tablix in SSRS 2008"
 description: "If you are having trouble getting the column headings to repeat on every page for a table/tablix in SSRS 2008 try this.…"
 pubDate: 2013-11-05
 updatedDate: 2014-03-24
-heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGSkwlGu2hIiKzOsOF5C3HAqjKAaNY9QEOCw1D1a3TGAujgndfzpQalpg2XsdIwHS7J826AYa9YMiOHPn6qaE-R0fddfqX4dhnN9ALNTCJi2V7gxIZBqm6t39GGcYIJHPrcPwMDsFdrbc/s320/tablix.png"
+heroImage: "/heroes/repeat-column-headers-for-tablix-in.png"
 category: power-apps
 tags:
   - "reports"

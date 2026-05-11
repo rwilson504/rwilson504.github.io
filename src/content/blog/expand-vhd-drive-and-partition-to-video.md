@@ -2,7 +2,6 @@
 title: "Expand a VHD drive and partition - &quot;How To &amp; Video&quot;"
 description: "When creating a virtual hard drive in Microsoft Virtual PC the default drive size is 16GB. This seems like a lot of space but it quickly dwindles as you do development.…"
 pubDate: 2009-08-21
-heroImage: "http://lh5.ggpht.com/_mr9BzRLR2GQ/So76C7JzLJI/AAAAAAAAEWE/yWPed4KiIRs/videof59855c090bb%5B3%5D.jpg?imgmax=800"
 category: misc
 tags:
   - "vhd"
