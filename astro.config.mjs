@@ -31,4 +31,13 @@ export default defineConfig({
   build: {
     format: "directory",
   },
+  vite: {
+    build: {
+      rollupOptions: {
+        // Pagefind assets are emitted into dist/pagefind/ by `pagefind --site dist`
+        // *after* astro build, so Vite must not try to resolve them at build time.
+        external: [/^\/pagefind\//],
+      },
+    },
+  },
 });

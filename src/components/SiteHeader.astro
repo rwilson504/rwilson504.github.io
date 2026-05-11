@@ -1,4 +1,6 @@
 ---
+import Search from "./Search.astro";
+
 const nav = [
   { href: "/", label: "Home" },
   { href: "/blog/", label: "Blog" },
@@ -15,5 +17,6 @@ const nav = [
         <li><a href={item.href}>{item.label}</a></li>
       ))}
     </ul>
+    <Search />
   </nav>
 </header>
