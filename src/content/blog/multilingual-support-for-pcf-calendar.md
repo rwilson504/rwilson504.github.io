@@ -2,6 +2,8 @@
 title: "Multilingual Support For PCF Calendar Control"
 description: "Multilingual support has been added to the Calendar component I recently shared. This works in both Canvas and Model apps."
 pubDate: 2020-05-01
+heroImage: "https://img.youtube.com/vi/xSCHCRQFhMI/sddefault.jpg"
+heroImageAlt: "Canvas App Video"
 category: power-apps
 tags:
   - "calendar"

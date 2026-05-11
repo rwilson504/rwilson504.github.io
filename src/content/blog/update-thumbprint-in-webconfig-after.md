@@ -2,6 +2,8 @@
 title: "Update Thumbprint in Web.Config After Updating ADFS 2.0 Certificate"
 description: "Recently I had to replace an expired certificate on my ADFS 2.0 machine. I followed the instruction on the TechNet wiki found here."
 pubDate: 2013-02-04
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikk1LD55uJCd1W0n1ZD9iX7ZmQuA-r2HzDCnNoDvr89U9KShb8UkK02rzjlQloNkiGGbMwDJdHTN-bdvDXFlm1W2QXwvZpLk8zbHsw8z7NH4P0-_CNfBjcJg_qwlKtCEimbT0urxL0PjU/?imgmax=800"
+heroImageAlt: "image"
 category: power-apps
 tags:
   - "adfs-2"

@@ -2,6 +2,8 @@
 title: "Open Model Apps Url Using Unique Name"
 description: "When generating links for records, lists or reports in a Dataverse environment it is important that they open the specific application they relate to so users have the best experience.…"
 pubDate: 2021-06-23
+heroImage: "https://user-images.githubusercontent.com/7444929/123127614-727c8980-d418-11eb-9f01-8731c4896e78.png"
+heroImageAlt: "2021-06-23_11-14-09"
 category: power-apps
 tags:
   - "dataverse"

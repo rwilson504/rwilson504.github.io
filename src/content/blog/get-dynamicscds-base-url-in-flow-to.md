@@ -2,6 +2,7 @@
 title: "Get Dynamics/CDS Base URL in Flow To Generate Links To Record"
 description: "When sending emails or approvals in flow it can be helpful to also include a link to the record which is being referenced.…"
 pubDate: 2019-08-09
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC1zIRtzTOraGd7IYUQie5keKE79KZhvG3LSSq7OTpnaH77YnhuILi-HdxhEm3Fd9mhsvr5IQHkQPm8pACG4jF5gPMLA9JWaWm3Z68iCac-Q377FFg-mDPl1oOcvibPwL5Wdqd4uRlf0k/s640/BaseURL1.png"
 category: power-apps
 tags:
   - "cds"

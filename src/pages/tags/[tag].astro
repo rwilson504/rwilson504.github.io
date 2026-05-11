@@ -37,6 +37,8 @@ const { tag, posts } = Astro.props;
         pubDate={post.data.pubDate}
         category={post.data.category}
         tags={post.data.tags}
+        heroImage={post.data.heroImage}
+        heroImageAlt={post.data.heroImageAlt}
       />
     ))}
   </ul>

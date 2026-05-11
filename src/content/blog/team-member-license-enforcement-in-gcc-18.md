@@ -2,6 +2,8 @@
 title: "Team Member License Enforcement in GCC"
 description: "If you have custom applications built on Dynamics/Dataverse within the US Government Community Cloud (GCC) and only have Team user license that were purchased after October 2018 your apps screen may…"
 pubDate: 2021-05-13
+heroImage: "https://user-images.githubusercontent.com/7444929/118153758-3ea75080-b3e4-11eb-9d7d-079a8f53a627.png"
+heroImageAlt: "image"
 category: power-apps
 tags:
   - "dataverse"

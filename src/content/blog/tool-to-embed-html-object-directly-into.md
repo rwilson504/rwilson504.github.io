@@ -2,6 +2,7 @@
 title: "Tool to embed HTML object directly into SharePoint content"
 description: "Check out this cool Rick Text Editor add-in that will allow you to embed html such as YouTube and Flash videos. Finally something on codeplex that works!"
 pubDate: 2009-09-01
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLlBlLySDfqP7hi91IjoVm_DBu-56f_Y4uUn65BKg4T7ygjjEgRx7InTMmOiak7vU2y0GSMDbUxLH-lGrAxJzcGsFtfjuy0-v4sib4N4nB4Lav1loToogLGFCeXOQjAo4r4lc_WYEXK_0/s400/richtextextender1.jpg"
 category: power-apps
 tags:
   - "codeplex"

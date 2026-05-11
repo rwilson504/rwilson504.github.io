@@ -2,6 +2,8 @@
 title: "Launch A Canvas App In Model App From SiteMap"
 description: "Canvas PowerApps provide a great amount of functionality with little or no code.…"
 pubDate: 2020-06-18
+heroImage: "https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/CanvasMenu.png?raw=true"
+heroImageAlt: "Canvas App Menu"
 category: power-apps
 tags: []
 draft: false

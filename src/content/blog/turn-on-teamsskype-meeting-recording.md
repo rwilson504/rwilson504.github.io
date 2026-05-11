@@ -2,6 +2,7 @@
 title: "Turn on Teams/Skype Meeting Recording and Transcription for Entire Organization"
 description: "<# .SYNOPSIS Turn on meeting recording and transcription for entire organization"
 pubDate: 2019-07-08
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicd46LicaTxy8tu-1k6Ko83Bs9TACCcujneYDM928vSqe1U_cKxwGK9osK7pfzp44RV7xb7qBN6vlvvgfUEAVLesbuCvoFuM1dVl9GlqFyc0eTYT72WNytH31FD8c_AX4RUupv2A5dd9Y/s640/TeamsAdminEnableRecordingAndTranscription.PNG"
 category: misc
 tags: []
 draft: false

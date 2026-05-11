@@ -2,6 +2,7 @@
 title: "Coming Soon - Sabbath Night in the Church of the Piranha"
 description: "[](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf-8147HaPjkLQGcgYLhF8Rf7qG7SEHkgyioV1kWbeUrJo-fB71Aerg-I7t5AgRgcwHcLfzBH4vu04k5vN9AtcB8KnGGD09aJ1uuG131w4cCAapM-sU48nWB7oeOTgGZGPv1i2b7Rr…"
 pubDate: 2010-09-20
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf-8147HaPjkLQGcgYLhF8Rf7qG7SEHkgyioV1kWbeUrJo-fB71Aerg-I7t5AgRgcwHcLfzBH4vu04k5vN9AtcB8KnGGD09aJ1uuG131w4cCAapM-sU48nWB7oeOTgGZGPv1i2b7RrEL0/s400/Sabbath-Banner_658x243.jpg"
 category: misc
 tags: []
 draft: false

@@ -2,6 +2,8 @@
 title: "Custom Auto Number in Dataverse with Fiscal Year-Based Incrementing Using Plugin Code"
 description: "In many scenarios, businesses require custom auto-numbering for records in Microsoft Dataverse that go beyond the default functionality provided.…"
 pubDate: 2024-08-23
+heroImage: "https://github.com/user-attachments/assets/d00d8c52-30ea-4f5e-a5ad-a2825b8a8a1c"
+heroImageAlt: "Custom Auto Number in Dataverse with Fiscal Year-Based Incrementing Using Plugin Code"
 category: power-apps
 tags:
   - "autogenate"

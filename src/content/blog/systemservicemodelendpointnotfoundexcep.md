@@ -2,6 +2,7 @@
 title: "System.ServiceModel.EndpointNotFoundException in OWSTIMER.EXE"
 description: "I started getting this error every five minutes after the timer service would kick off."
 pubDate: 2011-04-25
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEht9Qwa4Orsp8MQSvgnK-I7JGUgLyBLCfttyTlWh2gsvD-Mn0p2wnjVu-0McxpeX2Y4sa-r_BNOvqWUQdYkOJs7ntYODlRk0EGayGwZ9BHItUKmywDo5VGTSQLIDVgbNarZyY9NC72T8WI/s400/SeriveModelErrorOwstimer.png"
 category: power-apps
 tags:
   - "error"

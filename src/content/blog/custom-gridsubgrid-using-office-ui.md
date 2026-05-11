@@ -2,6 +2,8 @@
 title: "Custom Grid/Subgrid Using Office-UI-Fabric DetailsList"
 description: "Allows you to simulate the out of the box Grid and Subgrid controls using the Office-UI-Fabric DetailsList control. It was built to provide a springboard when you need a customizable grid experience.…"
 pubDate: 2020-02-05
+heroImage: "https://github.com/rwilson504/Blogger/blob/master/Office-Fabric-UI-DetailsList-PCF/office-fabric-ui-detailslist.gif?raw=true"
+heroImageAlt: "DetailsList Grid Control"
 category: power-apps
 tags:
   - "crm"

@@ -2,6 +2,8 @@
 title: "Power Automate Custom Connectors - Import Postman v2 Collection"
 description: "There are many tools you can utilize to develop Power Automate custom connectors including Postman and Swagger Inspector.…"
 pubDate: 2021-05-05
+heroImage: "https://user-images.githubusercontent.com/7444929/117196706-cf62a880-adb4-11eb-9bc8-a70a7fb01cfa.png"
+heroImageAlt: "image"
 category: power-apps
 tags:
   - "actions"

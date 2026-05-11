@@ -2,6 +2,8 @@
 title: "Overcoming OpenAPI 2.0 `multi` CollectionFormat Challenges in Power Automate Custom Connectors"
 description: "Integrating APIs into Power Automate flows often requires creating custom connectors, a process that can encounter challenges with certain API specifications.…"
 pubDate: 2024-06-24
+heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/02ae64d9-15d4-4e94-9d7f-f33f85b56450"
+heroImageAlt: "Overcoming OpenAPI 2.0  CollectionFormat Challenges in Power Automate Custom Connectors"
 category: power-apps
 tags:
   - "automate"

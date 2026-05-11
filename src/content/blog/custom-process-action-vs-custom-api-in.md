@@ -2,6 +2,8 @@
 title: "Custom Process Action vs Custom API in Dataverse"
 description: "I recently had the opportunity to utilize the new Custom API functionality within Dataverse.…"
 pubDate: 2021-06-09
+heroImage: "https://github.com/rwilson504/Blogger/blob/master/custom-process-action-vs-custom-api/customprocessvscustomapiheader.png?raw=true"
+heroImageAlt: "Custom Process Action vs Custom API in Dataverse"
 category: power-apps
 tags:
   - "api"

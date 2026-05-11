@@ -2,6 +2,7 @@
 title: "Excel Services Compatibility Checker"
 description: "A while back I had a customer who wished to use Excel Services to do some project reporting dashboards.…"
 pubDate: 2009-08-21
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikozdV8WkhP7vlXNFC2shqOSnkxNnMKg8FE9o3vH2tCEdU-i4Tb2ktZttl-xWcE5zZycjOdRso0gCsdTVFQUfy32KUO7et_ksPbr1kubp34W6PDk8Dj6zekOP_5NHYsxjnVtDOuJJy6V8/s400/warning_thumb_3F2EBBCC.jpg"
 category: power-apps
 tags:
   - "excel-services"

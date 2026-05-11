@@ -9,24 +9,39 @@ export interface Props {
   pubDate: Date;
   category: string;
   tags: string[];
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
-const { href, title, description, pubDate, category, tags } = Astro.props;
+const { href, title, description, pubDate, category, tags, heroImage, heroImageAlt } = Astro.props;
 const linkable = await getLinkableTags();
 ---
 
 <li class="post-card">
-  <a class="category-pill" href={`/categories/${category}/`}>{category}</a>
-  <h2><a class="post-title" href={href}>{title}</a></h2>
-  <p class="post-meta"><FormattedDate date={pubDate} /></p>
-  <p>{description}</p>
-  {tags.length > 0 && (
-    <p>
-      {tags.slice(0, 6).map((t) =>
-        linkable.has(t)
-          ? <a class="tag" href={`/tags/${t}/`}>{t}</a>
-          : <span class="tag">{t}</span>
-      )}
-    </p>
+  {heroImage && (
+    <a class="post-card-thumb-link" href={href} aria-hidden="true" tabindex="-1">
+      <img
+        class="post-card-thumb"
+        src={heroImage}
+        alt={heroImageAlt ?? ""}
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
   )}
+  <div class="post-card-body">
+    <a class="category-pill" href={`/categories/${category}/`}>{category}</a>
+    <h2><a class="post-title" href={href}>{title}</a></h2>
+    <p class="post-meta"><FormattedDate date={pubDate} /></p>
+    <p>{description}</p>
+    {tags.length > 0 && (
+      <p>
+        {tags.slice(0, 6).map((t) =>
+          linkable.has(t)
+            ? <a class="tag" href={`/tags/${t}/`}>{t}</a>
+            : <span class="tag">{t}</span>
+        )}
+      </p>
+    )}
+  </div>
 </li>

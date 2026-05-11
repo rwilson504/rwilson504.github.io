@@ -2,6 +2,7 @@
 title: "Grouping Articles By Month"
 description: "After creating a blog site I wanted to show a webpart that grouped the posts by month. To accomplish this I added a calculated field to my Posts list and used the following formula:"
 pubDate: 2009-09-01
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO5l6aBWWmRho_WbDbokFYPyI1KrVcVnjgCwCaWTIJYNBxhWi69xc8dkrqdqm1rMiDsFNe_EUqjvsHbYFxJo-xlDlAUqDvgLTpYgi_dJRUkXtoJUXj0gbZKvLYXdCU2djl3x_NTPPbzu0/s400/groupbymonthcalcfield.jpg"
 category: power-apps
 tags:
   - "sharepoint-2007"
