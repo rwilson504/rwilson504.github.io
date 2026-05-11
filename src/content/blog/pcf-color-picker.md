@@ -4,7 +4,9 @@ description: "For anyone looking for a PCF Color Picker I just released one out 
 pubDate: 2019-10-31
 heroImage: "/heroes/pcf-color-picker.gif"
 category: power-apps
-tags: []
+tags:
+  - "pcf"
+  - "solution"
 draft: false
 originalBloggerUrl: /2019/10/pcf-color-picker.html
 ---

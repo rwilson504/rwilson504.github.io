@@ -4,7 +4,12 @@ description: "Below are resources that you can utilize within your Dynamics proj
 pubDate: 2019-10-28
 updatedDate: 2019-12-11
 category: power-apps
-tags: []
+tags:
+  - "icons"
+  - "dynamics"
+  - "pcf"
+  - "dynamics-365"
+  - "crm"
 draft: false
 originalBloggerUrl: /2019/10/icon-resources-for-dynamics.html
 ---

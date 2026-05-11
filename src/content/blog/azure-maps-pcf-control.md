@@ -5,7 +5,11 @@ pubDate: 2020-03-22
 heroImage: "/heroes/azure-maps-pcf-control.gif"
 heroImageAlt: "Azure Maps Control Demonstration"
 category: power-apps
-tags: []
+tags:
+  - "pcf"
+  - "azure"
+  - "maps"
+  - "authentication"
 draft: false
 originalBloggerUrl: /2020/03/azure-maps-pcf-control.html
 ---

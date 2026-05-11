@@ -4,7 +4,9 @@ description: "In order to move Duplicate Detection Rules to another system utili
 pubDate: 2019-03-05
 heroImage: "/heroes/exporting-duplicate-detection-rules.png"
 category: power-apps
-tags: []
+tags:
+  - "duplicate-detection"
+  - "crm"
 draft: false
 originalBloggerUrl: /2019/03/exporting-duplicate-detection-rules.html
 ---

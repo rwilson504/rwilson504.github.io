@@ -3,7 +3,11 @@ title: "Cannot Access SharePoint Files Without Visitor Access in Dynamics CRM Do
 description: "Recently while building a system which synchronized Dynamics permissions to SharePoint we came upon an error which caused the SharePoint Document grid to tell us that we did not have the correct…"
 pubDate: 2019-04-06
 category: power-apps
-tags: []
+tags:
+  - "dynamics"
+  - "sharepoint"
+  - "crm"
+  - "security"
 draft: false
 originalBloggerUrl: /2019/04/cannot-access-sharepoint-files-without.html
 ---

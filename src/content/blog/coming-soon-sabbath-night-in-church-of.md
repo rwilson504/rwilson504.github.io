@@ -4,7 +4,8 @@ description: "Coming soon to the stage of Taking Flight Theatre Company is ﻿Sa
 pubDate: 2010-09-20
 heroImage: "/heroes/coming-soon-sabbath-night-in-church-of.jpg"
 category: misc
-tags: []
+tags:
+  - "theatre"
 draft: false
 originalBloggerUrl: /2010/09/coming-soon-sabbath-night-in-church-of.html
 ---

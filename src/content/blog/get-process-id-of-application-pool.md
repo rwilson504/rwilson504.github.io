@@ -4,7 +4,10 @@ description: "When wanting to debug in VS sometimes I only want to attach to a s
 pubDate: 2014-06-26
 heroImage: "/heroes/get-process-id-of-application-pool.png"
 category: misc
-tags: []
+tags:
+  - "iis"
+  - "debugging"
+  - "visual-studio"
 draft: false
 originalBloggerUrl: /2014/06/get-process-id-of-application-pool.html
 ---

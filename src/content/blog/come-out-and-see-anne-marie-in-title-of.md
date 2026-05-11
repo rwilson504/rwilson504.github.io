@@ -4,7 +4,9 @@ description: "My lovely wife Anne Marie will be performing in [title of show] at
 pubDate: 2011-04-18
 heroImage: "/heroes/come-out-and-see-anne-marie-in-title-of.jpg"
 category: misc
-tags: []
+tags:
+  - "theatre"
+  - "music"
 draft: false
 originalBloggerUrl: /2011/04/come-out-and-see-anne-marie-in-title-of.html
 ---

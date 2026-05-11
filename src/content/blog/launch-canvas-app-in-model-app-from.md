@@ -5,7 +5,12 @@ pubDate: 2020-06-18
 heroImage: "/heroes/launch-canvas-app-in-model-app-from.png"
 heroImageAlt: "Canvas App Menu"
 category: power-apps
-tags: []
+tags:
+  - "sitemap"
+  - "canvas"
+  - "model-driven"
+  - "power-apps"
+  - "gist"
 draft: false
 originalBloggerUrl: /2020/06/launch-canvas-app-in-model-app-from.html
 ---
