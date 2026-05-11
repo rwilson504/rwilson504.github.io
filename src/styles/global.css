@@ -210,7 +210,8 @@ hr {
   gap: 1em;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav .dropdown-trigger {
   color: var(--color-fg);
   text-decoration: none;
   font-weight: 600;
@@ -226,7 +227,7 @@ hr {
   gap: 0.6em;
 }
 
-.site-nav ul {
+.site-nav > ul {
   list-style: none;
   display: flex;
   gap: 1.2em;
@@ -234,7 +235,8 @@ hr {
   padding: 0;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav .dropdown-trigger:hover {
   color: var(--color-accent);
 }
 
