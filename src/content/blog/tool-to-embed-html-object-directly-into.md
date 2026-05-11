@@ -19,9 +19,6 @@ Check out this cool Rick Text Editor add-in that will allow you to embed html su
   
 After installing the tool you will now have a new button on your rich text editor.  
   
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLlBlLySDfqP7hi91IjoVm_DBu-56f_Y4uUn65BKg4T7ygjjEgRx7InTMmOiak7vU2y0GSMDbUxLH-lGrAxJzcGsFtfjuy0-v4sib4N4nB4Lav1loToogLGFCeXOQjAo4r4lc_WYEXK_0/s400/richtextextender1.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLlBlLySDfqP7hi91IjoVm_DBu-56f_Y4uUn65BKg4T7ygjjEgRx7InTMmOiak7vU2y0GSMDbUxLH-lGrAxJzcGsFtfjuy0-v4sib4N4nB4Lav1loToogLGFCeXOQjAo4r4lc_WYEXK_0/s1600-h/richtextextender1.jpg)
-
   
   
   

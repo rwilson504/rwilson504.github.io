@@ -23,8 +23,6 @@ Load control template file /_controltemplates/TaxonomyPicker.ascx failed: Could 
 
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKXnE5956oxXCgDAiPqFgpzNJypnwpFpXMIz0FPew114a1Dr4Msv2FdEyFmxdYn3QpvZ9tv8VjH0GVPbfLlkPO8_DiL7q0cRT4IgMYvApanefiYBSMW9-1GKBlJRy8WhPihtOkk9SVRxw/s400/TaxonomyPickerError1.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKXnE5956oxXCgDAiPqFgpzNJypnwpFpXMIz0FPew114a1Dr4Msv2FdEyFmxdYn3QpvZ9tv8VjH0GVPbfLlkPO8_DiL7q0cRT4IgMYvApanefiYBSMW9-1GKBlJRy8WhPihtOkk9SVRxw/s1600/TaxonomyPickerError1.png)
-
 ORIGINAL SOLUTION:   It appeared at first that the problem was with a HTML encoded ',' in the assembly reference of the file which I changed by editing the TaxonomyPicker.ascx file.
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS2hzk_aU53bHhQQYolJQss-0pN4FfHX1bd3FW-ZcfpIWxTwGTatIFnfpSXIlf-5tzD8XuHpb-zkoa16mk4cxEM4K0gL78yUcKSOzjqJ7xynGMTIG4XhIZP4MEGGiWcp7WpNPthO2tQMA/s400/TaxonomyPickerError4.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS2hzk_aU53bHhQQYolJQss-0pN4FfHX1bd3FW-ZcfpIWxTwGTatIFnfpSXIlf-5tzD8XuHpb-zkoa16mk4cxEM4K0gL78yUcKSOzjqJ7xynGMTIG4XhIZP4MEGGiWcp7WpNPthO2tQMA/s1600/TaxonomyPickerError4.png)

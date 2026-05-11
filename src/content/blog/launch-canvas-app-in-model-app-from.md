@@ -18,8 +18,6 @@ This solution is based off the solution from [Dynamict](https://www.dynamict.eu/
 
 Here is an example of a Canvas app I have created which will display a menu of items which the user can launch. The Canvas App is being called from the SiteMap link in the Model app and displayed full screen within the content window.
 
-![Canvas App Menu](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/CanvasMenu.png?raw=true)
-
 ## Pre-Requisites
 
 - The Canvas app you want to open must be in a Solution. If it is not then it will never show up in the “canvasapp” entity which we are using to get the App id. It does not matter what Solution it is in just that it sits in a solution within your environment.

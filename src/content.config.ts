@@ -1,7 +1,7 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
-const CATEGORIES = ["power-apps", "ai", "electronics", "misc"] as const;
+const CATEGORIES = ["power-apps", "ai", "electronics", "3d-printing", "misc"] as const;
 export type Category = (typeof CATEGORIES)[number];
 
 const blog = defineCollection({

@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2024/08/custom-auto-number-in-dataverse-with.html
 ---
 
-![Custom Auto Number in Dataverse with Fiscal Year-Based Incrementing Using Plugin Code](https://github.com/user-attachments/assets/d00d8c52-30ea-4f5e-a5ad-a2825b8a8a1c)
-
 In many scenarios, businesses require custom auto-numbering for records in Microsoft Dataverse that go beyond the default functionality provided. In this article, I’ll walk you through a solution that involves creating a custom auto-number field without using the out-of-the-box auto-numbering feature in Dataverse. Instead, we’ll use a combination of a custom entity as a counter and a plugin that triggers on the pre-create event of the target table.
 
 ## The Approach

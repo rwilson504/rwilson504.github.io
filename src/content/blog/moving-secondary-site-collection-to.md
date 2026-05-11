@@ -47,9 +47,6 @@ Note: you have to use the overwrite parameter since you are restoring over the b
   
 After the site was migrated I started clicking on things to see what would happen. Thing seemed fine until I clicked on a navigation heading. Highlighted in red below is an example of what I mean by "navigation heading."   
   
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFAXsv6Wu94yKqGpgso1KBLTrXCr4b9RSJJXPkxL29LHp3cTT4VIFjlkxY1n71L8_TGVttDwQHpZ7-JrZRJ5zQcK_4IzqEOnkqETOGiLmA-h44jdFqXVdk8qHAy-aLn9FNj-NcUVk_6EY/s400/navigationheading.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFAXsv6Wu94yKqGpgso1KBLTrXCr4b9RSJJXPkxL29LHp3cTT4VIFjlkxY1n71L8_TGVttDwQHpZ7-JrZRJ5zQcK_4IzqEOnkqETOGiLmA-h44jdFqXVdk8qHAy-aLn9FNj-NcUVk_6EY/s1600-h/navigationheading.jpg)
-
   
 For some reason all the navigation heading links still wanted to put /sites/collection/ into the url. I have a lot of sites and really didn't want to hand punch the fixes for all of these links so I created a SQL script to go out and change them. Below is the SQL I used. NOTE: Manipulating SharePoint databases can be bad. Also it's not supported by Microsoft, so if you do it, make a backup... please.  
   

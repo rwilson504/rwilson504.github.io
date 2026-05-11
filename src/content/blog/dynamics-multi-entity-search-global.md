@@ -14,9 +14,6 @@ While coming up with deployment scripts i was tasked to ensure that the Dynamics
 The manual way of updating these settings  
 1. Navigate to Settings -> Administration -> System Settings  
 2. Click on the button for Select entities for categories search  
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZfFbf3dC1DfjlBKsbYicNJLXG1yMJ_f3JbFDtbZ094Bs-KSqaH_caaSLKMqG3wHGBBUv7inJsfVaKl4NmoIgGMl_9_7tyQeRdpq9_4aGHqNuKpPO06492jAa6QNCTrKQU_s06q-0nUi8/s320/SettingsButton.PNG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZfFbf3dC1DfjlBKsbYicNJLXG1yMJ_f3JbFDtbZ094Bs-KSqaH_caaSLKMqG3wHGBBUv7inJsfVaKl4NmoIgGMl_9_7tyQeRdpq9_4aGHqNuKpPO06492jAa6QNCTrKQU_s06q-0nUi8/s1600/SettingsButton.PNG)
-
 3. Add/Remove the entities you want utilizing the selection screen.  
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdWCd0Eq2adGdZrubf_n_EyCQ0TRVNk90Ul23FrV8dQBqRGt2sk2vJKycNs0cP7AJVOPPqlRMjWkP7nRDtcDBo8IAJQMkBC5yAg53llgEqzCVGQS9KATrHJ94hYUh_xAgmh3h1ydRGP5M/s320/EntitySelection.PNG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdWCd0Eq2adGdZrubf_n_EyCQ0TRVNk90Ul23FrV8dQBqRGt2sk2vJKycNs0cP7AJVOPPqlRMjWkP7nRDtcDBo8IAJQMkBC5yAg53llgEqzCVGQS9KATrHJ94hYUh_xAgmh3h1ydRGP5M/s1600/EntitySelection.PNG)

@@ -19,10 +19,7 @@ After creating a blog site I wanted to show a webpart that grouped the posts by 
 ```
 
   
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO5l6aBWWmRho_WbDbokFYPyI1KrVcVnjgCwCaWTIJYNBxhWi69xc8dkrqdqm1rMiDsFNe_EUqjvsHbYFxJo-xlDlAUqDvgLTpYgi_dJRUkXtoJUXj0gbZKvLYXdCU2djl3x_NTPPbzu0/s400/groupbymonthcalcfield.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO5l6aBWWmRho_WbDbokFYPyI1KrVcVnjgCwCaWTIJYNBxhWi69xc8dkrqdqm1rMiDsFNe_EUqjvsHbYFxJo-xlDlAUqDvgLTpYgi_dJRUkXtoJUXj0gbZKvLYXdCU2djl3x_NTPPbzu0/s1600-h/groupbymonthcalcfield.jpg)
-
-  
+    
   
   
     

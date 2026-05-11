@@ -16,8 +16,6 @@ draft: false
 originalBloggerUrl: /2022/02/how-to-create-sharepoint-items-with.html
 ---
 
-![How do it create...](https://user-images.githubusercontent.com/7444929/152599822-85aeae57-142d-4d85-80aa-b0bd8459de4d.png)
-
 ## Overview
 
 [Power Automate Desktop](https://powerautomate.microsoft.com/en-us/desktop) is a great way to automate many of your daily task so you can focus on real work. A prime example of this is getting data from one place to another, especially when those data sources do not have an API such as a legacy desktop application or a file.

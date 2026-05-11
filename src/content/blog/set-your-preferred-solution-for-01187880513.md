@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2026/03/set-your-preferred-solution-for_01187880513.html
 ---
 
-![Set Your Preferred Solution for the Dataverse MCP](https://github.com/rwilson504/Blogger/blob/master/dataverse-mcp-preferred-solution/hero-image.png?raw=true)
-
 I was working with the [Dataverse MCP server](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcp) yesterday and noticed that when I created new tables through it, they were all getting the default `cr***` prefix from the Common Data Services Default Publisher. The MCP doesn’t give you an option to select a publisher or a prefix when creating table customizations — it just uses whatever the environment default is.
 
 If you’re like me and want your tables to have a consistent, meaningful prefix tied to your own publisher, there’s a simple fix: **set a Preferred Solution**.

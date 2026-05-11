@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2024/01/enhancing-public-sector-travel-with-gsa.html
 ---
 
-![# Enhancing Public Sector Travel with the GSA Per Diem Connector for Power Platform](https://github.com/rwilson504/Blogger/assets/7444929/cf4fb2d3-16a9-40de-ae6f-57b04cb20819)
-
 Navigating travel expenses in the public sector can be intricate, especially when it comes to adhering to per diem rates. To address this, I developed the GSA Per Diem Connector for Power Platform, aiming to simplify access to essential travel expense data. For those looking to delve deeper into per diem rates, the [U.S. General Services Administration (GSA)](https://www.gsa.gov/travel/plan-book/per-diem-rates) offers comprehensive information. Additionally, the [GSA Per Diem API](https://open.gsa.gov/api/perdiem-api/), which serves as the backbone of this connector, provides detailed insights into the rate data.
 
 ## The Importance of Per Diem Rates

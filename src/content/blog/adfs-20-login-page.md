@@ -17,8 +17,6 @@ After installing ADFS 2.0 for SharePoint a Windows login prompt was shown when 
   
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhxLEkZEkBRAyLgzL0u2ZWx_l_pyX5uw7gy0HlNVXuU-GyknLrYGcLzhRruAzUBC-UzuovXHzHT92ZqsjbCCpSwcigzvl93LzR6I2RfpvXoHoXtNY2v_KwkionFKDnLmqTrjIseWFj7TE/s320/adfsloginprompt.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhxLEkZEkBRAyLgzL0u2ZWx_l_pyX5uw7gy0HlNVXuU-GyknLrYGcLzhRruAzUBC-UzuovXHzHT92ZqsjbCCpSwcigzvl93LzR6I2RfpvXoHoXtNY2v_KwkionFKDnLmqTrjIseWFj7TE/s1600/adfsloginprompt.png)
-
 No matter what account I tried to use here I would eventually receive a 401 Not Auhorized error.
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3uMm2VSYCOVEyWvbA17HvJB1w11ZIIigHgz_7Thc-7tL5UiXxjQYkgXO5a3ftm0fi6iD9jIUl09gn7F0KMwKvX7JgU-CtspOlMhPFEH8_tletRasdQ2IuGLyAa5D5C6UZ3p8k54W_2tE/s400/adfs+401+error.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3uMm2VSYCOVEyWvbA17HvJB1w11ZIIigHgz_7Thc-7tL5UiXxjQYkgXO5a3ftm0fi6iD9jIUl09gn7F0KMwKvX7JgU-CtspOlMhPFEH8_tletRasdQ2IuGLyAa5D5C6UZ3p8k54W_2tE/s1600/adfs+401+error.png)

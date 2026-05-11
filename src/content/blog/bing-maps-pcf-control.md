@@ -19,8 +19,6 @@ originalBloggerUrl: /2020/01/bing-maps-pcf-control.html
 
 This PCF control allows you to display information for a view that contains latitude and longitude information within Bing Maps. The Info Box for each pushpin that is created on the map also gives you the ability to open the selected record.
 
-![Bing Maps Control Demonstration](https://github.com/rwilson504/Blogger/blob/master/Bing-Maps-Control/images/bing-maps-control.gif?raw=true)
-
 ## Additional Features
 
 - Map will default to a bounding box defined by the location data being shown.

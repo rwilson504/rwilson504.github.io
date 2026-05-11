@@ -4,7 +4,7 @@ description: "After installing a new hotend on my Creality CR-6 SE, I ran into a
 pubDate: 2025-04-12
 heroImage: "https://github.com/user-attachments/assets/36673b49-f9c1-4c39-ba22-48c52303544d"
 heroImageAlt: "Fixing Temperature Fluctuations on the Creality CR-6 SE with PID Tuning"
-category: electronics
+category: 3d-printing
 tags:
   - "3d"
   - "3dprint"
@@ -15,8 +15,6 @@ tags:
 draft: false
 originalBloggerUrl: /2025/04/fixing-temperature-fluctuations-on.html
 ---
-
-![Fixing Temperature Fluctuations on the Creality CR-6 SE with PID Tuning](https://github.com/user-attachments/assets/36673b49-f9c1-4c39-ba22-48c52303544d)
 
 After installing a new hotend on my **Creality CR-6 SE**, I ran into a frustrating issue: when printing above 210°C, the hotend temperature would swing wildly—fluctuating by 5–10°C. The printer wouldn’t even start the print due to this instability.
 

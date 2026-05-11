@@ -19,9 +19,6 @@ While working on a demo of the Business Cards Scanner component for PowerApps I 
   
 Address Labs (<http://www.addresslabs.com/>) does not require an API key to use and since I'm only doing a few calls for my demos it worked well for me.  You can also check out their document on GitHub (<https://github.com/addresslabs/api-docs/blob/master/README.md>).  
   
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEyqC_VYacwu2mSCi8rvK_DbWHKtyQMqWqIexY1v8i18qdTlteAhvi5r7U7mOOVfFju8g11kxiTW53Kt_QtvPwGqa9YfdVgdTOwbDvk0P-QZk6wmah56Q5TPBQLnNeDr_ki6WVDvyZMhc/s640/addresslabs.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEyqC_VYacwu2mSCi8rvK_DbWHKtyQMqWqIexY1v8i18qdTlteAhvi5r7U7mOOVfFju8g11kxiTW53Kt_QtvPwGqa9YfdVgdTOwbDvk0P-QZk6wmah56Q5TPBQLnNeDr_ki6WVDvyZMhc/s1600/addresslabs.png)
-
   
 One of the easiest ways to create a custom connector to flow is to use a Postman collection.  
   

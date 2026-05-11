@@ -21,7 +21,7 @@ When working with npm libraries there are times you find bugs or want to add fun
 
 If the project is out there on GitHub there is a better way.
 
-1. Fork the project on Github to your account.![enter image description here](https://github.com/rwilson504/Blogger/blob/master/Npm-Install-From-GitHub/npm-fork.png?raw=true)
+1. Fork the project on Github to your account.
 2. Create a new branch from your fork.
 3. Fix the bug or add the functionality you want.
 4. Uninstall the original npm package by opening a terminal within the directory of your project and running the following command.

@@ -15,8 +15,6 @@ If you need to install the XPS viewer on Windows Server 2008R2 just follow these
 
 1. Open the **Server Manager** for the computer.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkTSNpRCQImN4fUsskvI6FM3QvsdMT7UZb-EBtqjJzCSHxojhoO5NVyHnvpP3Itvd4XGWF3ajVFcPcZ2sIFCtots1XcVCMLmTz-SyXqy0K2KDK8mn2RuFLC1JU-gC-7gMmf-rJZXsiT1A/s320/XPS1.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkTSNpRCQImN4fUsskvI6FM3QvsdMT7UZb-EBtqjJzCSHxojhoO5NVyHnvpP3Itvd4XGWF3ajVFcPcZ2sIFCtots1XcVCMLmTz-SyXqy0K2KDK8mn2RuFLC1JU-gC-7gMmf-rJZXsiT1A/s1600/XPS1.png)
-
 2. Click on **Add features**.
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnogqiPGfslsMWbCSYTgKWKAxKp3sMGLtl_3-3iwV2cDVhLGCdIORUMimsiDO71Z2WmgSL0Kb9FnRtO3asCCNXBY4_zBff1B4I3Gk4oyCx-LkgqypHVv6bu_BsAju-TOvcaINZ0KCHXqY/s400/XPS2.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnogqiPGfslsMWbCSYTgKWKAxKp3sMGLtl_3-3iwV2cDVhLGCdIORUMimsiDO71Z2WmgSL0Kb9FnRtO3asCCNXBY4_zBff1B4I3Gk4oyCx-LkgqypHVv6bu_BsAju-TOvcaINZ0KCHXqY/s1600/XPS2.png)

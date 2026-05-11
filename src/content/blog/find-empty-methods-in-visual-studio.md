@@ -18,7 +18,3 @@ To find empty methods in Visual Studio search using the following regular expres
 ```
 void\ .*\(*\)(\ |(\r\n))*{(\ |(\r\n))*}
 ```
-
-  
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg28qLWLPkdIE7QPJtf1CqI2ELKVdbbvhAY53PZXuLcO8YTxVgd9ZxROqnxeL2F19fv_2eFavRHixqJPVd7xLi_LobGCv9GgNy6V2BIzZ8jmJg3KR1jnDW6-ZONB_DXT8FejdS9FDh4kGY/s320/RegularExpressionEmptyMethods.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg28qLWLPkdIE7QPJtf1CqI2ELKVdbbvhAY53PZXuLcO8YTxVgd9ZxROqnxeL2F19fv_2eFavRHixqJPVd7xLi_LobGCv9GgNy6V2BIzZ8jmJg3KR1jnDW6-ZONB_DXT8FejdS9FDh4kGY/s1600/RegularExpressionEmptyMethods.png)

@@ -16,8 +16,6 @@ originalBloggerUrl: /2012/06/adfs-20-default-claims-provider.html
 
 In situation where you have multiple Claims Providers the HomeRealDiscovery.aspx page may confuse users.
 
-[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVFb-38g22syLXf2fCiJsstVWecff24PMZ9L2Sy9LYqn7wqmwadQOGKfA_LA9vBRzd-2HAac-_Fw2pyPQKSO9A4TAR3H2vox-RA6r4vpLdyYvCksRW0ZsojEviEx7S7hSx5rvA1mK_hMo/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVV2KyCTTt64O3r01Ft1ww98usnntVLszBgjLTs1cCWJDmejDfuclGW1FL4mzLX9mqJZ-VshrfDDqkb23ifTXSya-Qiy9TJkkA-4hFFRnE6RwU28TmPlcjMlQBxEqgKglmsoXLnZyfHw/s1600-h/image39.png)
-
 As you can see here I have created a second claims provider called test. User may not know which one to use.
 
 [![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjluJYVoLMizOnAdme8v5nBPDSNk5N97pZYC1yRwOJKwUYWLygIz1I3Ybo4sTeWTFjWs984LtwtTWQXCBt7qtiJSaxlrA_vgWT_jcJMVzEp2CkWrwN-l4vP7LwlJ0E1T8tjiUyDrttK4HQ/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjACANoBqGOWzim_QU6tAcvCG8vFUryaQlSTsteu8jvsZDwiYgyC5Rci1yffF5Fdxr35QUmXmgAEy6xxiUubmDpKhSrn-uSQcxEKVK-hONFW40setJga4eacCJ1jyMGLDani5iy8mfiWrg/s1600-h/image40.png)

@@ -13,7 +13,7 @@ originalBloggerUrl: /2013/01/deletion-state-codes-fields-preventing.html
 ---
 
 If you have upgraded a CRM database from 4.0. to 2011 you may have some leftover fields that end in dsc.  These fields can later on come back to haunt you by showing up as missing components when import a solution into 2011. The fields will always end in “dsc” as you can see in the image below.  
-[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVUEKn4XHxMAlNA4nlw2zm7XaI1R8vsPkRx6zKN_59a32WUrBpNuTKDH0r6ANNsdjNIS7_AXxXSdNe0iElQK_pg2keeonEtpAIiv_XFmDT8BNIutk-p-pUV5xZwHPVFZb5SEvj7EflneU/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaasK7M3QkqNgNnhmvYmbtMP2ZKXMxp0C0KJ_jOmDQq0VxTIHZEkDIqiomCbL1cBBJ5Jd7v_yfhIYvPaAD2WzZeAoEjkpk6ICoAMZGUtTxQ9Gxv0MvSzW3zrqQMwJyOR4NT5i-BFlKvNs/s1600-h/image%25255B3%25255D.png)  
+  
   
 [John Hoven](http://hovenj.blogspot.com/2012/03/deletion-state-code-attribute-leftovers.html) has written a SQL script which will remove these attributes from the database.  After removing them re-export the solution and attempt the import again.  
 

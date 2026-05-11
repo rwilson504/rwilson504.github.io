@@ -27,8 +27,6 @@ With TMG going the way of the dodo Microsoft has moved much of it's functionalit
 
 This diagram represents the configuration for our sample environment. Additional setup scenarios for load balancing the WAP and CRM server are possible but not covered in this setup guide.
 
-[![2015-09-10 13_57_58-WAP ADFS KCD CRM (1).vsdx - Visio Professional](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2UQ_NKAPNWVvQsZmyUmzApOZwFjp9blwC5Sm1F5qrVI027X2FNq7Mssldi6bNbLjCGH3XsLqI3Ow49fzNXmNOGjj22f8YQ0HhKxl6yViQwwKco0i87acqdV3OruwoYa7tpmkK8fWSv4k/?imgmax=800 "2015-09-10 13_57_58-WAP ADFS KCD CRM (1).vsdx - Visio Professional")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMnmV0XIckHhTL8_I0AvqqNUjwyqRZ5mtb-aQm-GUSYImm974dG6m39qTgf93zWu4Ds1RFznscVvI1EgmEn4nRXnPvJ0DQZamNlY8O7E0ui5lAmSH623FQOjn3ly86nk0iUgFG8NKHAws/s1600-h/2015-09-10%25252013_57_58-WAP%25252BADFS%25252BKCD%25252BCRM%252520%2525281%252529.vsdx%252520-%252520Visio%252520Professional.png)
-
 ### 
 
 # Firewall Considerations

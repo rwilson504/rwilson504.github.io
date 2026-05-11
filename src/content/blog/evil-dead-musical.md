@@ -12,8 +12,6 @@ originalBloggerUrl: /2010/05/evil-dead-musical.html
 
 **Evil Dead The Musical**
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiANp1VF_KBI3NjgKIzp-6Vg8jNebWrVkCGfQqBOJERPvGtQvTTxXN9J90flazFLurJ_u1VLS9zeC1bFFrJauTtY7XAoW1bO07S8Iq6J9MaPqC36x1xE3PWcQtdVRU8IabuTjRYFn9P-HE/s400/evildead.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiANp1VF_KBI3NjgKIzp-6Vg8jNebWrVkCGfQqBOJERPvGtQvTTxXN9J90flazFLurJ_u1VLS9zeC1bFFrJauTtY7XAoW1bO07S8Iq6J9MaPqC36x1xE3PWcQtdVRU8IabuTjRYFn9P-HE/s1600/evildead.jpg)
-
   
 Evil Dead The Musical starts this Friday, May 28th, at the Loudoun campus of NOVA. If you loved the movie The Evil Dead or if you just love cheesy horror movies you will enjoy this show. As the Technical Director for the show I am extremely excited by all the hard work and dedication put in by the entire crew to see this technically challenging show come together in all its splendidly bloody goodness. Enjoy the show!  
   

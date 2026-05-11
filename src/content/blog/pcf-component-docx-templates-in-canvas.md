@@ -22,8 +22,6 @@ originalBloggerUrl: /2023/09/pcf-component-docx-templates-in-canvas.html
 
 Have you ever wanted to fill in a Docx template within a Canvas App? Look no further! I’m excited to introduce a new PCF component that allows you to do just that. This component leverages the [easy-template-x](https://github.com/alonrbar/easy-template-x) open-source library, making it a breeze to create and structure templates.
 
-![Docx Template Sample App](https://raw.githubusercontent.com/rwilson504/PCFControls/master/DocxTemplatesCanvas/image.png)
-
 ## How to Get Started:
 
 1. **Installation:** Begin by [downloading](https://github.com/rwilson504/PCFControls/releases/latest/download/RAWDocxTemplatesCanvas_managed.zip) and importing the managed solution into your environment. Ensure you’ve enabled PCF components for Canvas apps. If you’re unsure how, you can find instructions [here](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/component-framework-for-canvas-apps).

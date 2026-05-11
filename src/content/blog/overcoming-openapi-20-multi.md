@@ -19,8 +19,6 @@ draft: false
 originalBloggerUrl: /2024/06/overcoming-openapi-20-multi.html
 ---
 
-![Overcoming OpenAPI 2.0  CollectionFormat Challenges in Power Automate Custom Connectors](https://github.com/rwilson504/Blogger/assets/7444929/02ae64d9-15d4-4e94-9d7f-f33f85b56450)
-
 Integrating APIs into Power Automate flows often requires creating custom connectors, a process that can encounter challenges with certain API specifications. Specifically, the OpenAPI 2.0 specification allows array and multi-value parameters to be passed in various formats, including the `multi` collection format. This format is particularly troublesome for Power Automate’s Custom Connector wizard, which does not support it natively. This article outlines the issue and provides a detailed workaround using custom code components and modifying input parameters, ensuring seamless API integration.
 
 ## The Challenge with `multi` CollectionFormat

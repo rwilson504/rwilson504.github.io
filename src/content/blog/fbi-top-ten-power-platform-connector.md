@@ -19,8 +19,6 @@ draft: false
 originalBloggerUrl: /2025/02/fbi-top-ten-power-platform-connector.html
 ---
 
-![Powering Justice: Unveil the FBI Most Wanted with the Power Platform Custom Connector](https://github.com/rwilson504/Blogger/assets/7444929/cfe0d57b-f2c7-4f86-9224-4f127c35aaea)
-
 Today’s digital landscape offers unprecedented opportunities to leverage technology in the service of public safety. The FBI’s open API, a comprehensive source of data on the nation’s most wanted individuals and significant art crimes, now seamlessly integrates into the Power Platform thanks to the FBI Most Wanted Custom Connector. This innovation enables low-code developers across federal agencies to quickly and easily repurpose critical law enforcement data for the greater good.
 
 ### Inspiration Behind the Connector

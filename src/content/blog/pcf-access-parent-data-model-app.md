@@ -15,8 +15,6 @@ draft: false
 originalBloggerUrl: /2024/04/pcf-access-parent-data-model-app.html
 ---
 
-![Harnessing Host Form Data with PCF Controls in Model-Driven Applications](https://github.com/rwilson504/Blogger/assets/7444929/0308e67d-07e7-401a-b717-f8965d10bf2e)
-
 ## Introduction
 
 This tutorial delves into integrating PowerApps Component Framework (PCF) controls with host form data within Microsoft Power Platform’s model-driven apps. This article will guide you through the necessary scripting to expose and consume formContext and globalContext from a custom table called new\_Competitor. Aimed at enhancing both custom and Microsoft Form Component PCF controls, this approach ensures dynamic interactions with the host form data.

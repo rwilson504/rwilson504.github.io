@@ -16,8 +16,6 @@ draft: false
 originalBloggerUrl: /2021/06/enable-export-to-pdf-button-ribbon.html
 ---
 
-![2021-06-24_17-09-43](https://user-images.githubusercontent.com/7444929/123333167-658e9180-d50f-11eb-91e6-1ce770308f59.png)
-
 Dataverse allows you to easily generate your Word Templates as [PDF files](https://docs.microsoft.com/en-us/dynamics365/sales-enterprise/create-quote-pdf). Last year they expanded the functionality beyone just the out of the box sales entities to all custom entities. In order to enable the functionality though you need to do some configuration. Below are the different methods in which you can turn the PDF generation on or off for entities.
 
 **Note**: Aftert updating these settings in whatever manor make sure you [clear your browser data](https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd). The ribbon stores the values for which entities are enabled and disabled within the browser session. If you don’t do this you may not see the PDF generation buttons show up after you enable them.

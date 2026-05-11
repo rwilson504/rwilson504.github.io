@@ -35,6 +35,4 @@ Set-CsTeamsMeetingPolicy -Identity Global -AllowCloudRecording $true -AllowTrans
 ```
 
   
-These settings can also be updated using the Teams Admin website.  
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicd46LicaTxy8tu-1k6Ko83Bs9TACCcujneYDM928vSqe1U_cKxwGK9osK7pfzp44RV7xb7qBN6vlvvgfUEAVLesbuCvoFuM1dVl9GlqFyc0eTYT72WNytH31FD8c_AX4RUupv2A5dd9Y/s640/TeamsAdminEnableRecordingAndTranscription.PNG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicd46LicaTxy8tu-1k6Ko83Bs9TACCcujneYDM928vSqe1U_cKxwGK9osK7pfzp44RV7xb7qBN6vlvvgfUEAVLesbuCvoFuM1dVl9GlqFyc0eTYT72WNytH31FD8c_AX4RUupv2A5dd9Y/s1600/TeamsAdminEnableRecordingAndTranscription.PNG)
+These settings can also be updated using the Teams Admin website.

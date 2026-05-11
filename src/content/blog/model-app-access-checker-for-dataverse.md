@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2021/06/model-app-access-checker-for-dataverse.html
 ---
 
-![2021-06-28_13-53-22](https://user-images.githubusercontent.com/7444929/123683732-91b15780-d81a-11eb-9ae8-badf315269e1.png)
-
 Want to know which model applications your users have access to in Dataverse? Check out the app access checker that is available within the [Power Platform admin center](https://docs.microsoft.com/en-us/power-platform/admin/admin-guide). Enter a users Id or email address and see the list of published apps in your environment and all the access, license and security information specific to that user. This can be a very useful tool in troubleshooting why a user cannot see a specific app in your environment.
 
 Below are the different ways you can access the app access checker.

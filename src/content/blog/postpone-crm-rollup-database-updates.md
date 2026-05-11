@@ -22,8 +22,6 @@ To disable the automatic update you can use PowerShell or update the MSCRM\_CONF
 3. Right Click the **dbo.DeploymentProperties** table and select **Edit Top 200 Rows**
 4. Find the **AutomaticallyInstallDatabaseUpdates** key and update the **BitColumn** from True to **False**
 
-[![AutomaticallyInstallDatabaseUpdates](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzmUjIDtrT9ddih-9KZPXnRq7y3IjSvaxAGYUoj4LMoJoXCDvBN1XomJ-4iXbYS7yhFo1onWFRkBZvBZZV0X7DXlwvq80W8y7AEZGhMxAPqIDN_A9G30hdfaD7ki-QFiihXfJ7qmirRdU/?imgmax=800 "AutomaticallyInstallDatabaseUpdates")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAXKq8fjZB5Z1RBFkFBOx18p6GsXgjUnxsDI9YrGAYB1qg7OJlqxbcgOV-cKBnmLqQtOAyl-B62Rjt2VUq4jXcL52D3ViM0ECmPj1ncfYE505sFiJQPrzXylwo02OpuOziTqgQig1jDaM/s1600-h/AutomaticallyInstallDatabaseUpdates%25255B14%25255D.png)
-
 After installing the binary files for UR17 on each server you will then need to go into the CRM Deployment Manager and manually apply the updates for the organization.
 
 1. Start **Microsoft Dynamics CRM Deployment Manager**

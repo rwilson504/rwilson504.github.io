@@ -28,8 +28,6 @@ draft: false
 originalBloggerUrl: /2025/08/power-query-driftless-merges-using.html
 ---
 
-![Power Query: Driftless Merges using Table.Buffer](https://github.com/user-attachments/assets/a665d4aa-ae20-4998-a7ba-622ecb0dbd93)
-
 ## What happened
 
 Recently I was working on data where I needed to pick one best row per group, then merge that result with a lookup table. Here’s the head-scratcher I hit: the pick looked right in preview, but after the merge some groups showed different rows, like the merge had used the pre-pick data. What was happening is that Power Query re-evaluated and re-ordered things during the merge, which changed which row got selected. The fix was to freeze the picked result with `Table.Buffer` right after the pick so the merge used exactly those rows. I also made the lookup one row per key to avoid duplicate expands. After that, everything stayed stable on refresh.

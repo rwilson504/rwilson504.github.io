@@ -24,8 +24,6 @@ draft: false
 originalBloggerUrl: /2025/04/copy-hidden-power-automate-expressions.html
 ---
 
-![Copy Hidden Power Automate Expressions](https://github.com/user-attachments/assets/47b4c591-c27b-4594-b84e-c0b01e1b22b2)
-
 While recently walking a colleague through Power Automate, I was reminded of one of my long-standing frustrations: how difficult it is to copy expressions once they’ve been inserted into actions like a `Compose`, `Filter Array`, or `For Each`. For example:
 
 ```

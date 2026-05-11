@@ -18,8 +18,6 @@ draft: false
 originalBloggerUrl: /2025/08/locking-down-logic-app-consumption-with.html
 ---
 
-![Locking Down a Logic App (Consumption) with OAuth for Calls from Dataverse Plug-ins using Managed Identity](https://github.com/user-attachments/assets/473e9312-febc-44c9-a391-a2d94abeef8c)
-
 ## Why I did this
 
 I’m using **managed identity** to let a [Dataverse plug-in](https://learn.microsoft.com/en-us/power-platform/admin/managed-identity-overview) call Azure resources without storing secrets. One of those calls hits a **Logic App (Consumption)** via the *When an HTTP request is received* trigger. I wanted to ensure the workflow can **only** be invoked by callers from **my tenant** using **OAuth**—no shared access signature (SAS) keys. (If you’re on **Logic Apps Standard**, you’d typically use App Service “Easy Auth”.)

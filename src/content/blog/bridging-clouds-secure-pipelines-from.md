@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2025/08/bridging-clouds-secure-pipelines-from.html
 ---
 
-![Bridging Clouds: Secure Pipelines from Azure DevOps to GCC High](https://github.com/user-attachments/assets/334ce5c9-e2db-474b-a453-c46db56d8726)
-
 ## Introduction
 
 The goal of this setup is to allow an **Azure DevOps pipeline running in the Commercial cloud** to move files (e.g., build artifacts, documentation, or deployment packages) into a **Storage Account in GCC High**. Because these are two different clouds, the connection must be established carefully to remain **secure, compliant, and tenant-scoped**.

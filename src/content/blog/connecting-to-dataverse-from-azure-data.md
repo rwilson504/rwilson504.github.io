@@ -26,8 +26,6 @@ draft: false
 originalBloggerUrl: /2025/04/connecting-to-dataverse-from-azure-data.html
 ---
 
-![Connecting to Dataverse from Azure Data Factory](https://github.com/user-attachments/assets/d5f7a240-e1a7-472c-af1f-d62cde8fff8c)
-
 ## Introduction
 
 Azure Data Factory (ADF) provides versatile ways to connect and interact with Dataverse. Understanding the connection options and configurations is crucial for securely and efficiently managing your data integration tasks. This guide walks through the primary methods for connecting Azure Data Factory to Dataverse, covering their benefits, best practices, and detailed walkthroughs to get you started. provides versatile ways to connect and interact with Dataverse. Understanding the connection options and configurations is crucial for securely and efficiently managing your data integration tasks. This guide walks through the primary methods for connecting Azure Data Factory to Dataverse, covering their benefits, best practices, and detailed walkthroughs to get you started.

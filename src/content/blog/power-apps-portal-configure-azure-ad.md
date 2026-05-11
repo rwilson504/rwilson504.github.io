@@ -24,8 +24,6 @@ For this article my goals were the following.
 - Set the existing Azure AD and Local Login configuration as deprecated authentication mechanisms within the portal to migrate the users to B2C.
 - Allow user to authenticate to B2C using Azure AD, Google or create local B2C account.
 
-![Original log in screen](https://user-images.githubusercontent.com/7444929/148592406-10108368-93ab-4308-a721-23f4412a8a22.png "Original Login Screen")
-
 ## Deprecate Old Providers
 
 Once I had run through the [instructions](https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-azure-ad-b2c-provider) for configuring the Azure B2C authentication I then had to mark the Local Login and Azure AD authentication methods as deprecated. This ensures that when existing users log into the Portal using those methods, they will then be asked to migrate their account to B2C.

@@ -33,8 +33,7 @@ For those working in the U.S. Government or DoD/Military space needing the Power
 
 ## Video Tutorial
 
-Click the image below to open the YouTube video.  
-[![Install PowerApps Mobile for U.S. Government and DoD](http://img.youtube.com/vi/beWOKp0Xq4E/0.jpg)](http://www.youtube.com/watch?v=beWOKp0Xq4E "Install PowerApps Mobile for U.S. Government and DoD")
+Click the image below to open the YouTube video.
 
 ## Instructions
 
