@@ -49,18 +49,18 @@ Begin by registering an application in Azure Active Directory (Azure AD) that wi
 
    - The app automatically includes the `User.Read` permission under Microsoft Graph. No additional API permissions are needed.
 
-     ![image](https://github.com/user-attachments/assets/305136c5-4125-45f8-8bc0-3bdcfda94636)
+     ![image](/images/connecting-paconn-cli-tool-to-gcc-gcch/01-305136c5-4125-45f8-8bc0-3bdcfda94636.png)
 4. **Allow Public Client Flows**:
 
    - Under **Authentication** > **Advanced settings**, set **Allow public client flows** to **Yes**. This enables the device code flow, which `paconn` uses for authentication.
 
-     ![image](https://github.com/user-attachments/assets/08eebd97-9231-4987-9371-5655272f8aa5)
+     ![image](/images/connecting-paconn-cli-tool-to-gcc-gcch/02-08eebd97-9231-4987-9371-5655272f8aa5.png)
 5. **Copy Your IDs**:
 
    - After registering the application, go to the **Overview** section.
    - Copy the **Application (client) ID** and **Directory (tenant) ID**. These values will be used in the `connectionSettings.json` file in the next step.
 
-     ![image](https://github.com/user-attachments/assets/2005494b-492b-4865-8b23-e5cf3f4f9712)
+     ![image](/images/connecting-paconn-cli-tool-to-gcc-gcch/03-2005494b-492b-4865-8b23-e5cf3f4f9712.png)
 
 By the end of this step, you should have your **Application (client) ID** and **Directory (tenant) ID** ready for configuring the connection settings in the following step.
 
@@ -133,7 +133,7 @@ paconn download --settings connectionSettings.json
 
 This command will prompt you to choose the environment based on your `connectionSettings.json` file. After selecting the environment, you’ll be able to choose the connector you wish to download. The connector will be saved locally, along with a `settings.json` file.
 
-![image](https://github.com/user-attachments/assets/4720990c-d74f-44c3-af75-20489313e91b)
+![image](/images/connecting-paconn-cli-tool-to-gcc-gcch/04-4720990c-d74f-44c3-af75-20489313e91b.png)
 
 ## Step 5: Update the Connector
 
@@ -164,7 +164,7 @@ paconn update --settings settings.json
 
 This command will push the changes to the connector in the selected environment.
 
-![image](https://github.com/user-attachments/assets/2b8a4997-a344-4397-8f58-dcbe8ae5d38c)
+![image](/images/connecting-paconn-cli-tool-to-gcc-gcch/05-2b8a4997-a344-4397-8f58-dcbe8ae5d38c.png)
 
 ## Step 6: Create a New Connector
 

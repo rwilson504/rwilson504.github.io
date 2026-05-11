@@ -115,7 +115,7 @@ public class Script : ScriptBase
 }
 ```
 
-![Image of Custom Connector Code Step](https://github.com/rwilson504/Blogger/assets/7444929/5b05e8ba-7a08-4897-9ab4-f6d1fe6bc710)
+![Image of Custom Connector Code Step](/images/overcoming-openapi-20-multi/01-5b05e8ba-7a08-4897-9ab4-f6d1fe6bc710.png)
 
 ### Importance of Descriptive Parameter Descriptions
 

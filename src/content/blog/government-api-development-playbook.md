@@ -357,7 +357,7 @@ Creating a custom connector for the Power Platform involves careful selection of
 
 The Site Scanning program represents a pivotal federal initiative, automating the scanning of public federal websites to generate data on website health, policy compliance, and adherence to best practices. This program, provided as a no-cost shared service for federal agencies and the public, is built around the Federal Website Index, a comprehensive listing of all public federal .gov sites categorized by agency or department. Through daily scans, the program amasses over 1.5 million fields of data about approximately 26,000 federal .gov websites, all made accessible via an API and bulk download options.
 
-![GSA Site Scanning Program Website](https://github.com/rwilson504/Blogger/assets/7444929/8c411181-5072-496e-b4d4-1f28c01ef249)
+![GSA Site Scanning Program Website](/images/government-api-development-playbook/01-8c411181-5072-496e-b4d4-1f28c01ef249.png)
 
 #### Key Features and Benefits
 
@@ -379,7 +379,7 @@ Despite its numerous advantages, there are challenges associated with using the 
 
 - **Pagination Challenges**: Addressing the unique pagination method employed by the GSA Site Scanning API required a creative solution, as it diverges from the `@odata.nextLink` standard typically leveraged by Power Platform connectors for automatic paging. To facilitate efficient data access across the API’s extensive dataset, I devised a custom flow that leverages the pagination metadata provided by the API. This approach involves dynamically adjusting query parameters based on the pagination links and metadata supplied with each API response, allowing for seamless iteration through pages of data. By incorporating conditional checks and loop controls within the flow, I ensured complete and efficient data retrieval, effectively overcoming the API’s pagination challenge. This method demonstrates how developers can employ custom logic within Power Automate to handle non-standard pagination schemes, ensuring access to all available data without sacrificing performance or usability.  
      
-  ![Illustration of the custom pagination flow in Power Automate, demonstrating how pagination metadata is utilized to navigate through pages of data.](https://github.com/rwilson504/Blogger/assets/7444929/6eee21b3-6c01-46d7-a140-2da36bd674ba)
+  ![Illustration of the custom pagination flow in Power Automate, demonstrating how pagination metadata is utilized to navigate through pages of data.](/images/government-api-development-playbook/02-6eee21b3-6c01-46d7-a140-2da36bd674ba.png)
 - **OpenAPI 3.0 Format**: The API’s OpenAPI file is provided in OpenAPI 3.0 format, which is currently not directly supported for custom connectors on the Power Platform. This necessitates converting the file to OpenAPI 2.0 (Swagger), requiring additional steps and potentially external tooling like Apimatic or the `api-spec-converter` command-line tool. This conversion process, although manageable, introduces an extra layer of complexity to the connector development workflow.
 
 By carefully considering these advantages and challenges, developers can make informed decisions about using the GSA Site Scanning API for creating custom connectors, ensuring a balanced approach to leveraging this resource within the Power Platform ecosystem.
@@ -397,7 +397,7 @@ This real-world example serves as a valuable reference for your own connector de
 
 #### Step 1: Obtaining the API Key for the GSA Site Scanning API
 
-![GSA API Key Signup](https://github.com/rwilson504/Blogger/assets/7444929/e26cc294-2e67-41c7-91c2-c5a3373df144)
+![GSA API Key Signup](/images/government-api-development-playbook/03-e26cc294-2e67-41c7-91c2-c5a3373df144.png)
 
 Before you can start building your custom connector, you need to secure an API key, which serves as your access credential for the GSA Site Scanning API. Here’s how to go about it:
 
@@ -579,7 +579,7 @@ After enhancing the OpenAPI definition file with extended attributes and adding 
    - **Icon**: For this particular connector, an icon will not be used. When choosing to include an icon for other connectors, ensure it meets the [artifacts requirements](https://learn.microsoft.com/en-us/connectors/custom-connectors/certification-submission#step-5-prepare-the-connector-artifacts) set by Microsoft, which includes specifications for size, format, and design.
    - **Color**: Set the connector’s color to `#da3b01`. This specific color is a requirement for independent connectors, helping to distinguish them visually within the Power Platform ecosystem.
 
-   ![Custom Connector Configuration Page](https://github.com/rwilson504/Blogger/assets/7444929/bc7b4afc-068a-4e3a-849f-965547088c2a)
+   ![Custom Connector Configuration Page](/images/government-api-development-playbook/04-bc7b4afc-068a-4e3a-849f-965547088c2a.png)
 
    Incorporate these configuration details carefully to align with the platform’s standards and increase the likelihood of your connector being approved for publication. Further refine authentication methods, actions, triggers, parameters, and general information according to the functionality and data flow defined in your OpenAPI file.
 
@@ -590,13 +590,13 @@ After configuring your custom connector, the crucial next steps involve saving y
 1. **Saving the Connector**: Make sure all configurations are accurately applied and save your custom connector.
 2. **Testing the Connector**: Utilize the testing feature within the custom connector editor on the Power Platform. This enables you to run each action defined in the connector to verify correct interaction with the API and appropriate response handling.
 
-   ![Custom Connector Test Area](https://github.com/rwilson504/Blogger/assets/7444929/2b6b182b-f55e-4d25-b041-7a2644223eb6)
+   ![Custom Connector Test Area](/images/government-api-development-playbook/05-2b6b182b-f55e-4d25-b041-7a2644223eb6.png)
 3. **Encountering and Resolving Errors**: During testing, you may run into various schema validation errors. Addressing these errors is key to ensuring your connector’s reliability and user-friendliness.
 
    - **Remove ‘Required’ Sections from Response Schemas**: For return schemas (those defining API responses), removing the “required” section can prevent issues where the actual API response does not strictly adhere to the expected schema, particularly for non-mandatory fields.
    - **Adjusting for Type Mismatches**: Use the Swagger Editor, accessible via a toggle in the custom connector editor, to quickly edit the Swagger (OpenAPI) information. This allows for rapid adjustments to resolve type mismatches and other schema validation errors highlighted during testing.
 
-     ![Using Swagger Editor in Custom Connector UI](https://github.com/rwilson504/Blogger/assets/7444929/8bafc5b5-2912-46e2-87a6-acea7de1b248)
+     ![Using Swagger Editor in Custom Connector UI](/images/government-api-development-playbook/06-8bafc5b5-2912-46e2-87a6-acea7de1b248.png)
 4. **Re-testing After Making Adjustments**: Once you’ve made the necessary corrections, conduct another round of tests to ensure all issues have been resolved. Continue refining and testing until the connector performs flawlessly across all operations.
 
 Thorough testing and diligent error resolution are indispensable for preparing your custom connector for deployment or submission as an independent publisher. By meticulously addressing any issues encountered during the testing phase, you ensure the connector is robust, functional, and ready for use within the Power Platform ecosystem.
@@ -697,11 +697,11 @@ Contributing a new connector to the PowerPlatformConnectors GitHub repository re
      paconn validate --api-def apiDefinition.swagger.json
      ```
 
-     ![Output of paconn validate Command](https://github.com/rwilson504/Blogger/assets/7444929/6cf8aedf-4a9f-4b18-be73-579163ac2b88)
+     ![Output of paconn validate Command](/images/government-api-development-playbook/07-6cf8aedf-4a9f-4b18-be73-579163ac2b88.png)
 6. **Submitting a Pull Request and Providing Proof of Testing**  
    After finalizing your connector, you’ll need to submit a pull request from your fork to the main PowerPlatformConnectors repository, targeting the `dev` branch. To ensure your submission will be accepted:
 
-   ![Pull Request](https://github.com/rwilson504/Blogger/assets/7444929/83321919-43a1-45b8-962b-ee2159f57184)
+   ![Pull Request](/images/government-api-development-playbook/08-83321919-43a1-45b8-962b-ee2159f57184.png)
 
    - **Attach Images of Successful Action Tests**: Include screenshots that show each action of your connector running successfully within Power Automate. These images should clearly demonstrate the action configurations and the successful outcomes.
    - **Screenshots of Working Flows**: Add screenshots of the Power Automate flows you’ve created using your connector, showcasing successful execution. These provide concrete examples of how your connector operates in real-world scenarios.

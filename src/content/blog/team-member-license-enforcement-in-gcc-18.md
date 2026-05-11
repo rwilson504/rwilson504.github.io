@@ -35,15 +35,15 @@ Additional information on the license enforcement can be found on the [Microsoft
 ## What are the team license types?
 
 To better understand what licenses you currently have in your environment let’s take a look the different team licenses. The image below shows you the display names of the different team licenses available and what they can access. As you can see there is a **Dynamics 365 for Team Members for Government** that has no restrictions. These licenses were the ones purchased by organizations before October 2018. If your users have this license you will not see any changes and your apps will continue to work correctly. That being said upgrading these to Power Apps licenses can open up a lot of new opportunity. If you have the **Dynamics 365 for Team Members for Government** or **PowerApps for Dynamics 365 Team Members for Government** you will soon be limited to limited first party apps.  
-![image](https://user-images.githubusercontent.com/7444929/118153725-3818d900-b3e4-11eb-8269-ca393c7b60f2.png)
+![image](/images/team-member-license-enforcement-in-gcc-18/01-118153725-3818d900-b3e4-11eb-8269-ca393c7b60f2.png)
 
 ## Where do i find my license types?
 
 Within the Azure Portal you can go to the Azure Active Directory area and look at the license that are displayed there.  
-![AzureLicenseInfo](https://user-images.githubusercontent.com/7444929/118158381-b2982780-b3e9-11eb-992d-a3cd44b46e3d.gif)
+![AzureLicenseInfo](/images/team-member-license-enforcement-in-gcc-18/02-118158381-b2982780-b3e9-11eb-992d-a3cd44b46e3d.gif)
 
 As an individual user you can check your license by going to your [Office 365 account page](https://portal.office.com/account/) and clicking the link for subscriptions.  
-![UserLicenseInfo](https://user-images.githubusercontent.com/7444929/118158401-b9269f00-b3e9-11eb-8d09-726c7f3fb9ea.gif)
+![UserLicenseInfo](/images/team-member-license-enforcement-in-gcc-18/03-118158401-b9269f00-b3e9-11eb-8d09-726c7f3fb9ea.gif)
 
 ## So what should i do?
 

@@ -74,7 +74,7 @@ Final      = Table.ExpandTableColumn(Merged, "Right", {"R1","R2"}, {"R1","R2"});
 
 Here is a side-by-side Power Query comparison showing why buffering matters. Both queries “pick” 4 rows before the merge. After the merge, the unbuffered query returns 5 rows and shows a changed pick, while the buffered query returns the expected 4 rows that match the pick.
 
-![image](https://github.com/user-attachments/assets/df4c6655-3b52-4ff7-b757-f0e5c1387bfb)
+![image](/images/power-query-driftless-merges-using/01-df4c6655-3b52-4ff7-b757-f0e5c1387bfb.png)
 
 ## Reproduce the issue and the fix
 

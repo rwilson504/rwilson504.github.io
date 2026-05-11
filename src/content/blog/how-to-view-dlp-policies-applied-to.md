@@ -35,7 +35,7 @@ To get your environment ID:
 3. Select the environment you want to inspect.
 4. Under the **Details** or **Overview** section, locate the **Environment ID** (a GUID string).
 
-![image](https://github.com/user-attachments/assets/1318a95e-7fa4-4ea1-b5a1-5c8feabacb03)
+![image](/images/how-to-view-dlp-policies-applied-to/01-1318a95e-7fa4-4ea1-b5a1-5c8feabacb03.png)
 
 ### Step 2: Use the URL to View Applied DLP Policies
 
@@ -61,9 +61,9 @@ Example:
 https://admin.powerplatform.microsoft.com/security/dataprotection/dlp/environmentFilter/f4834a12-5388-4f41-b755-cce6a52d38a0
 ```
 
-![image](https://github.com/user-attachments/assets/ed7086a9-5d03-48bf-9216-0197d1a94b5e)
+![image](/images/how-to-view-dlp-policies-applied-to/02-ed7086a9-5d03-48bf-9216-0197d1a94b5e.png)
 
-![image](https://github.com/user-attachments/assets/b2485972-3f21-4dd7-922f-4475cf5a940b)
+![image](/images/how-to-view-dlp-policies-applied-to/03-b2485972-3f21-4dd7-922f-4475cf5a940b.png)
 
 These URLs take you directly to the list of DLP policies scoped to that environment, saving you time from clicking into each policy manually.
 

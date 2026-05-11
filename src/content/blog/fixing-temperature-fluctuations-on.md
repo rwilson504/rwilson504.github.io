@@ -26,7 +26,7 @@ This issue led me to discover **PID tuning**, a way to calibrate how the printer
 
 1. Open the **Terminal tab** in OctoPrint.
 
-   ![image](https://github.com/user-attachments/assets/33200617-3dae-4a85-a20d-776f5d7e93d3)
+   ![image](/images/fixing-temperature-fluctuations-on/01-33200617-3dae-4a85-a20d-776f5d7e93d3.png)
 2. **Turn on the cooling fan** before tuning for accuracy, if you typically run the fan during your prints:
 
    ```

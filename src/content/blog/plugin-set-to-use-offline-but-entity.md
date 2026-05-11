@@ -22,6 +22,6 @@ After reviewing the code for the plugin I realized that it was attempting to reg
 
 The problem there was that the Entity was not set for Offline mode.
 
-[![offlinesettings](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKZUERCoMf3bCveDu2ZwteY3AwVG_xQWd0lZbB9CP8BBpzT0bxlJ4-YHDyJvk5flSbsbfGeda-YiE8O2mmsQchDXp3dcAnnZnYbqmhC4VmFakQ5POmQpnn8N1N3-3EkHvu2lG-dwlfkpw/?imgmax=800 "offlinesettings")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBiSETWE2dTQk-I2V34vMbh_JdCpoC4cULnUt9ulHbez0OjA_9Ec1Lp7RGXYSO8eIFvH74HNqQeaA5JM9xNZV-fkNmEbEKgJ4jfbZpbIGRLgY-EJ4PgKmfbyi1tk0bNqISnlGXIxncAJE/s1600-h/offlinesettings%25255B4%25255D.png)
+[![offlinesettings](/images/plugin-set-to-use-offline-but-entity/01-img.png "offlinesettings")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBiSETWE2dTQk-I2V34vMbh_JdCpoC4cULnUt9ulHbez0OjA_9Ec1Lp7RGXYSO8eIFvH74HNqQeaA5JM9xNZV-fkNmEbEKgJ4jfbZpbIGRLgY-EJ4PgKmfbyi1tk0bNqISnlGXIxncAJE/s1600-h/offlinesettings%25255B4%25255D.png)
 
 One the entity was updated the solution installed correctly.

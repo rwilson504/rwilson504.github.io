@@ -23,8 +23,8 @@ Consider that Microsoft sees this as the “proper way” to do things you might
 
 All of this works if you are on an entity form because Xrm.Page.ui.refreshRibbon() is available.  Unfortunately if you are in a grid such as the one displayed below, Xrm.Page.ui is null, which means you cannot call the refreshRibbon() method.
 
-[![test2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWbPPIUl_9SBlVoSuI62-k7RCTlQeQaFtvovX_ZWVofhHqGQGFpty7WSVu5O5qwl-yP8c_JSNe_aRqkctGed7ajl2ge-2P0V32tMXBerRR9DgWPz9ejGxID7DH66YCO8OJ7zIiUKOjyRc/?imgmax=800 "test2")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibQYZwcOcd9wVu2fM5yPKrO0qYHHBNx2YCRuPhTnuYcYdje6yt1jL0oIf0Zu2ZjIH8RzvGrr7h0B1aDpSvbKlSXSxgxoGIrZF3zX2Eay46d3RtzKtNQTOQwGFOx0dnT00CPRsVDJncgSg/s1600-h/test2%25255B5%25255D.png)
+[![test2](/images/xrmpageui-not-available-on-primary-grid/01-img.png "test2")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibQYZwcOcd9wVu2fM5yPKrO0qYHHBNx2YCRuPhTnuYcYdje6yt1jL0oIf0Zu2ZjIH8RzvGrr7h0B1aDpSvbKlSXSxgxoGIrZF3zX2Eay46d3RtzKtNQTOQwGFOx0dnT00CPRsVDJncgSg/s1600-h/test2%25255B5%25255D.png)
 
 DAGGER!!!!!!
 
-If anyone knows a way in which to get around this please leave a comment ![Smile](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4lmhX8SUlEpI1tAQ2OxCrWgW49s8SB1Ei2dBcM8lDPk5ssPToBiq0gFo2xoqb0F5DPUpHLHpfOyuW10ncER5vTq9cvW46hWrph6ODQSAYto66g1YbO6DL-NrZgV-q8d2cHPxiS5CqNug/?imgmax=800)
+If anyone knows a way in which to get around this please leave a comment ![Smile](/images/xrmpageui-not-available-on-primary-grid/02-img.png)

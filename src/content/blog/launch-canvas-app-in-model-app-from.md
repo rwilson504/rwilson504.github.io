@@ -29,7 +29,7 @@ Create a new HTML WebResource. You can download the source [here](https://gist.g
 .gist-file
 .gist-data {max-height: 500px;}
 
-![New WebResource](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/WebResourceNew.png?raw=true)
+![New WebResource](/images/launch-canvas-app-in-model-app-from/01-WebResourceNew.png)
 
 ## Add A SiteMap Link Using Data Parameter
 
@@ -50,20 +50,20 @@ main.aspx/webresources/raw_CanvasAppInModel.html?Data=canvasappname%3Draw_canvas
 As you can see in the example the Data property appears to have several other parameters in it but they have all been encoded. If you want to see values decoded copy the contents of the data parameter use the decodeURIComponent command in a console window or use a website like this [Decode/Encode](https://meyerweb.com/eric/tools/dencoder/).
 
 Encoded Data Parameter  
-![Encoded Data Parameter](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/EncodedParams.png?raw=true)
+![Encoded Data Parameter](/images/launch-canvas-app-in-model-app-from/02-EncodedParams.png)
 
 Decoded Data Parameter  
-![Decoded Data Parameter](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/DecodedParams.png?raw=true)
+![Decoded Data Parameter](/images/launch-canvas-app-in-model-app-from/03-DecodedParams.png)
 
 **IMPORTANT NOTE - The SiteMap editor in the Maker portal will break your link to the WebResource if you use it to edit the sitemap. This happens when you click on your subarea because the editor will decode all of your data parameters. So make sure you edit your sitemap using [XrmToolbox](https://www.xrmtoolbox.com/) or an XML editor.**
 
-![Do Not Use Make Sitemap Editor](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/SiteMapLink.png?raw=true)
+![Do Not Use Make Sitemap Editor](/images/launch-canvas-app-in-model-app-from/04-SiteMapLink.png)
 
-![Use XrmToolbox](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/SiteMapLinkXrmToolbox.png?raw=true)
+![Use XrmToolbox](/images/launch-canvas-app-in-model-app-from/05-SiteMapLinkXrmToolbox.png)
 
 Looking at the parameters we can see that I have included three in this example. This list is just an example, as long as you include the canvasappname you can include however many other parameters you want!
 
-- canvasappname - (Required) This is used by the WebResource to determine which Canvas App to open. To get the name of your App open the maker portal and look at the Name field for your App. ![Canvas App Name](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/CanvasAppName.png?raw=true)
+- canvasappname - (Required) This is used by the WebResource to determine which Canvas App to open. To get the name of your App open the maker portal and look at the Name field for your App. ![Canvas App Name](/images/launch-canvas-app-in-model-app-from/06-CanvasAppName.png)
 - newwindow - (Optional) This parameter will allow you to open the canvas app in a new window instead of embedding it in the Model App. Set this parameters to true or 1 if you want this app to open in another window.
 - source - (Optional) Can be used within your Canvas app to determine which application or SiteMap link the app is being opened by. You could use this to determine which screen in your Canvas App should be opened when the link is clicked if you use a single Canvas App for multiple functions.
 - screencolor - (Optional) Affects the loading screen color when the Canvas App is being accessed. This takes in an rgba value. For more information on this parameters check out the Microsoft article on [Embedding Canvas Apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/embed-apps-dev).
@@ -144,17 +144,17 @@ After you have adjusted your code ad the file as a WebResource and create a Site
 
 If you would like to make sure that your Canvas App fits completely within the content window without any space on the left or right it’s important to turn off the “Lock aspect ratio” setting with your app. This can be done within the Canvas Editor by going to **Setting -> Screen size + orientation** and un-setting the toggle for **Lock aspect ratio**. Make sure after you complete this you hit the **Apply** button in the lower right hand screen and Save/Publish the app.
 
-![Turn off Lock aspect ratio](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/LockAspectRatioOff.png?raw=true)
+![Turn off Lock aspect ratio](/images/launch-canvas-app-in-model-app-from/07-LockAspectRatioOff.png)
 
 Here is what the app looks like with the Lock aspect ratio turned off.  
-![App with Lock aspect ratio off](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/AppWithAspectOff.png?raw=true)
+![App with Lock aspect ratio off](/images/launch-canvas-app-in-model-app-from/08-AppWithAspectOff.png)
 
 Here is what it looks ike with it turned on. You will notice that there is now grey padding around the app.  
-![App with Lock aspect ratio on](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/AppWithAspectOn.png?raw=true)
+![App with Lock aspect ratio on](/images/launch-canvas-app-in-model-app-from/09-AppWithAspectOn.png)
 
 Additionally with the Lock aspect radio turned off we can now set elements within our app to span the entire screen. For example you can create a banner whose width is set to the Parent.Width of the app and that bar will be displayed across the entire app.
 
-![App Banner](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/LauncherBarFullScreenWidth.png?raw=true)
+![App Banner](/images/launch-canvas-app-in-model-app-from/10-LauncherBarFullScreenWidth.png)
 
 ## Getting the Parameters In Your Canvas App
 
@@ -162,11 +162,11 @@ Canvas App provide a function called **Param** which can be used to get the para
 
 **Also make sure you note that parameter names are case sensitive.**
 
-![Get Param](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/ParamFunction.png?raw=true)
+![Get Param](/images/launch-canvas-app-in-model-app-from/11-ParamFunction.png)
 
 Next we can utilize the parameters we have passed to accomplish things in our Canvas App such as opening other Canvas App or Links to Record in our Model App.
 
-![All Params](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/AllParams.png?raw=true)
+![All Params](/images/launch-canvas-app-in-model-app-from/12-AllParams.png)
 
 ## Building a Link Back to A Record In the Model App
 
@@ -174,10 +174,10 @@ Having the Model App Url and Id can be very helpful if we ever want to create li
 
 This utilizes the Launch function and builds our the Model App url using the parameter. As of now the Launch function will open this link in a new tab. Opening it in a new window or the current window is in preview and available on some environments.
 
-![Build Link to Model App](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/LaunchExistingRecord.png?raw=true)
+![Build Link to Model App](/images/launch-canvas-app-in-model-app-from/13-LaunchExistingRecord.png)
 
 Now when we click on the button we will get a new tab with the Contacts entity record displayed.  
-![Contact Record](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/OpensExistingRecord.png?raw=true)
+![Contact Record](/images/launch-canvas-app-in-model-app-from/14-OpensExistingRecord.png)
 
 ## Building a Link to Another Canvas App
 
@@ -186,10 +186,10 @@ In my example i am building a Menu function which will allow users to complete o
 To start we need to get the App Id of the other Canvas App. We can do this by adding the Canvas App data source to our Canvas App and then filtering down on the Name field to get the app we want. You can get the name of the other app by opening the Make portal and looking at the Apps name field.
 
 In this example I have created a variable in my App Start to get the Id of the App I wanted.  
-![Store App Id](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/CanvasAppId.png?raw=true)
+![Store App Id](/images/launch-canvas-app-in-model-app-from/15-CanvasAppId.png)
 
 Then create a button to Launch the new app in another tab.  
-![Launch App](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/LaunchAnotherCanvasApp.png?raw=true)
+![Launch App](/images/launch-canvas-app-in-model-app-from/16-LaunchAnotherCanvasApp.png)
 
 The other app will be opened.  
-![App Launched](https://github.com/rwilson504/Blogger/blob/master/Launch-Canvas-From-Model-Sitemap/LaunchAnotherApp.png?raw=true)
+![App Launched](/images/launch-canvas-app-in-model-app-from/17-LaunchAnotherApp.png)

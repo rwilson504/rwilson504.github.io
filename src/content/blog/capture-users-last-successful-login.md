@@ -30,15 +30,15 @@ To populate the **Last Successful Login** field on the Contact table using the W
 
 To get started navigate to the Portal Management app.
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/791dabfa-61ba-4e67-a2ea-7f9a14a04ab4)
+![image](/images/capture-users-last-successful-login/01-791dabfa-61ba-4e67-a2ea-7f9a14a04ab4.png)
 
 Create a new Table permission that will allow for a user to update and read their own contact record.
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/5d87fd8f-d229-49ea-96e8-b57652aea452)
+![image](/images/capture-users-last-successful-login/02-5d87fd8f-d229-49ea-96e8-b57652aea452.png)
 
 Add the Authenticated User web role to the Table Permission.
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/dbac581d-0c37-4def-8390-0c9a5beada88)
+![image](/images/capture-users-last-successful-login/03-dbac581d-0c37-4def-8390-0c9a5beada88.png)
 
 ### Create Web API Settings
 
@@ -51,13 +51,13 @@ Note: In the site settings below we are using the out of the box column provided
 | Webapi/contact/enabled | true |
 | Webapi/contact/fields | adx\_identity\_lastsuccessfullogin |
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/2029d2d7-bdcd-40fa-91c0-3e535bc08147)
+![image](/images/capture-users-last-successful-login/04-2029d2d7-bdcd-40fa-91c0-3e535bc08147.png)
 
 ### DROP THE CODE!!
 
 Finally we will navigate to the Enable Traffic Analysis section of the App. From here select the website and then copy the code below and click save. If you are also doing Application Insights tracking (which is always a good idea), just copy this code below the code for that.
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/f2b464a0-4354-42e3-a9a5-2b9a14b7fe96)
+![image](/images/capture-users-last-successful-login/05-f2b464a0-4354-42e3-a9a5-2b9a14b7fe96.png)
 
 Code to be copied into the Tracking Code content snippet:
 

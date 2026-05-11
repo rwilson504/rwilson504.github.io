@@ -20,7 +20,7 @@ While working on creating a page to open a Canvas app full screen inside of a Mo
 Use XRMToolbox SiteMap editor to create your sub area.
 
 Do not use the Maker Portal Experience.  
-![Do Not Use Default Sitemap Editor](https://github.com/rwilson504/Blogger/blob/master/PassParametersToWebResourceFromSitemap/addurl.png?raw=true)
+![Do Not Use Default Sitemap Editor](/images/pass-custom-parameters-to-webresource/01-addurl.png)
 
 Here is the correctly formatted URL to use and an example of how to use it.
 
@@ -33,7 +33,7 @@ main.aspx/webresources/raw_CanvasAppInModel.html?Data=CanvasAppName=Test
 ```
 
 To encode your parameters just open the console in your browser by hitting the F12 button and run the encodeURIComponent function on your parameters.  
-![EncodeURI](https://github.com/rwilson504/Blogger/blob/master/PassParametersToWebResourceFromSitemap/encodeuri.png?raw=true)
+![EncodeURI](/images/pass-custom-parameters-to-webresource/02-encodeuri.png)
 
 In order to get the values of the Data parameter in your WebResource you can follow the instruction and code from Microsoft in the link below.
 

@@ -19,7 +19,7 @@ originalBloggerUrl: /2021/06/open-model-apps-url-using-unique-name.html
 
 When generating links for records, lists or reports in a Dataverse environment it is important that they open the specific application they relate to so users have the best experience. To see more details about generating links for Dataverse [click here.](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/open-forms-views-dialogs-reports-url?view=op-9-1)
 
-![2021-06-23_10-59-18](https://user-images.githubusercontent.com/7444929/123127398-3ba67380-d418-11eb-9eff-85b6f39d2ed5.png)  
+![2021-06-23_10-59-18](/images/open-model-apps-url-using-unique-name/01-123127398-3ba67380-d418-11eb-9eff-85b6f39d2ed5.png)  
 This image shows the message bar displayed within Dataverse when you open a link not directed to a specific application.
 
 Previously in order to open a specific application using a link you had to create the it with the [app suffix url](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/manage-access-apps-security-roles?view=op-9-1) or append the appid parameters to the url. In order to get either of those dynamically you need to query the Model-driven Apps (appmodule) entity and return the url attribute for the suffix or the appmoduleid attribute for the app id.

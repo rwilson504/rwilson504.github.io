@@ -28,7 +28,7 @@ This PCF control allows you to display information for a view that contains lati
 
 After you install the solution into your system create a new view and add the custom control to the view. Ensure you add the required fields to the view and any filter you want. After you create the view Publish the customizations and navigate to the new view. The video below provides additional details.
 
-![Bing Maps Control installation Usage](https://github.com/rwilson504/Blogger/blob/master/Bing-Maps-Control/images/bingmapcontrolusage.gif?raw=true)
+![Bing Maps Control installation Usage](/images/bing-maps-pcf-control/01-bingmapcontrolusage.gif)
 
 ## Download
 

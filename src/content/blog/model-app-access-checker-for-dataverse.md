@@ -35,9 +35,9 @@ https://<Your Org>.crm.dynamics.com/WebResources/msdyn_AppAccessChecker.html
 ## Power Platform Admin Center
 
 - Open the Power Platform admin center <https://admin.powerplatform.microsoft.com/>
-- On the Environments list click the link for the environment you would like to check.![2021-06-28_13-33-25](https://user-images.githubusercontent.com/7444929/123683771-9fff7380-d81a-11eb-9e26-2a35f9541c76.png)
-- Click on **See all** under the User heading the Action area. ![2021-06-28_13-26-21](https://user-images.githubusercontent.com/7444929/123683856-b6a5ca80-d81a-11eb-9240-9fa292e5b1ec.png)
-- Click the **app access checker** link located above the Users list.![2021-06-28_13-26-02](https://user-images.githubusercontent.com/7444929/123683866-b9a0bb00-d81a-11eb-86cb-1ddeb5eb9bf3.png)
+- On the Environments list click the link for the environment you would like to check.![2021-06-28_13-33-25](/images/model-app-access-checker-for-dataverse/01-123683771-9fff7380-d81a-11eb-9e26-2a35f9541c76.png)
+- Click on **See all** under the User heading the Action area. ![2021-06-28_13-26-21](/images/model-app-access-checker-for-dataverse/02-123683856-b6a5ca80-d81a-11eb-9240-9fa292e5b1ec.png)
+- Click the **app access checker** link located above the Users list.![2021-06-28_13-26-02](/images/model-app-access-checker-for-dataverse/03-123683866-b9a0bb00-d81a-11eb-86cb-1ddeb5eb9bf3.png)
 
 ## WebAPI Call
 

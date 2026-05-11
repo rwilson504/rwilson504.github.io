@@ -42,12 +42,12 @@ Below is the web template code for a classification banner component that allows
 
 - Navigate to the Power Pages Management App via the Power Pages Maker Portal.
 
-![image](https://github.com/user-attachments/assets/9fb49f6a-093f-49b0-86a4-03218599b974)
+![image](/images/using-web-templates-as-custom/01-9fb49f6a-093f-49b0-86a4-03218599b974.png)
 
 - Create a new Web Template record.
 - Paste the code into the Source field and save the record.
 
-![image](https://github.com/user-attachments/assets/4c6ff8ae-ccf2-4076-ba0d-365006b25f8c)
+![image](/images/using-web-templates-as-custom/02-4c6ff8ae-ccf2-4076-ba0d-365006b25f8c.png)
 
 ```
 {% manifest %}
@@ -94,15 +94,15 @@ To insert the component into the header, use the **VS Code Editor** built into P
 {% component name="Classification Banner" position="top" text="Confidential" backgroundColor="#0033a0" %}
 ```
 
-![image](https://github.com/user-attachments/assets/635eedb3-f6c5-4a99-9b91-ac73b0f1dc48)
+![image](/images/using-web-templates-as-custom/03-635eedb3-f6c5-4a99-9b91-ac73b0f1dc48.png)
 
-![image](https://github.com/user-attachments/assets/fde83ee6-fbba-4ab4-b128-0fd7c7332797)
+![image](/images/using-web-templates-as-custom/04-fde83ee6-fbba-4ab4-b128-0fd7c7332797.png)
 
 ### Step 3: Modifying Component Settings
 
 Once the component is placed on a page, you can modify its settings directly within the editor. If the component is added to a header or footer, you will need to return to the **VS Code Editor** to make changes.
 
-![image](https://github.com/user-attachments/assets/77a45c4c-2c34-44c9-b809-5c1b6fb84585)
+![image](/images/using-web-templates-as-custom/05-77a45c4c-2c34-44c9-b809-5c1b6fb84585.png)
 
 ### Step 4: Editing Web Templates in Restricted Environments
 

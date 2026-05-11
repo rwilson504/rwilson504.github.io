@@ -48,7 +48,7 @@ In short, AutoGPT is like a helpful middleman between you and a super-smart AI, 
 
    - Update the `OPENAI_API_KEY` in the `.env` file with your Azure OpenAI API key, found in the Azure portal under your OpenAI service’s “Keys and Endpoints”.
 
-     ![image](https://github.com/rwilson504/Blogger/assets/7444929/2f3968ad-27cb-4266-9b91-07d116908595)
+     ![image](/images/step-by-step-to-success-run-autogpt/01-2f3968ad-27cb-4266-9b91-07d116908595.png)
 4. **Docker and Azure YAML Setup**:
 
    - Copy the `azure.yaml.template` file to `C:\Auto-GPT` rename it to `azure.yaml` we will adjust it later according to our Azure OpenAI service details.
@@ -94,7 +94,7 @@ In short, AutoGPT is like a helpful middleman between you and a super-smart AI, 
 5. **Deploy Azure AI Models**:
    - Use [Azure AI Studio](https://oai.azure.com/portal) to deploy necessary models like `gpt-4` and `gpt-3.5-turbo-text-embedding-ada-002`, setting deployment names to match the model names for simplicity.
 
-     ![image](https://github.com/rwilson504/Blogger/assets/7444929/51e4ed6d-ffe3-4bc1-9acb-2fb43f47528b)
+     ![image](/images/step-by-step-to-success-run-autogpt/02-51e4ed6d-ffe3-4bc1-9acb-2fb43f47528b.png)
 
 ### Final Adjustments
 
@@ -103,12 +103,12 @@ In short, AutoGPT is like a helpful middleman between you and a super-smart AI, 
    - Set `azure_api_type` to `azure`, ensuring the use of the API key for authentication. If you want to use Azure AD you can set the parameter to `azure_ad`. This will also require that you use an auth token as your OPENAPI\_API\_KEY. Instructions on how to obtain this token can be found in [How to Configure AutoGPT with Azure OpenAI Active Directory Managed Identity](https://gist.github.com/primaryobjects/523577860628974501ffd3c52cd73525).
    - The `azure_api_base` and `azure_api_version` was determined using the [Azure AI Studio’s](https://oai.azure.com/portal) chat playground “View code” feature.
 
-     ![image](https://github.com/rwilson504/Blogger/assets/7444929/d5888573-532e-4f7e-880d-84280ec2e80c)
+     ![image](/images/step-by-step-to-success-run-autogpt/03-d5888573-532e-4f7e-880d-84280ec2e80c.png)
 
-     ![image](https://github.com/rwilson504/Blogger/assets/7444929/770210c4-1aa1-4d57-8aa1-cb7b7de7a386)
+     ![image](/images/step-by-step-to-success-run-autogpt/04-770210c4-1aa1-4d57-8aa1-cb7b7de7a386.png)
    - For azure\_model\_map, an iterative approach was taken. Initially, no mappings were specified. After running the Docker command, errors indicating missing models were used to gradually populate this section with the correct model mappings. This process involved mapping the AutoGPT’s expected model names to the corresponding deployment names in Azure AI Studio.
 
-     ![2024-02-28_16-36-06](https://github.com/rwilson504/Blogger/assets/7444929/41dc5ec2-a20f-4518-a815-4eb57beeeef0)
+     ![2024-02-28_16-36-06](/images/step-by-step-to-success-run-autogpt/05-41dc5ec2-a20f-4518-a815-4eb57beeeef0.png)
 
    Complete azure.yaml file.
 

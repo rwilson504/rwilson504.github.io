@@ -43,7 +43,7 @@ This setup allows you to configure fiscal years according to your organizationâ€
 
 To automate the numbering, I developed a plugin that runs on the `pre-create` event of the target table, which in this example is **Invoices**. This plugin increments the last number in the **Fiscal Year Counter** table based on the current fiscal year and assigns the new number to the invoice.
 
-![Plugin Step on Invoice](https://github.com/user-attachments/assets/894a9e17-4ce4-4b8a-848c-b731026822be)
+![Plugin Step on Invoice](/images/custom-auto-number-in-dataverse-with/01-894a9e17-4ce4-4b8a-848c-b731026822be.png)
 
 ### Using the Record Creation Date to Determine the Fiscal Year
 
@@ -214,13 +214,13 @@ You can download the sample solutions here:
 
 Below are screenshots showing the setup of the **Fiscal Year Counter** records. These screenshots demonstrate how to configure the Name, Start Date, End Date, and Last Number fields.
 
-![Fiscal Year Counter Records](https://github.com/user-attachments/assets/b1a3a869-8bec-4ddc-896b-332b973c381e)
+![Fiscal Year Counter Records](/images/custom-auto-number-in-dataverse-with/02-b1a3a869-8bec-4ddc-896b-332b973c381e.png)
 
 ### Creating New Invoices
 
 Here are screenshots showing the process of creating new invoices with the custom auto-numbering system in place. Youâ€™ll see how the plugin automatically assigns a unique invoice number based on the current fiscal year using the record creation date.
 
-![New Invoice Creation](https://github.com/user-attachments/assets/ff4430f2-5351-42cf-9650-94093dc92ae9)
+![New Invoice Creation](/images/custom-auto-number-in-dataverse-with/03-ff4430f2-5351-42cf-9650-94093dc92ae9.gif)
 
 ## Conclusion
 

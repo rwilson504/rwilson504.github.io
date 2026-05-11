@@ -42,64 +42,64 @@ In order to complete all this you will need the following.
 ## Inspecting the Email
 
 For this example I’m using emails supplied by a service called Tadpole which my kids school uses to send out images and notification. The first thing I had to do was use the developer tools (F12) within the browser to help me understand how the urls were formatted for the service and how they worked. After searching through the html I figured out the formatting and found that if i used one of the parameters found in the one link for d=t that it would download the full size image.  
-![2021-06-25_19-32-46](https://user-images.githubusercontent.com/7444929/123862479-613eeb80-d8f6-11eb-968b-fb25a2887e11.png)
+![2021-06-25_19-32-46](/images/power-automate-desktop-example/01-123862479-613eeb80-d8f6-11eb-968b-fb25a2887e11.png)
 
 ## Add Gmail Label and Filter
 
 The first thing i did was went into my Gmail and created a new label for the incoming emails. The name of the service the school use is Tadpole so i made that my label. I think created a filter so that all emails coming from the Tadpole address would get that label applied. All of this is important because otherwise your Flow will run on everything in your Inbox which could be a lot of messages and you could end up running into API limits for Flow depending on your license.
 
-![2021-06-25_15-23-53](https://user-images.githubusercontent.com/7444929/123493442-73fdab80-d5ea-11eb-8882-e7aab0a1b7c6.png)
+![2021-06-25_15-23-53](/images/power-automate-desktop-example/02-123493442-73fdab80-d5ea-11eb-8882-e7aab0a1b7c6.png)
 
 ## Create the Desktop Flow
 
 The desktop flow will download the image using it’s url and save it to to the network drive. To get started open the Power Automate Desktop application you have installed and create a new Flow.
 
 The first thing we need to do is define the input variables we will use. We will later be passing the data into these variables from the Cloud Flow created later.  
-![2021-06-25_15-30-37](https://user-images.githubusercontent.com/7444929/123493549-c212af00-d5ea-11eb-83cf-439051dfa1e8.png)
+![2021-06-25_15-30-37](/images/power-automate-desktop-example/03-123493549-c212af00-d5ea-11eb-83cf-439051dfa1e8.png)
 
 Now we can start adding actions to the Desktop flow. The first one will be a Convert text to datetime action which we will use to transform the input variable from the flow into a datetime which will allow us to do some string formatting faster.  
-![2021-06-25_15-34-46](https://user-images.githubusercontent.com/7444929/123493611-01410000-d5eb-11eb-8a8e-bed92c140955.png)
+![2021-06-25_15-34-46](/images/power-automate-desktop-example/04-123493611-01410000-d5eb-11eb-8a8e-bed92c140955.png)
 
 Next we will do some formatting on our date time to create flow variables which we will use later.  
-![2021-06-25_15-37-10](https://user-images.githubusercontent.com/7444929/123493622-0c942b80-d5eb-11eb-95ea-38d0216e3765.png)
+![2021-06-25_15-37-10](/images/power-automate-desktop-example/05-123493622-0c942b80-d5eb-11eb-95ea-38d0216e3765.png)
 
-![2021-06-25_15-39-25](https://user-images.githubusercontent.com/7444929/123493660-26357300-d5eb-11eb-8510-d73d45b4b56b.png)
+![2021-06-25_15-39-25](/images/power-automate-desktop-example/06-123493660-26357300-d5eb-11eb-8510-d73d45b4b56b.png)
 
 Check to see if the network drive folder exists and if not create it.  
-![2021-06-25_15-42-17](https://user-images.githubusercontent.com/7444929/123493697-3f3e2400-d5eb-11eb-8f2e-b8c84a696c36.png)
+![2021-06-25_15-42-17](/images/power-automate-desktop-example/07-123493697-3f3e2400-d5eb-11eb-8f2e-b8c84a696c36.png)
 
-![2021-06-25_15-45-39](https://user-images.githubusercontent.com/7444929/123493713-4e24d680-d5eb-11eb-84d6-923c957af126.png)
+![2021-06-25_15-45-39](/images/power-automate-desktop-example/08-123493713-4e24d680-d5eb-11eb-84d6-923c957af126.png)
 
 Finally we will download the file using the url provided as an input variable and save it to our network drive folder.  
-![2021-06-25_15-48-55](https://user-images.githubusercontent.com/7444929/123493760-73b1e000-d5eb-11eb-8f67-373abdb36ccd.png)
+![2021-06-25_15-48-55](/images/power-automate-desktop-example/09-123493760-73b1e000-d5eb-11eb-8f67-373abdb36ccd.png)
 
 We have now successfully created our Desktop flow. Make sure you save it and then you can test it by clicking the Run button in the editor.  
-![2021-06-25_15-51-50](https://user-images.githubusercontent.com/7444929/123493782-8fb58180-d5eb-11eb-8ca6-f0e76e48efbe.png)
+![2021-06-25_15-51-50](/images/power-automate-desktop-example/10-123493782-8fb58180-d5eb-11eb-8ca6-f0e76e48efbe.png)
 
 ## Create the Cloud Flow
 
 Now that we have created our Desktop Flow we need to run it any time an email arrives in our Tadpole inbox. This flow also needs to extract the rrl for the image and pass that information to the Desktop Flow.
 
 Here is a high level outline of the Flow we are going to build.  
-![2021-06-25_17-08-39](https://user-images.githubusercontent.com/7444929/123493050-4fed9a80-d5e9-11eb-9b23-1d8c51ec76c9.png)
+![2021-06-25_17-08-39](/images/power-automate-desktop-example/11-123493050-4fed9a80-d5e9-11eb-9b23-1d8c51ec76c9.png)
 
 Now let’s get started building! We will start by creating a solution in the maker portal.  
-![2021-06-25_16-08-48](https://user-images.githubusercontent.com/7444929/123493114-84f9ed00-d5e9-11eb-86fc-9d90082fe2ec.png)
+![2021-06-25_16-08-48](/images/power-automate-desktop-example/12-123493114-84f9ed00-d5e9-11eb-86fc-9d90082fe2ec.png)
 
 Add a new Cloud Flow.  
-![2021-06-25_16-12-41](https://user-images.githubusercontent.com/7444929/123493154-a5c24280-d5e9-11eb-8399-9490a6296802.png)
+![2021-06-25_16-12-41](/images/power-automate-desktop-example/13-123493154-a5c24280-d5e9-11eb-8399-9490a6296802.png)
 
 Setup for our Gmail trigger. Again if you haven’t created a new Application within the Google console you should do that now using the instructions located [here](https://docs.microsoft.com/en-us/connectors/gmail/#creating-an-oauth-client-application-in-google).  
-![2021-06-25_16-14-53](https://user-images.githubusercontent.com/7444929/123493166-afe44100-d5e9-11eb-8da6-69d15274ad66.png)
+![2021-06-25_16-14-53](/images/power-automate-desktop-example/14-123493166-afe44100-d5e9-11eb-8da6-69d15274ad66.png)
 
-![2021-06-25_16-24-09](https://user-images.githubusercontent.com/7444929/123493197-c4283e00-d5e9-11eb-8b68-92c885f76b76.png)
+![2021-06-25_16-24-09](/images/power-automate-desktop-example/15-123493197-c4283e00-d5e9-11eb-8b68-92c885f76b76.png)
 
-![2021-06-25_16-21-51](https://user-images.githubusercontent.com/7444929/123493181-ba063f80-d5e9-11eb-8398-2554f1e6be75.png)
+![2021-06-25_16-21-51](/images/power-automate-desktop-example/16-123493181-ba063f80-d5e9-11eb-8398-2554f1e6be75.png)
 
 All the emails that contain images have kids names at the beginning of the subject so i will set up a condition to make sure that this is an image email and also extract that data so i can use it to save the image later.  
-![2021-06-25_16-27-59](https://user-images.githubusercontent.com/7444929/123493239-dace9500-d5e9-11eb-9e0b-1cdaa11ef310.png)
+![2021-06-25_16-27-59](/images/power-automate-desktop-example/17-123493239-dace9500-d5e9-11eb-9e0b-1cdaa11ef310.png)
 
-![2021-06-25_16-32-34](https://user-images.githubusercontent.com/7444929/123493249-e1f5a300-d5e9-11eb-9b5d-250b57380912.png)
+![2021-06-25_16-32-34](/images/power-automate-desktop-example/18-123493249-e1f5a300-d5e9-11eb-9b5d-250b57380912.png)
 
 We need to get all the urls contained in the email so we will use the Encodian Regex action here to find them. Here is the Regex you will need to find all the urls in the body of the email.
 
@@ -107,20 +107,20 @@ We need to get all the urls contained in the email so we will use the Encodian R
 (?:(?:https?|ftp):\/\/|\b(?:[a-z\d]+\.))(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))?
 ```
 
-![2021-06-25_16-37-10](https://user-images.githubusercontent.com/7444929/123493265-efab2880-d5e9-11eb-980b-8444699df253.png)
+![2021-06-25_16-37-10](/images/power-automate-desktop-example/19-123493265-efab2880-d5e9-11eb-980b-8444699df253.png)
 
 Now that we have all the urls in the message we need to look at them all and see which one is the image. We will also do some parsing of the url to make sure we get the full size image by appending the ?d=t property to the url.  
-![2021-06-25_16-46-10](https://user-images.githubusercontent.com/7444929/123493360-2d0fb600-d5ea-11eb-9f90-0874e908629a.png)
+![2021-06-25_16-46-10](/images/power-automate-desktop-example/20-123493360-2d0fb600-d5ea-11eb-9f90-0874e908629a.png)
 
-![2021-06-25_16-49-05](https://user-images.githubusercontent.com/7444929/123493373-3a2ca500-d5ea-11eb-967d-20bc5a3200cc.png)
+![2021-06-25_16-49-05](/images/power-automate-desktop-example/21-123493373-3a2ca500-d5ea-11eb-967d-20bc5a3200cc.png)
 
 Last but not least we will connect to the Desktop Flow we created earlier and pass in all the information we have collected from the email.  
-![2021-06-25_16-58-56](https://user-images.githubusercontent.com/7444929/123493394-46186700-d5ea-11eb-908f-7528bb94683f.png)
+![2021-06-25_16-58-56](/images/power-automate-desktop-example/22-123493394-46186700-d5ea-11eb-908f-7528bb94683f.png)
 
 ## Test It!
 
 In order to test my flow I added another Gmail filter that would tagged any email coming from myself with my kids names in the subject. This allowed me to then forward old email to myself for test processing.
 
-![2021-06-25_20-05-06](https://user-images.githubusercontent.com/7444929/123495263-0e60ed80-d5f1-11eb-93ba-f880011f78a3.png)
+![2021-06-25_20-05-06](/images/power-automate-desktop-example/23-123495263-0e60ed80-d5f1-11eb-93ba-f880011f78a3.png)
 
-![2021-06-25_20-05-43](https://user-images.githubusercontent.com/7444929/123495267-128d0b00-d5f1-11eb-95d9-0b4db5f1a0d4.png)
+![2021-06-25_20-05-43](/images/power-automate-desktop-example/24-123495267-128d0b00-d5f1-11eb-95d9-0b4db5f1a0d4.png)

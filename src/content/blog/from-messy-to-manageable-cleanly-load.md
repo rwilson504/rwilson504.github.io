@@ -135,7 +135,7 @@ The function script presented here is a template that helps you **remove unneces
 
 One of the best practices highlighted by this script is to use a **parameter for the Dataverse URL** (`dataverseHost`). By using parameters, you can easily switch environments without editing the script each time. This approach supports a **more agile and scalable development process** and allows teams to deploy their reports in multiple environments seamlessly.
 
-![Create parameter](https://github.com/user-attachments/assets/ee084ac5-632e-4f02-b87b-c318903af495)
+![Create parameter](/images/from-messy-to-manageable-cleanly-load/01-ee084ac5-632e-4f02-b87b-c318903af495.png)
 
 If you’re unsure how to create a parameter in Power BI, here’s a quick guide:
 
@@ -153,11 +153,11 @@ To use this function within Power BI, follow these steps:
 3. **Rename Function**: After pasting, rename the query to something like `CleanTable`.
 4. **Invoke the Function**: Now that you have the function, you can use it to clean multiple tables. For each table, create a new query and use **Invoke Custom Function**, selecting `CleanTable` and specifying your desired parameters. You can also use this function on Microsoft tables, such as `account` and `contact`, if you wish to apply some of the optional transformations. Just make sure to set the `prefix` parameter to an empty string (`""`).
 
-   ![call function](https://github.com/user-attachments/assets/f5d3cb0f-9e3d-4c14-bc5d-29354ae651ca)
+   ![call function](/images/from-messy-to-manageable-cleanly-load/02-f5d3cb0f-9e3d-4c14-bc5d-29354ae651ca.png)
 
 This process allows you to apply consistent cleaning across multiple tables in Dataverse, significantly improving both efficiency and maintainability.
 
-![show data pane](https://github.com/user-attachments/assets/77bb5350-5e83-41ad-91d9-09ed65fd79e3)
+![show data pane](/images/from-messy-to-manageable-cleanly-load/03-77bb5350-5e83-41ad-91d9-09ed65fd79e3.png)
 
 **Save as a Template for Future Use**
 

@@ -24,4 +24,4 @@ I started getting this error every five minutes after the timer service would ki
 Turns out that the error was due to the Forefront Identity Manager Service not being started.  After starting the service the error goes away.  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitE2v0hEYULUVkynN-sR6MkROq5JmCqLiATMHjUatOtQC0eTFPotm_G-lkXz3x0TnexNSkNGP-akv_XADvJb5Gs5Sa8jivLi8gHYMVdqE9OCTPqWyJFNsbB5bW5mpPkUh0w__4S0sotOc/s400/ForefrontServicesStart.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitE2v0hEYULUVkynN-sR6MkROq5JmCqLiATMHjUatOtQC0eTFPotm_G-lkXz3x0TnexNSkNGP-akv_XADvJb5Gs5Sa8jivLi8gHYMVdqE9OCTPqWyJFNsbB5bW5mpPkUh0w__4S0sotOc/s1600/ForefrontServicesStart.png)
+[![](/images/systemservicemodelendpointnotfoundexcep/01-ForefrontServicesStart.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitE2v0hEYULUVkynN-sR6MkROq5JmCqLiATMHjUatOtQC0eTFPotm_G-lkXz3x0TnexNSkNGP-akv_XADvJb5Gs5Sa8jivLi8gHYMVdqE9OCTPqWyJFNsbB5bW5mpPkUh0w__4S0sotOc/s1600/ForefrontServicesStart.png)

@@ -28,7 +28,7 @@ Here is an example of my lab configuration:
 Finally, the help information is only available through the command line. below is a screen shot of the full output.  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkFQDpsXEAF7l2TpjpOsjX7BZGtwuhFG9Ii68hazlfVbqQJ5gnLqJICzU_F8wpk4gVzMSCJKLARsroQ6oi9bRrIt41-pfg6E0PcKv_Ius8M7EiyQtL6yfDX_MNnrrrt2Z_pD4wdj_a9-4/s640/CreateSQLFarmHelp.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkFQDpsXEAF7l2TpjpOsjX7BZGtwuhFG9Ii68hazlfVbqQJ5gnLqJICzU_F8wpk4gVzMSCJKLARsroQ6oi9bRrIt41-pfg6E0PcKv_Ius8M7EiyQtL6yfDX_MNnrrrt2Z_pD4wdj_a9-4/s1600/CreateSQLFarmHelp.png)
+[![](/images/using-sql-server-with-adfs-20/01-CreateSQLFarmHelp.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkFQDpsXEAF7l2TpjpOsjX7BZGtwuhFG9Ii68hazlfVbqQJ5gnLqJICzU_F8wpk4gVzMSCJKLARsroQ6oi9bRrIt41-pfg6E0PcKv_Ius8M7EiyQtL6yfDX_MNnrrrt2Z_pD4wdj_a9-4/s1600/CreateSQLFarmHelp.png)
 
   
   

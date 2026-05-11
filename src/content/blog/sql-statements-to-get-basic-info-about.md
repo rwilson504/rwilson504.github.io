@@ -43,7 +43,7 @@ ORDER BY SUM(pa.rows) DESC
   
 .csharpcode, .csharpcode pre<br />{<br /> font-size: small;<br /> color: black;<br /> font-family: consolas, "Courier New", courier, monospace;<br /> background-color: #ffffff;<br /> /\*white-space: pre;\*/<br />}<br />.csharpcode pre { margin: 0em; }<br />.csharpcode .rem { color: #008000; }<br />.csharpcode .kwrd { color: #0000ff; }<br />.csharpcode .str { color: #006080; }<br />.csharpcode .op { color: #0000c0; }<br />.csharpcode .preproc { color: #cc6633; }<br />.csharpcode .asp { background-color: #ffff00; }<br />.csharpcode .html { color: #800000; }<br />.csharpcode .attr { color: #ff0000; }<br />.csharpcode .alt <br />{<br /> background-color: #f4f4f4;<br /> width: 100%;<br /> margin: 0em;<br />}<br />.csharpcode .lnum { color: #606060; }<br />  
   
-[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaFZd_ES8uVN8T4CTUXrb4yV3l_mYUKsTOkECBLe7UP7OAuwuGpX3DhBodP0ym0SiX8Z7n41yZuXDAeFKKVh2sInjDwOl9TpRMCe2kcxEUakhyphenhyphenRuArO_4YorET_3alDeOX7KhoFgbRLX0/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgrF9AOzRHBZIHwGt7GG76VR4-KQenKuAsv4RnH4AnIAVYVYTki8uzylbuAs4dH_EEPOgKeLEgijWCaxt7L29UANAeWm9hatJWP2brzFG3-wwtxpqm_maLIJSKOAYIJ26k7LKYEcfXpGs/s1600-h/image%25255B5%25255D.png)  
+[![image](/images/sql-statements-to-get-basic-info-about/01-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgrF9AOzRHBZIHwGt7GG76VR4-KQenKuAsv4RnH4AnIAVYVYTki8uzylbuAs4dH_EEPOgKeLEgijWCaxt7L29UANAeWm9hatJWP2brzFG3-wwtxpqm_maLIJSKOAYIJ26k7LKYEcfXpGs/s1600-h/image%25255B5%25255D.png)  
   
 **FOREIGN KEY CONSTRAINTS (Relationships)**  
 
@@ -55,5 +55,5 @@ SELECT TABLE_NAME, CONSTRAINT_NAME
 ```
 
   
-[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizuH9kyWMLInMMuSsY2wP27-QAAwhQMJfNhlXIIgdRqaLagNxoYqPTYqNisO9olML8iZJo5oO81T3LsRWRAgVUJNFiC32WrVv377pu0PzmiNVZtqlAge8Uj2rXfyDhcS_pvbooZIsbVN0/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7Wydo8abF2OM8D4VglmK7MgKVL2dth1fY2r1cGzES2thqaxFKctL81NsPouUHk1XF8OjTot5UwouYQia-XZbgFaUL32CWdg5SX9O-vlJ7ekqZ-7ZizSf1XRY6Wu2AVj3aDFfFReNPx94/s1600-h/image%25255B3%25255D.png)  
+[![image](/images/sql-statements-to-get-basic-info-about/02-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7Wydo8abF2OM8D4VglmK7MgKVL2dth1fY2r1cGzES2thqaxFKctL81NsPouUHk1XF8OjTot5UwouYQia-XZbgFaUL32CWdg5SX9O-vlJ7ekqZ-7ZizSf1XRY6Wu2AVj3aDFfFReNPx94/s1600-h/image%25255B3%25255D.png)  
 .csharpcode, .csharpcode pre{font-size: small;color: black;font-family: consolas, "Courier New", courier, monospace;background-color: #ffffff;/\*white-space: pre;\*/}.csharpcode pre { margin: 0em; }.csharpcode .rem { color: #008000; }.csharpcode .kwrd { color: #0000ff; }.csharpcode .str { color: #006080; }.csharpcode .op { color: #0000c0; }.csharpcode .preproc { color: #cc6633; }.csharpcode .asp { background-color: #ffff00; }.csharpcode .html { color: #800000; }.csharpcode .attr { color: #ff0000; }.csharpcode .alt {background-color: #f4f4f4;width: 100%;margin: 0em;}.csharpcode .lnum { color: #606060; }

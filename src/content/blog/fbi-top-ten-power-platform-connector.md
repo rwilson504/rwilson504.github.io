@@ -40,7 +40,7 @@ To illustrate the practical use of the connector, a sample PowerApp and a flow h
 
 This application allows users to search and access detailed profiles of the FBI’s most wanted, designed to facilitate public engagement and support law enforcement efforts.
 
-![Sample PowerApp](https://github.com/rwilson504/Blogger/assets/7444929/8e2dc855-b040-4c59-a411-21fb1985f80e)
+![Sample PowerApp](/images/fbi-top-ten-power-platform-connector/01-8e2dc855-b040-4c59-a411-21fb1985f80e.gif)
 
 Following the illustrative image in the article, let’s delve into how to effectively leverage the app with the FBI Most Wanted Custom Connector to display the top 10 most wanted individuals. By integrating real-time data directly into your Power App, you can create a dynamic and informative resource. Here’s a step-by-step guide to setting up your app:
 
