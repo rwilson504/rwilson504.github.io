@@ -240,4 +240,42 @@
     --pagefind-ui-border-width: 1px;
     --pagefind-ui-font: var(--font-sans);
   }
+
+  /* Pagefind's stylesheet hardcodes text color on the input and result
+     bodies, so the CSS variables above don't reach them. Force them to
+     use our theme tokens so dark-mode users can actually read what they
+     typed. */
+  :global(#pagefind-search .pagefind-ui__search-input) {
+    color: var(--color-fg) !important;
+    background: var(--color-bg) !important;
+    border-color: var(--color-border) !important;
+  }
+  :global(#pagefind-search .pagefind-ui__search-input::placeholder) {
+    color: var(--color-muted) !important;
+  }
+  :global(#pagefind-search .pagefind-ui__search-clear) {
+    color: var(--color-fg) !important;
+    background: var(--color-code-bg) !important;
+  }
+  :global(#pagefind-search .pagefind-ui__result-title a),
+  :global(#pagefind-search .pagefind-ui__result-link) {
+    color: var(--color-fg) !important;
+  }
+  :global(#pagefind-search .pagefind-ui__result-title a:hover),
+  :global(#pagefind-search .pagefind-ui__result-link:hover) {
+    color: var(--color-accent) !important;
+  }
+  :global(#pagefind-search .pagefind-ui__result-excerpt) {
+    color: var(--color-muted) !important;
+  }
+  :global(#pagefind-search .pagefind-ui__result-tags),
+  :global(#pagefind-search .pagefind-ui__message) {
+    color: var(--color-muted) !important;
+  }
+  /* The yellow highlight band is fine, but it needs dark text on it for
+     contrast in dark mode (Pagefind defaults to yellow bg + inherited fg). */
+  :global(#pagefind-search mark) {
+    background: #fde68a !important;
+    color: #111 !important;
+  }
 </style>

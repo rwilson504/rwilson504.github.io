@@ -22,7 +22,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --color-bg: #15161a;
     --color-fg: #e8e6e0;
     --color-muted: #9a978d;
@@ -31,6 +31,33 @@
     --color-accent-hover: #8cc1ef;
     --color-code-bg: #1f2127;
   }
+}
+
+/* Explicit user choice via data-theme attribute (set by inline boot script
+   in BaseLayout from localStorage, defaults to 'dark'). Wins over OS prefs. */
+:root[data-theme="dark"] {
+  --color-bg: #15161a;
+  --color-fg: #e8e6e0;
+  --color-muted: #9a978d;
+  --color-border: #2a2c33;
+  --color-accent: #5fa8e6;
+  --color-accent-hover: #8cc1ef;
+  --color-code-bg: #1f2127;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  /* (light values are the :root defaults; this selector exists so it
+     wins over the dark @media query when the user has explicitly
+     chosen light.) */
+  --color-bg: #fdfdfc;
+  --color-fg: #1a1a1a;
+  --color-muted: #5a5a5a;
+  --color-border: #e4e4e0;
+  --color-accent: #1d6fc0;
+  --color-accent-hover: #175698;
+  --color-code-bg: #f4f3ee;
+  color-scheme: light;
 }
 
 /* ---------- Reset ---------- */
@@ -191,6 +218,12 @@ hr {
 
 .site-nav .brand {
   font-size: 1.1rem;
+}
+
+.site-nav-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
 }
 
 .site-nav ul {
@@ -430,12 +463,19 @@ hr {
 }
 
 @media (prefers-color-scheme: dark) {
-  .home-hero {
+  :root:not([data-theme]) .home-hero {
     background:
       radial-gradient(circle at 85% 15%, rgba(95, 168, 230, 0.18), transparent 55%),
       radial-gradient(circle at 15% 85%, rgba(95, 168, 230, 0.08), transparent 50%),
       linear-gradient(135deg, #1d1e24 0%, #15161a 60%, #1a1b21 100%);
   }
+}
+
+:root[data-theme="dark"] .home-hero {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(95, 168, 230, 0.18), transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(95, 168, 230, 0.08), transparent 50%),
+    linear-gradient(135deg, #1d1e24 0%, #15161a 60%, #1a1b21 100%);
 }
 
 .home-hero-inner {
@@ -580,10 +620,15 @@ hr {
 }
 
 @media (prefers-color-scheme: dark) {
-  .home-hero-decoration {
+  :root:not([data-theme]) .home-hero-decoration {
     background-image:
       radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
   }
+}
+
+:root[data-theme="dark"] .home-hero-decoration {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
 }
 
 /* Inset the post grid section so it reads as page content, not hero. */

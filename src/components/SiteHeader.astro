@@ -1,5 +1,6 @@
 ---
 import Search from "./Search.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -17,6 +18,9 @@ const nav = [
         <li><a href={item.href}>{item.label}</a></li>
       ))}
     </ul>
-    <Search />
+    <div class="site-nav-actions">
+      <Search />
+      <ThemeToggle />
+    </div>
   </nav>
 </header>

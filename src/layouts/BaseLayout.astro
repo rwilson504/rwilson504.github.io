@@ -39,6 +39,20 @@ const resolvedCanonical = canonical ?? Astro.url.href;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <!-- Apply theme BEFORE first paint to avoid flash-of-wrong-theme. -->
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme = saved === "light" || saved === "dark" ? saved : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <meta name="theme-color" content="#15161a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
