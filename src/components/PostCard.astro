@@ -1,6 +1,7 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
 import { getLinkableTags } from "../utils/tags";
+import { categoryLabel } from "../utils/categories";
 
 export interface Props {
   href: string;
@@ -30,7 +31,7 @@ const linkable = await getLinkableTags();
     </a>
   )}
   <div class="post-card-body">
-    <a class="category-pill" href={`/categories/${category}/`}>{category}</a>
+    <a class="category-pill" href={`/categories/${category}/`}>{categoryLabel(category)}</a>
     <h2><a class="post-title" href={href}>{title}</a></h2>
     <p class="post-meta"><FormattedDate date={pubDate} /></p>
     <p>{description}</p>

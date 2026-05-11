@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { getLinkableTags } from "../utils/tags";
+import { categoryLabel } from "../utils/categories";
 
 export interface Props {
   title: string;
@@ -31,7 +32,7 @@ const linkable = await getLinkableTags();
 >
   <article>
     <header style="margin-bottom: 2em;">
-      <a class="category-pill" href={`/categories/${category}/`}>{category}</a>
+      <a class="category-pill" href={`/categories/${category}/`}>{categoryLabel(category)}</a>
       <h1 style="margin: 0.25em 0;">{title}</h1>
       <p class="post-meta">
         <FormattedDate date={pubDate} />

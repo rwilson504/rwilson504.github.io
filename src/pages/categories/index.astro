@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { categories } from "../../content.config";
+import { categoryLabel } from "../../utils/categories";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const counts = Object.fromEntries(
@@ -16,7 +17,7 @@ const counts = Object.fromEntries(
       <li class="post-card">
         <h2>
           <a class="post-title" href={`/categories/${c}/`}>
-            {c.split("-").map((w) => w[0]?.toUpperCase() + w.slice(1)).join(" ")}
+            {categoryLabel(c)}
           </a>
         </h2>
         <p class="post-meta">{counts[c]} post{counts[c] === 1 ? "" : "s"}</p>
