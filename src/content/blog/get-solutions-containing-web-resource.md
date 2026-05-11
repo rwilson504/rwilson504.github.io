@@ -3,7 +3,8 @@ title: "Get Solutions Containing Web Resource"
 description: "Snipit to determine which solutions contain a web resource."
 pubDate: 2016-08-04
 category: misc
-tags: []
+tags:
+  - "web-resource"
 draft: false
 originalBloggerUrl: /2016/08/get-solutions-containing-web-resource.html
 ---

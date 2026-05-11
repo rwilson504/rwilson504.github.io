@@ -4,7 +4,10 @@ description: "While coming up with deployment scripts i was tasked to ensure tha
 pubDate: 2019-03-19
 heroImage: "/heroes/dynamics-multi-entity-search-global.png"
 category: power-apps
-tags: []
+tags:
+  - "dynamics"
+  - "search"
+  - "crm"
 draft: false
 originalBloggerUrl: /2019/03/dynamics-multi-entity-search-global.html
 ---

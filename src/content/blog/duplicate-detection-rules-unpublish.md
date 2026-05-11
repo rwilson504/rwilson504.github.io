@@ -3,7 +3,9 @@ title: "Duplicate Detection Rules Unpublish After Solution Import"
 description: "For the past few weeks something has been bothering me. I have been doing a lot of solution imports and also a lot of data imports."
 pubDate: 2012-12-05
 category: power-apps
-tags: []
+tags:
+  - "duplicate-detection"
+  - "solution"
 draft: false
 originalBloggerUrl: /2012/12/duplicate-detection-rules-unpublish.html
 ---

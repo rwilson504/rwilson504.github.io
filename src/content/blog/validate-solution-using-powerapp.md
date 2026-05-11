@@ -3,7 +3,11 @@ title: "Validate Solution Using the PowerApp Checker (Includes On-Premise Soluti
 description: "I recently saw the article on how to validate solutions using the PowerApps Solution Checker and wanted to share the link."
 pubDate: 2019-07-08
 category: power-apps
-tags: []
+tags:
+  - "power-apps"
+  - "powershell"
+  - "dynamics"
+  - "solution"
 draft: false
 originalBloggerUrl: /2019/07/validate-solution-using-powerapp.html
 ---

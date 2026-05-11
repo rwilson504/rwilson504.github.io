@@ -5,7 +5,11 @@ pubDate: 2015-06-29
 heroImage: "/heroes/crm-2011-email-router-configuration.png"
 heroImageAlt: "022412_1608_CRM2011Emai1"
 category: power-apps
-tags: []
+tags:
+  - "email-router"
+  - "crm-2011"
+  - "crm"
+  - "security"
 draft: false
 originalBloggerUrl: /2015/06/crm-2011-email-router-configuration.html
 ---

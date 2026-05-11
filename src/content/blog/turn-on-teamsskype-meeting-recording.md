@@ -4,7 +4,12 @@ description: "<# .SYNOPSIS Turn on meeting recording and transcription for entir
 pubDate: 2019-07-08
 heroImage: "/heroes/turn-on-teamsskype-meeting-recording.png"
 category: misc
-tags: []
+tags:
+  - "teams"
+  - "skype"
+  - "recording"
+  - "meetings"
+  - "powershell"
 draft: false
 originalBloggerUrl: /2019/07/turn-on-teamsskype-meeting-recording.html
 ---

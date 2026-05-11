@@ -3,7 +3,10 @@ title: "Web.Config Modification Manager Update"
 description: "So this is an update of a solution from Harmjan Greving which was an update from thekid.me.uk which can be used to view, modify, and create web.config modification that will be pushed to all servers…"
 pubDate: 2011-06-02
 category: misc
-tags: []
+tags:
+  - "webconfig"
+  - "sharepoint"
+  - "solution"
 draft: false
 originalBloggerUrl: /2011/06/webconfig-modification-manager-update.html
 ---

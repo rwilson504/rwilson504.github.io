@@ -5,7 +5,11 @@ pubDate: 2020-04-24
 heroImage: "/heroes/gotchas-for-pcf-code-components-in.png"
 heroImageAlt: "No Escape Characters"
 category: power-apps
-tags: []
+tags:
+  - "pcf"
+  - "canvas"
+  - "power-apps"
+  - "model-driven"
 draft: false
 originalBloggerUrl: /2020/04/gotchas-for-pcf-code-components-in.html
 ---

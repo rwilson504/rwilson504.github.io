@@ -78,5 +78,19 @@ const resolvedCanonical = canonical ?? Astro.url.href;
     <SiteHeader />
     <main class={wide ? "wide" : undefined}><slot /></main>
     <SiteFooter />
+    <!-- Buy Me a Coffee floating widget -->
+    <script
+      is:inline
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="richardawilson"
+      data-description="Support me on Buy me a coffee!"
+      data-message="Help me build more community tools ✨"
+      data-color="#FF5F5F"
+      data-position="Right"
+      data-x_margin="18"
+      data-y_margin="18"
+    ></script>
   </body>
 </html>
