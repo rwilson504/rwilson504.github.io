@@ -1,6 +1,6 @@
 ---
 title: "Create Status Reason Values Using C#"
-description: "The CRM interface no longer allows you to enter the Value for a Status Reason.…"
+description: "The CRM interface no longer allows you to enter the Value for a Status Reason. I had to update several entities to all have the same values but some of them were created way back in CRM 4.0 when you…"
 pubDate: 2015-07-14
 category: misc
 tags: []

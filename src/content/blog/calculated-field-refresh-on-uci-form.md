@@ -1,6 +1,6 @@
 ---
 title: "Rollup Field Refresh on UCI Form"
-description: "In the web client version of Dynamics when you hovered over a rollup field it would show a refresh icon to the right of the field.…"
+description: "In the web client version of Dynamics when you hovered over a rollup field it would show a refresh icon to the right of the field."
 pubDate: 2019-08-28
 heroImage: "/heroes/calculated-field-refresh-on-uci-form.png"
 category: power-apps

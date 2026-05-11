@@ -1,6 +1,6 @@
 ---
 title: "Step-by-Step to Success: Run AutoGPT using Azure OpenAI on Docker"
-description: "Integrating AutoGPT with Azure OpenAI through Docker offers a direct path to unlocking advanced AI capabilities.…"
+description: "Integrating AutoGPT with Azure OpenAI through Docker offers a direct path to unlocking advanced AI capabilities."
 pubDate: 2024-02-29
 heroImage: "/heroes/step-by-step-to-success-run-autogpt.png"
 heroImageAlt: "Step-by-Step to Success: Run AutoGPT using Azure OpenAI on Docker"

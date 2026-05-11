@@ -1,6 +1,6 @@
 ---
 title: "VSTS and SourceTree"
-description: "Recently started using Git with VSTS and wanted to connect it up to Sourcetree. This article by Adam Prescott helped me out.…"
+description: "Recently started using Git with VSTS and wanted to connect it up to Sourcetree. This article by Adam Prescott helped me out. You can view the article here:"
 pubDate: 2018-07-18
 category: power-apps
 tags:

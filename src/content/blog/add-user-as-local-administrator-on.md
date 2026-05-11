@@ -1,6 +1,6 @@
 ---
 title: "Add User As Local Administrator On Domain Controller"
-description: "I recently was settting up a new Microsoft SharePoint 2010 machine and had promoted the machine to a domain controller before creating my SharePoint admin accounts.…"
+description: "I recently was settting up a new Microsoft SharePoint 2010 machine and had promoted the machine to a domain controller before creating my SharePoint admin accounts."
 pubDate: 2010-06-30
 updatedDate: 2011-02-21
 category: power-apps

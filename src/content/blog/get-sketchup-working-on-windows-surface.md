@@ -1,6 +1,6 @@
 ---
 title: "Get Sketchup Working on Windows Surface Pro"
-description: "After installing Sketchup every time I clicked on the \"Start Using Sketchup\" button located on the Welcome window I would get an error that closed the application.…"
+description: "After installing Sketchup every time I clicked on the \"Start Using Sketchup\" button located on the Welcome window I would get an error that closed the application."
 pubDate: 2013-07-24
 category: misc
 tags: []

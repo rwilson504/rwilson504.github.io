@@ -1,6 +1,6 @@
 ---
 title: "Enable Kerberos Logging in Event Viewer"
-description: "1. Open the Registry Editor (regedit.exe) 2. Navigate to HKEY\\LOCAL\\MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Kerberos\\Parameters 3. Add a new DWORD Value called “LogLevel” set the value to 1 4.…"
+description: "After you have completed your testing delete the LogLevel key reboot the server to ensure you stop logging."
 pubDate: 2015-08-12
 category: power-apps
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "No \"Edit Page\" link for standard aspx page in SharePoint"
-description: "Many times user create aspx pages within SharePoint designer and then add web part zones to them so they can add data.…"
+description: "Many times user create aspx pages within SharePoint designer and then add web part zones to them so they can add data."
 pubDate: 2009-08-21
 updatedDate: 2009-09-01
 category: power-apps

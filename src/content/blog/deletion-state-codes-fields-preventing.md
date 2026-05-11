@@ -1,6 +1,6 @@
 ---
 title: "Deletion State Codes Fields Preventing Solution Import"
-description: "If you have upgraded a CRM database from 4.0. to 2011 you may have some leftover fields that end in dsc.…"
+description: "If you have upgraded a CRM database from 4.0. to 2011 you may have some leftover fields that end in dsc."
 pubDate: 2013-01-31
 heroImage: "/heroes/deletion-state-codes-fields-preventing.png"
 heroImageAlt: "image"

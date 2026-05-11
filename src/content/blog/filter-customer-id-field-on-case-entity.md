@@ -1,6 +1,6 @@
 ---
 title: "Filter Customer Id field on Case Entity To Only Show Contacts or Accounts"
-description: "Recently while working on a project where the customer was utilizing the Case entity they wanted to only allow users to enter contacts into the Customer Id field.…"
+description: "Recently while working on a project where the customer was utilizing the Case entity they wanted to only allow users to enter contacts into the Customer Id field."
 pubDate: 2019-03-07
 category: power-apps
 tags:

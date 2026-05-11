@@ -1,6 +1,6 @@
 ---
 title: "Use Dynamics WebAPI to get Record Count"
-description: "When working in an environment where tools like XrmToolbox are not available or allowed getting a total record count can be a real pain sometimes.…"
+description: "When working in an environment where tools like XrmToolbox are not available or allowed getting a total record count can be a real pain sometimes."
 pubDate: 2020-01-29
 category: power-apps
 tags:

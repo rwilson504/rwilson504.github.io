@@ -1,6 +1,6 @@
 ---
 title: "Custom Auto Number in Dataverse with Fiscal Year-Based Incrementing Using Plugin Code"
-description: "In many scenarios, businesses require custom auto-numbering for records in Microsoft Dataverse that go beyond the default functionality provided.…"
+description: "In many scenarios, businesses require custom auto-numbering for records in Microsoft Dataverse that go beyond the default functionality provided."
 pubDate: 2024-08-23
 heroImage: "/heroes/custom-auto-number-in-dataverse-with.png"
 heroImageAlt: "Custom Auto Number in Dataverse with Fiscal Year-Based Incrementing Using Plugin Code"

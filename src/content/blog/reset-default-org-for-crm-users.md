@@ -1,6 +1,6 @@
 ---
 title: "Reset Default Org for CRM Users"
-description: "The script below will change the default org for users.…"
+description: "The script below will change the default org for users. This can be helpful if you have disabled the original default org and users are now getting the crm error that the organization has been…"
 pubDate: 2013-09-24
 category: power-apps
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Server State Service"
-description: "After adding the SharePoint 2010 Chart Web Part to a page I received an error that the Server State Service had not been configured.…"
+description: "After adding the SharePoint 2010 Chart Web Part to a page I received an error that the Server State Service had not been configured."
 pubDate: 2010-07-22
 updatedDate: 2010-11-05
 heroImage: "/heroes/sharepoint-server-state-service.jpg"

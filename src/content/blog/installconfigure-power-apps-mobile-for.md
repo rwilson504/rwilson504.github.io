@@ -1,6 +1,6 @@
 ---
 title: "Install/Configure Power Apps Mobile for U.S. Government and DoD User"
-description: "For those working in the U.S.…"
+description: "For those working in the U.S. Government or DoD/Military space needing the Power Apps mobile application on your phone, an additional step of selecting a region must be taken before you attempt to…"
 pubDate: 2021-02-06
 heroImage: "/heroes/installconfigure-power-apps-mobile-for.jpg"
 heroImageAlt: "Install PowerApps Mobile for U.S. Government and DoD"

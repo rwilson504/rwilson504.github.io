@@ -1,6 +1,6 @@
 ---
 title: "From Messy to Manageable: Cleanly Load Dataverse Tables in Power BI"
-description: "First and foremost, I want to take a moment to acknowledge Brandon Pires, who originally crafted the script that inspired all of this work.…"
+description: "First and foremost, I want to take a moment to acknowledge Brandon Pires, who originally crafted the script that inspired all of this work."
 pubDate: 2024-11-20
 heroImage: "/heroes/from-messy-to-manageable-cleanly-load.png"
 heroImageAlt: "From Messy to Manageable: Cleanly Load Dataverse Tables in Power BI"

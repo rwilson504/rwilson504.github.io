@@ -1,6 +1,6 @@
 ---
 title: "Dynamics BPF Javascript: NEW onPreStageChange Handler!"
-description: "If you are utilizing the UCI interface there is a new JavaScript handler available for the Business Process Flows (BPF), onPreStageChange.…"
+description: "If you are utilizing the UCI interface there is a new JavaScript handler available for the Business Process Flows (BPF), onPreStageChange."
 pubDate: 2019-10-28
 category: power-apps
 tags: []

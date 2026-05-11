@@ -1,6 +1,6 @@
 ---
 title: "Uploading Large Files into Amazon S3"
-description: "I recently had to upload some VHDs to Amazon S3 and found myself going beyond the upload limits for the web upload.…"
+description: "I recently had to upload some VHDs to Amazon S3 and found myself going beyond the upload limits for the web upload."
 pubDate: 2018-03-14
 updatedDate: 2018-03-15
 category: misc

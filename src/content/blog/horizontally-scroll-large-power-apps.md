@@ -1,6 +1,6 @@
 ---
 title: "Horizontally Scroll A Large Power Apps Gallery"
-description: "So you have a lot of data to display but the screen in Power Apps isn’t large enough. My friend Ronald Sease recently showed me how to create a gallery in Power Apps that you can scroll horizontally.…"
+description: "So you have a lot of data to display but the screen in Power Apps isn’t large enough. My friend Ronald Sease recently showed me how to create a gallery in Power Apps that you can scroll horizontally."
 pubDate: 2021-03-10
 heroImage: "/heroes/horizontally-scroll-large-power-apps.gif"
 heroImageAlt: "Scrollable Gallery"

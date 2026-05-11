@@ -1,6 +1,6 @@
 ---
 title: "Create SharePoint Buttons on Administration Page"
-description: "A long time ago I wrote a SharePoint administration page and had used the \"Microsoft.SharePoint.Portal.WebControls\" dll to create Ok and Cancel buttons at the bottom of the page.…"
+description: "A long time ago I wrote a SharePoint administration page and had used the \"Microsoft.SharePoint.Portal.WebControls\" dll to create Ok and Cancel buttons at the bottom of the page."
 pubDate: 2014-01-23
 updatedDate: 2014-03-24
 category: power-apps

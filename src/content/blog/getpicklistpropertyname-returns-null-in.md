@@ -1,6 +1,6 @@
 ---
 title: "GetPickListProperty.name Returns Null in PreCreate"
-description: "In CRM 4.0 using the Target.GetPickListProperty(\"fieldname\").name property would return the string value of the pick list item display name even in a PreCreate plugin step.…"
+description: "In CRM 4.0 using the Target.GetPickListProperty(\"fieldname\").name property would return the string value of the pick list item display name even in a PreCreate plugin step."
 pubDate: 2011-08-17
 category: power-apps
 tags:

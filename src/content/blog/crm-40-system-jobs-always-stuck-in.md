@@ -1,6 +1,6 @@
 ---
 title: "CRM 4.0 - System Jobs always stuck in \"Waiting\""
-description: "I had just re-isntalled CRM so that I could set it up as an IFD (Internet Facing Deployment) server. Also CRM is set up through an ISA firewall and using SSL.…"
+description: "I had just re-isntalled CRM so that I could set it up as an IFD (Internet Facing Deployment) server. Also CRM is set up through an ISA firewall and using SSL."
 pubDate: 2009-08-21
 updatedDate: 2009-09-01
 category: power-apps

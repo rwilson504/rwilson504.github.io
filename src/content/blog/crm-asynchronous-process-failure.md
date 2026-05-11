@@ -1,6 +1,6 @@
 ---
 title: "CRM Asynchronous Process Failure Settings"
-description: "One of the things I do when setting up a CRM 4.0 server is modify the Recovery settings of the Asynch process.…"
+description: "One of the things I do when setting up a CRM 4.0 server is modify the Recovery settings of the Asynch process."
 pubDate: 2009-09-09
 updatedDate: 2011-02-21
 heroImage: "/heroes/crm-asynchronous-process-failure.png"

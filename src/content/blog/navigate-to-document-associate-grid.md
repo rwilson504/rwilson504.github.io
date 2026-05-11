@@ -1,6 +1,6 @@
 ---
 title: "Navigate to the Document Associate Grid View From Record"
-description: "This will allow you to navigate to the Documents Associated Grid view form a button in the main records ribbon. This currently works for Dynamics 9.0 and 9.1 Online.…"
+description: "This will allow you to navigate to the Documents Associated Grid view form a button in the main records ribbon. This currently works for Dynamics 9.0 and 9.1 Online."
 pubDate: 2019-01-29
 category: power-apps
 tags:

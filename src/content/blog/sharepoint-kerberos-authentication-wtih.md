@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Kerberos Authentication wtih IIS 7+"
-description: "When Microsoft designed IIS 7 they decided to add in a new feature that automaticaly uses the LocalSystem account for Windows Authentication by the kernel.…"
+description: "When Microsoft designed IIS 7 they decided to add in a new feature that automaticaly uses the LocalSystem account for Windows Authentication by the kernel."
 pubDate: 2010-07-01
 updatedDate: 2010-07-08
 heroImage: "/heroes/sharepoint-kerberos-authentication-wtih.jpg"

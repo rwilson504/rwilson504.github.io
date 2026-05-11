@@ -1,6 +1,6 @@
 ---
 title: "TimeGem – Free Tile Layout Software"
-description: "As a true techie I always look to find computer solutions that can help me save time and money.…"
+description: "As a true techie I always look to find computer solutions that can help me save time and money. I decided to tackle putting down tile in my basement and wondered if there was any software that could…"
 pubDate: 2013-02-21
 updatedDate: 2014-05-01
 heroImage: "/heroes/timegem-free-tile-layout-software.png"

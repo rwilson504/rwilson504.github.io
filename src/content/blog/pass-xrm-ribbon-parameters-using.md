@@ -1,6 +1,6 @@
 ---
 title: "Pass XRM Ribbon Parameters Using JavaScript Array"
-description: "Trying to pass the list of selected items from a grid using query parameters has limitations due to restrictions on the size of a URL.…"
+description: "Trying to pass the list of selected items from a grid using query parameters has limitations due to restrictions on the size of a URL."
 pubDate: 2014-03-05
 heroImage: "/heroes/pass-xrm-ribbon-parameters-using.png"
 heroImageAlt: "image"

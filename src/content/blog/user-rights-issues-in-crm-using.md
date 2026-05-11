@@ -1,6 +1,6 @@
 ---
 title: "User Rights Issues in CRM using JavaScript"
-description: "I needed to find a way to determine if a user did not exist in CRM or did not have any rights. The devError page is available in both CRM 4 and 2011 and returns the same errors.…"
+description: "I needed to find a way to determine if a user did not exist in CRM or did not have any rights. The devError page is available in both CRM 4 and 2011 and returns the same errors."
 pubDate: 2011-05-25
 category: power-apps
 tags:

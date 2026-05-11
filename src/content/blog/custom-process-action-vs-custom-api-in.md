@@ -1,6 +1,6 @@
 ---
 title: "Custom Process Action vs Custom API in Dataverse"
-description: "I recently had the opportunity to utilize the new Custom API functionality within Dataverse.…"
+description: "I recently had the opportunity to utilize the new Custom API functionality within Dataverse. I had previously used Custom Process Actions and was a little confused as to the difference and why i…"
 pubDate: 2021-06-09
 heroImage: "/heroes/custom-process-action-vs-custom-api-in.png"
 heroImageAlt: "Custom Process Action vs Custom API in Dataverse"

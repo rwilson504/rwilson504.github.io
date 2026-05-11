@@ -1,6 +1,6 @@
 ---
 title: "Dynamics CRM Demonstration Tools (Data Generator)"
-description: "When creating demo environments for sales presenations I like to add a lot of test data to my systems and make it relevant to the custom to which I'm presenting.…"
+description: "When creating demo environments for sales presenations I like to add a lot of test data to my systems and make it relevant to the custom to which I'm presenting."
 pubDate: 2009-08-27
 heroImage: "/heroes/dynamics-crm-demonstration-tools-data.jpg"
 category: power-apps

@@ -1,6 +1,6 @@
 ---
 title: "Handling Graph API Pagination in Power Platform Dataflows"
-description: "When managing extensive user datasets from Microsoft Graph API, a common challenge is handling the pagination of data.…"
+description: "When managing extensive user datasets from Microsoft Graph API, a common challenge is handling the pagination of data."
 pubDate: 2024-02-01
 heroImage: "/heroes/handling-graph-api-pagination-in-power.png"
 heroImageAlt: "Handling Graph API Pagination in Power Platform Dataflows"

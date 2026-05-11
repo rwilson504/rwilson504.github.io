@@ -1,6 +1,6 @@
 ---
 title: "Global Context for CRM 2011"
-description: "When creating htm pages as webresources in 2011 there are many times you would want to get information about CRM such as the orgname and server url.…"
+description: "When creating htm pages as webresources in 2011 there are many times you would want to get information about CRM such as the orgname and server url."
 pubDate: 2011-04-15
 category: power-apps
 tags:

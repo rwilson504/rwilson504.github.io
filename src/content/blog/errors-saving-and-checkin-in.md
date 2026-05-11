@@ -1,6 +1,6 @@
 ---
 title: "Errors Saving and Checkin In Excel/PowerPoint files in SharePoint using CAC Card"
-description: "Users accessing SharePoint using a CAC card may experienced problems with saving and checking in Excel and PowerPoint documents on the SharePoint servers.…"
+description: "Users accessing SharePoint using a CAC card may experienced problems with saving and checking in Excel and PowerPoint documents on the SharePoint servers."
 pubDate: 2010-05-07
 updatedDate: 2010-07-08
 category: power-apps

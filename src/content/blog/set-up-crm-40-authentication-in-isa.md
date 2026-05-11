@@ -1,6 +1,6 @@
 ---
 title: "Set up CRM 4.0 Authentication in ISA Server"
-description: "So you have CRM 4.0 and ISA server. You also want to use the IFD (Internet Facing Deployment) feature of CRM. Well here is what you need to know.…"
+description: "So you have CRM 4.0 and ISA server. You also want to use the IFD (Internet Facing Deployment) feature of CRM. Well here is what you need to know."
 pubDate: 2009-08-21
 updatedDate: 2009-09-01
 category: power-apps

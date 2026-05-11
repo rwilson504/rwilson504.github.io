@@ -1,6 +1,6 @@
 ---
 title: "Update Business Process Flow Using Flow"
-description: "When working through App In A Day Workshop I wanted to improve the Approval flow to move the Business Process Flow (BPF) Stage forward if the Device Order was Approved.…"
+description: "When working through App In A Day Workshop I wanted to improve the Approval flow to move the Business Process Flow (BPF) Stage forward if the Device Order was Approved."
 pubDate: 2019-08-12
 heroImage: "/heroes/update-business-process-flow-using-flow.png"
 category: power-apps

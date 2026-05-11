@@ -1,6 +1,6 @@
 ---
 title: "Import CRM 2011 Solution Into 2015"
-description: "In order to import a 2011 solution into 2015 you must first import it into 2013 then re-export from there.…"
+description: "In order to import a 2011 solution into 2015 you must first import it into 2013 then re-export from there."
 pubDate: 2015-09-10
 updatedDate: 2015-10-28
 category: power-apps

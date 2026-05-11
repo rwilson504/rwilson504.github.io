@@ -1,6 +1,6 @@
 ---
 title: "Check Out the DefenseReady Daily Standup App for Windows 8"
-description: "DefenseReady Daily Standup is a Windows 8 app that provides military commanders and leadership with real-time insights into PERSTEMPO and strength levels throughout their organizations.…"
+description: "DefenseReady Daily Standup is a Windows 8 app that provides military commanders and leadership with real-time insights into PERSTEMPO and strength levels throughout their organizations."
 pubDate: 2013-05-02
 category: misc
 tags: []

@@ -1,6 +1,6 @@
 ---
 title: "Dynamics Multi Entity Search (Global Search) Entity Selection Using C#"
-description: "While coming up with deployment scripts i was tasked to ensure that the Dynamics Global Search had specific entities selected.…"
+description: "While coming up with deployment scripts i was tasked to ensure that the Dynamics Global Search had specific entities selected."
 pubDate: 2019-03-19
 heroImage: "/heroes/dynamics-multi-entity-search-global.png"
 category: power-apps

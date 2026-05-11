@@ -1,6 +1,6 @@
 ---
 title: "CRM 2011 Ribbon XML Tips"
-description: "- SharePoint 2010 uses the same ribbon xml schema and there are a lot of resources which are also applicable to CRM 2011.…"
+description: "foreach (EntityMetadata em in resp.EntityMetadata) { if (em.IsCustomEntity == true) { entRibReq.EntityName = em.LogicalName; if (em.IsIntersect == true) //check to see if the entity is a M2M…"
 pubDate: 2011-04-15
 category: power-apps
 tags:

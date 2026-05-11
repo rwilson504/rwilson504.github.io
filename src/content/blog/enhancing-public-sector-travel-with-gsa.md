@@ -1,6 +1,6 @@
 ---
 title: "Enhancing Public Sector Travel with the GSA Per Diem Connector for Power Platform"
-description: "Navigating travel expenses in the public sector can be intricate, especially when it comes to adhering to per diem rates.…"
+description: "Navigating travel expenses in the public sector can be intricate, especially when it comes to adhering to per diem rates."
 pubDate: 2024-01-23
 heroImage: "/heroes/enhancing-public-sector-travel-with-gsa.png"
 heroImageAlt: "# Enhancing Public Sector Travel with the GSA Per Diem Connector for Power Platform"

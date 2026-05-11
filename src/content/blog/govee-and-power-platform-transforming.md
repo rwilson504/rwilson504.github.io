@@ -1,6 +1,6 @@
 ---
 title: "Govee and Power Platform: Transforming Smart Lighting Automation"
-description: "In the evolving world of smart home technology, the integration of lighting solutions with sophisticated automation platforms is gaining significant traction.…"
+description: "In the evolving world of smart home technology, the integration of lighting solutions with sophisticated automation platforms is gaining significant traction."
 pubDate: 2024-03-06
 heroImage: "/heroes/govee-and-power-platform-transforming.png"
 heroImageAlt: "Govee and Power Platform: Transforming Smart Lighting Automation"
