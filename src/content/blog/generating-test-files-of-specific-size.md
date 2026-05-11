@@ -2,7 +2,7 @@
 title: "Generating Test Files of A Specific Size"
 description: "While attempting to unit test the max upload size of files to CRM I needed to generates files of different sizes."
 pubDate: 2019-04-11
-category: misc
+category: "windows"
 tags:
   - "testing"
   - "windows"

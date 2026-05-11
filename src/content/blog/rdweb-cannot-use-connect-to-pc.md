@@ -2,7 +2,7 @@
 title: "RDWeb - Cannot use Connect to a PC Functionality"
 description: "After completing the setup of the RDS/RDWeb on Windows Server 2012 R2 we were unable to use the \"Connect to a PC\" functionality. When attempting to connect the following error:"
 pubDate: 2017-02-06
-category: misc
+category: "windows"
 tags:
   - "rds"
   - "remote-desktop"

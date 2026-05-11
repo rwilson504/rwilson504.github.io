@@ -2,7 +2,7 @@
 title: "IE11 __dopostback undefined"
 description: "After attempting to access my web app in IE11 I noticed all the links were no longer working. Looking through the JavaScript debugger I saw the error \"__dopostback undefined\" when attempting to click…"
 pubDate: 2013-11-19
-category: misc
+category: "windows"
 tags:
   - "asp-net"
   - "web-application"

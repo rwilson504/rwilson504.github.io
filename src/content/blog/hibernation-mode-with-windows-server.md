@@ -3,7 +3,7 @@ title: "Hibernation Mode With Windows Server 2008 and Hyper-V"
 description: "On occasion I need to run Hyper-V for testing on my laptop. Most of the time though I would love to have the power management function such as hibernation which is disabled by Hyper-V."
 pubDate: 2011-02-18
 updatedDate: 2011-02-21
-category: misc
+category: "windows"
 tags:
   - "hyper-v"
   - "windows-server-2008r2"

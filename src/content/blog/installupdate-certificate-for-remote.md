@@ -2,7 +2,7 @@
 title: "Install/Update Certificate for Remote Desktop Gateway"
 description: "To import a certificate to the RD Gateway server in the (Local Computer)/Personal Store"
 pubDate: 2013-02-04
-category: misc
+category: "windows"
 tags:
   - "certificates"
   - "remote-desktop"

@@ -2,7 +2,7 @@
 title: "Point Internal Servers to Internal IP for Internet Facing Sub Domain"
 description: "When you want to create internal DNS entries for a domain name that is also registered externally you can actually create a DNZ zone for that specific sub-domain."
 pubDate: 2014-06-05
-category: misc
+category: "windows"
 tags:
   - "dns"
   - "networking"

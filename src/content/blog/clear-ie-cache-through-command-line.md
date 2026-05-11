@@ -2,7 +2,7 @@
 title: "Clear IE Cache Through Command Line"
 description: "Apparently you can clear the IE cache using the command line. This is going into batch files to reduce the number of times I have to click in IE."
 pubDate: 2011-04-18
-category: misc
+category: "windows"
 tags:
   - "batch-files"
   - "cache"

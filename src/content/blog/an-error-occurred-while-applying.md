@@ -3,7 +3,7 @@ title: "An error occurred while applying security information to"
 description: "While attempting to move files from a hard drive I recovered I kept getting the following error on a specific set of files."
 pubDate: 2013-12-29
 updatedDate: 2019-04-06
-category: misc
+category: "windows"
 tags:
   - "security"
   - "windows-server-2008"

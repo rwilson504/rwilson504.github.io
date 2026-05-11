@@ -4,7 +4,7 @@ description: "While attempting to connect to a remote desktop though a Remote De
 pubDate: 2021-08-16
 heroImage: "/heroes/issue-connecting-through-remote-desktop.png"
 heroImageAlt: "Set RDGClientTransport Key"
-category: misc
+category: "windows"
 tags:
   - "connection"
   - "gateway"

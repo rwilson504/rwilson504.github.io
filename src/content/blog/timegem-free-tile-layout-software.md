@@ -5,7 +5,7 @@ pubDate: 2013-02-21
 updatedDate: 2014-05-01
 heroImage: "/heroes/timegem-free-tile-layout-software.png"
 heroImageAlt: "image"
-category: misc
+category: "dev-tools"
 tags:
   - "tools"
 draft: false

@@ -4,7 +4,7 @@ description: "How to convert Markdown documents (e.g. an Azure DevOps wiki) to P
 pubDate: 2019-11-06
 heroImage: "/heroes/convert-markdown-to-pdf-using-md-to-pdf.gif"
 heroImageAlt: "Create Folder and Run init"
-category: misc
+category: "dev-tools"
 tags:
   - "markdown"
   - "pdf"
