@@ -3,7 +3,7 @@ title: "Modify Logon Setting in IE When Group Policy Doesn't Allow It"
 description: "Recently I needed to \"Prompt for user name and password\" when logging into my Local Intranet zone so that I could test as multiple users."
 pubDate: 2019-02-07
 heroImage: "/heroes/modify-logon-setting-in-ie-when-group.png"
-category: misc
+category: "windows"
 tags:
   - "active-directory"
   - "group-policy"

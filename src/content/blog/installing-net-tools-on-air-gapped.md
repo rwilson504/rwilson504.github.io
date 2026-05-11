@@ -4,7 +4,7 @@ description: "In today’s digital age, the vast majority of our tasks rely heav
 pubDate: 2023-09-06
 heroImage: "/heroes/installing-net-tools-on-air-gapped.png"
 heroImageAlt: "Installing .NET Tools on Air Gapped Systems"
-category: misc
+category: "dev-tools"
 tags:
   - "dotnet"
   - "nuget"

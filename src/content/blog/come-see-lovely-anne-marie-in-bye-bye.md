@@ -3,7 +3,7 @@ title: "Come see the lovely Anne Marie in Bye Bye Birdie!"
 description: "Hey Everybody,"
 pubDate: 2009-09-16
 heroImage: "/heroes/come-see-lovely-anne-marie-in-bye-bye.png"
-category: misc
+category: "personal"
 tags:
   - "theatre"
 draft: false

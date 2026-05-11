@@ -3,7 +3,7 @@ title: "Come Out and See Anne Marie in [title of show]"
 description: "My lovely wife Anne Marie will be performing in [title of show] at The Little Theatre of Alexandria from April 23-May 14. If you can make it out to support her I would appreciate it."
 pubDate: 2011-04-18
 heroImage: "/heroes/come-out-and-see-anne-marie-in-title-of.jpg"
-category: misc
+category: "personal"
 tags:
   - "theatre"
   - "music"

@@ -4,7 +4,7 @@ description: "When created a lab environment to test ADFS 2.0 I utilized the Win
 pubDate: 2010-11-04
 updatedDate: 2011-02-21
 heroImage: "/heroes/windows-server-2008r2-vms-shut-down.png"
-category: misc
+category: "windows"
 tags:
   - "windows-server-2008"
   - "windows-server-2008r2"

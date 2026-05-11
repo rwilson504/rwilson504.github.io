@@ -3,7 +3,7 @@ title: "Coming Soon - Sabbath Night in the Church of the Piranha"
 description: "Coming soon to the stage of Taking Flight Theatre Company is ﻿Sabbath Night in the Church of the Piranha. I will be there the opening Friday, October 8th @ 8PM ."
 pubDate: 2010-09-20
 heroImage: "/heroes/coming-soon-sabbath-night-in-church-of.jpg"
-category: misc
+category: "personal"
 tags:
   - "theatre"
 draft: false

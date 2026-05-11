@@ -3,7 +3,7 @@ title: "Get Process ID of Application Pool (w3wp.exe)"
 description: "When wanting to debug in VS sometimes I only want to attach to a specific Application Pool. To find out which Process Id belongs to what Application pool open a Command Prompt and use the following…"
 pubDate: 2014-06-26
 heroImage: "/heroes/get-process-id-of-application-pool.png"
-category: misc
+category: "windows"
 tags:
   - "iis"
   - "debugging"

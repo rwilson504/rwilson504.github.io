@@ -3,7 +3,7 @@ title: "Anne Marie in The Producers"
 description: "My wonderful wife Anne Marie is going to be performing in an upcoming production of The Producers. This is musical written by Mel Brooks, so you know it has to be funny."
 pubDate: 2010-04-08
 updatedDate: 2011-02-21
-category: misc
+category: "personal"
 tags:
   - "theatre"
 draft: false
