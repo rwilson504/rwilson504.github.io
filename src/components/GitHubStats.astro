@@ -1,0 +1,295 @@
+---
+/**
+ * GitHubStats.astro
+ * Build-time fetch of public GitHub stats for a user. No client-side JS,
+ * no rate-limit risk for visitors. Re-runs every site build (i.e. each
+ * deploy via GitHub Actions).
+ */
+export interface Props {
+  username: string;
+  topReposLimit?: number;
+}
+
+const { username, topReposLimit = 6 } = Astro.props;
+
+interface UserData {
+  login: string;
+  name: string | null;
+  followers: number;
+  public_repos: number;
+  created_at: string;
+  avatar_url: string;
+  html_url: string;
+}
+
+interface Repo {
+  name: string;
+  html_url: string;
+  description: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  language: string | null;
+  fork: boolean;
+  archived: boolean;
+}
+
+const headers: HeadersInit = {
+  Accept: "application/vnd.github+json",
+  "User-Agent": "richardawilson.com-build",
+};
+// GH_TOKEN is optional; if set in the build env (Actions), used to bump rate limits.
+if (import.meta.env.GH_TOKEN) {
+  (headers as Record<string, string>).Authorization = `Bearer ${import.meta.env.GH_TOKEN}`;
+}
+
+let user: UserData | null = null;
+let repos: Repo[] = [];
+let totalStars = 0;
+let totalForks = 0;
+let memberSince = "";
+
+try {
+  const userRes = await fetch(`https://api.github.com/users/${username}`, { headers });
+  if (userRes.ok) {
+    user = (await userRes.json()) as UserData;
+    memberSince = new Date(user.created_at).getFullYear().toString();
+  } else {
+    console.warn(`[GitHubStats] user fetch failed: ${userRes.status}`);
+  }
+
+  // Pull up to 200 owned repos (2 pages), filter forks/archived for the top list
+  const all: Repo[] = [];
+  for (const page of [1, 2]) {
+    const r = await fetch(
+      `https://api.github.com/users/${username}/repos?per_page=100&type=owner&page=${page}`,
+      { headers },
+    );
+    if (!r.ok) {
+      console.warn(`[GitHubStats] repos page ${page} failed: ${r.status}`);
+      break;
+    }
+    const batch = (await r.json()) as Repo[];
+    all.push(...batch);
+    if (batch.length < 100) break;
+  }
+  repos = all;
+  totalStars = repos.reduce((acc, r) => acc + (r.stargazers_count ?? 0), 0);
+  totalForks = repos.reduce((acc, r) => acc + (r.forks_count ?? 0), 0);
+} catch (err) {
+  console.warn("[GitHubStats] build-time fetch failed", err);
+}
+
+const topRepos = repos
+  .filter((r) => !r.fork && !r.archived)
+  .sort((a, b) => b.stargazers_count - a.stargazers_count)
+  .slice(0, topReposLimit);
+
+const profileUrl = user?.html_url ?? `https://github.com/${username}`;
+---
+
+{user ? (
+  <section class="gh-stats">
+    <header class="gh-stats-header">
+      <img
+        class="gh-avatar"
+        src={user.avatar_url}
+        width="64"
+        height="64"
+        alt={`${username} avatar`}
+        loading="lazy"
+        decoding="async"
+      />
+      <div>
+        <h2 class="gh-stats-title">
+          <a href={profileUrl} target="_blank" rel="noopener noreferrer">
+            @{username}
+          </a>{" "}
+          on GitHub
+        </h2>
+        <p class="gh-stats-sub">Open-source projects, mostly Power Platform &amp; PCF tooling. Member since {memberSince}.</p>
+      </div>
+    </header>
+
+    <div class="gh-stat-row">
+      <div class="gh-stat">
+        <div class="gh-stat-value">{user.public_repos}</div>
+        <div class="gh-stat-label">Repos</div>
+      </div>
+      <div class="gh-stat">
+        <div class="gh-stat-value">{totalStars.toLocaleString()}</div>
+        <div class="gh-stat-label">Total Stars</div>
+      </div>
+      <div class="gh-stat">
+        <div class="gh-stat-value">{totalForks.toLocaleString()}</div>
+        <div class="gh-stat-label">Total Forks</div>
+      </div>
+      <div class="gh-stat">
+        <div class="gh-stat-value">{user.followers}</div>
+        <div class="gh-stat-label">Followers</div>
+      </div>
+    </div>
+
+    {topRepos.length > 0 && (
+      <>
+        <h3 class="gh-top-heading">Most-starred repositories</h3>
+        <ul class="gh-repo-list">
+          {topRepos.map((r) => (
+            <li class="gh-repo">
+              <a class="gh-repo-name" href={r.html_url} target="_blank" rel="noopener noreferrer">
+                {r.name}
+              </a>
+              {r.description && <p class="gh-repo-desc">{r.description}</p>}
+              <div class="gh-repo-meta">
+                {r.language && <span class="gh-repo-lang">{r.language}</span>}
+                <span class="gh-repo-pill" title="Stars">★ {r.stargazers_count.toLocaleString()}</span>
+                <span class="gh-repo-pill" title="Forks">⑂ {r.forks_count.toLocaleString()}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+  </section>
+) : (
+  <p class="gh-stats-fallback">
+    Browse my open-source work on{" "}
+    <a href={profileUrl} target="_blank" rel="noopener noreferrer">GitHub</a>.
+  </p>
+)}
+
+<style>
+  .gh-stats {
+    margin: 2rem 0;
+    padding: 1.4rem 1.4rem 1.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    background: linear-gradient(135deg,
+      color-mix(in oklab, var(--color-accent) 4%, transparent) 0%,
+      transparent 60%);
+  }
+  .gh-stats-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .gh-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+  }
+  .gh-stats-title {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+  .gh-stats-title a {
+    text-decoration: none;
+    color: var(--color-fg);
+  }
+  .gh-stats-title a:hover {
+    color: var(--color-accent);
+  }
+  .gh-stats-sub {
+    margin: 0.25rem 0 0;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+  .gh-stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .gh-stat {
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+  }
+  .gh-stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-fg);
+  }
+  .gh-stat-label {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-muted);
+  }
+
+  .gh-top-heading {
+    margin: 0.5rem 0 0.8rem;
+    font-size: 1rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .gh-repo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+  .gh-repo {
+    padding: 0.85rem 0.95rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .gh-repo:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-border));
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  }
+  .gh-repo-name {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-fg);
+    font-size: 0.98rem;
+    word-break: break-word;
+  }
+  .gh-repo-name:hover {
+    color: var(--color-accent);
+  }
+  .gh-repo-desc {
+    margin: 0.4rem 0 0.6rem;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .gh-repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.78rem;
+  }
+  .gh-repo-lang {
+    color: var(--color-muted);
+  }
+  .gh-repo-pill {
+    color: var(--color-muted);
+    background: var(--color-code-bg);
+    padding: 0.1em 0.5em;
+    border-radius: 999px;
+  }
+  .gh-stats-fallback {
+    margin: 1rem 0;
+    color: var(--color-muted);
+  }
+</style>
