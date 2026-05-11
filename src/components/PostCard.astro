@@ -1,5 +1,6 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
+import { getLinkableTags } from "../utils/tags";
 
 export interface Props {
   href: string;
@@ -11,6 +12,7 @@ export interface Props {
 }
 
 const { href, title, description, pubDate, category, tags } = Astro.props;
+const linkable = await getLinkableTags();
 ---
 
 <li class="post-card">
@@ -20,9 +22,11 @@ const { href, title, description, pubDate, category, tags } = Astro.props;
   <p>{description}</p>
   {tags.length > 0 && (
     <p>
-      {tags.slice(0, 6).map((t) => (
-        <a class="tag" href={`/tags/${t}/`}>{t}</a>
-      ))}
+      {tags.slice(0, 6).map((t) =>
+        linkable.has(t)
+          ? <a class="tag" href={`/tags/${t}/`}>{t}</a>
+          : <span class="tag">{t}</span>
+      )}
     </p>
   )}
 </li>
