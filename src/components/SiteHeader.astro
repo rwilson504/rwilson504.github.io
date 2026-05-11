@@ -139,10 +139,15 @@ const nav: Array<
     background: transparent;
     border: none;
     color: inherit;
-    font: inherit;
+    /* Inherit font family/size from the surrounding nav, but DO NOT use
+       'font: inherit' shorthand because that resets font-weight to the
+       inherited (normal) value and beats the global '.site-nav a' rule
+       on weight. We want 600 to match the sibling anchors. */
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
     cursor: pointer;
     padding: 0;
-    /* Match the look of the sibling <a> nav links */
     line-height: inherit;
   }
   .dropdown-trigger:hover,
