@@ -3,46 +3,77 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import GitHubStats from "../components/GitHubStats.astro";
 ---
 
-<BaseLayout title="About" description="About Richard A. Wilson.">
+<BaseLayout title="About" description="About Richard A. Wilson." wide>
   <h1>About</h1>
-  <figure class="about-photo">
-    <img
-      src="/about/wilson-family.jpg"
-      alt="The Wilson family"
-      width="600"
-      loading="eager"
-      decoding="async"
-    />
-    <figcaption>The Wilsons</figcaption>
-  </figure>
-  <p>
-    I'm Rick Wilson — a Principal Consultant at Microsoft focusing on Power
-    Platform and AI. I've been blogging since 2009 (yes, really).
-  </p>
-  <p>Topics here, roughly in order of frequency:</p>
-  <ul>
-    <li><strong>Power Platform</strong> — Power Apps, PCF controls, Dataverse,
-      Power Automate, governance.</li>
-    <li><strong>AI</strong> — tooling, agents, automation, MCP, and the stuff I'm
-      currently breaking.</li>
-    <li><strong>Electronics & side projects</strong> — occasional weekend
-      tinkering.</li>
-    <li><strong>3D printing</strong> — builds, mods, and the occasional
-      filament disaster.</li>
-  </ul>
-  <p>
-    Find me on
-    <a href="https://github.com/rwilson504" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-    <a href="https://www.youtube.com/channel/UCdI64e7AJNaLF-b9uCGXLSQ" target="_blank" rel="noopener noreferrer">YouTube</a> ·
-    <a href="https://www.linkedin.com/in/rickawilson/">LinkedIn</a>.
-  </p>
+  <div class="about-grid">
+    <div class="about-main">
+      <figure class="about-photo">
+        <img
+          src="/about/wilson-family.jpg"
+          alt="The Wilson family"
+          width="600"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption>The Wilsons</figcaption>
+      </figure>
+      <p>
+        I'm Rick Wilson — a Principal Consultant at Microsoft focusing on Power
+        Platform and AI. I've been blogging since 2009 (yes, really).
+      </p>
+      <p>Topics here, roughly in order of frequency:</p>
+      <ul>
+        <li><strong>Power Platform</strong> — Power Apps, PCF controls, Dataverse,
+          Power Automate, governance.</li>
+        <li><strong>AI</strong> — tooling, agents, automation, MCP, and the stuff I'm
+          currently breaking.</li>
+        <li><strong>Electronics & side projects</strong> — occasional weekend
+          tinkering.</li>
+        <li><strong>3D printing</strong> — builds, mods, and the occasional
+          filament disaster.</li>
+      </ul>
+      <p>
+        Find me on
+        <a href="https://github.com/rwilson504" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+        <a href="https://www.youtube.com/channel/UCdI64e7AJNaLF-b9uCGXLSQ" target="_blank" rel="noopener noreferrer">YouTube</a> ·
+        <a href="https://www.linkedin.com/in/rickawilson/">LinkedIn</a>.
+      </p>
+    </div>
 
-  <GitHubStats username="rwilson504" topReposLimit={6} />
+    <aside class="about-side">
+      <GitHubStats username="rwilson504" topReposLimit={6} />
+    </aside>
+  </div>
 </BaseLayout>
 
 <style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1.5rem;
+  }
+
+  /* Two columns on wider screens — main text + sticky-ish sidebar with GH stats. */
+  @media (min-width: 960px) {
+    .about-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+      gap: 2.5rem;
+    }
+    .about-side {
+      position: sticky;
+      top: 1.5rem;
+    }
+  }
+
+  /* Keep prose readable even inside the wide layout. */
+  .about-main {
+    max-width: 65ch;
+  }
+
   .about-photo {
-    margin: 1.5rem 0 2rem;
+    margin: 0 0 1.5rem;
     max-width: 32rem;
   }
   .about-photo img {
@@ -54,7 +85,12 @@ import GitHubStats from "../components/GitHubStats.astro";
   .about-photo figcaption {
     margin-top: 0.5rem;
     font-size: 0.9em;
-    color: #666;
+    color: var(--color-muted);
     font-style: italic;
+  }
+
+  /* Pull the GitHubStats card flush at the top of the sidebar. */
+  .about-side :global(.gh-stats) {
+    margin-top: 0;
   }
 </style>
