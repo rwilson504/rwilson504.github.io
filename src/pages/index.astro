@@ -6,24 +6,36 @@ import PostCard from "../components/PostCard.astro";
 const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-const recent = posts.slice(0, 10);
+const [featured, ...rest] = posts;
+const grid = rest.slice(0, 11); // 1 featured + 11 compact = 12 on the home page
 ---
 
-<BaseLayout title="Richard A. Wilson">
-  <section>
+<BaseLayout title="Richard A. Wilson" wide>
+  <section class="intro">
     <h1>Hi, I'm Rick.</h1>
     <p>
-      I write about Power Platform, AI tinkering, and the occasional
-      electronics or side project. Long-time
-      <a href="https://www.richardawilson.com/">Power Apps blogger</a>;
-      now rebuilding everything here as a static site.
+      Principal Consultant at Microsoft writing about Power Platform, AI,
+      3D printing, and side projects. Blogging since 2009.
     </p>
   </section>
 
   <section>
-    <h2>Recent posts</h2>
-    <ul class="post-list">
-      {recent.map((post) => (
+    <h2 class="section-heading">Recent posts</h2>
+
+    <PostCard
+      href={`/blog/${featured.id}/`}
+      title={featured.data.title}
+      description={featured.data.description}
+      pubDate={featured.data.pubDate}
+      category={featured.data.category}
+      tags={featured.data.tags}
+      heroImage={featured.data.heroImage}
+      heroImageAlt={featured.data.heroImageAlt}
+      variant="featured"
+    />
+
+    <div class="post-grid">
+      {grid.map((post) => (
         <PostCard
           href={`/blog/${post.id}/`}
           title={post.data.title}
@@ -33,9 +45,11 @@ const recent = posts.slice(0, 10);
           tags={post.data.tags}
           heroImage={post.data.heroImage}
           heroImageAlt={post.data.heroImageAlt}
+          variant="compact"
         />
       ))}
-    </ul>
-    <p><a href="/blog/">→ all posts</a></p>
+    </div>
+
+    <p class="all-posts-link"><a href="/blog/">→ all posts</a></p>
   </section>
 </BaseLayout>

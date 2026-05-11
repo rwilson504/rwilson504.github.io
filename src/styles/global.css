@@ -15,6 +15,7 @@
   --color-code-bg: #f4f3ee;
 
   --content-width: 70ch;
+  --page-width: 1200px;
   --space: 1rem;
   --radius: 6px;
   --line-height: 1.65;
@@ -61,6 +62,15 @@ main {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: calc(var(--space) * 2) var(--space);
+}
+
+main.wide {
+  max-width: var(--page-width);
+}
+
+.site-header .site-nav,
+.site-footer {
+  /* let header/footer breathe on wide pages too */
 }
 
 img,
@@ -164,7 +174,7 @@ hr {
 }
 
 .site-nav {
-  max-width: var(--content-width);
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 1em var(--space);
   display: flex;
@@ -204,21 +214,160 @@ hr {
   gap: 1.75em;
 }
 
+/* Responsive card grid: auto-fills as many ~280px cards per row as fit. */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75em;
+  margin: 1.5em 0;
+}
+
+/* Compact (grid) card — image on top, body below. */
+.post-card-compact {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.post-card-compact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-border));
+}
+
+.post-card-compact .post-card-thumb-link {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-code-bg);
+}
+
+.post-card-compact .post-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.post-card-compact:hover .post-card-thumb {
+  transform: scale(1.04);
+}
+
+.post-card-compact .post-card-body {
+  padding: 0.95em 1.05em 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.post-card-compact h2 {
+  margin: 0.1em 0 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.post-card-compact .post-card-desc {
+  margin: 0.25em 0 0;
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Featured (large hero) card — image on top, big title, full description. */
+.post-card-featured {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 0 2em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.post-card-featured:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: color-mix(in oklab, var(--color-accent) 40%, var(--color-border));
+}
+
+.post-card-featured .post-card-thumb-link {
+  display: block;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--color-code-bg);
+}
+
+@media (max-width: 700px) {
+  .post-card-featured .post-card-thumb-link {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.post-card-featured .post-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.post-card-featured:hover .post-card-thumb {
+  transform: scale(1.02);
+}
+
+.post-card-featured .post-card-body {
+  padding: 1.4em 1.5em 1.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.post-card-featured h2 {
+  margin: 0.1em 0 0;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 900px) {
+  .post-card-featured h2 {
+    font-size: 2.1rem;
+  }
+}
+
+.post-card-featured .post-card-desc {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin: 0.2em 0 0;
+}
+
+/* Legacy `.post-card` (used by old templates) — kept as a side-by-side fallback. */
 .post-card {
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 1.75em;
+}
+
+.post-list .post-card {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 1.25em;
 }
 
 @media (max-width: 640px) {
-  .post-card {
+  .post-list .post-card {
     grid-template-columns: 1fr;
   }
 }
 
-.post-card:last-child {
+.post-list .post-card:last-child {
   border-bottom: none;
 }
 
@@ -246,18 +395,27 @@ hr {
   margin-top: 0;
 }
 
-.post-card h2 {
-  margin: 0.2em 0 0.25em 0;
-  font-size: 1.25rem;
-}
-
-.post-card a.post-title {
+.post-card h2 a.post-title {
   color: var(--color-fg);
   text-decoration: none;
 }
 
-.post-card a.post-title:hover {
+.post-card h2 a.post-title:hover {
   color: var(--color-accent);
+}
+
+.section-heading {
+  margin: 1.5em 0 1em;
+}
+
+.intro {
+  margin-bottom: 2em;
+}
+
+.all-posts-link {
+  margin-top: 2em;
+  text-align: center;
+  font-weight: 600;
 }
 
 .post-hero {

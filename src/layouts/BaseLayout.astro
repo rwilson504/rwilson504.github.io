@@ -9,6 +9,8 @@ export interface Props {
   description?: string;
   canonical?: URL | string;
   ogImage?: string;
+  /** Use the wider page max-width (for index/listing pages). */
+  wide?: boolean;
   /** Article-specific OG tags. */
   article?: {
     publishedTime?: string;
@@ -22,6 +24,7 @@ const {
   description = "Tips, tricks, and notes from Richard A. Wilson on Power Platform, AI, and side projects.",
   canonical,
   ogImage,
+  wide = false,
   article,
 } = Astro.props;
 
@@ -73,7 +76,7 @@ const resolvedCanonical = canonical ?? Astro.url.href;
   </head>
   <body>
     <SiteHeader />
-    <main><slot /></main>
+    <main class={wide ? "wide" : undefined}><slot /></main>
     <SiteFooter />
   </body>
 </html>
