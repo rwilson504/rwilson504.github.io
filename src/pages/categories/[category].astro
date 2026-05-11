@@ -18,10 +18,8 @@ export async function getStaticPaths() {
 }
 
 const { category, posts } = Astro.props;
-const titleCase = category
-  .split("-")
-  .map((w) => w[0]?.toUpperCase() + w.slice(1))
-  .join(" ");
+import { categoryLabel } from "../../utils/categories";
+const titleCase = categoryLabel(category);
 ---
 
 <BaseLayout
