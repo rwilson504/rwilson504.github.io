@@ -1,12 +1,12 @@
 ---
-title: "Fix Error &quot;Microsoft Dynamics CRM Mail Merge is already running&quot;"
-description: "When trying to do multiple mail merges I many time get a pop-up error stating \"Microsoft Dynamics CRM Mail Merge is already running\". Here is how to fix it."
+title: Fix Error "Microsoft Dynamics CRM Mail Merge is already running"
+description: When trying to do multiple mail merges I many time get a pop-up error stating "Microsoft Dynamics CRM Mail Merge is already running". Here is how to fix it.
 pubDate: 2009-08-21
 updatedDate: 2009-09-01
-heroImage: "/heroes/fix-error-microsoft-dynamics-crm-mail.jpg"
+heroImage: /heroes/fix-error-microsoft-dynamics-crm-mail.jpg
 category: power-apps
 tags:
-  - "crm-4"
+- crm-4
 draft: false
 originalBloggerUrl: /2009/08/fix-error-microsoft-dynamics-crm-mail.html
 ---

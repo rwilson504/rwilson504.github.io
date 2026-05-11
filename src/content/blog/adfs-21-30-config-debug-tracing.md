@@ -1,15 +1,15 @@
 ---
-title: "ADFS 2.1 &amp; 3.0 Config Debug Tracing"
-description: "Run CMD as Administrator- WEVTUTIL sl \"AD FS Tracing/Debug\" /l:5- Open the file “C:/Windows/ADFS/Microsoft.IdentityServer.Servicehost.exe.config”- Find the following sections shown in the image…"
+title: ADFS 2.1 & 3.0 Config Debug Tracing
+description: Run CMD as Administrator- WEVTUTIL sl "AD FS Tracing/Debug" /l:5- Open the file “C:/Windows/ADFS/Microsoft.IdentityServer.Servicehost.exe.config”- Find the following sections shown in the image…
 pubDate: 2015-08-12
 updatedDate: 2015-08-20
-heroImage: "/heroes/adfs-21-30-config-debug-tracing.png"
-heroImageAlt: "ADFS2.13.0Tracing"
+heroImage: /heroes/adfs-21-30-config-debug-tracing.png
+heroImageAlt: ADFS2.13.0Tracing
 category: power-apps
 tags:
-  - "adfs"
-  - "adfs-2-1"
-  - "adfs-3"
+- adfs
+- adfs-2-1
+- adfs-3
 draft: false
 originalBloggerUrl: /2015/08/adfs-21-30-config-debug-tracing.html
 ---
