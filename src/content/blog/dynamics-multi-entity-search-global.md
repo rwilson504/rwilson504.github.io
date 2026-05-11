@@ -16,7 +16,7 @@ The manual way of updating these settings
 2. Click on the button for Select entities for categories search  
 3. Add/Remove the entities you want utilizing the selection screen.  
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdWCd0Eq2adGdZrubf_n_EyCQ0TRVNk90Ul23FrV8dQBqRGt2sk2vJKycNs0cP7AJVOPPqlRMjWkP7nRDtcDBo8IAJQMkBC5yAg53llgEqzCVGQS9KATrHJ94hYUh_xAgmh3h1ydRGP5M/s320/EntitySelection.PNG)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdWCd0Eq2adGdZrubf_n_EyCQ0TRVNk90Ul23FrV8dQBqRGt2sk2vJKycNs0cP7AJVOPPqlRMjWkP7nRDtcDBo8IAJQMkBC5yAg53llgEqzCVGQS9KATrHJ94hYUh_xAgmh3h1ydRGP5M/s1600/EntitySelection.PNG)
+[![](/images/dynamics-multi-entity-search-global/01-EntitySelection.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdWCd0Eq2adGdZrubf_n_EyCQ0TRVNk90Ul23FrV8dQBqRGt2sk2vJKycNs0cP7AJVOPPqlRMjWkP7nRDtcDBo8IAJQMkBC5yAg53llgEqzCVGQS9KATrHJ94hYUh_xAgmh3h1ydRGP5M/s1600/EntitySelection.PNG)
 
   
 How to do it utilizing code:  

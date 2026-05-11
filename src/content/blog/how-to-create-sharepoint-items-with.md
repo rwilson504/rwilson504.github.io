@@ -22,11 +22,11 @@ originalBloggerUrl: /2022/02/how-to-create-sharepoint-items-with.html
 
 In this example I demonstrate several ways in which an Excel sheet containing fictitious customer data could be loaded into a SharePoint list. In order to do this I first generated some fake data for my customers using [Mockaroo](https://www.mockaroo.com/).
 
-![Excel Data](https://user-images.githubusercontent.com/7444929/152590014-68ffa7f4-365e-4c5f-9f78-a774a90ed7bd.png)
+![Excel Data](/images/how-to-create-sharepoint-items-with/01-152590014-68ffa7f4-365e-4c5f-9f78-a774a90ed7bd.png)
 
 I then created a new SharePoint list and added some columns to match my spreadsheet.
 
-![New SharePoint List](https://user-images.githubusercontent.com/7444929/152590069-9ce3ffcc-4270-41e3-9fae-0a50baa6652f.png)
+![New SharePoint List](/images/how-to-create-sharepoint-items-with/02-152590069-9ce3ffcc-4270-41e3-9fae-0a50baa6652f.png)
 
 ## Methods
 
@@ -48,7 +48,7 @@ The first way for creating a SharePoint item I will cover is using the [screen r
 One issue i did run into while building this automation was that after the first record creation the validation on the SharePoint create screen always said that my required field were not filled in even though they were. To work around this I added a Browser Reload Web Page action at the start of each loop to reload the SharePoint list url.
 
 This is the final result for the recording method.  
-![Final PAD Flow for Recording](https://user-images.githubusercontent.com/7444929/152586092-fbef1fae-f7f1-4e2c-8873-6ca847749867.png)
+![Final PAD Flow for Recording](/images/how-to-create-sharepoint-items-with/03-152586092-fbef1fae-f7f1-4e2c-8873-6ca847749867.png)
 
 If you copy the code below you can paste it into the Power Automate Desktop design surface to get started.
 
@@ -276,7 +276,7 @@ Register-PnPManagementShellAccess
 
 The Register-PnPManagementShellAccess will open a web browser where you will need to authorize the managment shell app. When this screen appears click the Accept button. You can also choose if you have the proper rights to authorize this connection for your entire organization.
 
-![Authorize Management Shell](https://user-images.githubusercontent.com/7444929/151868432-6a41a238-42ef-44af-9dbc-8770d60e8587.png)
+![Authorize Management Shell](/images/how-to-create-sharepoint-items-with/04-151868432-6a41a238-42ef-44af-9dbc-8770d60e8587.png)
 
 Now you are ready to update the property which will allow for App-Only authentication. After you run these commands it can take some time for it to propagate, so go grab some coffee or drink of your choice.
 
@@ -289,11 +289,11 @@ Now that our authentication mechanism is all ready we will add in the first Invo
 
 [PowerShell to generate URL and Request Body for SharePoint authentication](https://github.com/rwilson504/PowerShell/blob/main/SharePoint/AppOnlyWebResquestProperties.ps1)
 
-![Inovke web service for authentication](https://user-images.githubusercontent.com/7444929/152588294-bffa6e31-67b4-47cb-9c87-607035742d34.png)
+![Inovke web service for authentication](/images/how-to-create-sharepoint-items-with/05-152588294-bffa6e31-67b4-47cb-9c87-607035742d34.png)
 
 Next parse the JSON returned from the authentication call so that we can easily retrieve the bearer token.
 
-![Parse Authentication Response](https://user-images.githubusercontent.com/7444929/152588548-f525f8ce-20c1-46b1-9120-8f2db9e2f28b.png)
+![Parse Authentication Response](/images/how-to-create-sharepoint-items-with/06-152588548-f525f8ce-20c1-46b1-9120-8f2db9e2f28b.png)
 
 Now we can use the Invoke web service to call a post method that will create our new item. You can see in the custom headers section where we utilized the output of the authentication call to pass our bearer token. Additional information on how to generate the Request body when working with the SharePoint REST API can be found here: [Working with lists and list items with REST](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/working-with-lists-and-list-items-with-rest)
 
@@ -305,15 +305,15 @@ https://yoursharepoint.sharepoint.com/sites/Clients/_api/web/lists/GetByTitle('C
 
 After the data is returned just search for “SP.Data” and you will be able to see the content type(s) for the list.
 
-![Find Content Types](https://user-images.githubusercontent.com/7444929/152595257-784f6202-80dc-40be-bc1f-f1e213588d5f.png)
+![Find Content Types](/images/how-to-create-sharepoint-items-with/07-152595257-784f6202-80dc-40be-bc1f-f1e213588d5f.png)
 
 Here is Invoke web service action I used to generate list items.
 
-![Call SharePoint to Create Item](https://user-images.githubusercontent.com/7444929/152588964-a7d7c090-6880-43c9-b848-1eebd7867a55.png)
+![Call SharePoint to Create Item](/images/how-to-create-sharepoint-items-with/08-152588964-a7d7c090-6880-43c9-b848-1eebd7867a55.png)
 
 This is the final result for the web service call method.
 
-![Final PAD Flow for Web Service Calls](https://user-images.githubusercontent.com/7444929/152586179-320a1fd3-f8b8-47c4-897b-a5be641c2a87.png)
+![Final PAD Flow for Web Service Calls](/images/how-to-create-sharepoint-items-with/09-152586179-320a1fd3-f8b8-47c4-897b-a5be641c2a87.png)
 
 If you copy the code below you can paste it into the Power Automate Desktop design surface to get started.
 
@@ -356,7 +356,7 @@ Register-PnPManagementShellAccess
 ```
 
 The Register-PnPManagementShellAccess will open a web browser where you will need to authorize the managment shell app. When this screen appears click the Accept button. You can also choose if you have the proper rights to authorize this connection for your entire organization.  
-![Authorize Management Shell](https://user-images.githubusercontent.com/7444929/151868432-6a41a238-42ef-44af-9dbc-8770d60e8587.png)
+![Authorize Management Shell](/images/how-to-create-sharepoint-items-with/04-151868432-6a41a238-42ef-44af-9dbc-8770d60e8587.png)
 
 In order for the PowerShell script to authenticate to SharePoint we can utilize the PnP module to save the credential to the machine within the Windows Credential Manager. For more information on this go here: [How to use the Windows Credential Manager to ease authentication with PnP PowerShell](https://github.com/pnp/PnP-PowerShell/wiki/How-to-use-the-Windows-Credential-Manager-to-ease-authentication-with-PnP-PowerShell)
 
@@ -368,7 +368,7 @@ Add-PnPStoredCredential -Name https://yoursharepoint.sharepoint.com -Username yo
 
 This is the final result for the PowerShell method.
 
-![Final PAD Flow for PowerShell](https://user-images.githubusercontent.com/7444929/152586245-aac49479-5e69-4077-9ba3-462129bb0b42.png)
+![Final PAD Flow for PowerShell](/images/how-to-create-sharepoint-items-with/10-152586245-aac49479-5e69-4077-9ba3-462129bb0b42.png)
 
 If you copy the code below you can paste it into the Power Automate Desktop design surface to get started.
 
@@ -392,4 +392,4 @@ The FY22 Realese Wave 1 plans show plans for a dedicated SharePoint connector wi
 
 [SharePoint connector in Power Automate for desktop](https://docs.microsoft.com/en-us/power-platform-release-plan/2022wave1/power-automate/sharepoint-connector-power-automate-desktop)
 
-![image](https://user-images.githubusercontent.com/7444929/151870624-483f4c07-b849-4e39-9e2c-58008e55342a.png)
+![image](/images/how-to-create-sharepoint-items-with/11-151870624-483f4c07-b849-4e39-9e2c-58008e55342a.png)

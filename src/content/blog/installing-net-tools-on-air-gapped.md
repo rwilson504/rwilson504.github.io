@@ -18,7 +18,7 @@ In today’s digital age, the vast majority of our tasks rely heavily on interne
 
 Before diving into the nitty-gritty of offline installations, it’s essential to understand the foundational tools at our disposal. Central to our endeavor is the .NET SDK, a powerful suite that grants us the capability to harness the `dotnet` command. With this command, we can perform a myriad of tasks, including the installation of .NET tools. But how do we achieve this without an active internet connection? The answer lies in NuGet packages. These packages, which are typically fetched from online repositories, can also be saved locally. By leveraging locally saved NuGet packages, we can sidestep the need for online connectivity, making it possible to install our desired .NET tools on air-gapped systems. In the sections that follow, we’ll walk you through the step-by-step process of setting up the .NET SDK, accessing the ‘dotnet’ command, and utilizing local NuGet packages to achieve our installation goals.
 
-![default behavior when installing packages](https://github.com/rwilson504/Blogger/assets/7444929/3603f080-251d-4658-8f16-362982cf672d)
+![default behavior when installing packages](/images/installing-net-tools-on-air-gapped/01-3603f080-251d-4658-8f16-362982cf672d.png)
 
 # Step 1: Preparing for the Offline Journey
 
@@ -28,13 +28,13 @@ Remember, the key to a successful installation on an air-gapped system is thorou
 
 Before anything else, you’ll need the .NET SDK. This is the backbone that will allow you to run the `dotnet` command on your air-gapped machine. Visit the official .NET SDK download page from a machine with internet access. Ensure you select the appropriate version and platform for your needs, then initiate the download.
 
-![Download .Net SDK](https://github.com/rwilson504/Blogger/assets/7444929/c5e6a01c-8b51-4a8e-b86c-60f698bfc9c5)
+![Download .Net SDK](/images/installing-net-tools-on-air-gapped/02-c5e6a01c-8b51-4a8e-b86c-60f698bfc9c5.png)
 
 ## Gathering Required NuGet Packages:
 
 Next, identify all the .NET tools you wish to install on the offline machine. For each tool, you’ll need its corresponding NuGet package. Navigate to NuGet’s official website and use the search functionality to locate each package. Once found, download the .nupkg file for the latest stable version, or the version you require.
 
-![Download nupkg files](https://github.com/rwilson504/Blogger/assets/7444929/7f922cb0-6dd4-4c54-b451-d21954901eb9)
+![Download nupkg files](/images/installing-net-tools-on-air-gapped/03-7f922cb0-6dd4-4c54-b451-d21954901eb9.png)
 
 ## Transferring Files to the Air-Gapped Machine:
 
@@ -71,7 +71,7 @@ Open a text editor of your choice and paste the following configuration:
 
 Ensure that the value attribute in the tag points to the correct location of your nuget folder. Save this file as nuget.config within your packages/nuget directory.
 
-![nuget.config file](https://github.com/rwilson504/Blogger/assets/7444929/bddc68be-768a-4eda-bd95-8b9353e10b36)
+![nuget.config file](/images/installing-net-tools-on-air-gapped/04-bddc68be-768a-4eda-bd95-8b9353e10b36.png)
 
 # Step 3: Running dotnet tool commands
 
@@ -81,7 +81,7 @@ When you wish to install a tool or package using the dotnet command line, ensure
 dotnet tool install <tool-name> --configfile F:\packages\nuget\nuget.config
 ```
 
-![installing docfx](https://github.com/rwilson504/Blogger/assets/7444929/4dcb3d87-9ca9-424b-acb9-affc75b2997a)
+![installing docfx](/images/installing-net-tools-on-air-gapped/05-4dcb3d87-9ca9-424b-acb9-affc75b2997a.png)
 
 # Alternate Configuration: Modifying the Default NuGet Configuration
 

@@ -40,4 +40,4 @@ Check out these videos on how to get the control working in a multilingual setup
 [Canvas Apps Multilingual Setup](https://youtu.be/xSCHCRQFhMI)  
   
 [Model Apps Multilingual Setup](https://youtu.be/wJYN6TMnMT4)  
-[![Model App Video](https://img.youtube.com/vi/wJYN6TMnMT4/sddefault.jpg)](https://youtu.be/wJYN6TMnMT4)
+[![Model App Video](/images/multilingual-support-for-pcf-calendar/01-sddefault.jpg)](https://youtu.be/wJYN6TMnMT4)

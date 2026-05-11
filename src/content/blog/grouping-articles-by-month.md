@@ -52,4 +52,4 @@ After completing the calculated field I added a new Posts webpart to the page. I
   
 **Note**: It is important to change the view of the webpart to from "" to "All Items" after you add the webpart. Otherwise when you uncollapse the grouping the titles and other text will have the same formatting as the blog posts. This means your titles will show up HUGE.  
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtCIpZvArzImJU-mQcqMDfZKT7AVmYAvfxxGpM5VqBNayBr47VfxoTH7Befj5F2BFVD1Qf_lFcPEZp_s46s5hnRAA7EUCGRXZ0vx39cg_31IJ7izceCxf_pfz2Kz2JqNRIjuK1L82ozdo/s400/groupbymonth.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtCIpZvArzImJU-mQcqMDfZKT7AVmYAvfxxGpM5VqBNayBr47VfxoTH7Befj5F2BFVD1Qf_lFcPEZp_s46s5hnRAA7EUCGRXZ0vx39cg_31IJ7izceCxf_pfz2Kz2JqNRIjuK1L82ozdo/s1600-h/groupbymonth.jpg)
+[![](/images/grouping-articles-by-month/01-groupbymonth.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtCIpZvArzImJU-mQcqMDfZKT7AVmYAvfxxGpM5VqBNayBr47VfxoTH7Befj5F2BFVD1Qf_lFcPEZp_s46s5hnRAA7EUCGRXZ0vx39cg_31IJ7izceCxf_pfz2Kz2JqNRIjuK1L82ozdo/s1600-h/groupbymonth.jpg)

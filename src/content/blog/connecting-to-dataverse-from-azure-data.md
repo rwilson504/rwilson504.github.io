@@ -102,12 +102,12 @@ Managed identities offer secure, credential-free access to Dataverse from ADF.
 **Walkthrough: Creating and Assigning a Managed Identity**
 
 1. In the Azure Portal, create a new **User-assigned Managed Identity**.  
-   ![image](https://github.com/user-attachments/assets/942a3dd3-e14c-4d86-9bae-d3a7e5e1f869)
+   ![image](/images/connecting-to-dataverse-from-azure-data/01-942a3dd3-e14c-4d86-9bae-d3a7e5e1f869.png)
 2. Navigate to your Azure Data Factory resource.
 3. Under **Settings**, select **Managed identities** and then click **+ Add user-assigned managed identity**.  
-   ![image](https://github.com/user-attachments/assets/48532949-acd7-4552-b4a7-8898c13808d4)
+   ![image](/images/connecting-to-dataverse-from-azure-data/02-48532949-acd7-4552-b4a7-8898c13808d4.png)
 4. Select the newly created identity and add it to your ADF instance.  
-   ![image](https://github.com/user-attachments/assets/45978f65-2825-4156-87ee-96e43fcb5844)
+   ![image](/images/connecting-to-dataverse-from-azure-data/03-45978f65-2825-4156-87ee-96e43fcb5844.png)
 5. Go to Azure Active Directory and assign the identity to your Dataverse environment if needed.
 6. In the Power Platform admin center, assign the identity a security role (e.g., System Administrator or a custom role with required privileges).
 
@@ -120,14 +120,14 @@ Assigning security roles in Dataverse is essential to ensure that your ADF-manag
 1. Go to the **Power Platform Admin Center** and open the **Environments** section.
 2. Click on the environment you want to assign access to.
 3. Select the **S2S Apps** tab to manage Server-to-Server (S2S) app users.  
-   ![image](https://github.com/user-attachments/assets/ed95b971-409f-49f2-9890-05ec68b85210)
+   ![image](/images/connecting-to-dataverse-from-azure-data/04-ed95b971-409f-49f2-9890-05ec68b85210.png)
 4. Click **+ Add an app user** to begin adding your Managed Identity.  
    **Important:** When searching for your Managed Identity, search by **Object ID**, not the display name, as it may not appear otherwise.  
-   ![image](https://github.com/user-attachments/assets/b5023dca-4f60-49c1-b6d2-cfd5562e1274)
+   ![image](/images/connecting-to-dataverse-from-azure-data/05-b5023dca-4f60-49c1-b6d2-cfd5562e1274.png)
 5. Select a **Business Unit** if prompted.  
-   ![image](https://github.com/user-attachments/assets/7f7c4f1b-d664-4605-b8ac-73e55fbd6509)
+   ![image](/images/connecting-to-dataverse-from-azure-data/06-7f7c4f1b-d664-4605-b8ac-73e55fbd6509.png)
 6. Choose a **Security Role** to grant the necessary permissions.  
-   ![image](https://github.com/user-attachments/assets/bdfb2220-8a0e-457b-8cbb-cc932c80f210)
+   ![image](/images/connecting-to-dataverse-from-azure-data/07-bdfb2220-8a0e-457b-8cbb-cc932c80f210.png)
 
 Although the screenshot example shows assigning the **System Administrator** role, I typically recommend creating a tailored security role that grants only the permissions needed for your ADF activities. This promotes better security hygiene and minimizes risk.
 
@@ -141,11 +141,11 @@ Once your User-assigned Managed Identity has been created and assigned the prope
 
 1. In Azure Data Factory, go to **Manage > Linked services** and click **+ New** to create a new connection.
 2. Select your connector type (e.g., REST or Dataverse) and begin configuring the connection.  
-   ![image](https://github.com/user-attachments/assets/dc72da9a-68a9-4b1a-ab3d-a5fa19e35294)
+   ![image](/images/connecting-to-dataverse-from-azure-data/08-dc72da9a-68a9-4b1a-ab3d-a5fa19e35294.png)
 3. When prompted for authentication, choose **Managed Identity** and click **+ New** to create a credential.  
-   ![image](https://github.com/user-attachments/assets/074e354b-12bd-4471-af49-9cd4081ac949)
+   ![image](/images/connecting-to-dataverse-from-azure-data/09-074e354b-12bd-4471-af49-9cd4081ac949.png)
 4. Select **User-assigned managed identity** from the dropdown and pick the identity previously created and assigned roles.  
-   ![image](https://github.com/user-attachments/assets/815e7076-dd6d-43b1-a474-b85371fe7c35)
+   ![image](/images/connecting-to-dataverse-from-azure-data/10-815e7076-dd6d-43b1-a474-b85371fe7c35.png)
 
 With these steps, your ADF pipelines and data flows will be able to securely access Dataverse using the configured Managed Identity.
 

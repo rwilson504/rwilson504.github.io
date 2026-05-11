@@ -32,8 +32,8 @@ To replicate this do the following:
 
 The iamge belows shows the output after a completed run. We can now see the Action name which failed as well as the error message. In this scenario I am using that information to populate a JSON object which will be used later for returning information back to a Power App.
 
-![2021-06-22_13-59-51](https://user-images.githubusercontent.com/7444929/122977991-02143080-d364-11eb-8326-7cd42369dd68.png)
+![2021-06-22_13-59-51](/images/return-error-in-power-automate-when/01-122977991-02143080-d364-11eb-8326-7cd42369dd68.png)
 
 If you would like to return additional information from the Failed result test the flow in a way which will force it to fail then look at the flow run history. Expand the Catch block and click on the Filter Result for Failed action. You can see the body of what is returned in the result and utilize any of that additional information in generating your error message.
 
-![2021-06-22_14-42-10](https://user-images.githubusercontent.com/7444929/122981846-32f66480-d368-11eb-9176-8aef3509c830.png)
+![2021-06-22_14-42-10](/images/return-error-in-power-automate-when/02-122981846-32f66480-d368-11eb-9176-8aef3509c830.png)

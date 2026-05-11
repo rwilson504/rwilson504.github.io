@@ -24,7 +24,7 @@ When you hit the "load data" button on the "User, Queues, and Forward Mailboxes"
 at Microsoft.Crm.ObjectModel.EmailService.GetDecryptionKey(ExecutionContext context)
 
 On the UI the following error will be reported:   
-[![022412_1608_CRM2011Emai2](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikeWBSJt0REFqRyCs2fHuHH7j8BES0ji3BUo1teiEjmur9ChHa34sEar7Wmrreo11tXoqq7P71gH4UsNmxyeBg4EzyiDysRLFyGY_21U48fWZor1Q7AlP5yONB5hPRAfb1BbGLUzwm5Zc/?imgmax=800 "022412_1608_CRM2011Emai2")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPJlqzGRCEZEMgDh_W3akeis-S_NLaCIQHUsibhf__9E9OEKBu9NVX0fgilU0bVxFECmQ9qqumsLNzgV4Fm0B2XMK8p_5uj6h8JPCszFq4KIZJ_SkYTFdrA45eJBx-UAmthYP2iGJjuyA/s1600-h/022412_1608_CRM2011Emai2%25255B2%25255D.png)
+[![022412_1608_CRM2011Emai2](/images/crm-2011-email-router-configuration/01-img.png "022412_1608_CRM2011Emai2")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPJlqzGRCEZEMgDh_W3akeis-S_NLaCIQHUsibhf__9E9OEKBu9NVX0fgilU0bVxFECmQ9qqumsLNzgV4Fm0B2XMK8p_5uj6h8JPCszFq4KIZJ_SkYTFdrA45eJBx-UAmthYP2iGJjuyA/s1600-h/022412_1608_CRM2011Emai2%25255B2%25255D.png)
 
 **Cause**  
 The e-mail router expects a HTTPS connection to the CRM website and if SSL is not enabled on the website the request will fail.

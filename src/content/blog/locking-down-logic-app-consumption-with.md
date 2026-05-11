@@ -28,7 +28,7 @@ Microsoft’s docs say you can require OAuth and (critically) you must **disable
 
 ### 1) Disable SAS for the HTTP trigger (Consumption only)
 
-![image](https://github.com/user-attachments/assets/b1c32b30-4139-454d-b3b9-6326ed089148)
+![image](/images/locking-down-logic-app-consumption-with/01-b1c32b30-4139-454d-b3b9-6326ed089148.png)
 
 1. Open the Logic App (Consumption) in the Azure portal.
 2. Go to **Development Tools ➜ Logic app code view**.
@@ -55,7 +55,7 @@ This disables SAS so OAuth can’t be bypassed. (This is equivalent to what the 
 
 ### 2) Add an OAuth policy on the Logic App
 
-![image](https://github.com/user-attachments/assets/a49e65d3-f1da-46f2-9ce5-de6868c991f4)
+![image](/images/locking-down-logic-app-consumption-with/02-a49e65d3-f1da-46f2-9ce5-de6868c991f4.png)
 
 1. In the Logic App, go to **Authorization**.
 2. Click **+ Add policy** ➜ **OAuth 2.0**.
@@ -73,7 +73,7 @@ The OAuth policy validates the token’s `iss` and `aud` claims on inbound calls
 
 If you want to ensure that only a specific managed identity can access this logic app you can additional add a custom claim onto the OAuth profile. To do this add a custom claim in the OAuth Profile. Set the claim name as `appid` and set the value to the id of your managed identity. This will ensure that only that managed identity can call this Logic App. You can add multiple OAuth profiles to allow for more managed identities if you want.
 
-![image](https://github.com/user-attachments/assets/c53fd358-2de6-4925-a106-f1f07d05d3a3)
+![image](/images/locking-down-logic-app-consumption-with/03-c53fd358-2de6-4925-a106-f1f07d05d3a3.png)
 
 ## What broke (and how I fixed it)
 

@@ -24,7 +24,7 @@ In this blog post, I will guide you through automating the process of bypassing 
 
 This automation can be particularly useful for initial deployments of a new app or to ensure all apps currently have this applied.
 
-![image](https://github.com/user-attachments/assets/2a561503-24b2-4c81-8d20-167e89fdceb1)
+![image](/images/bypass-power-apps-consent-prompts-using/01-2a561503-24b2-4c81-8d20-167e89fdceb1.png)
 
 **Background: Bypassing Power Apps Consent**
 
@@ -52,7 +52,7 @@ Below is the complete PowerShell script for automating the process of bypassing 
 
 To use this script, you will need the environment ID of your Power Platform environment. The easiest way to get this ID is by navigating to the [Power Platform Admin Center](https://aka.ms/ppac), selecting the ‘Environments’ area, and viewing the details for your specific environment. Below is a picture that shows where you can find the details for an environment:
 
-![image](https://github.com/user-attachments/assets/3ddfb99b-d32e-49aa-960c-8e2e68090b34)
+![image](/images/bypass-power-apps-consent-prompts-using/02-3ddfb99b-d32e-49aa-960c-8e2e68090b34.png)
 
 ### How to Use the Script Based on Different Examples
 

@@ -41,22 +41,22 @@ XML Escape Characters
 The preview image is great for Model apps because it gives the user an image of what your control looks like before selecting it. Unfortunately right now it will cause an error when you attempt to import your control into the Canvas editor.
 
 Here is what the sample image looks like in a Model App when adding it to a form or view.  
-![Preview Image Sample](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/preview-image.png?raw=true)
+![Preview Image Sample](/images/gotchas-for-pcf-code-components-in/01-preview-image.png)
 
 Make sure not to utilize the preview-image in your manifest if you plan on importing this control to Canvas.  
-![Preview Image in Manifest](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/namifest-preview-image.png?raw=true)
+![Preview Image in Manifest](/images/gotchas-for-pcf-code-components-in/02-namifest-preview-image.png)
 
 ## Don’t Use Enum Type for Parameters
 
 When defining your parameters Enums are a great way to let the users know which values are allowed. Unfortunately using Enums will allow the control to be added in the Canvas editor but as soon as you try to run the app in the Canvas run-time you will get the horrible Canvas Screen of Death!
 
-![Canvas Screen of Death](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/canvas-screen-of-death.png?raw=true)
+![Canvas Screen of Death](/images/gotchas-for-pcf-code-components-in/03-canvas-screen-of-death.png)
 
 Here is an example of an Enum defined in a manifest.  
-![Manifest With Enum](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/manifest-enum-dont.png?raw=true)
+![Manifest With Enum](/images/gotchas-for-pcf-code-components-in/04-manifest-enum-dont.png)
 
 Instead define your parameters and an SingleLine.Text and give the user some instruction on the Description keys as the valid options.  
-![Use SingleLine.Text Instead](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/manifest-enum-do.png?raw=true)
+![Use SingleLine.Text Instead](/images/gotchas-for-pcf-code-components-in/05-manifest-enum-do.png)
 
 Using text is a bit harder and will require you to determine the correct value in your code. For example with a true/false field you will need to do something like this.
 
@@ -65,4 +65,4 @@ Using text is a bit harder and will require you to determine the correct value i
 ## Multiple Datasets
 
 The default comments that are included in the manfiest when you provision a PCF project incldues text that says they allow multiple datasets. I though this would be great for a Calendar control I was building so I could define one dataset for the Events and one for the Resources unfortunately adding two datasets caused the Import of the PCF component to fail in the Canvas Editor.  
-![Allow Multiple Dataset](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/manifest-multiple-dataset.png?raw=true)
+![Allow Multiple Dataset](/images/gotchas-for-pcf-code-components-in/06-manifest-multiple-dataset.png)

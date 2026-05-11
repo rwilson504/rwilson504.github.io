@@ -68,7 +68,7 @@ Remember, the PAT is sensitive and should be securely stored. It provides direct
 
 After securing your PAT, the next step is to establish a Power BI dataflow that will serve as the intermediary for transferring and transforming data between Azure DevOps (ADO) and Microsoft Dataverse. This involves creating custom functions within Power BI to handle data batching and API calls. Follow these detailed instructions to set up your Power BI dataflow:
 
-![Copmleted Dataflow](https://github.com/rwilson504/Blogger/assets/7444929/1d1a23f1-448c-4c34-acee-b8c51087ac4b)
+![Copmleted Dataflow](/images/syncing-azure-devops-work-item-status/01-1d1a23f1-448c-4c34-acee-b8c51087ac4b.png)
 
 #### Creating a New Blank Query for Batching
 

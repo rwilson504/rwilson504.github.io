@@ -43,11 +43,11 @@ If you don’t have sales installed on your system you can still enable this fea
 
 First we will open FetchXML Builder and retrieve the pdfsetting entity, we will need to specify the pdfsettingsid and pdfsettingsjson attributes. This will return a single records. Copy the outputs of these fields to your text editor.
 
-![2021-06-24_13-52-57](https://user-images.githubusercontent.com/7444929/123332434-7c80b400-d50e-11eb-9c85-a7bcccd1b45c.png)
+![2021-06-24_13-52-57](/images/enable-export-to-pdf-button-ribbon/01-123332434-7c80b400-d50e-11eb-9c85-a7bcccd1b45c.png)
 
 Next I will utilize the WebAPI Launcher to update the pdfsettign entity with our updated json which will contain all the entities you want to enable for PDF generation.
 
-![2021-06-24_15-19-38](https://user-images.githubusercontent.com/7444929/123332462-84d8ef00-d50e-11eb-9d55-d7101b2b611d.png)
+![2021-06-24_15-19-38](/images/enable-export-to-pdf-button-ribbon/02-123332462-84d8ef00-d50e-11eb-9d55-d7101b2b611d.png)
 
 ## Method 4 (PowerShell)
 

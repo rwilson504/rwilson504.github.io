@@ -36,15 +36,15 @@ To address these challenges, I incorporate a consistent practice in my entity cr
 Implementing this pattern involves:
 
 1. **Creating an Autonumber Field**: Establish an autonumber field in each new entity as a unique identifier.  
-   ![Create Autonumber Column](https://github.com/rwilson504/Blogger/assets/7444929/bd4297a0-46f3-4f42-bced-1ecc6e198220)
+   ![Create Autonumber Column](/images/building-better-tables-patterned/01-bd4297a0-46f3-4f42-bced-1ecc6e198220.png)
 2. **Setting Up an Alternate Key (IdKey)**: Implement an alternate key for the entity to facilitate efficient data mapping.  
-   ![Create Alternate Key on ID Column](https://github.com/rwilson504/Blogger/assets/7444929/304f0fa4-7319-4dfe-9f47-6f2e562876f1)
+   ![Create Alternate Key on ID Column](/images/building-better-tables-patterned/02-304f0fa4-7319-4dfe-9f47-6f2e562876f1.png)
 
 ## Integrating This Setup in Dataflows
 
 Once you have established the autonumber field and alternate key (IdKey) in your entities, the next crucial step is integrating this configuration into your dataflows for effective data mapping. This integration is key to leveraging the full potential of your design pattern in Power Platform’s data management.
 
-![Using Autonumber field to set lookup value](https://github.com/rwilson504/Blogger/assets/7444929/6073839a-eae4-4e97-ac7a-b84e5044f5b9)
+![Using Autonumber field to set lookup value](/images/building-better-tables-patterned/03-6073839a-eae4-4e97-ac7a-b84e5044f5b9.png)
 
 1. **Data Mapping in Dataflows**: Navigate to the data mapping stage when setting up or editing a dataflow in Power Platform. Here, you will map data from your source to the corresponding fields in your Dataverse entities.
 2. **Mapping the ID Field**: Focus on the lookup columns of your entity. Correctly mapping the ‘ID’ field, your autonumber field, is crucial. This ID field will serve as a reference, ensuring data from your source is correctly associated with the corresponding record in your entity.
@@ -64,7 +64,7 @@ If you’re looking to add autonumber columns to existing tables, you can do so 
 2. **Add the AutoNumberUpdater Tool**: Locate and add the AutoNumberUpdater tool to your toolbox.
 3. **Connect to Your Dataverse Environment**: Connect to your environment and use the tool to populate the new autonumber fields.
 
-![AutoNumberUpdater Tool](https://github.com/rwilson504/Blogger/assets/7444929/56de40d2-d4b6-40ff-88b2-8b1f949cc0dc)
+![AutoNumberUpdater Tool](/images/building-better-tables-patterned/04-56de40d2-d4b6-40ff-88b2-8b1f949cc0dc.png)
 
 ## Adjusting Seed Values with Auto Number Manager in XrmToolBox
 
@@ -75,7 +75,7 @@ After populating autonumber fields in existing tables, adjust the seed value usi
 3. **Adjust Seed Values**: Locate the autonumber fields and adjust the seed value to be greater than the highest number set by the AutoNumberUpdater.
 4. **Save Changes**: Ensure your new configuration is applied by saving the changes.
 
-![Auto Number Manager Tool](https://github.com/rwilson504/Blogger/assets/7444929/b56a0864-20a8-443f-9fc9-9368439abb17)
+![Auto Number Manager Tool](/images/building-better-tables-patterned/05-b56a0864-20a8-443f-9fc9-9368439abb17.png)
 
 ## Conclusion
 

@@ -38,13 +38,13 @@ You can set your preferred solution in two ways.
 
 When you [create a new solution](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution), there’s a checkbox right on the creation form to **Set as your preferred solution**. Just check it and you’re good to go.
 
-![Set preferred solution when creating a new solution](https://github.com/rwilson504/Blogger/blob/master/dataverse-mcp-preferred-solution/preferred-on-create.png?raw=true)
+![Set preferred solution when creating a new solution](/images/set-your-preferred-solution-for-01187880513/01-preferred-on-create.png)
 
 ### Option 2: From the Solutions List
 
 If you already have a solution you’d like to use, go to the **Solutions** area in [Power Apps](https://make.powerapps.com), select your unmanaged solution, and click **Set preferred solution** on the command bar.
 
-![Set preferred solution from the solutions grid](https://github.com/rwilson504/Blogger/blob/master/dataverse-mcp-preferred-solution/set-preferred-on-grid.png?raw=true)
+![Set preferred solution from the solutions grid](/images/set-your-preferred-solution-for-01187880513/02-set-preferred-on-grid.png)
 
 Once it’s set, you’ll see a **preferred solution** indicator in the Solutions area confirming which solution is active.
 

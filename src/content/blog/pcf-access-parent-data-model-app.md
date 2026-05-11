@@ -100,7 +100,7 @@ declare global {
 
 If you are using the Form Component to load editable form into a host form you may want to access information and interact with the host form. The onLoad function running on the host form as shown earlier gets us global variables we can use here as well. These variables will enable you to call JavaScript on the form inside the component and access information from the hosing form. More information about the Form Component can be found here [Edit related table records directly from another table’s main form](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/form-component-control).
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/7598bf4c-f269-4ba9-9876-313814049551)
+![image](/images/pcf-access-parent-data-model-app/01-7598bf4c-f269-4ba9-9876-313814049551.png)
 
 ### Setting up JavaScript in the Child Form
 

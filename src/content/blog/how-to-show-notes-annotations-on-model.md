@@ -27,14 +27,14 @@ Model-driven apps in Power Apps allow users to create dashboards that display ke
 2. Create a new **dashboard**.
 3. When adding components to the dashboard, insert a **List** for any entity (e.g., Accounts). The selected entity does not matter, as we will modify it later to display Notes.
 
-![Create new dashboard](https://github.com/user-attachments/assets/1af606e3-919b-4441-82e6-537093a41f3e)
+![Create new dashboard](/images/how-to-show-notes-annotations-on-model/01-1af606e3-919b-4441-82e6-537093a41f3e.png)
 
 ### **Step 2: Obtain the Notes View ID**
 
 1. In the **Maker Portal**, navigate to an existing **View** for the **Notes (Annotations)** entity or create a new custom view.
 2. Once the view is open, **copy the View ID** as it will be needed later.
 
-![Copy view guid](https://github.com/user-attachments/assets/8404f9d5-bd9a-4cc8-ba7d-599e4015d132)
+![Copy view guid](/images/how-to-show-notes-annotations-on-model/02-8404f9d5-bd9a-4cc8-ba7d-599e4015d132.png)
 
 ### **Step 3: Install XrmToolBox and FormXml Manager Plugin**
 
@@ -42,7 +42,7 @@ Model-driven apps in Power Apps allow users to create dashboards that display ke
 2. Install the **FormXml Manager Plugin**.
 3. Connect to your **Dataverse environment** where the dashboard was created.
 
-![Install FormXml Manager](https://github.com/user-attachments/assets/c56e5192-b18b-4823-90f2-09d00ff4c2d5)
+![Install FormXml Manager](/images/how-to-show-notes-annotations-on-model/03-c56e5192-b18b-4823-90f2-09d00ff4c2d5.png)
 
 ***Note**: If you don’t have access to use XrmToolBox, you can also update this FormXml by creating a new unmanaged solution and adding in just the dashboard you created earlier. Then export and unzip the solution, you will find the FormXml within the customizations.xml file. Perform the updates as described in the next step, then re-zip all the files and reimport the solution.*
 
@@ -53,7 +53,7 @@ Model-driven apps in Power Apps allow users to create dashboards that display ke
 3. In the **FormXmls pane**, find and select your **custom dashboard**.
 4. Click **Edit FormXml** to open the editor.
 
-![image](https://github.com/user-attachments/assets/33c566ad-16f0-49fd-829d-77708cf9230e)
+![image](/images/how-to-show-notes-annotations-on-model/04-33c566ad-16f0-49fd-829d-77708cf9230e.png)
 
 5. Locate the control corresponding to the **List component** added in Step 1 (e.g., the Accounts list).
 6. Modify the XML as follows:
@@ -86,7 +86,7 @@ Model-driven apps in Power Apps allow users to create dashboards that display ke
      ```
 7. Click **Update** and **Publish** the changes.
 
-![Steps to update FormXml](https://github.com/user-attachments/assets/86bdf98a-a0d8-4ea2-9aae-4877a4b318db)
+![Steps to update FormXml](/images/how-to-show-notes-annotations-on-model/05-86bdf98a-a0d8-4ea2-9aae-4877a4b318db.png)
 
 ### **Step 5: Verify Changes in the Model-Driven App**
 
@@ -94,7 +94,7 @@ Model-driven apps in Power Apps allow users to create dashboards that display ke
 2. Open the **Dashboard**.
 3. The list that previously displayed **Accounts** should now display **Notes** instead.
 
-![Notes list now in dashboard](https://github.com/user-attachments/assets/ac62d077-12b7-44ca-bdfc-f6a75b270edd)
+![Notes list now in dashboard](/images/how-to-show-notes-annotations-on-model/06-ac62d077-12b7-44ca-bdfc-f6a75b270edd.png)
 
 ### **Conclusion**
 

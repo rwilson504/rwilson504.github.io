@@ -33,7 +33,7 @@ item()?['logicalName']
 
 Once fields are wrapped in certain expressions or are in certain actions, you can no longer open them in the expression popup—you or easily copy them out to reuse elsewhere. That makes it frustrating when you want to replicate logic in another flow or simply document what you’ve written. There is a copy action functionality but that copies the entire action and sometimes you just want a specific expression.
 
-![Power Automate Expression Inspector](https://github.com/user-attachments/assets/ecb40951-2545-4c3c-b0e1-a554fbe9bb51)
+![Power Automate Expression Inspector](/images/copy-hidden-power-automate-expressions/01-ecb40951-2545-4c3c-b0e1-a554fbe9bb51.gif)
 
 ### The Workaround (Until Now)
 

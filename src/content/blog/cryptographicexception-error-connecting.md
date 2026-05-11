@@ -79,8 +79,8 @@ When we repeat the steps earlier and try to access the site we can now see the f
 In order to give the application pool the correct rights to load the certificates we need to update the application pool settings.   Specifically we need to update the Load User Profile setting to True.  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdr1eqEFRORbDBTEWWj2_W05tdRk2CtFZFARgKd2c-G0Ow6I6JkONSLA8g273a7s40gxGlfYH7-gXqF9zY_ucCSw9y89l602-PMCJbcgdsK_QpjtcXvTfgKvpfcI68s3rojKHgV61OF6w/s400/sharepointapppool.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdr1eqEFRORbDBTEWWj2_W05tdRk2CtFZFARgKd2c-G0Ow6I6JkONSLA8g273a7s40gxGlfYH7-gXqF9zY_ucCSw9y89l602-PMCJbcgdsK_QpjtcXvTfgKvpfcI68s3rojKHgV61OF6w/s1600/sharepointapppool.png)
+[![](/images/cryptographicexception-error-connecting/01-sharepointapppool.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdr1eqEFRORbDBTEWWj2_W05tdRk2CtFZFARgKd2c-G0Ow6I6JkONSLA8g273a7s40gxGlfYH7-gXqF9zY_ucCSw9y89l602-PMCJbcgdsK_QpjtcXvTfgKvpfcI68s3rojKHgV61OF6w/s1600/sharepointapppool.png)
 
   
  After you have updated this restart IIS and give it another try.  
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjurb95KwrH3hMx5bqQrCKhSzeN6LbvgutQ3Pmss2ISXlE6bPIsw4afQ2pjKN2MILpVGf7-w4RWUoIVCc_n1H87hWmmArSH8AfhAjWvAxh-wcObqZgsYC5BFB_fwjDFdPemx9IeJcznVo/s320/spwebconfig1.png)
+![](/images/cryptographicexception-error-connecting/02-spwebconfig1.png)

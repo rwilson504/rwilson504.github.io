@@ -23,19 +23,19 @@ Next we need to parse the Output of the returned record and get the base URL of
 
 Expression to Parse URL (**Note**: Replace Get\_Current\_Record with the name of the Get record action you created earlier): first(split(outputs('Get\_Current\_Record')?['body']?['@odata.id'],'/api/'))
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHrX8Tgi0AM7cZtbaL6wfZg6lrO3f8osaruLfONjLtWBvbXZrgVGSKaTdaOPTunLjCLiPp9r6zoT3rgrttdfVxqMCyHwg0oTrs19F0SqCVBs2eoct5v8mekkB4Sn_SQjeHuv_t0gyeSSo/s640/BaseURL2.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHrX8Tgi0AM7cZtbaL6wfZg6lrO3f8osaruLfONjLtWBvbXZrgVGSKaTdaOPTunLjCLiPp9r6zoT3rgrttdfVxqMCyHwg0oTrs19F0SqCVBs2eoct5v8mekkB4Sn_SQjeHuv_t0gyeSSo/s1600/BaseURL2.png)
+[![](/images/get-dynamicscds-base-url-in-flow-to/01-BaseURL2.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHrX8Tgi0AM7cZtbaL6wfZg6lrO3f8osaruLfONjLtWBvbXZrgVGSKaTdaOPTunLjCLiPp9r6zoT3rgrttdfVxqMCyHwg0oTrs19F0SqCVBs2eoct5v8mekkB4Sn_SQjeHuv_t0gyeSSo/s1600/BaseURL2.png)
 
 So how did we determine how to parse the URL?  You can view the output of the Get record activity by view either running the Flow in Test mode or you can view a historical run of the Flow where the Get record activity has already been added.  From here we can view the JSON output which allows us to determine the parsing.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7Y9U2hrQbqhCYUd79v0EirtIzwELJCupMxrgngeO77pC-RBIzA7z9iFArNkD-9AvLxpvX8durRnqMrHVpqlB0oggxJjssaCVEAcEzYOiIaLwDYaLazvFsmIUcxiRJ3iH5NXkBzeWtntk/s640/BaseURL4.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7Y9U2hrQbqhCYUd79v0EirtIzwELJCupMxrgngeO77pC-RBIzA7z9iFArNkD-9AvLxpvX8durRnqMrHVpqlB0oggxJjssaCVEAcEzYOiIaLwDYaLazvFsmIUcxiRJ3iH5NXkBzeWtntk/s1600/BaseURL4.png)
+[![](/images/get-dynamicscds-base-url-in-flow-to/02-BaseURL4.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7Y9U2hrQbqhCYUd79v0EirtIzwELJCupMxrgngeO77pC-RBIzA7z9iFArNkD-9AvLxpvX8durRnqMrHVpqlB0oggxJjssaCVEAcEzYOiIaLwDYaLazvFsmIUcxiRJ3iH5NXkBzeWtntk/s1600/BaseURL4.png)
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbY7DXhjEMSyxiO08wMxW5OImnV7UTlAQ1-NhAP9KuoGQm5IbE02cXnOkkXyF36SXxh30hIVHHZTXcYQM2j-CUPzBQt_82B3z5CD67WKfDobtUSdDsrQl4i9ISjn-XmgvxpmtoixKtf7M/s640/BaseURL3.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbY7DXhjEMSyxiO08wMxW5OImnV7UTlAQ1-NhAP9KuoGQm5IbE02cXnOkkXyF36SXxh30hIVHHZTXcYQM2j-CUPzBQt_82B3z5CD67WKfDobtUSdDsrQl4i9ISjn-XmgvxpmtoixKtf7M/s1600/BaseURL3.png)
+[![](/images/get-dynamicscds-base-url-in-flow-to/03-BaseURL3.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbY7DXhjEMSyxiO08wMxW5OImnV7UTlAQ1-NhAP9KuoGQm5IbE02cXnOkkXyF36SXxh30hIVHHZTXcYQM2j-CUPzBQt_82B3z5CD67WKfDobtUSdDsrQl4i9ISjn-XmgvxpmtoixKtf7M/s1600/BaseURL3.png)
 
 Finally we can utilize the Record URL variable we have initialized within the other action in our Flow.  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-CAKQaeKVVAaGfcfT644cyJ3LhmW92i2hsCmHF2-Nx6bnPUT0cQ7HckO7v9M00PW589YI5PbB_FQL39cL3e_1UiaWPbUT2Lmz6oQMlymDT4dO85x0EWWnChRYv7HSiWzvptVwUUpBTos/s640/BaseURL5.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-CAKQaeKVVAaGfcfT644cyJ3LhmW92i2hsCmHF2-Nx6bnPUT0cQ7HckO7v9M00PW589YI5PbB_FQL39cL3e_1UiaWPbUT2Lmz6oQMlymDT4dO85x0EWWnChRYv7HSiWzvptVwUUpBTos/s1600/BaseURL5.png)
+[![](/images/get-dynamicscds-base-url-in-flow-to/04-BaseURL5.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-CAKQaeKVVAaGfcfT644cyJ3LhmW92i2hsCmHF2-Nx6bnPUT0cQ7HckO7v9M00PW589YI5PbB_FQL39cL3e_1UiaWPbUT2Lmz6oQMlymDT4dO85x0EWWnChRYv7HSiWzvptVwUUpBTos/s1600/BaseURL5.png)
 
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXIppXVnmk6VUCoz509JZMBTy-IEDkQlQxBpIXbW_vaYIVPUxuqmmrTHmL_cNnFkgjF9Mk8YW0rNbqRRCXoW-TOE9BQYdNQ1b5rHpp54ncGS46UDqsNPoC5OgRc0dPWlRA8SvZrnUqiiw/s640/BaseURL7.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXIppXVnmk6VUCoz509JZMBTy-IEDkQlQxBpIXbW_vaYIVPUxuqmmrTHmL_cNnFkgjF9Mk8YW0rNbqRRCXoW-TOE9BQYdNQ1b5rHpp54ncGS46UDqsNPoC5OgRc0dPWlRA8SvZrnUqiiw/s1600/BaseURL7.png)
+[![](/images/get-dynamicscds-base-url-in-flow-to/05-BaseURL7.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXIppXVnmk6VUCoz509JZMBTy-IEDkQlQxBpIXbW_vaYIVPUxuqmmrTHmL_cNnFkgjF9Mk8YW0rNbqRRCXoW-TOE9BQYdNQ1b5rHpp54ncGS46UDqsNPoC5OgRc0dPWlRA8SvZrnUqiiw/s1600/BaseURL7.png)

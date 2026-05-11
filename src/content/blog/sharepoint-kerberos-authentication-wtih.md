@@ -46,11 +46,11 @@ Open the IIS Manager and click on the website you would like to change.  Then d
 
 Click on the Windows Authentication option in the center pane and then click Advanced Settings... in the right hand pane.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQXv0EGkkFDp-cOf2Z0u3IUYwc5hB7cFdWQJZ6Vl-l82255rhUqIgs9lYb_Uiu2Hq9-W1110n_zDXJ8rHzIPqz8jh-K4QTva0m6OMd616qIuhx_c7jIv2nZ4CxAA_eClgWn7vWesa0N_4/s400/Kerberos2.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQXv0EGkkFDp-cOf2Z0u3IUYwc5hB7cFdWQJZ6Vl-l82255rhUqIgs9lYb_Uiu2Hq9-W1110n_zDXJ8rHzIPqz8jh-K4QTva0m6OMd616qIuhx_c7jIv2nZ4CxAA_eClgWn7vWesa0N_4/s1600/Kerberos2.jpg)
+[![](/images/sharepoint-kerberos-authentication-wtih/01-Kerberos2.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQXv0EGkkFDp-cOf2Z0u3IUYwc5hB7cFdWQJZ6Vl-l82255rhUqIgs9lYb_Uiu2Hq9-W1110n_zDXJ8rHzIPqz8jh-K4QTva0m6OMd616qIuhx_c7jIv2nZ4CxAA_eClgWn7vWesa0N_4/s1600/Kerberos2.jpg)
 
 Finally **un-check** the Enable Kernel-mode authentication box.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8VHzqhluv7CKb276QXuuxH1mttwh0XoNefGK0dXMhbfc3RbchJC5qy1ceUlFEclt5VFsevhw0wk0pnmhObod_9KDAjS67qow6vcyYI3FTv7MrmtAKq8CBK4hZtPT-7F-xPFcIp6wKwSk/s320/Kerberos3.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8VHzqhluv7CKb276QXuuxH1mttwh0XoNefGK0dXMhbfc3RbchJC5qy1ceUlFEclt5VFsevhw0wk0pnmhObod_9KDAjS67qow6vcyYI3FTv7MrmtAKq8CBK4hZtPT-7F-xPFcIp6wKwSk/s1600/Kerberos3.jpg)
+[![](/images/sharepoint-kerberos-authentication-wtih/02-Kerberos3.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8VHzqhluv7CKb276QXuuxH1mttwh0XoNefGK0dXMhbfc3RbchJC5qy1ceUlFEclt5VFsevhw0wk0pnmhObod_9KDAjS67qow6vcyYI3FTv7MrmtAKq8CBK4hZtPT-7F-xPFcIp6wKwSk/s1600/Kerberos3.jpg)
 
 Supporting Post(s):
 

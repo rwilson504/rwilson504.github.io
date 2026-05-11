@@ -33,7 +33,7 @@ The first thing to do is create an App Registration within Azure AD for Datavers
 ## Add App User to Dataverse
 
 Next add an Application User to Dataverse. To do this follow the [instructions Microsoft has provided](https://docs.microsoft.com/en-us/power-platform/admin/manage-application-users). Application users additional are also now available within the Power Platform Admin Portal  
-![App User Power Platform Admin Portal](https://github.com/rwilson504/Blogger/blob/master/call-dataverse-webapi-in-powershell-with-client-credentials/appuserinadminportal.png?raw=true)
+![App User Power Platform Admin Portal](/images/calling-dataverse-web-api-in-powershell/01-appuserinadminportal.png)
 
 ## PowerShell Script
 

@@ -52,20 +52,20 @@ To automate this process, I created a **Power Automate custom connector** that p
 The Power Automate flow consists of the following steps:
 
 1. **Retrieve the latest download URL** using the `GetDirectDownloadUrl` action.  
-   ![image](https://github.com/user-attachments/assets/322d96f9-8b60-45f1-bbd2-1de204c9f4a5)
+   ![image](/images/automating-azure-storage-account-ip/01-322d96f9-8b60-45f1-bbd2-1de204c9f4a5.png)
 2. **Extract service tags and IP addresses** using the `GetIPAddressesByServiceTag` action.  
-   ![image](https://github.com/user-attachments/assets/ee5268dd-4833-4392-9114-88501baddf8c)
+   ![image](/images/automating-azure-storage-account-ip/02-ee5268dd-4833-4392-9114-88501baddf8c.png)
 3. **Filter CIDR ranges** using `CIDRReducer`, ensuring only `/30` or smaller prefixes are included.  This action also included an output for Reduced Count, so you can check to make sure your IP addresses are less than 400 at this point.  
-   ![image](https://github.com/user-attachments/assets/284cd25c-aeaa-4d91-ae1e-f4b1df59de47)
+   ![image](/images/automating-azure-storage-account-ip/03-284cd25c-aeaa-4d91-ae1e-f4b1df59de47.png)
 4. **Generate IP rules** using `GenerateIPRules`, formatting them for Azure Storage firewall.  
-   ![image](https://github.com/user-attachments/assets/233f5236-fa9a-4023-98ad-a6363df7d665)
+   ![image](/images/automating-azure-storage-account-ip/04-233f5236-fa9a-4023-98ad-a6363df7d665.png)
 5. **Compose the request body** for the Azure Management API with `defaultAction` set to `Deny` and `ipRules` containing the allowed list.  
-   ![image](https://github.com/user-attachments/assets/d02a764a-2a64-4c40-87b4-52f25fe4f26f)
+   ![image](/images/automating-azure-storage-account-ip/05-d02a764a-2a64-4c40-87b4-52f25fe4f26f.png)
 6. **Call the Azure Management API** via an HTTP PATCH request to update the storage account settings.  
-   ![image](https://github.com/user-attachments/assets/9d96ff8f-c52b-419a-8641-075b588e4b62)
+   ![image](/images/automating-azure-storage-account-ip/06-9d96ff8f-c52b-419a-8641-075b588e4b62.png)
 
 Overall flow diagram generated using [PowerDocu](https://github.com/modery/PowerDocu)  
-![flow-detailed](https://github.com/user-attachments/assets/4ecf05a0-740e-455d-a0b8-5d75b508d22d)
+![flow-detailed](/images/automating-azure-storage-account-ip/07-4ecf05a0-740e-455d-a0b8-5d75b508d22d.png)
 
 ### API Call Example
 

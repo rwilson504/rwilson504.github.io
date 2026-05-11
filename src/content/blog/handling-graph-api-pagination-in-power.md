@@ -43,13 +43,13 @@ By experimenting with Graph Explorer, you gain valuable insights into how Graph 
 
 - The first step involves integrating the Graph API into your Power Platform dataflow.
 - Create a new Dataflow in the Maker portal.  
-  ![image](https://github.com/rwilson504/Blogger/assets/7444929/6b2279b1-0964-4e7a-abe5-87128d9255b0)
+  ![image](/images/handling-graph-api-pagination-in-power/01-6b2279b1-0964-4e7a-abe5-87128d9255b0.png)
 - Select the Web API connector  
-  ![image](https://github.com/rwilson504/Blogger/assets/7444929/07f9fa85-87d8-41fe-b3d1-9a730ca7b9f0)
+  ![image](/images/handling-graph-api-pagination-in-power/02-07f9fa85-87d8-41fe-b3d1-9a730ca7b9f0.png)
 - Create a connection to the Graph API url (eg: <https://graph.microsoft.com/v1.0>). Make sure to get the authentication type to **Organizational account**.  
-  ![image](https://github.com/rwilson504/Blogger/assets/7444929/347b939f-4862-4cf5-8c37-10e6cbea7de5)
+  ![image](/images/handling-graph-api-pagination-in-power/03-347b939f-4862-4cf5-8c37-10e6cbea7de5.png)
 - A new query will be created showing all of the endpoints for the Graph API.  
-  ![image](https://github.com/rwilson504/Blogger/assets/7444929/8f4914d2-4d83-47b9-aa1b-c96dd695b653)
+  ![image](/images/handling-graph-api-pagination-in-power/04-8f4914d2-4d83-47b9-aa1b-c96dd695b653.png)
 
 Now that you have a connection to graph you can utilze the default query that was provided for you or create your own queries using the pattern provided by this default query and using the **Json.Document(Web.Contents(“<https://graph.microsoft.com/v1.0/me>”))** functionality to pass in your Graph query.
 

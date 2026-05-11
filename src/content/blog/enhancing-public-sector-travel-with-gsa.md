@@ -81,7 +81,7 @@ Incorporating the GSA Per Diem Connector into Power Platform enhances travel-rel
 
 ### Building a Power Automate Flow
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/4f567874-08c5-40d5-a382-0335ee07cd0e)
+![image](/images/enhancing-public-sector-travel-with-gsa/01-4f567874-08c5-40d5-a382-0335ee07cd0e.png)
 
 1. **Create a New Flow**: Start by creating a new automated flow in Power Automate.
 2. **Trigger**: Choose a trigger that suits your application needs, such as a scheduled trigger for daily updates or a manual trigger for on-demand requests.
@@ -92,13 +92,13 @@ Incorporating the GSA Per Diem Connector into Power Platform enhances travel-rel
 
 ### Creating a Power App
 
-![Sample Power App](https://github.com/rwilson504/Blogger/assets/7444929/e41323ec-217c-4d02-9939-a5faef508fa1)
+![Sample Power App](/images/enhancing-public-sector-travel-with-gsa/02-e41323ec-217c-4d02-9939-a5faef508fa1.gif)
 
 The entire sample app can be downloaded here: [Sample Power App](https://github.com/rwilson504/Blogger/raw/master/gsa-per-diem-connector/Travel%20Location.msapp)
 
 1. **Start a New App**: Open Power Apps and start a new canvas app from blank or choose a template that fits your scenario.
 2. **Add Data Connection**: Connect to the GSA Per Diem Connector as a data source.  
-   ![image](https://github.com/rwilson504/Blogger/assets/7444929/843b9b07-1748-4e6f-ae2a-8046ace82758)  
+   ![image](/images/enhancing-public-sector-travel-with-gsa/03-843b9b07-1748-4e6f-ae2a-8046ace82758.png)  
    4
 3. **Design the User Interface**: Create a user-friendly interface with input fields for city, state, and year, and display areas for the retrieved per diem rates.
 4. **Integrate the Connector**: Use Power Apps formulas to fetch per diem rates based on user input and display the results in the app.

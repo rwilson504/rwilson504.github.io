@@ -22,7 +22,7 @@ By default the service is set to Restart only on the first failure and the resta
   
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX5k4rmNvmJYkULvfVZqSt9jDibpRZMdUlifG-40YKYuGKvRJXc9Alovd-efZ1xHAXVrpfNBCA32f0Ufnt9T1Cu-r3KLvgcSS-F5sOv3zHpFyyFJEDrQ8Mz6-Vjz_XBwGnz4XKHWq6_Do/s400/RestartServices.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX5k4rmNvmJYkULvfVZqSt9jDibpRZMdUlifG-40YKYuGKvRJXc9Alovd-efZ1xHAXVrpfNBCA32f0Ufnt9T1Cu-r3KLvgcSS-F5sOv3zHpFyyFJEDrQ8Mz6-Vjz_XBwGnz4XKHWq6_Do/s1600-h/RestartServices.png)Figure 2
+[![](/images/crm-asynchronous-process-failure/01-RestartServices.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX5k4rmNvmJYkULvfVZqSt9jDibpRZMdUlifG-40YKYuGKvRJXc9Alovd-efZ1xHAXVrpfNBCA32f0Ufnt9T1Cu-r3KLvgcSS-F5sOv3zHpFyyFJEDrQ8Mz6-Vjz_XBwGnz4XKHWq6_Do/s1600-h/RestartServices.png)Figure 2
 
   
   

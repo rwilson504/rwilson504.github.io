@@ -33,7 +33,7 @@ Send the request to test it.
 After you have tested the call export the Collection in v1 format. (This is the only format currently allowed for custom connectors)  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj58kEIbMaCAcS8CwttgZjZqcPc8_Dp9P65Exx73lYG6szxwdt-PK4zfa1lmVZCy_HLTTRbk6A3Ih02Ybz5gn4GKBthq6-WMkn9obHSvu9kjPIMRP9__qFU7RHC5oozQ5UHr9z2niVWrJU/s1600/Custom+Connector+Postman.gif)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj58kEIbMaCAcS8CwttgZjZqcPc8_Dp9P65Exx73lYG6szxwdt-PK4zfa1lmVZCy_HLTTRbk6A3Ih02Ybz5gn4GKBthq6-WMkn9obHSvu9kjPIMRP9__qFU7RHC5oozQ5UHr9z2niVWrJU/s1600/Custom+Connector+Postman.gif)
+[![](/images/custom-flow-connector-for-parsing/01-Custom-Connector-Postman.gif)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj58kEIbMaCAcS8CwttgZjZqcPc8_Dp9P65Exx73lYG6szxwdt-PK4zfa1lmVZCy_HLTTRbk6A3Ih02Ybz5gn4GKBthq6-WMkn9obHSvu9kjPIMRP9__qFU7RHC5oozQ5UHr9z2niVWrJU/s1600/Custom+Connector+Postman.gif)
 
   
 Navigate to the flow admin page ([https://flow.microsoft.com](https://flow.microsoft.com/)).  
@@ -54,7 +54,7 @@ Finally at the bottom of the Definition page you can click the Test button. On t
   
 After you have tested your connector click the **Update connector** button then the **Close** button.  We are now ready to add this connection to a Flow.  While on the Custom connectors screen you can also download your custom connection so you can save it for another environment.  
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_pRvZs5-Qw52A9_3LBUBgaB8yU653ZtS1n7yQY8K5BJvPpSehCQEx82ayjr0o0Az9Yxm1m04asme6IWNKTM6uzO9wSnJzgQ-GW6dj8PCiXcJ7gn63HzoB4pZAws6_cwMwHD8NtsNVx08/s1600/Custom+Connector+Create+Connector.gif)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_pRvZs5-Qw52A9_3LBUBgaB8yU653ZtS1n7yQY8K5BJvPpSehCQEx82ayjr0o0Az9Yxm1m04asme6IWNKTM6uzO9wSnJzgQ-GW6dj8PCiXcJ7gn63HzoB4pZAws6_cwMwHD8NtsNVx08/s1600/Custom+Connector+Create+Connector.gif)
+[![](/images/custom-flow-connector-for-parsing/02-Custom-Connector-Create-Connector.gif)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_pRvZs5-Qw52A9_3LBUBgaB8yU653ZtS1n7yQY8K5BJvPpSehCQEx82ayjr0o0Az9Yxm1m04asme6IWNKTM6uzO9wSnJzgQ-GW6dj8PCiXcJ7gn63HzoB4pZAws6_cwMwHD8NtsNVx08/s1600/Custom+Connector+Create+Connector.gif)
 
 Next we will build a flow to utilize the response from the service.  This will be demonstrated using a manual flow which will add a Contact record in a CDS database.  
   
@@ -71,4 +71,4 @@ Finally add a step to **Create a new record** in the **Common Data Services** a
 After you are done you can test your Flow using the **Test** button in the upper right hand corner then browse to your CDS instance to see the data.  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQB8laI29Q2RkjMLYZWexyRn96JjUPQG34AttOrvOL_5cVUfXnm0eW7WKrTX4kKlK087TjZXmC4M3oJqM0dksBL87_Wv850v3RH1fSqfPL9Y6G7encmW1rkEduCamx3mIibCBmIMf5uVg/s1600/Custom+Connector+Create+Flow.gif)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQB8laI29Q2RkjMLYZWexyRn96JjUPQG34AttOrvOL_5cVUfXnm0eW7WKrTX4kKlK087TjZXmC4M3oJqM0dksBL87_Wv850v3RH1fSqfPL9Y6G7encmW1rkEduCamx3mIibCBmIMf5uVg/s1600/Custom+Connector+Create+Flow.gif)
+[![](/images/custom-flow-connector-for-parsing/03-Custom-Connector-Create-Flow.gif)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQB8laI29Q2RkjMLYZWexyRn96JjUPQG34AttOrvOL_5cVUfXnm0eW7WKrTX4kKlK087TjZXmC4M3oJqM0dksBL87_Wv850v3RH1fSqfPL9Y6G7encmW1rkEduCamx3mIibCBmIMf5uVg/s1600/Custom+Connector+Create+Flow.gif)
