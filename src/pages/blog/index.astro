@@ -8,10 +8,10 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
 );
 ---
 
-<BaseLayout title="All posts" description="Every article on richardawilson.com.">
+<BaseLayout title="All posts" description="Every article on richardawilson.com." wide>
   <h1>All posts</h1>
   <p class="post-meta">{posts.length} articles, newest first.</p>
-  <ul class="post-list">
+  <div class="post-grid">
     {posts.map((post) => (
       <PostCard
         href={`/blog/${post.id}/`}
@@ -24,5 +24,5 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
         heroImageAlt={post.data.heroImageAlt}
       />
     ))}
-  </ul>
+  </div>
 </BaseLayout>

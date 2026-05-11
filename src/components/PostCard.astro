@@ -12,20 +12,32 @@ export interface Props {
   tags: string[];
   heroImage?: string;
   heroImageAlt?: string;
+  /** "featured" = large hero card; "compact" = small grid card. */
+  variant?: "featured" | "compact";
 }
 
-const { href, title, description, pubDate, category, tags, heroImage, heroImageAlt } = Astro.props;
+const {
+  href,
+  title,
+  description,
+  pubDate,
+  category,
+  tags,
+  heroImage,
+  heroImageAlt,
+  variant = "compact",
+} = Astro.props;
 const linkable = await getLinkableTags();
 ---
 
-<li class="post-card">
+<article class={`post-card post-card-${variant}`}>
   {heroImage && (
     <a class="post-card-thumb-link" href={href} aria-hidden="true" tabindex="-1">
       <img
         class="post-card-thumb"
         src={heroImage}
         alt={heroImageAlt ?? ""}
-        loading="lazy"
+        loading={variant === "featured" ? "eager" : "lazy"}
         decoding="async"
       />
     </a>
@@ -34,8 +46,8 @@ const linkable = await getLinkableTags();
     <a class="category-pill" href={`/categories/${category}/`}>{categoryLabel(category)}</a>
     <h2><a class="post-title" href={href}>{title}</a></h2>
     <p class="post-meta"><FormattedDate date={pubDate} /></p>
-    <p>{description}</p>
-    {tags.length > 0 && (
+    {description && <p class="post-card-desc">{description}</p>}
+    {variant === "featured" && tags.length > 0 && (
       <p>
         {tags.slice(0, 6).map((t) =>
           linkable.has(t)
@@ -45,4 +57,4 @@ const linkable = await getLinkableTags();
       </p>
     )}
   </div>
-</li>
+</article>
