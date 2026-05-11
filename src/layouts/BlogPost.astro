@@ -1,0 +1,61 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  category: string;
+  tags: string[];
+  heroImage?: { src: string; width: number; height: number; format: string };
+}
+
+const { title, description, pubDate, updatedDate, category, tags, heroImage } =
+  Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={heroImage?.src}
+  article={{
+    publishedTime: pubDate.toISOString(),
+    modifiedTime: updatedDate?.toISOString(),
+    tags,
+  }}
+>
+  <article>
+    <header style="margin-bottom: 2em;">
+      <a class="category-pill" href={`/categories/${category}/`}>{category}</a>
+      <h1 style="margin: 0.25em 0;">{title}</h1>
+      <p class="post-meta">
+        <FormattedDate date={pubDate} />
+        {updatedDate && (
+          <>
+            {" · updated "}
+            <FormattedDate date={updatedDate} />
+          </>
+        )}
+      </p>
+      {tags.length > 0 && (
+        <p style="margin-top: 0.5em;">
+          {tags.map((t) => (
+            <a class="tag" href={`/tags/${t}/`}>{t}</a>
+          ))}
+        </p>
+      )}
+      {heroImage && (
+        <img
+          src={heroImage.src}
+          width={heroImage.width}
+          height={heroImage.height}
+          alt=""
+          style="margin-top: 1.5em; border-radius: var(--radius);"
+        />
+      )}
+    </header>
+    <slot />
+  </article>
+</BaseLayout>

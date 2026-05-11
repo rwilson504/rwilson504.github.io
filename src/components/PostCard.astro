@@ -1,0 +1,28 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+export interface Props {
+  href: string;
+  title: string;
+  description: string;
+  pubDate: Date;
+  category: string;
+  tags: string[];
+}
+
+const { href, title, description, pubDate, category, tags } = Astro.props;
+---
+
+<li class="post-card">
+  <a class="category-pill" href={`/categories/${category}/`}>{category}</a>
+  <h2><a class="post-title" href={href}>{title}</a></h2>
+  <p class="post-meta"><FormattedDate date={pubDate} /></p>
+  <p>{description}</p>
+  {tags.length > 0 && (
+    <p>
+      {tags.slice(0, 6).map((t) => (
+        <a class="tag" href={`/tags/${t}/`}>{t}</a>
+      ))}
+    </p>
+  )}
+</li>

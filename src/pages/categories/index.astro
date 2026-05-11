@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { categories } from "../../content.config";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const counts = Object.fromEntries(
+  categories.map((c) => [c, posts.filter((p) => p.data.category === c).length]),
+);
+---
+
+<BaseLayout title="Categories" description="Browse posts by category.">
+  <h1>Categories</h1>
+  <ul class="post-list">
+    {categories.map((c) => (
+      <li class="post-card">
+        <h2>
+          <a class="post-title" href={`/categories/${c}/`}>
+            {c.split("-").map((w) => w[0]?.toUpperCase() + w.slice(1)).join(" ")}
+          </a>
+        </h2>
+        <p class="post-meta">{counts[c]} post{counts[c] === 1 ? "" : "s"}</p>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

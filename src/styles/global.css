@@ -1,0 +1,257 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --font-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  --color-bg: #fdfdfc;
+  --color-fg: #1a1a1a;
+  --color-muted: #5a5a5a;
+  --color-border: #e4e4e0;
+  --color-accent: #b1450b;
+  --color-accent-hover: #8a3508;
+  --color-code-bg: #f4f3ee;
+
+  --content-width: 70ch;
+  --space: 1rem;
+  --radius: 6px;
+  --line-height: 1.65;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #15161a;
+    --color-fg: #e8e6e0;
+    --color-muted: #9a978d;
+    --color-border: #2a2c33;
+    --color-accent: #f08a3e;
+    --color-accent-hover: #ffae6b;
+    --color-code-bg: #1f2127;
+  }
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: var(--line-height);
+  background: var(--color-bg);
+  color: var(--color-fg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: calc(var(--space) * 2) var(--space);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p,
+ul,
+ol,
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding: 0.25em 1em;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--color-code-bg);
+  padding: 0.15em 0.35em;
+  border-radius: var(--radius);
+}
+
+pre {
+  font-family: var(--font-mono);
+  background: var(--color-code-bg);
+  padding: 1em;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-size: 0.88em;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5em 0;
+}
+
+/* ---------- Header / Footer ---------- */
+.site-header,
+.site-footer {
+  border-color: var(--color-border);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  padding: 2em var(--space);
+  text-align: center;
+}
+
+.site-nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1em var(--space);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.site-nav a {
+  color: var(--color-fg);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav .brand {
+  font-size: 1.1rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Post list / cards ---------- */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5em;
+}
+
+.post-card {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5em;
+}
+
+.post-card:last-child {
+  border-bottom: none;
+}
+
+.post-card h2 {
+  margin: 0 0 0.25em 0;
+  font-size: 1.25rem;
+}
+
+.post-card a.post-title {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+.post-card a.post-title:hover {
+  color: var(--color-accent);
+}
+
+.post-meta {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  background: var(--color-code-bg);
+  padding: 0.1em 0.55em;
+  border-radius: var(--radius);
+  margin-right: 0.3em;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.tag:hover {
+  color: var(--color-fg);
+}
+
+.category-pill {
+  font-size: 0.78rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
