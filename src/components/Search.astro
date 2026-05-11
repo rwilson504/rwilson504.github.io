@@ -197,6 +197,7 @@
     max-height: 100vh;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
   .search-dialog::backdrop {
     background: rgba(0, 0, 0, 0.55);
@@ -205,28 +206,41 @@
   .search-dialog-inner {
     position: relative;
     max-width: 720px;
+    max-height: 84vh;
     margin: 8vh auto 0;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     background: var(--color-bg);
     color: var(--color-fg);
     border-radius: 14px;
     border: 1px solid var(--color-border);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .search-close {
-    position: absolute;
-    top: 0.4rem;
-    right: 0.6rem;
-    background: transparent;
-    border: none;
+    position: sticky;
+    top: 0;
+    float: right;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
     color: var(--color-muted);
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 1;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
+    padding: 0;
+    margin-bottom: -32px;
+    z-index: 2;
+    transition: color 0.15s ease, border-color 0.15s ease;
   }
   .search-close:hover {
     color: var(--color-fg);
+    border-color: var(--color-accent);
   }
 
   /* Tweak Pagefind UI to match the site theme. */
@@ -256,6 +270,22 @@
   :global(#pagefind-search .pagefind-ui__search-clear) {
     color: var(--color-fg) !important;
     background: var(--color-code-bg) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 8px !important;
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: border-color 0.15s ease, color 0.15s ease !important;
+  }
+  :global(#pagefind-search .pagefind-ui__search-clear:hover) {
+    border-color: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+  /* Give the search input some right padding so it never tucks under
+     the close X button in the top-right corner of the modal. */
+  :global(#pagefind-search .pagefind-ui__form) {
+    margin-right: 2.5rem !important;
   }
   :global(#pagefind-search .pagefind-ui__result-title a),
   :global(#pagefind-search .pagefind-ui__result-link) {
@@ -267,6 +297,19 @@
   }
   :global(#pagefind-search .pagefind-ui__result-excerpt) {
     color: var(--color-muted) !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  /* Any pre/code/inline-code from the indexed body should wrap rather
+     than overflow the modal (we saw a long base64 blob blow out the
+     width). */
+  :global(#pagefind-search pre),
+  :global(#pagefind-search code),
+  :global(#pagefind-search .pagefind-ui__result) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
   }
   :global(#pagefind-search .pagefind-ui__result-tags),
   :global(#pagefind-search .pagefind-ui__message) {
