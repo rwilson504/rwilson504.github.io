@@ -1,0 +1,79 @@
+---
+import { SEO } from "astro-seo";
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: URL | string;
+  ogImage?: string;
+  /** Article-specific OG tags. */
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    tags?: string[];
+  };
+}
+
+const {
+  title,
+  description = "Tips, tricks, and notes from Richard A. Wilson on Power Platform, AI, and side projects.",
+  canonical,
+  ogImage,
+  article,
+} = Astro.props;
+
+const siteName = "Richard A. Wilson";
+const fullTitle = title === siteName ? title : `${title} — ${siteName}`;
+const resolvedCanonical = canonical ?? Astro.url.href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={siteName}
+      href={new URL("/rss.xml", Astro.site)}
+    />
+    <SEO
+      title={fullTitle}
+      description={description}
+      canonical={String(resolvedCanonical)}
+      openGraph={{
+        basic: {
+          title: fullTitle,
+          type: article ? "article" : "website",
+          image: ogImage ?? new URL("/og-default.png", Astro.site).toString(),
+          url: String(resolvedCanonical),
+        },
+        optional: {
+          siteName,
+          description,
+        },
+        article: article
+          ? {
+              publishedTime: article.publishedTime,
+              modifiedTime: article.modifiedTime,
+              tags: article.tags,
+            }
+          : undefined,
+      }}
+      twitter={{
+        card: "summary_large_image",
+      }}
+    />
+  </head>
+  <body>
+    <SiteHeader />
+    <main><slot /></main>
+    <SiteFooter />
+  </body>
+</html>

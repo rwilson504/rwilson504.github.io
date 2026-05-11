@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { categories } from "../../content.config";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return categories.map((category) => ({
+    params: { category },
+    props: {
+      category,
+      posts: posts
+        .filter((p) => p.data.category === category)
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+const titleCase = category
+  .split("-")
+  .map((w) => w[0]?.toUpperCase() + w.slice(1))
+  .join(" ");
+---
+
+<BaseLayout
+  title={`${titleCase}`}
+  description={`Posts in the ${titleCase} category.`}
+>
+  <p class="category-pill">category</p>
+  <h1>{titleCase}</h1>
+  <p class="post-meta">{posts.length} post{posts.length === 1 ? "" : "s"}</p>
+  <ul class="post-list">
+    {posts.map((post) => (
+      <PostCard
+        href={`/blog/${post.id}/`}
+        title={post.data.title}
+        description={post.data.description}
+        pubDate={post.data.pubDate}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))}
+  </ul>
+</BaseLayout>
