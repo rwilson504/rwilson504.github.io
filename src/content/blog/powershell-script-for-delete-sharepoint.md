@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Script for Delete SharePoint Designer Cache"
-description: "I have developed several workflow activities for use within SharePoint designer.…"
+description: "I have developed several workflow activities for use within SharePoint designer. Every time a SharePoint Designer workflow is opened a copy of the deployed DLL is downloaded into the WebSiteCache…"
 pubDate: 2010-07-09
 updatedDate: 2010-11-05
 category: power-apps

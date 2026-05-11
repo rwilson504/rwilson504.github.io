@@ -1,6 +1,6 @@
 ---
 title: "Finding Largest Files on Drive Using Powershell"
-description: "Recently a colleague of mine was having issues with low drive space on one of our servers.…"
+description: "Recently a colleague of mine was having issues with low drive space on one of our servers. Because this is a clients system i am unable to copy over WinDirStat which is what i would usually use to…"
 pubDate: 2019-04-22
 updatedDate: 2019-07-01
 category: power-apps

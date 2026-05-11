@@ -1,6 +1,6 @@
 ---
 title: "Refresh ISV/WebResource after CRM 2013/2015/2016 Save Event"
-description: "I had a Web Resource page which needed to refresh a jqgrid on it after some fields on a CRM form were updated and record was saved.…"
+description: "I had a Web Resource page which needed to refresh a jqgrid on it after some fields on a CRM form were updated and record was saved."
 pubDate: 2016-04-07
 category: power-apps
 tags:

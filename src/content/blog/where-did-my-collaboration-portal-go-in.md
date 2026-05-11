@@ -1,6 +1,6 @@
 ---
 title: "Where did my Collaboration Portal go in SharePoint 2010?"
-description: "When I went to create my first site collection in SharePoint 2010 I was surprised to find there was no site template for the Collaboration Portal.…"
+description: "When I went to create my first site collection in SharePoint 2010 I was surprised to find there was no site template for the Collaboration Portal."
 pubDate: 2010-07-20
 updatedDate: 2010-11-05
 category: power-apps

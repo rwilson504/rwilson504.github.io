@@ -1,6 +1,6 @@
 ---
 title: "Open Model Apps Url Using Unique Name"
-description: "When generating links for records, lists or reports in a Dataverse environment it is important that they open the specific application they relate to so users have the best experience.…"
+description: "When generating links for records, lists or reports in a Dataverse environment it is important that they open the specific application they relate to so users have the best experience."
 pubDate: 2021-06-23
 heroImage: "/heroes/open-model-apps-url-using-unique-name.png"
 heroImageAlt: "2021-06-23_11-14-09"

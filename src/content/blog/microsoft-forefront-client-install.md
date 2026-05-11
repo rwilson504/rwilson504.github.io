@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Forefront Client Install Wihtout Centralized Server"
-description: "I was recently looking around for an Anti-Virus solution for Windows Server 2008.…"
+description: "I was recently looking around for an Anti-Virus solution for Windows Server 2008. I had tried downloading Microsoft Forefront Client before but when I ran the setup it wanted me to install a ton of…"
 pubDate: 2010-07-01
 updatedDate: 2011-05-16
 category: misc

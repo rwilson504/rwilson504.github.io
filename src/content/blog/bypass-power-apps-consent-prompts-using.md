@@ -1,6 +1,6 @@
 ---
 title: "Bypass Power Apps Consent Prompts Using PowerShell"
-description: "When a user opens a Power App for the first time, they are often presented with a consent form asking for permission to access data sources or APIs used by the app.…"
+description: "When a user opens a Power App for the first time, they are often presented with a consent form asking for permission to access data sources or APIs used by the app."
 pubDate: 2024-10-16
 heroImage: "/heroes/bypass-power-apps-consent-prompts-using.png"
 heroImageAlt: "Bypass Power Apps Consent Prompts Using PowerShell"

@@ -1,6 +1,6 @@
 ---
 title: "Launch A Canvas App In Model App From SiteMap"
-description: "Canvas PowerApps provide a great amount of functionality with little or no code.…"
+description: "Canvas PowerApps provide a great amount of functionality with little or no code. Many examples demonstrate how to open a Canvas App within a Model App on a specific record and pass the context of…"
 pubDate: 2020-06-18
 heroImage: "/heroes/launch-canvas-app-in-model-app-from.png"
 heroImageAlt: "Canvas App Menu"
@@ -24,10 +24,7 @@ Here is an example of a Canvas app I have created which will display a menu of i
 
 ## Create a New WebResource
 
-Create a new HTML WebResource. You can download the source [here](https://gist.github.com/rwilson504/417e334a5597ebc5a9dec8e762efe0b3) or copy and past from below.
-
-.gist-file
-.gist-data {max-height: 500px;}
+Create a new HTML WebResource. The full source is available as a [GitHub Gist](https://gist.github.com/rwilson504/417e334a5597ebc5a9dec8e762efe0b3) — you can download it from there or copy/paste from below.
 
 ![New WebResource](/images/launch-canvas-app-in-model-app-from/01-WebResourceNew.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "Get SPUser Information for the Document Creator"
-description: "While working on creating a SharePoint 2007 event handler I needed to get the login name for the creator of the document I was trying to update.…"
+description: "While working on creating a SharePoint 2007 event handler I needed to get the login name for the creator of the document I was trying to update."
 pubDate: 2009-09-01
 category: power-apps
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Disable CRL Checking in IIS 8"
-description: "When working on a system with no internet access it is important to ensure that CRL checking is disabled. If not disabled you will always receive a 403.13 error after entering you pin.…"
+description: "When working on a system with no internet access it is important to ensure that CRL checking is disabled. If not disabled you will always receive a 403.13 error after entering you pin."
 pubDate: 2014-12-16
 updatedDate: 2015-07-27
 category: power-apps

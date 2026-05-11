@@ -1,6 +1,6 @@
 ---
 title: "Pass Custom Parameters To WebResource From UIC SiteMap in Dynamics"
-description: "While working on creating a page to open a Canvas app full screen inside of a Model app I wanted to create a WebResource I could use over and over again.…"
+description: "While working on creating a page to open a Canvas app full screen inside of a Model app I wanted to create a WebResource I could use over and over again."
 pubDate: 2020-06-16
 heroImage: "/heroes/pass-custom-parameters-to-webresource.png"
 heroImageAlt: "Use XRMToolbox"

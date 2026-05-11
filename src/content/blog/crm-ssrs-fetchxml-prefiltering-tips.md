@@ -1,6 +1,6 @@
 ---
 title: "CRM SSRS FetchXml PreFiltering Tips"
-description: "I don't do custom SSRS to often but when I do I consonantly have issues pre-filtering FetchXML in SSRS reports.…"
+description: "I don't do custom SSRS to often but when I do I consonantly have issues pre-filtering FetchXML in SSRS reports."
 pubDate: 2017-03-16
 category: power-apps
 tags:

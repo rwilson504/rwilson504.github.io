@@ -1,6 +1,6 @@
 ---
 title: "How to Create SharePoint Items with Power Automate Desktop"
-description: "Power Automate Desktop is a great way to automate many of your daily task so you can focus on real work.…"
+description: "Power Automate Desktop is a great way to automate many of your daily task so you can focus on real work."
 pubDate: 2022-02-04
 heroImage: "/heroes/how-to-create-sharepoint-items-with.png"
 heroImageAlt: "How do it create..."

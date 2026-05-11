@@ -1,6 +1,6 @@
 ---
 title: "SSIS Speed: DefaultBufferMaxRows "
-description: "SSIS can sometimes take a long time to load. Try messing witht he DefaultBufferMaxRows setting in the package.…"
+description: "SSIS can sometimes take a long time to load. Try messing witht he DefaultBufferMaxRows setting in the package."
 pubDate: 2013-10-22
 category: power-apps
 tags:

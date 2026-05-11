@@ -1,6 +1,6 @@
 ---
 title: "PowerApps Naming Conventions and Coding Standards"
-description: "When building canvas apps the naming conventions used by the objects can be very confusing once you have added a few screens.…"
+description: "When building canvas apps the naming conventions used by the objects can be very confusing once you have added a few screens."
 pubDate: 2019-08-06
 category: power-apps
 tags: []

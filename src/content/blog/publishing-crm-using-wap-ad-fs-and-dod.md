@@ -1,6 +1,6 @@
 ---
 title: "Publishing CRM Using WAP, AD FS and DoD PKI"
-description: "With TMG going the way of the dodo Microsoft has moved much of it's functionality into Server 2012R2.…"
+description: "With TMG going the way of the dodo Microsoft has moved much of it's functionality into Server 2012R2."
 pubDate: 2015-09-10
 heroImage: "/heroes/publishing-crm-using-wap-ad-fs-and-dod.png"
 heroImageAlt: "2015-09-10 13_57_58-WAP ADFS KCD CRM (1).vsdx - Visio Professional"

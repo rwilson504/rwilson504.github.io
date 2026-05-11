@@ -1,6 +1,6 @@
 ---
 title: "Dev Box Tools"
-description: "- AstroGrep - Fiddler - LINQPad - XRMToolkit - Team Foundation Sidekicks - WinDirStat - JustDecompile - CodeCompare - Search Everything - SMTP Diag Tool - HTML CheatSheet - Right Click \"Command…"
+description: "AstroGrep - Fiddler - LINQPad - XRMToolkit - Team Foundation Sidekicks - WinDirStat - JustDecompile - CodeCompare - Search Everything - SMTP Diag Tool - HTML CheatSheet - Right Click \"Command Window…"
 pubDate: 2018-06-02
 updatedDate: 2019-04-01
 category: misc

@@ -1,6 +1,6 @@
 ---
 title: "SharePoint List Definition Exporter"
-description: "I was looking to create a schema file for a list I currently have in SharePoint. If you have done this before you can understand the pain.…"
+description: "I was looking to create a schema file for a list I currently have in SharePoint. If you have done this before you can understand the pain."
 pubDate: 2010-08-20
 updatedDate: 2011-02-21
 category: power-apps

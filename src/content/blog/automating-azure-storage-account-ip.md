@@ -1,6 +1,6 @@
 ---
 title: "Automating Azure Storage Account IP Restrictions with Power Automate"
-description: "When managing Azure Storage Accounts, it’s essential to control access by restricting allowed IP addresses.…"
+description: "When managing Azure Storage Accounts, it’s essential to control access by restricting allowed IP addresses."
 pubDate: 2025-03-18
 heroImage: "/heroes/automating-azure-storage-account-ip.png"
 heroImageAlt: "Automating Azure Storage Account IP Restrictions with Power Automate"

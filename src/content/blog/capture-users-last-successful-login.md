@@ -1,6 +1,6 @@
 ---
 title: "Capture User’s Last Successful Login with Portal Web API"
-description: "Hey Power Pages developers! Are you sitting there scratching your head wondering why the Authentication/LoginTrackingEanbled site setting isn’t working? Unfortunately it has been deprecated 😭😭😭😭.…"
+description: "Hey Power Pages developers! Are you sitting there scratching your head wondering why the Authentication/LoginTrackingEanbled site setting isn’t working? Unfortunately it has been deprecated 😭😭😭😭."
 pubDate: 2023-08-28
 heroImage: "/heroes/capture-users-last-successful-login.png"
 heroImageAlt: "image"

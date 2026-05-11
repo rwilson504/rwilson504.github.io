@@ -1,6 +1,6 @@
 ---
 title: "Increase CRM Paging Limit for User"
-description: "Below is an unsupported method for increasing the number of records in each page of a view. This setting is individual to each users.…"
+description: "Below is an unsupported method for increasing the number of records in each page of a view. This setting is individual to each users."
 pubDate: 2014-02-14
 updatedDate: 2014-03-05
 category: power-apps

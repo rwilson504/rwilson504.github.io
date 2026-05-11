@@ -1,6 +1,6 @@
 ---
 title: "Government API Development Playbook: Designing for Power Platform and Building Custom Connectors"
-description: "The article discusses integrating Government APIs with Microsoft Power Platform, emphasizing the creation and certification of custom connectors.…"
+description: "The article discusses integrating Government APIs with Microsoft Power Platform, emphasizing the creation and certification of custom connectors."
 pubDate: 2024-02-16
 heroImage: "/heroes/government-api-development-playbook.png"
 heroImageAlt: "Government API Development Playbook: Designing for Power Platform and Building Custom Connectors"

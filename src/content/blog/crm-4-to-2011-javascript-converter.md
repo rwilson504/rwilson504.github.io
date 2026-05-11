@@ -1,6 +1,6 @@
 ---
 title: "CRM 4 to 2011 Javascript Converter"
-description: "Project Description: CRM 4 to CRM 2011 Javascript Converter helps convert scripts to the latest CRM 2011 Form scripting model.…"
+description: "Project Description: CRM 4 to CRM 2011 Javascript Converter helps convert scripts to the latest CRM 2011 Form scripting model."
 pubDate: 2010-09-27
 updatedDate: 2011-02-21
 category: power-apps

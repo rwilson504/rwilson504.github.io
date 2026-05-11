@@ -1,6 +1,6 @@
 ---
 title: "Using SQL Server 2005/2008 with ADFS 2.0"
-description: "If you plan on using a SQL server 2005/2008 to host your ADFS 2.0 configuration database you must run the configuration using the command line.…"
+description: "If you plan on using a SQL server 2005/2008 to host your ADFS 2.0 configuration database you must run the configuration using the command line."
 pubDate: 2010-09-30
 updatedDate: 2010-10-25
 heroImage: "/heroes/using-sql-server-with-adfs-20.png"

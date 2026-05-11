@@ -1,18 +1,23 @@
 ---
 title: "Convert Markdown Documents to PDF Using md-to-pdf"
-description: "Azure DevOps now has an option to link your Wiki to a repo).…"
+description: "How to convert Markdown documents (e.g. an Azure DevOps wiki) to PDF using the md-to-pdf npm package, with examples of project setup, configuration, and generation."
 pubDate: 2019-11-06
-heroImage: "/heroes/article.gif"
+heroImage: "/heroes/convert-markdown-to-pdf-using-md-to-pdf.gif"
 heroImageAlt: "Create Folder and Run init"
 category: misc
-tags: []
+tags:
+  - "markdown"
+  - "pdf"
+  - "npm"
+  - "azure-devops"
+  - "documentation"
 draft: false
 originalBloggerUrl: /2019/11/article.html
 ---
 
 # Convert Markdown Documents to PDF Using md-to-pdf
 
-Azure DevOps now has an option to link your [Wiki to a repo](%5Bhttps://docs.microsoft.com/en-us/azure/devops/project/wiki/publish-repo-to-wiki?view=azure-devops%5D(https://docs.microsoft.com/en-us/azure/devops/project/wiki/publish-repo-to-wiki?view=azure-devops)). With this change I decided to start creating all my documentation in Markdown and then to supply my users with PDF output for things such as user guide. This allows me to source control my documents and still supply users with clean looking outputs. Here is how i went about doing this.
+Azure DevOps now has an option to [link your Wiki to a repo](https://docs.microsoft.com/en-us/azure/devops/project/wiki/publish-repo-to-wiki?view=azure-devops). With this change I decided to start creating all my documentation in Markdown and then to supply my users with PDF output for things such as user guide. This allows me to source control my documents and still supply users with clean looking outputs. Here is how i went about doing this.
 
 ## Create Documents Folder/Package
 
@@ -22,7 +27,7 @@ I started by creating a new folder for my documents and running the **npm init**
 
 Install the [md-to-pdf](https://www.npmjs.com/package/md-to-pdf) npm package by running **npm i --save-dev md-to-pdf**
 
-![Install md-to-pdf](/images/article/01-install-md-to-pdf.gif)
+![Install md-to-pdf](/images/convert-markdown-to-pdf-using-md-to-pdf/01-install-md-to-pdf.gif)
 
 ## Create Index.js file
 
@@ -60,4 +65,4 @@ Update the docs array to include the file names of the markdown files you want t
 
 To generate the pdf documents open a console window and run **npm run test**. The output for the PDFs will have the same file name as the Markdown files and will be in the same directory.
 
-![Generate Files](/images/article/02-generate-pdf.gif)
+![Generate Files](/images/convert-markdown-to-pdf-using-md-to-pdf/02-generate-pdf.gif)

@@ -1,6 +1,6 @@
 ---
 title: "Raspberry Pi Pinout Terminal Command"
-description: "When i first started workign with the Raspberry Pi i found myself constantly searching for images of the pinout and then printing it.…"
+description: "When i first started workign with the Raspberry Pi i found myself constantly searching for images of the pinout and then printing it."
 pubDate: 2021-05-24
 heroImage: "/heroes/raspberry-pi-pinout-terminal-command.png"
 heroImageAlt: "2021-05-24_13-54-23"

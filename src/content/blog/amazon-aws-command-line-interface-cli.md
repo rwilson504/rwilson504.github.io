@@ -1,6 +1,6 @@
 ---
 title: "Amazon AWS Command Line Interface (CLI) Install"
-description: "Using CLI can make doing task in AWS much easier. In order to get the CLI tool this is the setup i usually perform.…"
+description: "Using CLI can make doing task in AWS much easier. In order to get the CLI tool this is the setup i usually perform."
 pubDate: 2018-03-14
 updatedDate: 2018-03-15
 category: misc

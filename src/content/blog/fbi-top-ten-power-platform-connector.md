@@ -1,6 +1,6 @@
 ---
 title: "FBI Top Ten Power Platform Connector"
-description: "Today’s digital landscape offers unprecedented opportunities to leverage technology in the service of public safety.…"
+description: "Today’s digital landscape offers unprecedented opportunities to leverage technology in the service of public safety."
 pubDate: 2025-02-24
 heroImage: "/heroes/fbi-top-ten-power-platform-connector.png"
 heroImageAlt: "Powering Justice: Unveil the FBI Most Wanted with the Power Platform Custom Connector"

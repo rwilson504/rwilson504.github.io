@@ -1,6 +1,6 @@
 ---
 title: "Installing .NET Tools on Air Gapped Systems"
-description: "In today’s digital age, the vast majority of our tasks rely heavily on internet connectivity.…"
+description: "In today’s digital age, the vast majority of our tasks rely heavily on internet connectivity. However, there are scenarios, more common than one might think, where systems are intentionally kept…"
 pubDate: 2023-09-06
 heroImage: "/heroes/installing-net-tools-on-air-gapped.png"
 heroImageAlt: "Installing .NET Tools on Air Gapped Systems"

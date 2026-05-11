@@ -1,6 +1,6 @@
 ---
 title: "Power Automate Blueprint Accessing Azure Portal Backend APIs and the Intricacies of main.iam.ad.ext.azure.com"
-description: "In the realms of digital infrastructure management, automation emerges as a pivotal ally, especially when confronting repetitive and time-sensitive tasks.…"
+description: "In the realms of digital infrastructure management, automation emerges as a pivotal ally, especially when confronting repetitive and time-sensitive tasks."
 pubDate: 2024-02-29
 heroImage: "/heroes/readme.png"
 heroImageAlt: "Power Automate Blueprint Accessing Azure Portal Backend APIs and the Intricacies of main.iam.ad.ext.azure.com"

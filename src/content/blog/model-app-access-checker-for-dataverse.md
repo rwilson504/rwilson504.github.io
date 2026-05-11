@@ -1,6 +1,6 @@
 ---
 title: "Model App Access Checker for Dataverse"
-description: "Want to know which model applications your users have access to in Dataverse? Check out the app access checker that is available within the Power Platform admin center.…"
+description: "Want to know which model applications your users have access to in Dataverse? Check out the app access checker that is available within the Power Platform admin center."
 pubDate: 2021-06-28
 heroImage: "/heroes/model-app-access-checker-for-dataverse.png"
 heroImageAlt: "2021-06-28_13-53-22"

@@ -1,6 +1,6 @@
 ---
 title: "Copy data between rows in the same table"
-description: "So here was my issue. I needed to copy some <binary data> from one row in a table to another row.…"
+description: "So here was my issue. I needed to copy some from one row in a table to another row. I tried using the SQL Server Managment Studio but it does not allow you to copy and past binary information."
 pubDate: 2009-09-01
 category: power-apps
 tags:

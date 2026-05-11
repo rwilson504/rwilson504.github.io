@@ -1,6 +1,6 @@
 ---
 title: ""
-description: "Recently I have been working with two plugins in my web pages.…"
+description: "Recently I have been working with two plugins in my web pages. DirtyForm, which allows you to detect when changes have been made to fields, and JQueryUI which has a very flexible popup calendar for…"
 pubDate: 2014-04-30
 updatedDate: 2014-05-13
 category: power-apps

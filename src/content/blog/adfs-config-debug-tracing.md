@@ -1,6 +1,6 @@
 ---
 title: "ADFS 2.0 Config Debug Tracing"
-description: "1.…"
+description: "Run CMD as Administrator- wevtutil sl \"AD FS 2.0 Tracing/Debug\" /l:5- Open Event Viewer.- To open Event Viewer, click Start, point to Programs, point to Administrative Tools, and then click Event…"
 pubDate: 2012-02-28
 updatedDate: 2015-08-12
 category: power-apps

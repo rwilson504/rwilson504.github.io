@@ -1,6 +1,6 @@
 ---
 title: "Create Windows 10 VHD and Import as EC2 AMI"
-description: "In needing to test client configuration and keep them in the same domain as our server we recently needed to add some Windows 10 machines to EC2.…"
+description: "In needing to test client configuration and keep them in the same domain as our server we recently needed to add some Windows 10 machines to EC2."
 pubDate: 2018-03-15
 heroImage: "/heroes/create-windows-10-vhd-and-uploading-to.png"
 category: misc

@@ -1,6 +1,6 @@
 ---
 title: "Power Query: Driftless Merges using Table.Buffer"
-description: "Recently I was working on data where I needed to pick one best row per group, then merge that result with a lookup table.…"
+description: "Recently I was working on data where I needed to pick one best row per group, then merge that result with a lookup table."
 pubDate: 2025-08-11
 heroImage: "/heroes/power-query-driftless-merges-using.png"
 heroImageAlt: "Power Query: Driftless Merges using Table.Buffer"

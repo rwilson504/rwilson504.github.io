@@ -1,6 +1,6 @@
 ---
 title: "Using Web Templates as Custom Components in Power Pages: A Classification Banner Example"
-description: "Web templates in Power Pages offer a powerful way to create reusable components that can be used across multiple pages, headers, and footers.…"
+description: "Web templates in Power Pages offer a powerful way to create reusable components that can be used across multiple pages, headers, and footers."
 pubDate: 2025-02-19
 updatedDate: 2025-04-21
 heroImage: "/heroes/using-web-templates-as-custom.png"

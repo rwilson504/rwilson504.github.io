@@ -1,6 +1,6 @@
 ---
 title: "Return Error in Power Automate When Using Try/Catch Scopes"
-description: "When utilizing scopes within Power Automate to create a try/catch/finally statement it can be useful to provide additional details about any errors that occurred within the try block.…"
+description: "When utilizing scopes within Power Automate to create a try/catch/finally statement it can be useful to provide additional details about any errors that occurred within the try block."
 pubDate: 2021-06-22
 heroImage: "/heroes/return-error-in-power-automate-when.png"
 heroImageAlt: "2021-06-22_13-50-06"

@@ -1,6 +1,6 @@
 ---
 title: "Filtering Down the CrmSvcUtil"
-description: "Most of the time i use late bound but there are times when early bound makes things easier. I needed to limit the size of the file so filtering down on just the entities i use was needed.…"
+description: "Most of the time i use late bound but there are times when early bound makes things easier. I needed to limit the size of the file so filtering down on just the entities i use was needed."
 pubDate: 2018-03-08
 updatedDate: 2018-03-15
 category: power-apps

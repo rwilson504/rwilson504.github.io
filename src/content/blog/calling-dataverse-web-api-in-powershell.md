@@ -1,6 +1,6 @@
 ---
 title: "Calling Dataverse Web API in PowerShell using Client Credentials"
-description: "Connecting to Dataverse using PowerShell can be very helpful for data migrations and use within Azure DevOps. Connecting to an instance in a non-interactive way can be tricky though.…"
+description: "Connecting to Dataverse using PowerShell can be very helpful for data migrations and use within Azure DevOps. Connecting to an instance in a non-interactive way can be tricky though."
 pubDate: 2021-06-09
 heroImage: "/heroes/calling-dataverse-web-api-in-powershell.png"
 heroImageAlt: "PowerShell Plus Dataverse"

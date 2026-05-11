@@ -1,6 +1,6 @@
 ---
 title: "Fixing Temperature Fluctuations on the Creality CR-6 SE with PID Tuning"
-description: "After installing a new hotend on my Creality CR-6 SE, I ran into a frustrating issue: when printing above 210°C, the hotend temperature would swing wildly—fluctuating by 5–10°C.…"
+description: "After installing a new hotend on my Creality CR-6 SE, I ran into a frustrating issue: when printing above 210°C, the hotend temperature would swing wildly—fluctuating by 5–10°C."
 pubDate: 2025-04-12
 heroImage: "/heroes/fixing-temperature-fluctuations-on.png"
 heroImageAlt: "Fixing Temperature Fluctuations on the Creality CR-6 SE with PID Tuning"

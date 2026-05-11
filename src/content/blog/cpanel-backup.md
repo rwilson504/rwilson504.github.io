@@ -1,6 +1,6 @@
 ---
 title: "cPanel - Backup"
-description: "After having my e-mail accidentally removed and LunarPages.com charging me $75 dollars to have it restored I created a backup script to download the automated cPanel backups.…"
+description: "After having my e-mail accidentally removed and LunarPages.com charging me $75 dollars to have it restored I created a backup script to download the automated cPanel backups."
 pubDate: 2009-08-21
 updatedDate: 2009-09-01
 category: misc

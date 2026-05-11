@@ -1,6 +1,6 @@
 ---
 title: "Gotchas for PCF Code Components in Canvas Apps"
-description: "PCF Code Components allow developers to create their own custom interfaces utilizing Typescript and/or React. To learn more about the PCF Component Framework check out this article.…"
+description: "PCF Code Components allow developers to create their own custom interfaces utilizing Typescript and/or React. To learn more about the PCF Component Framework check out this article."
 pubDate: 2020-04-24
 heroImage: "/heroes/gotchas-for-pcf-code-components-in.png"
 heroImageAlt: "No Escape Characters"

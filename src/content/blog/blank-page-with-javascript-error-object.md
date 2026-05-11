@@ -1,6 +1,6 @@
 ---
 title: "Blank Page With JavaScript Error 'Object Expected'"
-description: "I had just installed reporting services and the reporting services connector. Suddenly my CRM web client is only showing me a blue screen and will not go to the main page.…"
+description: "I had just installed reporting services and the reporting services connector. Suddenly my CRM web client is only showing me a blue screen and will not go to the main page."
 pubDate: 2009-08-21
 category: power-apps
 tags:

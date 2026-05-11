@@ -1,6 +1,6 @@
 ---
 title: "Validate Solution Using the PowerApp Checker (Includes On-Premise Solution)"
-description: "I recently saw the article on how to validate solutions using the PowerApps Solution Checker and wanted to share the link.…"
+description: "I recently saw the article on how to validate solutions using the PowerApps Solution Checker and wanted to share the link."
 pubDate: 2019-07-08
 category: power-apps
 tags: []

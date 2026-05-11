@@ -1,6 +1,6 @@
 ---
 title: "Finding Parental and Cascading Relationships In CRM using SQL"
-description: "This script will find custom Parental or Cascading Relationship between entities in CRM.…"
+description: "This script will find custom Parental or Cascading Relationship between entities in CRM. This script was used to determine if someone had changed a relationship on a target system and if that change…"
 pubDate: 2017-07-13
 updatedDate: 2018-03-15
 category: power-apps

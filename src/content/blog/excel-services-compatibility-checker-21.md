@@ -1,6 +1,6 @@
 ---
 title: "Excel Services Compatibility Checker"
-description: "A while back I had a customer who wished to use Excel Services to do some project reporting dashboards.…"
+description: "A while back I had a customer who wished to use Excel Services to do some project reporting dashboards."
 pubDate: 2009-08-21
 heroImage: "/heroes/excel-services-compatibility-checker-21.jpg"
 category: power-apps

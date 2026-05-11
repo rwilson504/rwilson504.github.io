@@ -1,6 +1,6 @@
 ---
 title: "Debug App that Uses ADFS: The SecurityToken is rejected because the validation time is out of range"
-description: "When debugging an app which connected to CRM using IFD connection I kept getting the following in the trace log.…"
+description: "When debugging an app which connected to CRM using IFD connection I kept getting the following in the trace log."
 pubDate: 2014-04-21
 category: power-apps
 tags:

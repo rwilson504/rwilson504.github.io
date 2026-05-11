@@ -1,6 +1,6 @@
 ---
 title: "Remove Timeout When Debugging w3wp Process"
-description: "One of the smart guys I work with posted some information about debugging the W3WP process that I though I should share.…"
+description: "One of the smart guys I work with posted some information about debugging the W3WP process that I though I should share."
 pubDate: 2010-07-08
 category: power-apps
 tags:

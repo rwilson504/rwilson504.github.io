@@ -1,6 +1,6 @@
 ---
 title: "Windows Server 2008R2 VMs Shut Down After 1 to 2 Hours"
-description: "When created a lab environment to test ADFS 2.0 I utilized the Windows 2008R2 VM baselines distributed by Microsoft. After a few days I was told that I had to activate.…"
+description: "When created a lab environment to test ADFS 2.0 I utilized the Windows 2008R2 VM baselines distributed by Microsoft. After a few days I was told that I had to activate."
 pubDate: 2010-11-04
 updatedDate: 2011-02-21
 heroImage: "/heroes/windows-server-2008r2-vms-shut-down.png"
