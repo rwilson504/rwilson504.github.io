@@ -1,0 +1,17 @@
+---
+title: "TimeGem – Free Tile Layout Software"
+description: "As a true techie I always look to find computer solutions that can help me save time and money.…"
+pubDate: 2013-02-21
+updatedDate: 2014-05-01
+category: misc
+tags:
+  - "tools"
+draft: false
+originalBloggerUrl: /2013/02/timegem-free-tile-layout-software.html
+---
+
+As a true techie I always look to find computer solutions that can help me save time and money.  I decided to tackle putting down tile in my basement and wondered if there was any software that could help me plan the layout.  I was pleasantly surprised to find TileGem, a freeware app.  After taking measurements I added in the walls, chose the tile, and set the grout size.  Once the room was set up it was easy to drag around the tile grid to find the best way to completely the layout.
+
+<http://www.tilegem.com>
+
+[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8y-kH46LypGOitYPhVEt5yhrzz2qYSLgHgpQC4e3SSDUDe6DCNC4jCxBYJQeoNWs-Wjqfvtex2U_l-wIkKL9EVgyuCxiU8GzesRmP8qvrFqQ8xhc1oWpSZ7DuP4kQFzLckBNmsKYZcZw/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHV4jItABD46u6IsAaszLyTJ0ITJiYGSd3SEddFb2xplb56qXwIw4SQmqq3B_lLtJV1fmSzQHZk-Xz9Mpn_YxVVNqOx8dG6ehEAuU491yHYetVNv6JoG9XO0IFHQTWPzw9CDqoUIkuDgw/s1600-h/image%25255B3%25255D.png)

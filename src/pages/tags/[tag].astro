@@ -5,9 +5,12 @@ import PostCard from "../../components/PostCard.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
-  const tags = new Set<string>();
-  for (const p of posts) for (const t of p.data.tags) tags.add(t);
-  return [...tags].map((tag) => ({
+  const counts = new Map<string, number>();
+  for (const p of posts) for (const t of p.data.tags) counts.set(t, (counts.get(t) ?? 0) + 1);
+  // Only emit tag pages for tags used in >=2 posts — keeps singletons
+  // visible in frontmatter (and Pagefind search) without 292 dead-end pages.
+  const tags = [...counts.entries()].filter(([, n]) => n >= 2).map(([t]) => t);
+  return tags.map((tag) => ({
     params: { tag },
     props: {
       tag,
