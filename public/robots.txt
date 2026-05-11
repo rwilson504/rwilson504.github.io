@@ -1,0 +1,11 @@
+# https://www.richardawilson.com/robots.txt
+# Default: allow everything. Search engines, please come in.
+User-agent: *
+Allow: /
+
+# Pagefind's internal index files are not meant to be crawled or indexed.
+# They are JSON/WASM fragments consumed by the on-page search UI.
+Disallow: /pagefind/
+
+# Point crawlers at the sitemap so they don't have to discover URLs.
+Sitemap: https://www.richardawilson.com/sitemap-index.xml
