@@ -13,8 +13,6 @@ When working through App In A Day Workshop I wanted to improve the Approval flow
   
 Below if the final Device Approval Request.  The parts I added to the BPF are outlined in Red.  
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEic9mlB1hpjp21OpI615YZVg4r4kC1ganh2MPqetnWiQ9pUFQnC30iio9empCLYkI0XPWFLhUsilCIfranl8JLYZBcLxKiOnooqoIg8bSlO5639jUwsypY3RxWFZ8ItL6pgBo_De4DFeos/s640/FlowBPF1.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEic9mlB1hpjp21OpI615YZVg4r4kC1ganh2MPqetnWiQ9pUFQnC30iio9empCLYkI0XPWFLhUsilCIfranl8JLYZBcLxKiOnooqoIg8bSlO5639jUwsypY3RxWFZ8ItL6pgBo_De4DFeos/s1600/FlowBPF1.png)
-
 The first thing we need to do is get the Device Procurement Process record for the Device Order that applies to the BPF we build in the workshop.
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6Mnfm1kYZwQnjXMucUH0eAy-rh0O8fGDO0It84HnQKxMHq9MDTPGE7iAoaGKGuWRqFE-0Y5jtMuXdBMSCxFbtau5J8gBJXInUmM7Z-RZR0uGgVUFLm8_uVL5GG-0UTXrqPVyOe5ltiOk/s640/FlowBPF2.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6Mnfm1kYZwQnjXMucUH0eAy-rh0O8fGDO0It84HnQKxMHq9MDTPGE7iAoaGKGuWRqFE-0Y5jtMuXdBMSCxFbtau5J8gBJXInUmM7Z-RZR0uGgVUFLm8_uVL5GG-0UTXrqPVyOe5ltiOk/s1600/FlowBPF2.png)

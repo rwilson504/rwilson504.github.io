@@ -19,8 +19,6 @@ draft: false
 originalBloggerUrl: /2025/02/how-to-show-notes-annotations-on-model.html
 ---
 
-![How to Show Notes (Annotations) on a Model-Driven App Dashboard](https://github.com/user-attachments/assets/6340b6f4-df97-4a81-b1e4-813d671be6bb)
-
 Model-driven apps in Power Apps allow users to create dashboards that display key data from different entities. By default, dashboards do not provide an easy way to display Notes (Annotations). However, using a combination of dashboard customization and XrmToolBox, you can modify a dashboard to include a list of Notes. This article provides a step-by-step guide to achieving this.
 
 ### **Step 1: Create a New Dashboard**

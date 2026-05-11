@@ -25,8 +25,6 @@ This tool has several useful features:
    
 The tool I use the most is the data generator. This allows me to create XML files which will automatically generate entity records in my demo system.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQbIVRGdJNImydm9vHBskGbEp7OfY89ofA35RBqI77eLfRYxXnYVW8regFVeH33imsq1gR588zHAc6OPo_ogFLvg5SoASv3tqUCjhuyoxTYDiWlTyEu57CXVynSbrDbwSIQLVf5dRBwnw/s400/DataGenerator.png.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQbIVRGdJNImydm9vHBskGbEp7OfY89ofA35RBqI77eLfRYxXnYVW8regFVeH33imsq1gR588zHAc6OPo_ogFLvg5SoASv3tqUCjhuyoxTYDiWlTyEu57CXVynSbrDbwSIQLVf5dRBwnw/s800/DataGenerator.png.jpg)
-
 I first go into the demonstration tools and generate an XML file with all the fields I want to populate and put in at least one test value for each field to ensure that I get my data formatted right.
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiy-GmDPW80chh5bZ5qTFDhLhWeZ_I54Ej2MiQtFjFJ-40wN_kHjmhaLNnulhhOxa0ZnhMEWZTffM77LHJltV0JIyhsB8k8SiUi0XaBQIC3vm-rJrW6OAfC2Ea7IWwMeQcrVgh2ixirGN4/s400/SaveDataGeneratorFile.png.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiy-GmDPW80chh5bZ5qTFDhLhWeZ_I54Ej2MiQtFjFJ-40wN_kHjmhaLNnulhhOxa0ZnhMEWZTffM77LHJltV0JIyhsB8k8SiUi0XaBQIC3vm-rJrW6OAfC2Ea7IWwMeQcrVgh2ixirGN4/s800/SaveDataGeneratorFile.png.jpg)

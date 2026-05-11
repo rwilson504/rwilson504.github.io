@@ -32,4 +32,3 @@ tfpt unshelve /migrate /source:"$/Project/CurrentBranch" /target:"$/Project/NewB
 -A shelveset details window will come up, click the Unshelv button.  
 -Next the Unshelv/Merge window will come up, click the Auto-merg button.  
  The command prompt will then start showing the merges into the new branch.
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigwMJpSbht500aNCdZnRjA9d9tbSIoY4h-4FwiTnOBrbawD6mD7EJ7SEObA_iLsRI-k76uJVH1xkVFRLxNK-_zznptXvKcM_TIgS1Pajk-59oWkcAFza1IEbdYCstbhVmA7RuPBBt3Sok/s320/2018-02-16+09_39_47-rick.anycom.us+-+Remote+Desktop+Connection+Manager+v2.7.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigwMJpSbht500aNCdZnRjA9d9tbSIoY4h-4FwiTnOBrbawD6mD7EJ7SEObA_iLsRI-k76uJVH1xkVFRLxNK-_zznptXvKcM_TIgS1Pajk-59oWkcAFza1IEbdYCstbhVmA7RuPBBt3Sok/s1600/2018-02-16+09_39_47-rick.anycom.us+-+Remote+Desktop+Connection+Manager+v2.7.png)

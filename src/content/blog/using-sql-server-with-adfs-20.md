@@ -24,9 +24,6 @@ Run the following command:
   
 Here is an example of my lab configuration:  
   
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg24Svig5TBNDKE9wxGaTZgvIji8qz6xQpx-4Sp-bE1ezr4nd_5UaT10piSLsl8gj-V2lfohIqTVC8ZsYdpl829YVGc5OyZHYsewHc4c15A9HClt4OYRg4CtdXJVd3kBji57h6pK5xZsY/s400/CreateSQLFarmComplete.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg24Svig5TBNDKE9wxGaTZgvIji8qz6xQpx-4Sp-bE1ezr4nd_5UaT10piSLsl8gj-V2lfohIqTVC8ZsYdpl829YVGc5OyZHYsewHc4c15A9HClt4OYRg4CtdXJVd3kBji57h6pK5xZsY/s1600/CreateSQLFarmComplete.png)
-
   
 Finally, the help information is only available through the command line. below is a screen shot of the full output.  
   

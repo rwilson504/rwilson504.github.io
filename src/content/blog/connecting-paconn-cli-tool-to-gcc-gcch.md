@@ -24,8 +24,6 @@ draft: false
 originalBloggerUrl: /2024/08/connecting-paconn-cli-tool-to-gcc-gcch.html
 ---
 
-![Connecting the Paconn CLI Tool to GCC, GCCH, and DoD Environments for Power Platform Connectors](https://github.com/user-attachments/assets/5a2755aa-9b80-4627-b02f-e2d78c8d996b)
-
 When working with the `paconn` CLI tool to create and manage custom connectors in the Power Platform, it’s essential to configure your environment settings properly, especially when targeting different government cloud environments like GCC, GCC High, and DoD. In this article, we’ll guide you through setting up these configurations, including creating a `connectionSettings.json` file for each environment, downloading a custom connector, and updating the connector’s settings for seamless management.
 
 ## Prerequisites

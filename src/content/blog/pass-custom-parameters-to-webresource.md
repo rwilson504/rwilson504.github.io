@@ -17,8 +17,7 @@ While working on creating a page to open a Canvas app full screen inside of a Mo
 
 **Update-** After working with the Maker Portal SiteMap editor I have realized that it will auto decode all of your Data parameters. Instead of using the Maker portal you will need to update the SiteMap using [XrmToolbox] or another XML Editor.
 
-Use XRMToolbox SiteMap editor to create your sub area.  
-![Use XRMToolbox](https://github.com/rwilson504/Blogger/blob/master/PassParametersToWebResourceFromSitemap/SiteMapLinkXrmToolbox.png?raw=true)
+Use XRMToolbox SiteMap editor to create your sub area.
 
 Do not use the Maker Portal Experience.  
 ![Do Not Use Default Sitemap Editor](https://github.com/rwilson504/Blogger/blob/master/PassParametersToWebResourceFromSitemap/addurl.png?raw=true)

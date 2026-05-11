@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2024/03/syncing-azure-devops-work-item-status.html
 ---
 
-![Syncing Azure DevOps Work Item Status to Microsoft Dataverse with Dataflows](https://github.com/rwilson504/Blogger/assets/7444929/de09fe1f-3949-4bb1-abde-587528e9d2ef)
-
 In today’s fast-paced development environments, seamless integration between customer and development tracking systems can be crucial for maintaining transparency, efficiency, and alignment across teams. Our objective centers around a scenario faced by some organizations: **synchronizing customer requirements captured by staff in Microsoft Dataverse with the development work tracked in Azure DevOps (ADO)**.
 
 ## Business Case and Goals

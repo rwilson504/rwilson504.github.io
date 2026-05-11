@@ -16,7 +16,4 @@ Just wanted to let you know that my wonderful Wife, Anne Marie, is going to be p
   
 Bye Bye Birdie  
 Performance dates: September 18, 19, 20(m), 25, 26, 27(m), October 2 & 3, 2009  
-[Click here](http://www.thearlingtonplayers.org/Page/Page.php) to purchase your tickets online.  
-  
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpjWqUV3dh0aqXzRLJV1TwBCCpfXR-hYJfpcwg09IM544Bp-OxoE0s8dLW9PlLgVNhQVuGYFlmUwFEo9RhUbm-sRkLl_RHGfwVQ0ALUGIGik7r9Jw86auXTR2uwoxbyGZVFWplumNQ3O8/s400/Birdie.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpjWqUV3dh0aqXzRLJV1TwBCCpfXR-hYJfpcwg09IM544Bp-OxoE0s8dLW9PlLgVNhQVuGYFlmUwFEo9RhUbm-sRkLl_RHGfwVQ0ALUGIGik7r9Jw86auXTR2uwoxbyGZVFWplumNQ3O8/s1600-h/Birdie.png)
+[Click here](http://www.thearlingtonplayers.org/Page/Page.php) to purchase your tickets online.

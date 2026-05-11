@@ -17,8 +17,7 @@ While developing an EnableRule for some new functionality I decided to use an As
 
 <http://myencounterwithcrm.wordpress.com/2011/06/09/walkthrough-of-asynchronous-call-from-customrule-ribbondiff/>
 
-Microsoft even notes this strategy in the SDK documentation:    
-[![test](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxPuFE8VibSMUU8k2a6068DxASsmK2Uqke_APclUz_0-QSX_T_oolkDiQzrvBgzuOqOcwyLHOg-4z6FapMr6nfGct6eOy9HMG2TPxx2yoJE55x66HWDM6OFnbiReaX9Ha48cwQbugU7Sc/?imgmax=800 "test")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixVmPO3uhQit_maHY4Pce5nbdvrUIImpjq-JCM1Y4h9Corj6lbLSuIKnlUQGppVTJ-eFpeFJCt4FiHhBV8CpDhapoUddsm5qgsi1DeHmrazDiqp8Eaz3DYDj23Gz-WGFWbNGxybNasRjg/s1600-h/test%25255B4%25255D.png)
+Microsoft even notes this strategy in the SDK documentation: 
 
 Consider that Microsoft sees this as the “proper way” to do things you might think that they would provide the necessary methods to complete this, that would only be half correct.
 

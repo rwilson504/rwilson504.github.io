@@ -19,7 +19,4 @@ Secondly, the Calendar web part .dll is not located in the GAC so I had to go ou
   
 Then after selecting the .ddl file in the License Manager I entered the product code. I accidently entered an incorrect product code. Then came the BLUE SCREEN OF DEATH from Windows Server 2003. I don't know about you but that is scary.  
   
-After my server restarted I then ran the License Manger again... this time using the correct product code. I was then able to activate the .dll file located in the multiple web application I installed it in.  
-  
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfAq2p5_GB6ansf8t2dpI4HvsDJ5eMZSw7dxrs1JQzGyYnaRTL9RaPzW3_pt4t8KQye5etBqQZjvjBTR_19dluBNqaaJdwRblF2pcatJIuKFxdJsC4vX9619HoKYKJHjrOwH1viPmCHBI/s400/bambooinstaller.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfAq2p5_GB6ansf8t2dpI4HvsDJ5eMZSw7dxrs1JQzGyYnaRTL9RaPzW3_pt4t8KQye5etBqQZjvjBTR_19dluBNqaaJdwRblF2pcatJIuKFxdJsC4vX9619HoKYKJHjrOwH1viPmCHBI/s1600-h/bambooinstaller.png)
+After my server restarted I then ran the License Manger again... this time using the correct product code. I was then able to activate the .dll file located in the multiple web application I installed it in.

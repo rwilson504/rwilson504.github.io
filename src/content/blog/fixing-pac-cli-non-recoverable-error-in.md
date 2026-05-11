@@ -25,8 +25,6 @@ draft: false
 originalBloggerUrl: /2026/02/fixing-pac-cli-non-recoverable-error-in.html
 ---
 
-![Fixing PAC CLI “non-recoverable error” in GCC High and DoD by enabling telemetry](https://github.com/user-attachments/assets/9104ef03-e3cc-4582-b8a3-dbc0cf2d3d2a)
-
 If you use the Power Platform CLI (PAC CLI) in **GCC High** or **DoD** environments, you may run into a sudden crash that looks like this:
 
 > Sorry, the app encountered a non-recoverable error and will need to terminate. The exception details have been captured and will be forwarded to the development team, if telemetry has been enabled. Session Id: 6e212345-df11-22a7-b633-42380ed22acd, Exception Type: System.NullReferenceException

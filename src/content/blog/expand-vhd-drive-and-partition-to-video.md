@@ -25,5 +25,3 @@ The second tool required is the Gparted LiveCD. This is an open source tool that
 [GParted Homepage](http://gparted.sourceforge.net/)
 
 **Demonstration**
-
-[![](http://lh5.ggpht.com/_mr9BzRLR2GQ/So76C7JzLJI/AAAAAAAAEWE/yWPed4KiIRs/videof59855c090bb%5B3%5D.jpg?imgmax=800)](http://www.youtube.com/watch?v=UxHJ2J3PxxU)

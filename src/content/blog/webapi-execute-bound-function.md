@@ -30,8 +30,6 @@ https://<yourorg>.crm.dynamics.com/api/data/v9.0/$metadata
 
 This document contains the function name and their input properties.
 
-![CDS Metadata Doc](https://github.com/rwilson504/Blogger/blob/master/WebApi-Execute-Bound-Function-PCF/RetrievePrincipalAccessMetadata.png?raw=true)
-
 After finding the function in the document i was able to determine that I needed the following properties: entity, Target. This also gave me their Types which i could use i the parameterTypes section of the request. That being said it was still someone of a pain to figure out how to create the entity and Target correctly. In the end I believe entity is an actual Entity record which is why you construct it with a entityType and an Id and the Target is an EntityReference which is why it’s constructed with an @odata.type and the actual id field name.
 
 My final code is below. Hope this help save someone some time.

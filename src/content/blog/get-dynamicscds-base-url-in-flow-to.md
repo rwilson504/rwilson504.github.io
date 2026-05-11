@@ -19,8 +19,6 @@ This will be demonstrated within a Flow created for the [App In A Day Workshop](
 The first Action we need to add to our existing workflow is the CDS Get record step.  Why do we need this step?  Well unfortunately the Output that is provided from the Flow Trigger of when a record is created does not include the URL to the record.  Instead we need also include the Get record step which will include the record URL in it's Output.  
   
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC1zIRtzTOraGd7IYUQie5keKE79KZhvG3LSSq7OTpnaH77YnhuILi-HdxhEm3Fd9mhsvr5IQHkQPm8pACG4jF5gPMLA9JWaWm3Z68iCac-Q377FFg-mDPl1oOcvibPwL5Wdqd4uRlf0k/s640/BaseURL1.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC1zIRtzTOraGd7IYUQie5keKE79KZhvG3LSSq7OTpnaH77YnhuILi-HdxhEm3Fd9mhsvr5IQHkQPm8pACG4jF5gPMLA9JWaWm3Z68iCac-Q377FFg-mDPl1oOcvibPwL5Wdqd4uRlf0k/s1600/BaseURL1.png)
-
 Next we need to parse the Output of the returned record and get the base URL of the dynamics environment.  We can do this by adding an Initialize variable Action to our flow.  As you can see below we are first creating an expression that will grab the URL from the @odata.id field within the body of the output.  The @odata.id field is the OData URL of the record so we cannot just sent the user that, instead we parse that URL to get the base environment portion.  After you parse out the environment UR  you can then add on the rest that will allow a user to actually view the record in Dynamics.
 
 Expression to Parse URL (**Note**: Replace Get\_Current\_Record with the name of the Get record action you created earlier): first(split(outputs('Get\_Current\_Record')?['body']?['@odata.id'],'/api/'))

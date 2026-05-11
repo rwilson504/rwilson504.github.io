@@ -16,8 +16,6 @@ originalBloggerUrl: /2020/04/powerapps-calendar-control.html
 
 This calendar control was built off of [React Big Calendar](https://github.com/jquense/react-big-calendar). The calendar can be used to display events with or without related resources.
 
-![Control Overview](https://github.com/rwilson504/PCFControls/raw/master/Calendar/images/calendarcontrol.gif)
-
 This control has been designed to work in both Canvas and Model apps. Because of the differences in those types of applications there are some differences in how you utilize them in each app.
 
 Canvas

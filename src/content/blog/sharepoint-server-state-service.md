@@ -31,8 +31,5 @@ New-SPStateServiceApplicationProxy -Name "<ApplicationProxyName>" -ServiceApplic
   
 Also here is a screenshot of the output I received:  
   
-
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu2wYVLplzfPKa-GsLk1LSKxvGFxkbCk5A3RhxgXpz4QefRqvppH5m26TFtD_UYWpZHJ13D5693vJnArqzD9FgfL9ZzDZKLmgnQ6f0qEsu_eB7-H0KCjoGeprAXBWitHJFEXuTFmuxnsQ/s400/New+Picture.bmp)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhu2wYVLplzfPKa-GsLk1LSKxvGFxkbCk5A3RhxgXpz4QefRqvppH5m26TFtD_UYWpZHJ13D5693vJnArqzD9FgfL9ZzDZKLmgnQ6f0qEsu_eB7-H0KCjoGeprAXBWitHJFEXuTFmuxnsQ/s1600/New+Picture.bmp)
-
   
 After the service was up and running the Chart Web Part started working great.

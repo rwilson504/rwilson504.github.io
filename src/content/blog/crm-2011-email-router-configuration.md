@@ -17,8 +17,6 @@ After you deployed the CRM 2011 on premise and the CRM e-mail router you may exp
 **Issue**  
 When you hit the "load data" button on the "User, Queues, and Forward Mailboxes" Tab in the Email Router Configuration manager …
 
-[![022412_1608_CRM2011Emai1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigdDjgvFXnbNrZTSjDZ_Hcog1MEDZd_ryLVtRqUYJMeu_OsI2PKIExOP5Wq-WD42fdUSJBL2zieF5HZ7sP352YaKD0QZnZAsIDXIVZ0mvCFcq81642JoOQ2hWf2Sq0Jb8caDrGjuHhSFU/?imgmax=800 "022412_1608_CRM2011Emai1")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisjdKQjDAG_UNLk6iZYGJgPFzu3fDyz7-CXLLUGghfd3z8ieJStzN0XnExL4U-8Mh_rbH2aHyqBtd8JPzHyWh8TvHtTDEsXmHld0fT9ZmPyRvbsRbWUwmg5scEGr-zhgTfrIJ7oXmHAVI/s1600-h/022412_1608_CRM2011Emai1%25255B5%25255D.png)
-
 … the e-mail router might not be able to load the data. Within the  CRM platform trace the below error can be seen:
 
 >Crm Exception: Message: The decryption key could not be obtained because HTTPS protocol is enforced, but not enabled. Enable HTTPS protocol, and try again., ErrorCode: -2147187707, InnerException: Microsoft.Crm.CrmException: The decryption key could not be obtained because HTTPS protocol is enforced, but not enabled. Enable HTTPS protocol, and try again.

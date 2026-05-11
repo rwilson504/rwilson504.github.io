@@ -22,8 +22,6 @@ In order to actually enter these characters into a text editor the easier way is
   
 **NOTE**: If using Windows Server 2008 ensure the Desktop Experience feature installed or the Charmap will not be available.
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8iFtBVRLPL_N9Jpa5zwHMCGkzFACY6r0letg7gHMa01npBxVjJXbCArbRfFzlO6nzrOBmtJJAi0OT-TZ9KNI3BzIhJJW-ia_RPo_ydkmoui4ZlplcnUX5aAddGYPlyelGRJvmk-MwM7A/s320/charmap.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8iFtBVRLPL_N9Jpa5zwHMCGkzFACY6r0letg7gHMa01npBxVjJXbCArbRfFzlO6nzrOBmtJJAi0OT-TZ9KNI3BzIhJJW-ia_RPo_ydkmoui4ZlplcnUX5aAddGYPlyelGRJvmk-MwM7A/s1600/charmap.png)
-
 1. Start->Run->charmap
 
 2. Change the font to Arial Unicode MS

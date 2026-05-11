@@ -18,8 +18,6 @@ draft: false
 originalBloggerUrl: /2024/02/government-api-development-playbook.html
 ---
 
-![Government API Development Playbook: Designing for Power Platform and Building Custom Connectors](https://github.com/rwilson504/Blogger/assets/7444929/9693714c-2bb4-456c-860f-7e12399e681d)
-
 The article discusses integrating Government APIs with Microsoft Power Platform, emphasizing the creation and certification of custom connectors. It guides government API developers on adopting best practices and standards for API design to ensure compatibility and effectiveness within Power Platform. This includes leveraging tools like OpenAPI and Postman for development and navigating the certification process for connectors, aiming to improve government data accessibility and digital transformation efforts.
 
 **Table of Contents**

@@ -18,8 +18,6 @@ originalBloggerUrl: /2021/05/power-automate-custom-connectors-import.html
 
 There are many tools you can utilize to develop [Power Automate custom connectors](https://docs.microsoft.com/en-us/connectors/custom-connectors/) including [Postman](https://www.postman.com/) and [Swagger Inspector](https://inspector.swagger.io/builder). I prefer to utilize Postman but recent updates to the product no longer make it possible to export to a v1 collection.
 
-![image](https://user-images.githubusercontent.com/7444929/117196706-cf62a880-adb4-11eb-9bc8-a70a7fb01cfa.png)
-
 This is unfortunate because the Power Automate custom connector site only allows upload of v1 collections.
 
 ![image](https://user-images.githubusercontent.com/7444929/117197061-59ab0c80-adb5-11eb-87ed-ed2cd9f37672.png)

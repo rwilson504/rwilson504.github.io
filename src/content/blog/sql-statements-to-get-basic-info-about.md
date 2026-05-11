@@ -22,7 +22,7 @@ SELECT TABLE_NAME, COUNT(*) AS COLUMN_COUNT
 ```
 
   
-[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAE8PVLqIjQsqscDbM2BhMKVka3jbHBeunRZ-rZ_KNAykqfQp-1yy8RX8kzxexwYvwil6odgZJnkKhS6lji0VLXB9V0g0f5_pFqQW1wAKEtG5MBlJ94aU2DcdzkmbeQ7Qq0lN7QwzV0iY/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNeQgA4kZ80o_3sgXHHGM2B1mVooKksKuW-we23Odm6lwhMDQeG3MgiPGgO3Q5XwUL__nOPiwGbRdHcdSdCKQBJEsYqAsmyOBotwA8PFp3wEpb2PUJS5d2oWM-ExfiuARhmaZQ0WcYPCA/s1600-h/image%25255B2%25255D.png)   
+   
 .csharpcode, .csharpcode pre<br />{<br /> font-size: small;<br /> color: black;<br /> font-family: consolas, "Courier New", courier, monospace;<br /> background-color: #ffffff;<br /> /\*white-space: pre;\*/<br />}<br />.csharpcode pre { margin: 0em; }<br />.csharpcode .rem { color: #008000; }<br />.csharpcode .kwrd { color: #0000ff; }<br />.csharpcode .str { color: #006080; }<br />.csharpcode .op { color: #0000c0; }<br />.csharpcode .preproc { color: #cc6633; }<br />.csharpcode .asp { background-color: #ffff00; }<br />.csharpcode .html { color: #800000; }<br />.csharpcode .attr { color: #ff0000; }<br />.csharpcode .alt <br />{<br /> background-color: #f4f4f4;<br /> width: 100%;<br /> margin: 0em;<br />}<br />.csharpcode .lnum { color: #606060; }<br />  
   
 **RECORD COUNT FOR TABLE**  

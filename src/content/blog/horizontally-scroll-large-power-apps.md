@@ -19,8 +19,6 @@ So you have a lot of data to display but the screen in Power Apps isn’t large 
 
 ## Demo
 
-![Scrollable Gallery](https://github.com/rwilson504/Blogger/blob/master/scrollable-canvas-gallery/ScrollingCanvasGallery.gif?raw=true)
-
 ## Instructions
 
 First add a **Horizontal container** to your screen.

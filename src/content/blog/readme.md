@@ -10,8 +10,6 @@ draft: false
 originalBloggerUrl: /2023/11/readme.html
 ---
 
-![Power Automate Blueprint Accessing Azure Portal Backend APIs and the Intricacies of main.iam.ad.ext.azure.com](https://github.com/rwilson504/power-automate-azure-portal-hidden-api/assets/7444929/6f67a1f1-2456-48d0-8638-93fa3cabb301)
-
 In the realms of digital infrastructure management, automation emerges as a pivotal ally, especially when confronting repetitive and time-sensitive tasks. A recent endeavor led me to a scenario where automating the management of OAuth tokens for users within our organization was paramount. Our meticulous record-keeping of these tokens and their respective assignments is handled through Power Apps. However, the manual aspect of adding these tokens via the Azure portal, which necessitated the upload of a CSV file each time, posed a cumbersome challenge.
 
 Given the current preview status of this functionality, a straightforward method through Graph API was conspicuously absent. Thus, I aimed to devise an automated framework, enabling individuals with the appropriate permissions in Power Apps to seamlessly add these tokens for users. While this wouldn’t entirely absolve admins of their duties—they would still need to activate the tokens within the Azure portal—it significantly mitigated the manual labor involved in creating and uploading the CSV file.

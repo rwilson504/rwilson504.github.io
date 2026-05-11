@@ -20,8 +20,6 @@ draft: false
 originalBloggerUrl: /2025/05/how-to-view-dlp-policies-applied-to.html
 ---
 
-![How to View DLP Policies Applied to a Power Platform Environment](https://github.com/user-attachments/assets/08b245a4-c6f0-48e5-a497-d9032fef2feb)
-
 To quickly see which Data Loss Prevention (DLP) policies are applied to a specific Power Platform environment, you can use a direct URL. This article shows you how to:
 
 1. Find your environment ID

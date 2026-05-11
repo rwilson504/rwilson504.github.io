@@ -14,8 +14,6 @@ DefenseReady Daily Standup is a Windows 8 app that provides military commanders 
 
 [View in the Windows Store](http://apps.microsoft.com/windows/en-us/app/defenseready-daily-standup/c2e5d633-7592-4c27-b8a5-012188056c1d)
 
-![Screen shot 1](http://wscont2.apps.microsoft.com/winstore/1x/240b3071-28ff-48d5-a7f2-51e4fc742be2/Screenshot.116567.1000000.jpg)
-
 ![Screen shot 2](http://wscont1.apps.microsoft.com/winstore/1x/240b3071-28ff-48d5-a7f2-51e4fc742be2/Screenshot.116567.1000001.jpg)
 
 ![Screen shot 3](http://wscont2.apps.microsoft.com/winstore/1x/240b3071-28ff-48d5-a7f2-51e4fc742be2/Screenshot.116567.1000002.jpg)

@@ -17,8 +17,6 @@ draft: false
 originalBloggerUrl: /2024/02/step-by-step-to-success-run-autogpt.html
 ---
 
-![Step-by-Step to Success: Run AutoGPT using Azure OpenAI on Docker](https://github.com/rwilson504/Blogger/assets/7444929/105d93ce-4983-4c37-9fc2-bbf9dbc6be3e)
-
 Integrating AutoGPT with Azure OpenAI through Docker offers a direct path to unlocking advanced AI capabilities. This detailed guide not only walks through the initial setup and configuration steps but also emphasizes the critical adjustments required for effective Azure OpenAI integration. Let’s dive into a more focused and informative discussion on setting up AutoGPT and ensuring it works seamlessly with Azure OpenAI services.
 
 ## What is AutoGPT?

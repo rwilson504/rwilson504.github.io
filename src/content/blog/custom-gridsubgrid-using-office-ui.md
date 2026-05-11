@@ -16,8 +16,6 @@ originalBloggerUrl: /2020/02/custom-gridsubgrid-using-office-ui.html
 
 ## Custom PCF Grid/Subgrid Using Office-UI-Fabric DetailsList
 
-![DetailsList Grid Control](https://github.com/rwilson504/Blogger/blob/master/Office-Fabric-UI-DetailsList-PCF/office-fabric-ui-detailslist.gif?raw=true)
-
 Allows you to simulate the out of the box Grid and Subgrid controls using the Office-UI-Fabric DetailsList control. It was built to provide a springboard when you need a customizable grid experience. This component re-creates a mojority of the capabilities available out of the box in less than 300 lines of code and demonstrates the following:
 
 - Using the DataSet within a React functional component.

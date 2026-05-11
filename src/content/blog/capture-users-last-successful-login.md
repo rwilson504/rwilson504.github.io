@@ -17,8 +17,6 @@ draft: false
 originalBloggerUrl: /2023/08/capture-users-last-successful-login.html
 ---
 
-![image](https://github.com/rwilson504/Blogger/assets/7444929/30275784-cfd0-4770-8748-5bd304a6c4ee)
-
 Hey Power Pages developers! Are you sitting there scratching your head wondering why the **Authentication/LoginTrackingEanbled** site setting isn’t working? Unfortunately it has been [deprecated](https://cloudblogs.microsoft.com/dynamics365/it/2018/03/20/portal-capabilities-for-dynamics-365-deprecated-features/) 😭😭😭😭. This saddened me a lot because I utilize the **Last Successful Login** date field on the Contact table for a lot of reporting and automation using Power Automate. In this article I will demonstrate how you can use the Portal WebAPI with a little Javascript/Liquid to populate that field. Before we dive in, here are a few other options you might consider:
 
 - Power Automate: Use a Flow to capture the data, a good example of how to implement can be found here: [Last Successful Login on Contact record](https://prasadmotupallicrm.blogspot.com/2021/10/last-successful-login-on-contact-record.html) by [Prasad Motupalli](https://prasadmotupallicrm.blogspot.com/). The one thing this was missing for me though was security which could be a concern with the http trigger not requiring authentication. I want to be sure that the person updating the data is an authenticated user.

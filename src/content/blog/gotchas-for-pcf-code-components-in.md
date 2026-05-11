@@ -25,7 +25,7 @@ The ControlManifest.Input.xml file is where you define your component informatio
 When defining your component it’s important to add descriptions to ensure your users know how to interact with your control. When doing so though make sure you don’t include any XML escape characters or your control will not import correctly
 
 This is bad…  
-![No Escape Characters](https://github.com/rwilson504/Blogger/blob/master/PCF-Code-Control-Canvas-Gotchas/manifest-escap-character.png?raw=true)  
+  
 XML Escape Characters
 
 | Name | Character |

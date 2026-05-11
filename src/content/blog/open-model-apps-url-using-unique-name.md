@@ -17,8 +17,6 @@ draft: false
 originalBloggerUrl: /2021/06/open-model-apps-url-using-unique-name.html
 ---
 
-![2021-06-23_11-14-09](https://user-images.githubusercontent.com/7444929/123127614-727c8980-d418-11eb-9f01-8731c4896e78.png)
-
 When generating links for records, lists or reports in a Dataverse environment it is important that they open the specific application they relate to so users have the best experience. To see more details about generating links for Dataverse [click here.](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/open-forms-views-dialogs-reports-url?view=op-9-1)
 
 ![2021-06-23_10-59-18](https://user-images.githubusercontent.com/7444929/123127398-3ba67380-d418-11eb-9eff-85b6f39d2ed5.png)  

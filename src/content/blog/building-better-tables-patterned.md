@@ -19,8 +19,6 @@ draft: false
 originalBloggerUrl: /2023/12/building-better-tables-patterned.html
 ---
 
-![Building Better Tables for Dataflows](https://github.com/rwilson504/Blogger/assets/7444929/75e1d6d2-d761-4bb5-9f59-99042cc927ef)
-
 ## Introduction
 
 Navigating the complexities of dataflows in Microsoft’s Power Platform, especially when dealing with Dataverse, can present unique challenges. One significant hurdle is efficiently setting up and using lookup values. This article introduces a straightforward design pattern I’ve developed, emphasizing the use of autonumber fields and alternate keys in entity creation to facilitate smoother data mapping for data analysts.

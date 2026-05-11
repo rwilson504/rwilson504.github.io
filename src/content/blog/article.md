@@ -18,8 +18,6 @@ Azure DevOps now has an option to link your [Wiki to a repo](%5Bhttps://docs.mic
 
 I started by creating a new folder for my documents and running the **npm init** command.
 
-![Create Folder and Run init](https://github.com/rwilson504/Blogger/blob/master/Convert-Markdown-to-PDF/images/create-folder-npm-init.gif?raw=true)
-
 ## Install md-to-pdf from NPM
 
 Install the [md-to-pdf](https://www.npmjs.com/package/md-to-pdf) npm package by running **npm i --save-dev md-to-pdf**

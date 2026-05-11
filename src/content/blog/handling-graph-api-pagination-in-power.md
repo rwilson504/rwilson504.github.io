@@ -18,8 +18,6 @@ draft: false
 originalBloggerUrl: /2024/02/handling-graph-api-pagination-in-power.html
 ---
 
-![Handling Graph API Pagination in Power Platform Dataflows](https://github.com/rwilson504/Blogger/assets/7444929/123afe82-83a8-4e29-9bd8-828bd925b8fc)
-
 ## Introduction
 
 When managing extensive user datasets from Microsoft Graph API, a common challenge is handling the pagination of data. This blog post explores a solution for effectively looping through multiple pages of Graph API data within Power Platform dataflows and discusses alternative methods that might be more efficient in certain scenarios.

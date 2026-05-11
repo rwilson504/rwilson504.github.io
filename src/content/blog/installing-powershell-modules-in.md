@@ -17,8 +17,6 @@ draft: false
 originalBloggerUrl: /2024/06/installing-powershell-modules-in.html
 ---
 
-![Installing PowerShell Modules in Firewalled and Air-Gapped Systems](https://github.com/rwilson504/Blogger/assets/7444929/c2927200-441b-4645-9689-d82038fb3a5e)
-
 Managing IT environments with limited or no internet access, such as firewalled systems or air-gapped setups, presents unique challenges. One of the critical tasks in such environments is the installation and usage of PowerShell modules, which often require internet access for download and updates. This guide provides a method to facilitate the offline installation of PowerShell modules using custom scripts and includes a practical example of managing Power Platform environments by limiting developer environments.
 
 ## Background

@@ -21,9 +21,7 @@ In needing to test client configuration and keep them in the same domain as our 
 1. Download and install [Oracle VM Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 2. Download your Windows 10 ISO file.
 3. Create a new Windows 10 VM
-4. When creating the hard drive make sure to choose the VHD format.  
-     
-   [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFDx12g8q14GG7-t5Vy3VrwakfBxnqtXGRPXaTEmQDTuapBGD8HStSZSm4e31YaFtRTwdV4T3l6dd8T2xhXyCF_mcO9WD3pwNMN2PRdtLnbopfIenKNYCyqU_cZXSSR6QYBFlJbDNUz08/s320/2018-03-14+12_55_13-Oracle+VM+VirtualBox+Manager.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFDx12g8q14GG7-t5Vy3VrwakfBxnqtXGRPXaTEmQDTuapBGD8HStSZSm4e31YaFtRTwdV4T3l6dd8T2xhXyCF_mcO9WD3pwNMN2PRdtLnbopfIenKNYCyqU_cZXSSR6QYBFlJbDNUz08/s1600/2018-03-14+12_55_13-Oracle+VM+VirtualBox+Manager.png)
+4. When creating the hard drive make sure to choose the VHD format.
 5. I chose Fixed size for the storage on the hard disk.  I have not tried using Dynamic.  
      
      [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZ2UpcrEe5t8-oqQ1z0Vy6rqROOhZ0ANu9I_6bcAfTGkvaINUgfHD0DwtnyXDkcshMvvc_6uMkpbG4dx3mQaYRh0oSNsghqG4eglGxvopwCIQUtToCIBAcOAK_n3FQz5O0WyatBBND6Yk/s320/2018-03-14+12_56_29-Oracle+VM+VirtualBox+Manager.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZ2UpcrEe5t8-oqQ1z0Vy6rqROOhZ0ANu9I_6bcAfTGkvaINUgfHD0DwtnyXDkcshMvvc_6uMkpbG4dx3mQaYRh0oSNsghqG4eglGxvopwCIQUtToCIBAcOAK_n3FQz5O0WyatBBND6Yk/s1600/2018-03-14+12_56_29-Oracle+VM+VirtualBox+Manager.png)

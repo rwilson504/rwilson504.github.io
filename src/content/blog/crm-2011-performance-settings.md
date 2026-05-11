@@ -139,7 +139,7 @@ This will help ensure that some static content files used by CRM will also be ca
 - Switch omitVaryStart to True and click the Apply button.
 
   
-[![image](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsOwIe-eiNa2x7dWXoaLuokb99JTuVfrGpmO8W5dsu_ojXXHBWlPk_0MkKHxMYK6yIuerNIlpsoXkobgrKvMvwEikOxL3YqCiAJ4_DymBwC09E7emnHVeEYqQuC1Eh_45N9VK09_ukctk/?imgmax=800 "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhquPHLkGlY9ofP3QAd8XGiRBNJrE7SvKsH9_fUhengw89pk0T_ODkAsFr4gS5YftPclmmlGGH7KuWBVC7pZvn4g9BFBhJPgmlOjFcmIVvhGkTWFrjfc6rObz1Wqj-eoQAMk1_QEOX7-CM/s1600-h/image%25255B4%25255D.png)   
+  
   
 [http://blogs.msdn.com/b/crminthefield/archive/2014/12/19/static-content-not-cached-properly-in-dynamics-crm-due-to-vary-header.aspx](http://blogs.msdn.com/b/crminthefield/archive/2014/12/19/static-content-not-cached-properly-in-dynamics-crm-due-to-vary-header.aspx "http://blogs.msdn.com/b/crminthefield/archive/2014/12/19/static-content-not-cached-properly-in-dynamics-crm-due-to-vary-header.aspx")  
   

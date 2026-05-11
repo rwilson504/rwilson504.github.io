@@ -21,5 +21,3 @@ This image component allows you to rotate an image to any degree unlike the Canv
 
 [Installation/Usage Instructions](https://github.com/rwilson504/PCFControls/blob/master/RotationalImage/README.md)  
 [Download](https://github.com/rwilson504/PCFControls/releases/latest/download/RotationalImageComponent_managed.zip)
-
-![Rotational Image](https://github.com/rwilson504/PCFControls/blob/master/RotationalImage/images/RotationalImage.gif?raw=true)
