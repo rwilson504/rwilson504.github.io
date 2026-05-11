@@ -1,0 +1,28 @@
+/* TEAM */
+  Author: Richard A. Wilson
+  Site: https://www.richardawilson.com
+  GitHub: https://github.com/rwilson504
+  Twitter: https://twitter.com/RAWilson504
+  YouTube: https://www.youtube.com/@RichardWilson504
+  From: USA (Westerville, OH)
+
+/* THANKS */
+  Family, friends, and every reader who left a comment on the
+  original Blogger site between 2009 and 2026.
+
+/* SITE */
+  Last update: 2026
+  Language: English
+  Doctype: HTML5
+  Standards: HTML5, CSS3, SVG
+  Components: Astro, MDX, Pagefind, GitHub Pages
+  Hosting: GitHub Pages with Cloudflare DNS (via GoDaddy nameservers)
+  Source: https://github.com/rwilson504/rwilson504.github.io
+  License: Content (c) Richard A. Wilson - all rights reserved.
+           Code (site theme, scripts) MIT licensed in the repo.
+
+/* MIGRATION */
+  Migrated from Blogger to Astro on GitHub Pages in May 2026.
+  All ~230 historical posts preserved with original publication
+  dates. Old Blogger URLs (/YYYY/MM/slug.html) redirect to the
+  new /blog/slug/ paths so existing inbound links keep working.
