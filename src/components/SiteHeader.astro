@@ -1,11 +1,40 @@
 ---
 import Search from "./Search.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import { getCollection } from "astro:content";
+import { categories } from "../content.config";
+import { categoryLabel } from "../utils/categories";
 
-const nav = [
+// Count posts per category at build time so the dropdown can show
+// "Power Apps (180)" style labels.
+const posts = await getCollection("blog");
+const counts = Object.fromEntries(
+  categories.map((c) => [c, posts.filter((p) => p.data.category === c).length])
+);
+
+// Sort categories by count desc so the busiest buckets are at the top
+// of the dropdown. Stable: ties keep declaration order.
+const orderedCategories = [...categories].sort(
+  (a, b) => (counts[b] ?? 0) - (counts[a] ?? 0)
+);
+
+const nav: Array<
+  | { href: string; label: string }
+  | { label: string; menu: Array<{ href: string; label: string; count?: number }> }
+> = [
   { href: "/", label: "Home" },
   { href: "/blog/", label: "Blog" },
-  { href: "/categories/", label: "Categories" },
+  {
+    label: "Categories",
+    menu: [
+      { href: "/categories/", label: "All categories" },
+      ...orderedCategories.map((c) => ({
+        href: `/categories/${c}/`,
+        label: categoryLabel(c),
+        count: counts[c],
+      })),
+    ],
+  },
   { href: "/about/", label: "About" },
 ];
 ---
@@ -14,9 +43,50 @@ const nav = [
   <nav class="site-nav" aria-label="Primary">
     <a class="brand" href="/">Richard A. Wilson</a>
     <ul>
-      {nav.map((item) => (
-        <li><a href={item.href}>{item.label}</a></li>
-      ))}
+      {nav.map((item) =>
+        "menu" in item ? (
+          <li class="has-dropdown">
+            <button
+              type="button"
+              class="dropdown-trigger"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {item.label}
+              <svg
+                class="dropdown-caret"
+                viewBox="0 0 12 12"
+                width="10"
+                height="10"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 4l4 4 4-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              {item.menu.map((sub) => (
+                <li role="none">
+                  <a role="menuitem" href={sub.href}>
+                    <span>{sub.label}</span>
+                    {sub.count !== undefined && (
+                      <span class="dropdown-count">{sub.count}</span>
+                    )}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ) : (
+          <li><a href={item.href}>{item.label}</a></li>
+        )
+      )}
     </ul>
     <div class="site-nav-actions">
       <Search />
@@ -24,3 +94,146 @@ const nav = [
     </div>
   </nav>
 </header>
+
+<script is:inline>
+  // Lightweight dropdown controller: click toggles, click-outside closes,
+  // Esc closes. Hover open is handled via :hover in CSS.
+  (function () {
+    const triggers = document.querySelectorAll(".dropdown-trigger");
+    function closeAll(except) {
+      triggers.forEach((t) => {
+        if (t !== except) {
+          t.setAttribute("aria-expanded", "false");
+          t.parentElement?.classList.remove("is-open");
+        }
+      });
+    }
+    triggers.forEach((t) => {
+      t.addEventListener("click", (e) => {
+        e.preventDefault();
+        const open = t.getAttribute("aria-expanded") === "true";
+        closeAll(t);
+        t.setAttribute("aria-expanded", open ? "false" : "true");
+        t.parentElement?.classList.toggle("is-open", !open);
+      });
+    });
+    document.addEventListener("click", (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (!target.closest(".has-dropdown")) closeAll(null);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeAll(null);
+    });
+  })();
+</script>
+
+<style>
+  .has-dropdown {
+    position: relative;
+  }
+  .dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    /* Match the look of the sibling <a> nav links */
+    line-height: inherit;
+  }
+  .dropdown-trigger:hover,
+  .has-dropdown.is-open .dropdown-trigger {
+    color: var(--color-accent);
+  }
+  .dropdown-caret {
+    transition: transform 0.15s ease;
+  }
+  .has-dropdown.is-open .dropdown-caret {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    /* Hidden by default. Shown when parent has .is-open OR on hover (desktop). */
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 220px;
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.12s ease, transform 0.12s ease, visibility 0.12s;
+    z-index: 50;
+  }
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown:focus-within .dropdown-menu,
+  .has-dropdown.is-open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .dropdown-menu li {
+    margin: 0;
+  }
+  .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    color: var(--color-fg);
+    text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus-visible {
+    background: var(--color-code-bg);
+    color: var(--color-accent);
+  }
+  .dropdown-count {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+  }
+  /* Visually separate the "All categories" link from the rest. */
+  .dropdown-menu li:first-child a {
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* On small screens the nav wraps; let the dropdown sit inline. */
+  @media (max-width: 640px) {
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      min-width: 0;
+      margin-top: 0.25rem;
+      transform: none;
+      /* Hidden by default; only shown when explicitly opened via click. */
+    }
+    .has-dropdown:hover .dropdown-menu,
+    .has-dropdown:focus-within .dropdown-menu {
+      /* Disable hover-open on touch; require explicit click via .is-open */
+      opacity: 0;
+      visibility: hidden;
+    }
+    .has-dropdown.is-open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+</style>
