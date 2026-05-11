@@ -2,6 +2,8 @@
 title: "Enable the Export to PDF Ribbon Button"
 description: "Dataverse allows you to easily generate your Word Templates as PDF files. Last year they expanded the functionality beyone just the out of the box sales entities to all custom entities.…"
 pubDate: 2021-06-25
+heroImage: "https://user-images.githubusercontent.com/7444929/123333167-658e9180-d50f-11eb-91e6-1ce770308f59.png"
+heroImageAlt: "2021-06-24_17-09-43"
 category: power-apps
 tags:
   - "button"

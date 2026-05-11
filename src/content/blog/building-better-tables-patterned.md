@@ -2,6 +2,8 @@
 title: "Building Better Tables - A patterned approach to using autonumber columns and alternate keys to drive efficiency in Dataflows"
 description: "Navigating the complexities of dataflows in Microsoft’s Power Platform, especially when dealing with Dataverse, can present unique challenges.…"
 pubDate: 2023-12-11
+heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/75e1d6d2-d761-4bb5-9f59-99042cc927ef"
+heroImageAlt: "Building Better Tables for Dataflows"
 category: power-apps
 tags:
   - "automation"

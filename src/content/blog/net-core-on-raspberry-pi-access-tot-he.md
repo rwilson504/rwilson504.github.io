@@ -2,6 +2,8 @@
 title: ".NET Core on Raspberry Pi - Access to the path is denied"
 description: "After installing the .NET Core sdk on my Raspberry Pi I received the following error when attempting to create a new console application using the ‘dotnet new console’ command."
 pubDate: 2021-05-24
+heroImage: "https://user-images.githubusercontent.com/7444929/119385533-3ed10700-bc94-11eb-9df9-ad784bc565d2.png"
+heroImageAlt: "image"
 category: electronics
 tags:
   - "accessdenied"

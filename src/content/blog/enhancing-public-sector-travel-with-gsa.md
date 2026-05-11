@@ -2,6 +2,8 @@
 title: "Enhancing Public Sector Travel with the GSA Per Diem Connector for Power Platform"
 description: "Navigating travel expenses in the public sector can be intricate, especially when it comes to adhering to per diem rates.…"
 pubDate: 2024-01-23
+heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/cf4fb2d3-16a9-40de-ae6f-57b04cb20819"
+heroImageAlt: "# Enhancing Public Sector Travel with the GSA Per Diem Connector for Power Platform"
 category: power-apps
 tags:
   - "automation"

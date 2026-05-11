@@ -3,6 +3,7 @@ title: "Custom Flow Connector For Parsing Address"
 description: "While working on a demo of the Business Cards Scanner component for PowerApps I found that the component only returns the address as a single line and not as parsed address components (UPDATE: The…"
 pubDate: 2019-08-21
 updatedDate: 2019-12-11
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEyqC_VYacwu2mSCi8rvK_DbWHKtyQMqWqIexY1v8i18qdTlteAhvi5r7U7mOOVfFju8g11kxiTW53Kt_QtvPwGqa9YfdVgdTOwbDvk0P-QZk6wmah56Q5TPBQLnNeDr_ki6WVDvyZMhc/s640/addresslabs.png"
 category: power-apps
 tags:
   - "cds"

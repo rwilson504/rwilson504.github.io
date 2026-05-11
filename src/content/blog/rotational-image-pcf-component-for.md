@@ -2,6 +2,8 @@
 title: "Rotational Image PCF Component for Canvas Apps"
 description: "This image component allows you to rotate an image to any degree unlike the Canvas image component which only allows 90, 180, or 270 degrees.…"
 pubDate: 2020-06-23
+heroImage: "https://github.com/rwilson504/PCFControls/blob/master/RotationalImage/images/RotationalImage.gif?raw=true"
+heroImageAlt: "Rotational Image"
 category: power-apps
 tags:
   - "canvas"

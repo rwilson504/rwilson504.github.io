@@ -3,6 +3,8 @@ title: "ADFS 2.1 &amp; 3.0 Config Debug Tracing"
 description: "1.…"
 pubDate: 2015-08-12
 updatedDate: 2015-08-20
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQ4HWaK2y4hphnozm08DrC2L_GiTPue2tl77_D3FLJJk6gZIeLt07KQbqtY_wzrxwffLCBpHjaVPQfgbyPg3OsihZvlTbCeJCplqCfoLolTJ3ih7jFGEIuFaCAkFeqZQ5vcm2x63eYcu4/?imgmax=800"
+heroImageAlt: "ADFS2.13.0Tracing"
 category: power-apps
 tags:
   - "adfs"

@@ -2,6 +2,8 @@
 title: "From Messy to Manageable: Cleanly Load Dataverse Tables in Power BI"
 description: "First and foremost, I want to take a moment to acknowledge Brandon Pires, who originally crafted the script that inspired all of this work.…"
 pubDate: 2024-11-20
+heroImage: "https://github.com/user-attachments/assets/58aa531e-bae7-4ed1-b88a-a54cf87b1db6"
+heroImageAlt: "From Messy to Manageable: Cleanly Load Dataverse Tables in Power BI"
 category: power-apps
 tags:
   - "data"

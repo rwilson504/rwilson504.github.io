@@ -2,6 +2,8 @@
 title: "PCF Component: Docx Templates in Canvas Apps"
 description: "Have you ever wanted to fill in a Docx template within a Canvas App? Look no further! I’m excited to introduce a new PCF component that allows you to do just that.…"
 pubDate: 2023-09-27
+heroImage: "https://raw.githubusercontent.com/rwilson504/PCFControls/master/DocxTemplatesCanvas/image.png"
+heroImageAlt: "Docx Template Sample App"
 category: power-apps
 tags:
   - "canvas"

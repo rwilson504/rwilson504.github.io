@@ -2,6 +2,7 @@
 title: "Dynamics CRM Demonstration Tools (Data Generator)"
 description: "When creating demo environments for sales presenations I like to add a lot of test data to my systems and make it relevant to the custom to which I'm presenting.…"
 pubDate: 2009-08-27
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQbIVRGdJNImydm9vHBskGbEp7OfY89ofA35RBqI77eLfRYxXnYVW8regFVeH33imsq1gR588zHAc6OPo_ogFLvg5SoASv3tqUCjhuyoxTYDiWlTyEu57CXVynSbrDbwSIQLVf5dRBwnw/s400/DataGenerator.png.jpg"
 category: power-apps
 tags:
   - "crm-4"

@@ -10,10 +10,11 @@ export interface Props {
   updatedDate?: Date;
   category: string;
   tags: string[];
-  heroImage?: { src: string; width: number; height: number; format: string };
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
-const { title, description, pubDate, updatedDate, category, tags, heroImage } =
+const { title, description, pubDate, updatedDate, category, tags, heroImage, heroImageAlt } =
   Astro.props;
 const linkable = await getLinkableTags();
 ---
@@ -21,7 +22,7 @@ const linkable = await getLinkableTags();
 <BaseLayout
   title={title}
   description={description}
-  ogImage={heroImage?.src}
+  ogImage={heroImage}
   article={{
     publishedTime: pubDate.toISOString(),
     modifiedTime: updatedDate?.toISOString(),
@@ -52,11 +53,11 @@ const linkable = await getLinkableTags();
       )}
       {heroImage && (
         <img
-          src={heroImage.src}
-          width={heroImage.width}
-          height={heroImage.height}
-          alt=""
-          style="margin-top: 1.5em; border-radius: var(--radius);"
+          src={heroImage}
+          alt={heroImageAlt ?? ""}
+          loading="eager"
+          decoding="async"
+          class="post-hero"
         />
       )}
     </header>

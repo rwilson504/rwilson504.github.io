@@ -2,6 +2,8 @@
 title: "Installing .NET Tools on Air Gapped Systems"
 description: "In today’s digital age, the vast majority of our tasks rely heavily on internet connectivity.…"
 pubDate: 2023-09-06
+heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/091918db-8218-4b69-aecb-104297153253"
+heroImageAlt: "Installing .NET Tools on Air Gapped Systems"
 category: misc
 tags:
   - "dotnet"

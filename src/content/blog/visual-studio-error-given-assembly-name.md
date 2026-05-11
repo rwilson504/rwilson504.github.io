@@ -2,6 +2,8 @@
 title: "Visual Studio Error: The given assembly name or codebase was invalid (HRESULT: 0x80131047)"
 description: "When attempting to add a reference to a project this error kept appearing."
 pubDate: 2014-03-06
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTNi4bTE2IOL5bzjue4gQGQFqH6FEsI6OGbGvFFkqcOdpK3qXQGqEtPvZnMbtltZaC5lkJin8TKc7cmNuSv8f6Uz5UGHOsh62p520ZI_z2vIEFooxpqFR_nTMswCbWTKoV1DMurFYDvAs/?imgmax=800"
+heroImageAlt: "image"
 category: power-apps
 tags:
   - "error"

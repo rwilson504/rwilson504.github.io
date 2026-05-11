@@ -2,6 +2,7 @@
 title: "Register Bamboo Calendar Web Part"
 description: "I recently downloaded the Bamboo Calendar Plus Web Part v2.5. I ran the setup file and installed both the Calendar Plus Web Part and the Bamboo License Manager v2.7. Here are the issues I ran into:"
 pubDate: 2009-09-01
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfAq2p5_GB6ansf8t2dpI4HvsDJ5eMZSw7dxrs1JQzGyYnaRTL9RaPzW3_pt4t8KQye5etBqQZjvjBTR_19dluBNqaaJdwRblF2pcatJIuKFxdJsC4vX9619HoKYKJHjrOwH1viPmCHBI/s400/bambooinstaller.png"
 category: power-apps
 tags:
   - "sharepoint-2007"

@@ -2,6 +2,8 @@
 title: "Sparse Checkout with Git To Reduce Confusion"
 description: "If you would like to make updates to the Xrm types or any others in the DefinitelyTyped project on github you can find that cloning all the types can be a real pain.…"
 pubDate: 2020-05-04
+heroImage: "https://github.com/rwilson504/Blogger/blob/master/Git-Sparse-Checkout-Xrm-Types/github.png?raw=true"
+heroImageAlt: "Git Sparse Checkout Definition"
 category: power-apps
 tags:
   - "checkout"

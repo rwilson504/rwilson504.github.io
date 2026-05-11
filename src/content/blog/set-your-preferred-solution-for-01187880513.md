@@ -2,6 +2,8 @@
 title: "Set Your Preferred Solution for the Dataverse MCP"
 description: "I was working with the Dataverse MCP server yesterday and noticed that when I created new tables through it, they were all getting the default cr prefix from the Common Data Services Default…"
 pubDate: 2026-03-26
+heroImage: "https://github.com/rwilson504/Blogger/blob/master/dataverse-mcp-preferred-solution/hero-image.png?raw=true"
+heroImageAlt: "Set Your Preferred Solution for the Dataverse MCP"
 category: ai
 tags:
   - "ai"

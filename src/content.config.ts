@@ -15,7 +15,11 @@ const blog = defineCollection({
       category: z.enum(CATEGORIES),
       tags: z.array(z.string()).default([]),
       draft: z.boolean().default(false),
-      heroImage: image().optional(),
+      // Hero image: external URL (most posts use Blogger/GitHub-hosted
+      // images). We store it as a plain string instead of an Astro `image()`
+      // because none of the migrated images are colocated yet.
+      heroImage: z.string().url().optional(),
+      heroImageAlt: z.string().optional(),
       // The original Blogger URL path (e.g. "/2026/03/some-post.html"), used
       // by the migration tooling to emit a redirect stub at the legacy URL.
       originalBloggerUrl: z.string().optional(),

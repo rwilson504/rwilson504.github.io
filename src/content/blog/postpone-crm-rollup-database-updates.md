@@ -2,6 +2,8 @@
 title: "Postpone CRM Rollup Database Updates"
 description: "Update Rollup 17 for CRM 2011 creates new indexes for database tables when installed. Because of this the install can take several hours.…"
 pubDate: 2014-11-25
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzmUjIDtrT9ddih-9KZPXnRq7y3IjSvaxAGYUoj4LMoJoXCDvBN1XomJ-4iXbYS7yhFo1onWFRkBZvBZZV0X7DXlwvq80W8y7AEZGhMxAPqIDN_A9G30hdfaD7ki-QFiihXfJ7qmirRdU/?imgmax=800"
+heroImageAlt: "AutomaticallyInstallDatabaseUpdates"
 category: power-apps
 tags:
   - "crm-2011"

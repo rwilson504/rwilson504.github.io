@@ -2,6 +2,7 @@
 title: "CryptographicException Error Connecting SharePoint 2007 and ADFS 2.0 Using Domain App Pool User with SharePoint"
 description: "When attempting to connect ADFS 2.0 and SharePoint 2007 most of the documentation assumes you are using the NetworkService account to run the application pools for the SharePoint content web…"
 pubDate: 2010-10-25
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxbcfKktLPOHXZO3-VgRKBqifYTjOix0PKDTI51A2gZS21z1FzWl4kDuiPYCNYcmYUiZtiwsYgv9WEUaFOZoHPsr7Q4_-LwCueC0FjUxGS8DBN2CQEP9qvNx3AKe2D2U4wIlMWAysdbAk/s400/navigatetosite.png"
 category: power-apps
 tags:
   - "adfs-2"

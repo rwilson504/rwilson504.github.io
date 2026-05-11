@@ -2,6 +2,8 @@
 title: "Power Apps Portal - Configure Azure AD Provider in Azure B2C"
 description: "It is recommended that you no longer use Local Login authentication for Power Apps Portal but instead utilize Azure Active Directory B2C to provide this type of authentication.…"
 pubDate: 2022-01-07
+heroImage: "https://user-images.githubusercontent.com/7444929/148592406-10108368-93ab-4308-a721-23f4412a8a22.png"
+heroImageAlt: "Original log in screen"
 category: power-apps
 tags:
   - "activedirectory"

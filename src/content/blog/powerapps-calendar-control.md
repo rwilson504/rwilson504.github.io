@@ -2,6 +2,8 @@
 title: "PowerApps Calendar Control"
 description: "This calendar control was built off of React Big Calendar. The calendar can be used to display events with or without related resources."
 pubDate: 2020-04-22
+heroImage: "https://github.com/rwilson504/PCFControls/raw/master/Calendar/images/calendarcontrol.gif"
+heroImageAlt: "Control Overview"
 category: power-apps
 tags:
   - "calendar"

@@ -2,6 +2,8 @@
 title: "Pass XRM Ribbon Parameters Using JavaScript Array"
 description: "Trying to pass the list of selected items from a grid using query parameters has limitations due to restrictions on the size of a URL.…"
 pubDate: 2014-03-05
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvMs9BeLjknxKglY-G9GsCAYEcdwdFud2bYbfxzKpmxxycQK-yAfBLsrdq440U1kOqO-mJhBi58lMbSwUSZNWD3Ru5kRzmQd2-RXybMo-gNYtE0AiMKVCoEbcUDKetTtXN4eEqi-DpMdo/?imgmax=800"
+heroImageAlt: "image"
 category: power-apps
 tags:
   - "crm-2011"

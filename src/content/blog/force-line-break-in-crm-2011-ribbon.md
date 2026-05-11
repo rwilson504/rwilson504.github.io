@@ -3,6 +3,7 @@ title: "Force Line Break in CRM 2011 Ribbon Labels"
 description: "With really long title on CRM ribbon buttons the text will fill the entire space before going to the next line. In order to for text to the next line you can use the Zero Width Space.…"
 pubDate: 2012-02-27
 updatedDate: 2012-03-01
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8iFtBVRLPL_N9Jpa5zwHMCGkzFACY6r0letg7gHMa01npBxVjJXbCArbRfFzlO6nzrOBmtJJAi0OT-TZ9KNI3BzIhJJW-ia_RPo_ydkmoui4ZlplcnUX5aAddGYPlyelGRJvmk-MwM7A/s320/charmap.png"
 category: power-apps
 tags:
   - "crm-2011"

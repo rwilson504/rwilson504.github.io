@@ -3,6 +3,8 @@ title: "CRM 2011 Performance Settings"
 description: "Disable Loopback check HKEY\\LOCAL\\MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa New DWORD Value: DisableLoopbackCheck = 1 (Decimal) CRM Settings HKEY\\LOCAL\\MACHINE\\SOFTWARE\\Microsoft\\MSCRM New DWORD…"
 pubDate: 2013-08-23
 updatedDate: 2016-10-27
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsOwIe-eiNa2x7dWXoaLuokb99JTuVfrGpmO8W5dsu_ojXXHBWlPk_0MkKHxMYK6yIuerNIlpsoXkobgrKvMvwEikOxL3YqCiAJ4_DymBwC09E7emnHVeEYqQuC1Eh_45N9VK09_ukctk/?imgmax=800"
+heroImageAlt: "image"
 category: power-apps
 tags:
   - "crm-2011"

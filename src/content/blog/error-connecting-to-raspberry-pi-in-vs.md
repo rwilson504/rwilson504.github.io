@@ -2,6 +2,8 @@
 title: "Error Connecting to Raspberry Pi in VS Code After Reset"
 description: "While utilizing the Remote Development tools to connecto to a raspberry pi board using SSH I encountered the following error after doing a full OS reset on the pi board."
 pubDate: 2021-05-24
+heroImage: "https://user-images.githubusercontent.com/7444929/119375596-feb85700-bc88-11eb-835c-dd2e981f0909.png"
+heroImageAlt: "Visual Studio Code Error"
 category: electronics
 tags:
   - "dnsspoofing"

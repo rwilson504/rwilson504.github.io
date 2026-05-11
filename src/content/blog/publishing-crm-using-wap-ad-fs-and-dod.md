@@ -2,6 +2,8 @@
 title: "Publishing CRM Using WAP, AD FS and DoD PKI"
 description: "With TMG going the way of the dodo Microsoft has moved much of it's functionality into Server 2012R2.…"
 pubDate: 2015-09-10
+heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2UQ_NKAPNWVvQsZmyUmzApOZwFjp9blwC5Sm1F5qrVI027X2FNq7Mssldi6bNbLjCGH3XsLqI3Ow49fzNXmNOGjj22f8YQ0HhKxl6yViQwwKco0i87acqdV3OruwoYa7tpmkK8fWSv4k/?imgmax=800"
+heroImageAlt: "2015-09-10 13_57_58-WAP ADFS KCD CRM (1).vsdx - Visio Professional"
 category: power-apps
 tags:
   - "adfs-3"

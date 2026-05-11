@@ -2,6 +2,8 @@
 title: "Harnessing Host Form Data with PCF Controls in Model-Driven Applications"
 description: "This tutorial delves into integrating PowerApps Component Framework (PCF) controls with host form data within Microsoft Power Platform’s model-driven apps.…"
 pubDate: 2025-04-24
+heroImage: "https://github.com/rwilson504/Blogger/assets/7444929/0308e67d-07e7-401a-b717-f8965d10bf2e"
+heroImageAlt: "Harnessing Host Form Data with PCF Controls in Model-Driven Applications"
 category: power-apps
 tags:
   - "dynamics"

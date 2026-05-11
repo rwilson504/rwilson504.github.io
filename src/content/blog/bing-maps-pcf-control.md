@@ -2,6 +2,8 @@
 title: "Bing Maps PCF Control"
 description: "This PCF control allows you to display information for a view that contains latitude and longitude information within Bing Maps.…"
 pubDate: 2020-03-24
+heroImage: "https://github.com/rwilson504/Blogger/blob/master/Bing-Maps-Control/images/bing-maps-control.gif?raw=true"
+heroImageAlt: "Bing Maps Control Demonstration"
 category: power-apps
 tags:
   - "dynamics"
