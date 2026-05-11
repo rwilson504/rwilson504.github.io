@@ -4,6 +4,10 @@ on:
   push:
     branches: [main, master]
   workflow_dispatch:
+  schedule:
+    # Daily at 06:00 UTC (~01:00-02:00 ET) so the GitHub stats card
+    # on /about/ stays current without needing a code push.
+    - cron: "0 6 * * *"
 
 permissions:
   contents: read
@@ -31,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
       - name: Upload Pages artifact
