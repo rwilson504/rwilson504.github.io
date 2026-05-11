@@ -418,6 +418,23 @@ hr {
   font-weight: 600;
 }
 
+/* Responsive YouTube embed (used inside post markdown). */
+.yt-embed {
+  position: relative;
+  margin: 1.5em 0;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+.yt-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .post-hero {
   display: block;
   width: 100%;

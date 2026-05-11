@@ -36,8 +36,10 @@ The following languages are now supported.
 [Click Here](https://github.com/rwilson504/PCFControls/releases/latest/CalendarControl_managed.zip) to download the latest release of the component.  
 [Click Here](https://github.com/rwilson504/PCFControls) to get the source code for this component.
 
-Check out these videos on how to get the control working in a multilingual setup.  
-[Canvas Apps Multilingual Setup](https://youtu.be/xSCHCRQFhMI)  
-  
-[Model Apps Multilingual Setup](https://youtu.be/wJYN6TMnMT4)  
-[![Model App Video](/images/multilingual-support-for-pcf-calendar/01-sddefault.jpg)](https://youtu.be/wJYN6TMnMT4)
+Check out these videos on how to get the control working in a multilingual setup.
+
+**Canvas Apps Multilingual Setup**
+<div class="yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/xSCHCRQFhMI" title="Canvas Apps Multilingual Setup" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+
+**Model Apps Multilingual Setup**
+<div class="yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/wJYN6TMnMT4" title="Model Apps Multilingual Setup" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>

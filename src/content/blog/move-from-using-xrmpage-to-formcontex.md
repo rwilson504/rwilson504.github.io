@@ -19,7 +19,7 @@ originalBloggerUrl: /2020/05/move-from-using-xrmpage-to-formcontex.html
 The usage of Xrm.Page is currently deprecated, still available due to it’s high usage, but still deprecated. When will it go away, we don’t really know yet. How then can we use it’s formContext replacement within a web resource. Well Microsoft recently added a the getContentWindow() function to the context which allows us to get the actual content of a web resource. By adding an onload function to our form and utilizing getContentWindow() we can now call javascript on our web resource and pass it the formContext. Additionally you can add the context to the window object of the web resource so that the formContext can be used throughout the lifecycle of the web resource.
 
 Here is a quick tutorial on how to pass the formContext to a WebResource on a UCI Form.  
-[formContext in WebResource](https://youtu.be/uWDiMv82iSM)
+<div class="yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/uWDiMv82iSM" title="formContext in WebResource" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
 
 **Form OnLoad Code**
 
