@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GitHubStats from "../components/GitHubStats.astro";
 ---
 
 <BaseLayout title="About" description="About Richard A. Wilson.">
@@ -35,6 +36,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <a href="https://www.youtube.com/channel/UCdI64e7AJNaLF-b9uCGXLSQ" target="_blank" rel="noopener noreferrer">YouTube</a> ·
     <a href="https://www.linkedin.com/in/rickawilson/">LinkedIn</a>.
   </p>
+
+  <GitHubStats username="rwilson504" topReposLimit={6} />
 </BaseLayout>
 
 <style>
