@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,20 @@ export default defineConfig({
       theme: "github-dark-dimmed",
       wrap: true,
     },
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          // Any href that isn't same-origin (relative or matching the site)
+          // opens in a new tab. Adds rel=noopener,noreferrer for security.
+          target: "_blank",
+          rel: ["noopener", "noreferrer"],
+          // Treat protocol-less / root-relative URLs as internal
+          // (everything starting with `http(s)://` not matching our host is external)
+          protocols: ["http", "https"],
+        },
+      ],
+    ],
   },
   build: {
     format: "directory",
