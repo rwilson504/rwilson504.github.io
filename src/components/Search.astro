@@ -45,21 +45,41 @@
 <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
 <script>
   // Lazy-load Pagefind UI when the user first opens the search.
+  // Note: /pagefind/pagefind-ui.js is an IIFE (not an ES module). It attaches
+  // `window.PagefindUI` as a side effect, so we inject it as a <script> tag
+  // rather than using dynamic import().
   let initialized = false;
-  let pagefindUI: any = null;
 
   const trigger = document.getElementById("search-trigger");
   const dialog = document.getElementById("search-dialog") as HTMLDialogElement | null;
   const mount = document.getElementById("pagefind-search");
 
+  function loadPagefindScript(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      if ((window as any).PagefindUI) {
+        resolve();
+        return;
+      }
+      const s = document.createElement("script");
+      s.src = "/pagefind/pagefind-ui.js";
+      s.async = true;
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error("Failed to load /pagefind/pagefind-ui.js"));
+      document.head.appendChild(s);
+    });
+  }
+
   async function initPagefind() {
     if (initialized || !mount) return;
     initialized = true;
     try {
-      // @ts-expect-error - dynamic external module, no types
-      const mod = await import(/* @vite-ignore */ "/pagefind/pagefind-ui.js");
-      const PagefindUI = mod.PagefindUI;
-      pagefindUI = new PagefindUI({
+      await loadPagefindScript();
+      const PagefindUI = (window as any).PagefindUI;
+      if (!PagefindUI) {
+        throw new Error("window.PagefindUI not defined after script load");
+      }
+      // eslint-disable-next-line no-new
+      new PagefindUI({
         element: "#pagefind-search",
         showSubResults: true,
         showImages: false,
@@ -68,6 +88,7 @@
       });
     } catch (err) {
       console.warn("[Search] failed to load Pagefind UI", err);
+      initialized = false; // allow a retry next time
       if (mount) {
         mount.innerHTML =
           '<p style="color:#888;padding:1rem">Search index not available. Try the production site.</p>';
