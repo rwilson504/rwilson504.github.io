@@ -1,0 +1,93 @@
+---
+/**
+ * ThemeToggle.astro - sun/moon toggle button.
+ *
+ * Reads/writes the chosen theme in localStorage under the key 'theme'
+ * (values: 'light' | 'dark'). Sets/updates the data-theme attribute on
+ * <html>. Pairs with the inline boot script in BaseLayout.astro that
+ * does the same on first paint to avoid flash-of-wrong-theme.
+ */
+---
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Toggle light / dark theme"
+  title="Toggle theme"
+>
+  <!-- Sun icon (shown in dark mode, click to go light) -->
+  <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <circle cx="12" cy="12" r="4" fill="currentColor" />
+    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="12" y1="2"  x2="12" y2="5" />
+      <line x1="12" y1="19" x2="12" y2="22" />
+      <line x1="2"  y1="12" x2="5"  y2="12" />
+      <line x1="19" y1="12" x2="22" y2="12" />
+      <line x1="4.2"  y1="4.2"  x2="6.3"  y2="6.3" />
+      <line x1="17.7" y1="17.7" x2="19.8" y2="19.8" />
+      <line x1="4.2"  y1="19.8" x2="6.3"  y2="17.7" />
+      <line x1="17.7" y1="6.3"  x2="19.8" y2="4.2" />
+    </g>
+  </svg>
+  <!-- Moon icon (shown in light mode, click to go dark) -->
+  <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M21 13.5A9 9 0 1 1 10.5 3a7 7 0 0 0 10.5 10.5z"
+    />
+  </svg>
+</button>
+
+<script is:inline>
+  (function () {
+    const KEY = "theme";
+    const root = document.documentElement;
+    const btn = document.getElementById("theme-toggle");
+
+    function current() {
+      return root.getAttribute("data-theme") || "dark";
+    }
+
+    function set(next) {
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(KEY, next); } catch (_) {}
+    }
+
+    btn?.addEventListener("click", () => {
+      set(current() === "dark" ? "light" : "dark");
+    });
+  })();
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-code-bg);
+    color: var(--color-fg);
+    cursor: pointer;
+    padding: 0;
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .theme-icon {
+    display: none;
+  }
+  /* Dark mode -> show sun (so user can switch back to light) */
+  :global([data-theme="dark"]) .theme-icon-sun {
+    display: block;
+  }
+  /* Light mode -> show moon */
+  :global([data-theme="light"]) .theme-icon-moon {
+    display: block;
+  }
+</style>
