@@ -220,7 +220,11 @@ const nav: Array<
     padding-bottom: 0.5rem;
   }
 
-  /* On small screens the nav wraps; let the dropdown sit inline. */
+  /* On small screens the nav wraps; let the dropdown sit inline.
+     IMPORTANT: use display:none for the hidden state, not just
+     visibility/opacity. position:static keeps the menu in flow, and
+     visibility:hidden hides paint but not layout — which previously
+     reserved ~430px of nav height for the invisible menu items. */
   @media (max-width: 640px) {
     .dropdown-menu {
       position: static;
@@ -228,15 +232,17 @@ const nav: Array<
       min-width: 0;
       margin-top: 0.25rem;
       transform: none;
-      /* Hidden by default; only shown when explicitly opened via click. */
+      display: none;
     }
     .has-dropdown:hover .dropdown-menu,
     .has-dropdown:focus-within .dropdown-menu {
       /* Disable hover-open on touch; require explicit click via .is-open */
+      display: none;
       opacity: 0;
       visibility: hidden;
     }
     .has-dropdown.is-open .dropdown-menu {
+      display: block;
       opacity: 1;
       visibility: visible;
     }

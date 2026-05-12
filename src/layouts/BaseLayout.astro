@@ -3,6 +3,21 @@ import { SEO } from "astro-seo";
 import "../styles/global.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import { execSync } from "node:child_process";
+
+// Build identity — injected at build time so we can confirm which
+// commit a deployed page came from without guessing.
+let buildCommit = "unknown";
+try {
+  buildCommit = execSync("git rev-parse --short HEAD", {
+    stdio: ["ignore", "pipe", "ignore"],
+  })
+    .toString()
+    .trim();
+} catch {
+  // git not available in this environment — leave as "unknown"
+}
+const buildTime = new Date().toISOString();
 
 export interface Props {
   title: string;
@@ -34,11 +49,13 @@ const resolvedCanonical = canonical ?? Astro.url.href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-build={buildCommit}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="build-commit" content={buildCommit} />
+    <meta name="build-time" content={buildTime} />
     <!-- Apply theme BEFORE first paint to avoid flash-of-wrong-theme. -->
     <script is:inline>
       (function () {
@@ -115,6 +132,10 @@ const resolvedCanonical = canonical ?? Astro.url.href;
     }
   </head>
   <body>
+    <!-- build: {buildCommit} @ {buildTime} -->
+    <script is:inline define:vars={{ buildCommit, buildTime }}>
+      try { console.info("build", buildCommit, buildTime); } catch (e) {}
+    </script>
     <SiteHeader />
     <main class={wide ? "wide" : undefined}><slot /></main>
     <SiteFooter />
