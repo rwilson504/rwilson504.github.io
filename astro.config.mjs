@@ -14,10 +14,11 @@ export default defineConfig({
     astroD2({
       // Render diagrams at build time so produced SVGs ship as static assets.
       // D2 themes are numeric strings, see https://d2lang.com/tour/themes
-      // 200 = Earth Tones (dark), 8 = Origami (light).
+      //   '0'   = Neutral default (light)
+      //   '200' = Dark Mauve (dark)
       theme: {
-        default: "0",   // Default light theme
-        dark: "200",    // Earth Tones for dark mode
+        default: "0",
+        dark: "200",
       },
       layout: "elk",
       sketch: false,
