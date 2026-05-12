@@ -270,26 +270,8 @@ hr {
     gap: 1.2em;
   }
 
-  /* Hero: break out only as far as main's own horizontal padding
-     and tuck up against the header. The earlier 100vw + transform
-     approach was overshooting because body doesn't clip horizontal
-     overflow and main's padding shifted the centering reference. */
-  .home-hero {
-    width: auto;
-    margin-left: calc(var(--space) * -1);
-    margin-right: calc(var(--space) * -1);
-    transform: none;
-    margin-top: calc(var(--space) * -2);
-    padding: 1.5em 1.25rem 2em;
-    border-top: 1px solid var(--color-border);
-  }
-  .home-hero-inner {
-    gap: 1rem;
-  }
-  .home-hero-avatar {
-    width: clamp(110px, 28vw, 150px);
-    height: clamp(110px, 28vw, 150px);
-  }
+  /* Mobile .home-hero overrides moved below the base .home-hero rule
+     so they win on cascade (same specificity, later wins). */
 }
 
 /* ---------- Post list / cards ---------- */
@@ -662,6 +644,27 @@ hr {
 }
 
 /* Decorative blob/grid on the right side of the hero on wider screens */
+/* Mobile hero overrides — must come AFTER the base .home-hero rule above
+   because they share specificity; later rule wins on cascade. */
+@media (max-width: 700px) {
+  .home-hero {
+    margin-left: calc(var(--space) * -1);
+    margin-right: calc(var(--space) * -1);
+    margin-top: calc(var(--space) * -2);
+    margin-bottom: 1.5em;
+    padding: 1.5em 1.25rem 2em;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .home-hero-inner {
+    gap: 1rem;
+  }
+  .home-hero-avatar {
+    width: clamp(110px, 28vw, 150px);
+    height: clamp(110px, 28vw, 150px);
+  }
+}
+
 .home-hero-decoration {
   position: absolute;
   inset: 0;
