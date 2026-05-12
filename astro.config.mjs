@@ -3,11 +3,32 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import rehypeExternalLinks from "rehype-external-links";
+import astroD2 from "astro-d2";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.richardawilson.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    astroD2({
+      // Render diagrams at build time so produced SVGs ship as static assets.
+      // D2 themes are numeric strings, see https://d2lang.com/tour/themes
+      // 200 = Earth Tones (dark), 8 = Origami (light).
+      theme: {
+        default: "0",   // Default light theme
+        dark: "200",    // Earth Tones for dark mode
+      },
+      layout: "elk",
+      sketch: false,
+      pad: 20,
+      experimental: {
+        // Use the bundled WASM build of D2 instead of requiring a system binary.
+        // Lets the GitHub Pages build succeed without installing D2 via apt or curl.
+        useD2js: true,
+      },
+    }),
+  ],
   markdown: {
     shikiConfig: {
       theme: "github-dark-dimmed",
