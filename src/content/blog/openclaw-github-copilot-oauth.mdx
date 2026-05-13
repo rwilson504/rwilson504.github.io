@@ -21,6 +21,9 @@ If you already pay for **GitHub Copilot**, you can point OpenClaw at it and reac
 
 Here's the whole setup, including the exact terminal commands.
 
+> ⚠️ **Heads up: Copilot billing is changing on June 1, 2026.** GitHub is moving Copilot from premium-request units (PRUs) to **GitHub AI Credits** (token-based, [announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/)). Plan base prices are unchanged — each plan includes credits equal to its monthly cost (Pro $10 → $10 in credits) — but heavy use will burn through them faster than under the old PRU model. The biggest gotcha for OpenClaw users: GitHub's own auto-fallback to cheaper models is going away. OpenClaw's fallback ladder (below) still works for *rate-limit* failover but won't save you from running out of credits. See the ["After June 1, 2026"](#after-june-1-2026) section at the bottom for what changes for this workflow.
+
+
 ## Why route through Copilot
 
 - **One bill, four model families** — Copilot's plan ladder includes Claude, GPT-5, and Gemini. If you already pay for Copilot for VS Code, you're paying for these models anyway.
@@ -133,9 +136,21 @@ Verify with `openclaw status` — you should see `model=github-copilot/...` in t
 
 ## What this doesn't do
 
-- Doesn't unlock unlimited use — Copilot's per-model rate limits still apply.
+- Doesn't unlock unlimited use — Copilot's per-model rate limits still apply (and after June 1, 2026, your monthly **AI Credit** allotment caps total token spend).
 - Doesn't expose every raw provider feature (extended thinking budgets, response continuation, etc.). OpenClaw picks the right transport automatically (Anthropic Messages for Claude, OpenAI Responses for GPT/Gemini).
 - Doesn't replace VS Code Copilot — they coexist on independent token stores.
+
+## After June 1, 2026
+
+When [usage-based billing](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) kicks in, the setup steps in this post don't change — same OAuth login, same model refs, same fallback ladder — but the *economics* shift:
+
+- **Every Copilot plan includes monthly AI Credits equal to its base price.** Pro: $10 in credits. Pro+: $39. Business: $19/seat. Enterprise: $39/seat. Pooled across a business org. Code completions and Next Edit suggestions stay free and don't burn credits.
+- **Tokens are billed at the underlying provider's published API rates** (Anthropic, OpenAI, Google). A long Opus 4.7 conversation through OpenClaw will cost the same as it would on the Anthropic API directly. Heavy multi-step agent runs eat credits fast — the same conversation that used to be "free under your Pro plan" may now blow through your monthly allotment in a session or two.
+- **GitHub's auto-fallback to cheaper models is going away.** Previously when you exhausted PRUs, Copilot would silently drop you to a cheaper model. After June 1, you'll either need available credits or the call fails. **OpenClaw's fallback ladder is unaffected** — it fails over for *rate-limit* errors, not credit exhaustion — but it won't paper over an empty credit pool.
+- **Admins get budget controls** at the enterprise, cost-center, and user level. Useful if you're routing OpenClaw through a Business/Enterprise plan and want a hard ceiling.
+- **Annual Pro/Pro+ subscribers** keep PRU-style pricing until their plan expires (with bumped multipliers starting June 1). Monthly Pro/Pro+ subscribers auto-migrate to credits.
+
+**Practical takeaway:** point OpenClaw at the cheapest model in the table that does the job. For most personal-assistant tasks (calendar parsing, reminders, short summaries), `github-copilot/claude-haiku-4.5` or `github-copilot/claude-sonnet-4.6` will spend a fraction of the credits Opus does. Reserve `github-copilot/claude-opus-4.7` for actual heavy lifting and let the fallback ladder demote you to cheaper models when Opus rate-limits. Keep an eye on your **Billing Overview** at github.com to track credit burn.
 
 ## Wrap-up
 
