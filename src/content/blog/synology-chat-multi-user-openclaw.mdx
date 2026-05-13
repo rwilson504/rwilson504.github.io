@@ -148,20 +148,9 @@ For the group channel, I picked `/Ricky`, `/ricky`, `/ask`, `/openclaw`. Pick so
 
 #### "Wait — why not Synology's built-in Slash Commands?"
 
-Good instinct, and worth addressing because it's the first thing I tried.
+Fair instinct — they look more native and have a nicer autocomplete. The catch: **the slash-command webhook payload doesn't tell you which channel it was invoked from.** No `channel_id`, no `channel_name`. So a `/Ricky` from my private My Space and a `/Ricky` from the family channel arrive at OpenClaw indistinguishably, and the reply goes to whichever channel the command was originally bound to. That's exactly the privacy leak this post is about avoiding.
 
-Synology Chat does have a [Slash Commands](https://www.synology.com/en-us/dsm/feature/chat) feature where you register something like `/Ricky` once at the server level. It works — the command is available everywhere, looks nice in the autocomplete, and feels more "native" than trigger words on outgoing webhooks.
-
-The problem: **slash commands don't tell the receiving webhook which channel they were invoked from.** I confirmed this experimentally. When `/Ricky hello` is sent from my My Space, the payload that arrives at OpenClaw is identical to the one that arrives when it's sent from the family channel. There's no `channel_id`, no `channel_name`, no breadcrumb.
-
-Which means OpenClaw can't route the reply back to the channel the command came from. It defaults to the channel the slash command was originally bound to (in my case the `Family` channel, because that's where I happened to set it up first). So a `/Ricky` from my private My Space would mysteriously surface a reply in the family channel — the exact privacy violation this whole post is about avoiding.
-
-**The takeaway:**
-
-- If you have a **single-channel** setup (just one DM, or just one team channel), slash commands are great. Cleaner UI, easier discovery.
-- If you have a **multi-channel** setup like this one, slash commands silently merge all your channels into one routing destination. Use **outgoing webhooks per channel** instead — the payload includes `channel_id` and `channel_type`, so OpenClaw can reply where the message actually came from.
-
-That's why every step below uses outgoing webhooks, not slash commands.
+Fine for single-channel setups. For multi-channel, use outgoing webhooks per channel — the payload includes `channel_id` so OpenClaw can reply where the message actually came from. Every step below uses that pattern.
 
 ### 2. Create the incoming webhooks (bot → chat) — one per channel
 
