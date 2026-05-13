@@ -24,8 +24,6 @@ If you're running OpenClaw in a Docker container on a Synology NAS — and you w
 
 This post is the prerequisite I keep ending up needing for every other "OpenClaw on Synology" article. Two things to nail down. Both take five minutes. Both will silently break things if you skip them.
 
----
-
 ## The shape of the problem
 
 When OpenClaw runs as a Docker container on Synology DSM, you have two networks in play on the same physical box:
@@ -43,8 +41,6 @@ The classic failure mode looks like this:
 - Logs say "connection timed out" or "no route to host", or worse, the request just silently sits there.
 
 Two fixes. Do both.
-
----
 
 ## Fix 1: Pin the container subnet
 
@@ -68,8 +64,6 @@ After redeploying, confirm the container actually picked up the pinned subnet:
 docker inspect <container-name> | grep -A2 IPAddress
 # IPAddress should be inside 172.22.0.0/16
 ```
-
----
 
 ## Fix 2: Allow the container subnet through the DSM Firewall
 
@@ -101,8 +95,6 @@ A few things worth knowing about how DSM applies these rules:
 - **"All interfaces" vs per-interface.** Rules in "All interfaces" are evaluated first; if none match, DSM falls through to the per-interface tab. For container traffic to host services on the same machine, "All interfaces" is what you want.
 - **Default action.** If nothing matches anywhere, DSM applies the profile's default action. If yours defaults to "Deny", forgetting the Allow rule = silent failure.
 
----
-
 ## Verify the container can actually reach the host
 
 Don't trust the firewall UI to tell you the truth — test from the container's perspective:
@@ -117,15 +109,11 @@ docker exec <container-name> curl -sS -o /dev/null -w "%{http_code}\n" \
 
 If that returns a real status code, the container ↔ host path is open and you can move on. If it times out, the rule didn't take — re-check the subnet matches what `docker inspect` reports, and that the rule is above any "Deny all" in the firewall list.
 
----
-
 ## Don't use ad-hoc `iptables`
 
 Tempting shortcut: SSH in and run `iptables -A INPUT -s 172.22.0.0/16 -j ACCEPT`. Don't. DSM rebuilds iptables from the Firewall config on every reboot and on most package updates, so manual rules vanish without warning. Always use the DSM Firewall UI — those rules are the ones that actually persist.
 
 (Same logic applies to `ufw`, `firewalld`, or any other host-level tool: DSM's firewall stack is authoritative on the NAS, and it doesn't know about anyone else's rules.)
-
----
 
 ## Bonus: surviving a container rebuild
 
@@ -142,8 +130,6 @@ A few additional things worth doing in the same setup pass, because they all com
 - **Use the DSM Firewall UI, not `docker network create --subnet`**, for whitelisting. The compose file owns the network; DSM owns the firewall. Mixing them up is how you end up with a "fixed" subnet that the firewall still doesn't trust.
 - **Document the subnet next to the compose file.** A one-line comment in `docker-compose.yml` (`# subnet must match DSM Firewall rule "container-allow"`) saves future-you twenty minutes when you wonder why one number is hardcoded in two places.
 
----
-
 ## Wrap-up
 
 Two changes:
@@ -152,8 +138,6 @@ Two changes:
 2. Add an Allow rule for that subnet in DSM Firewall so the container can reach host services.
 
 Do both, do them once, and OpenClaw can talk to anything else running on the NAS — through every redeploy, every DSM update, every Portainer "Recreate". This is the foundation every other "OpenClaw on Synology" post (Chat integration, Drive sync, DSM automation, container-to-container) quietly assumes is already done.
-
----
 
 ## References & further reading
 
