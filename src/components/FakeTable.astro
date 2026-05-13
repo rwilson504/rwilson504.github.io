@@ -1,0 +1,219 @@
+---
+/**
+ * FakeTable — a stylized "settings table" (e.g. Synology DSM Firewall rules
+ * list) designed to live inside a <FakeDialog>.
+ *
+ * Renders a generic OS-agnostic table with a title bar, an optional toolbar
+ * row (Create / Edit / Delete buttons + an "All interfaces" filter), and a
+ * tbody slot for <Row /> children. Doesn't imitate any specific vendor UI.
+ *
+ * Usage (in .mdx):
+ *   import FakeTable from "@/components/FakeTable.astro"
+ *   import Row from "@/components/Row.astro"
+ *
+ *   <FakeTable title="Firewall Rules" actions="Create  Edit  Delete" filter="All interfaces">
+ *     <Row enabled ports="All" protocol="All" source="172.22.0.0/255.255.0.0" action="Allow" highlight />
+ *     <Row enabled ports="……" protocol="……" source="……" action="Allow" muted />
+ *   </FakeTable>
+ */
+interface Props {
+  title?: string;
+  actions?: string;
+  filter?: string;
+}
+const { title, actions, filter } = Astro.props;
+const actionItems = (actions || "")
+  .split(/\s{2,}|\s+/)
+  .map((s) => s.trim())
+  .filter(Boolean);
+---
+
+<div class="fake-table">
+  {title && (
+    <div class="fake-table__bar">
+      <div class="fake-table__title">{title}</div>
+    </div>
+  )}
+  {(actionItems.length > 0 || filter) && (
+    <div class="fake-table__toolbar">
+      {actionItems.length > 0 && (
+        <div class="fake-table__actions">
+          {actionItems.map((a) => (
+            <span class="fake-table-btn">{a}</span>
+          ))}
+        </div>
+      )}
+      {filter && (
+        <div class="fake-table__filter">
+          <span class="fake-table-select">{filter} ▾</span>
+        </div>
+      )}
+    </div>
+  )}
+  <table class="fake-table__table">
+    <thead>
+      <tr>
+        <th class="fake-table__col-toggle"></th>
+        <th>Enabled</th>
+        <th>Ports</th>
+        <th>Protocol</th>
+        <th>Source IP</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <slot />
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .fake-table {
+    --ft-bg: var(--fd-bg, #ffffff);
+    --ft-bar-from: var(--fd-bar-from, #fafbfc);
+    --ft-bar-to: var(--fd-bar-to, #f1f3f5);
+    --ft-ink: var(--fd-ink, #1f2328);
+    --ft-ink-soft: var(--fd-ink-soft, #59636e);
+    --ft-line: var(--fd-line, #d0d7de);
+    --ft-line-soft: var(--fd-line-soft, #e7ebef);
+    --ft-readonly-bg: var(--fd-readonly-bg, #f6f8fa);
+    --ft-mono: var(--fd-mono, ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace);
+    --ft-allow: #1a7f37;
+    --ft-deny: #cf222e;
+    --ft-highlight-bg: rgba(255, 212, 0, 0.18);
+    --ft-highlight-border: rgba(255, 174, 0, 0.55);
+
+    border: 1px solid var(--ft-line);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--ft-bg);
+    margin: 10px 0 4px;
+    font-size: 0.82rem;
+  }
+
+  :global([data-theme="dark"]) .fake-table,
+  :global(.dark) .fake-table {
+    --ft-allow: #4ac26b;
+    --ft-deny: #ff7b72;
+    --ft-highlight-bg: rgba(255, 212, 0, 0.10);
+    --ft-highlight-border: rgba(255, 174, 0, 0.35);
+  }
+
+  .fake-table__bar {
+    background: linear-gradient(180deg, var(--ft-bar-from), var(--ft-bar-to));
+    border-bottom: 1px solid var(--ft-line);
+    padding: 6px 10px;
+  }
+  .fake-table__title {
+    font-weight: 600;
+    color: var(--ft-ink);
+    font-size: 0.84rem;
+  }
+  .fake-table__toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--ft-line-soft);
+    background: var(--ft-readonly-bg);
+  }
+  .fake-table__actions { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+  .fake-table-btn {
+    border: 1px solid var(--ft-line);
+    background: linear-gradient(180deg, var(--ft-bg), var(--ft-readonly-bg));
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.74rem;
+    color: var(--ft-ink);
+  }
+  .fake-table-select {
+    border: 1px solid var(--ft-line);
+    background: var(--ft-bg);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.74rem;
+    color: var(--ft-ink);
+    font-family: var(--ft-mono);
+  }
+
+  .fake-table__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+  }
+  .fake-table__table th {
+    text-align: left;
+    padding: 6px 10px;
+    background: var(--ft-readonly-bg);
+    color: var(--ft-ink-soft);
+    font-weight: 600;
+    border-bottom: 1px solid var(--ft-line-soft);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .fake-table__col-toggle { width: 18px; }
+
+  .fake-table :global(.fake-table__row) {
+    border-bottom: 1px dashed var(--ft-line-soft);
+  }
+  .fake-table :global(.fake-table__row:last-child) { border-bottom: none; }
+  .fake-table :global(.fake-table__row td) {
+    padding: 6px 10px;
+    color: var(--ft-ink);
+    vertical-align: middle;
+  }
+  .fake-table :global(.fake-table__row td.fake-table__col-toggle) {
+    color: var(--ft-ink-soft);
+    cursor: grab;
+    user-select: none;
+  }
+  .fake-table :global(.fake-table__row td.fake-table__src) {
+    font-family: var(--ft-mono);
+  }
+  .fake-table :global(.fake-table__row--highlight) {
+    background: var(--ft-highlight-bg);
+    box-shadow: inset 3px 0 0 var(--ft-highlight-border);
+  }
+  .fake-table :global(.fake-table__row--muted td) {
+    color: var(--ft-ink-soft);
+    opacity: 0.85;
+  }
+  .fake-table :global(.fake-table-check) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--ft-line);
+    border-radius: 2px;
+    background: #0969da;
+    color: #fff;
+    font-size: 0.62rem;
+    line-height: 1;
+  }
+  .fake-table :global(.fake-table-uncheck) {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--ft-line);
+    border-radius: 2px;
+    background: var(--ft-bg);
+  }
+  .fake-table :global(.fake-table-action) {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .fake-table :global(.fake-table-action--allow) {
+    background: rgba(26, 127, 55, 0.12);
+    color: var(--ft-allow);
+  }
+  .fake-table :global(.fake-table-action--deny) {
+    background: rgba(207, 34, 46, 0.12);
+    color: var(--ft-deny);
+  }
+</style>
