@@ -1,0 +1,157 @@
+---
+title: "Connecting OpenClaw to GitHub Copilot (OAuth, no API key)"
+description: "Point your self-hosted OpenClaw instance at GitHub Copilot's models — Claude, GPT-5, Gemini — using one device-flow OAuth login and your existing Copilot subscription. No per-provider API keys."
+pubDate: 2026-05-13
+category: dev-tools
+tags:
+  - openclaw
+  - github-copilot
+  - oauth
+  - self-hosted
+  - ai
+draft: false
+heroImage: /heroes/openclaw-github-copilot-oauth.png
+heroImageAlt: "Cartoon raccoon mascot in an oversized red plush lobster costume holding up a glowing card with a one-time device code, with golden OAuth particles flowing from a GitHub Copilot helmet silhouette on the left into an OpenClaw gateway icon on the right."
+---
+
+import FakeDialog from "@/components/FakeDialog.astro";
+import Field from "@/components/Field.astro";
+
+If you already pay for **GitHub Copilot**, you can point OpenClaw at it and reach Claude (Opus/Sonnet/Haiku), GPT-5, and Gemini Pro through one auth, on one bill, with one device-flow login. No per-provider API keys, no four billing portals.
+
+Here's the whole setup, including the exact terminal commands.
+
+## Why route through Copilot
+
+- **One bill, four model families** — Copilot's plan ladder includes Claude, GPT-5, and Gemini. If you already pay for Copilot for VS Code, you're paying for these models anyway.
+- **No per-provider key management** — one OAuth profile instead of three.
+- **Built-in fallback** — OpenClaw fails over Opus → Sonnet → GPT-5 → Gemini automatically when a model is rate-limited. Sessions don't die mid-turn.
+
+The catch: Copilot's per-model rate limits are stingier than direct API access, and which models you can hit depends on your plan tier. For a personal household assistant — calendars, reminders, occasional coding help — it's more than enough.
+
+## Prerequisites
+
+- An active **GitHub Copilot subscription** (Individual, Business, or Enterprise)
+- **OpenClaw installed and running** ([install docs](https://docs.openclaw.ai))
+- A real **interactive terminal** — the device-flow login won't work over `ssh -T`, in CI, or piped through `nohup`. Inside Docker: `docker exec -it <container> …`.
+
+## Step 1 — Run the login
+
+```bash
+openclaw models auth login-github-copilot --set-default
+```
+
+Output looks like:
+
+```
+First, copy your one-time code:
+
+    AB12-CD34
+
+Then visit:
+
+    https://github.com/login/device
+
+Waiting for authorization...
+```
+
+**Leave the terminal open** — it's polling GitHub's device-code endpoint waiting for you. `--set-default` also makes Copilot your default provider in one step; add `--yes` to skip the confirm prompt.
+
+## Step 2 — Approve in the browser
+
+Open `https://github.com/login/device` signed in as the GitHub account that owns your Copilot subscription:
+
+<FakeDialog title="GitHub — Device Activation">
+  <Field label="Enter the code displayed on your device" placeholder="AB12-CD34" mono />
+  <Field label="" action="Continue" />
+</FakeDialog>
+
+Paste the code, hit **Continue**, then authorize the **OpenClaw** OAuth app. Scopes are minimal (just what's needed to discover and call Copilot models — no repo access). You can revoke any time at [github.com/settings/applications](https://github.com/settings/applications).
+
+The terminal flips to:
+
+```
+✓ Authorization complete
+✓ Stored auth profile: github-copilot:github
+```
+
+The token is stored under `~/.openclaw/auth/` and survives container restarts as long as that directory is on a persistent volume.
+
+## Step 3 — Pick a model (and a fallback ladder)
+
+If you skipped `--set-default`, set one now:
+
+```bash
+openclaw models set github-copilot/claude-opus-4.7
+```
+
+Common refs (availability depends on plan):
+
+| Model ref | Family | Good for |
+|---|---|---|
+| `github-copilot/claude-opus-4.7` | Claude Opus | Long-context reasoning, multi-step tool use |
+| `github-copilot/claude-sonnet-4.6` | Claude Sonnet | Fast everyday tasks |
+| `github-copilot/gpt-5.4` | GPT-5 | Strong general reasoning, code |
+| `github-copilot/gemini-3.1-pro` | Gemini | Long context, multimodal |
+
+Then add a fallback ladder to `~/.openclaw/openclaw.json` so a single model going down doesn't kill your session:
+
+```json5
+{
+  agents: {
+    defaults: {
+      model: {
+        primary:  "github-copilot/claude-opus-4.7",
+        fallbacks: [
+          "github-copilot/claude-sonnet-4.6",
+          "github-copilot/gpt-5.4",
+          "github-copilot/gemini-3.1-pro",
+        ],
+      },
+    },
+  },
+}
+```
+
+Verify with `openclaw status` — you should see `model=github-copilot/...` in the runtime line.
+
+## Troubleshooting
+
+- **"Interactive TTY required"** — you ran the login over a non-interactive shell. Use a real terminal; in Docker use `docker exec -it`.
+- **"Model not available for your plan"** — try a smaller/different model from the table. Plan tier gates availability.
+- **"Authorization expired"** — re-run `openclaw models auth login-github-copilot`. Takes about 15 seconds.
+- **Headless setup** — if you have a Copilot OAuth token already, import non-interactively:
+
+  ```bash
+  openclaw onboard --non-interactive --accept-risk \
+    --auth-choice github-copilot \
+    --github-copilot-token "$COPILOT_GITHUB_TOKEN" \
+    --skip-channels --skip-health
+  ```
+
+  Env var priority: `COPILOT_GITHUB_TOKEN` → `GH_TOKEN` → `GITHUB_TOKEN`. The device-login path always wins over env vars.
+
+## What this doesn't do
+
+- Doesn't unlock unlimited use — Copilot's per-model rate limits still apply.
+- Doesn't expose every raw provider feature (extended thinking budgets, response continuation, etc.). OpenClaw picks the right transport automatically (Anthropic Messages for Claude, OpenAI Responses for GPT/Gemini).
+- Doesn't replace VS Code Copilot — they coexist on independent token stores.
+
+## Wrap-up
+
+Two commands, one browser visit:
+
+```bash
+openclaw models auth login-github-copilot --set-default
+# ...visit github.com/login/device, paste code, approve...
+openclaw status   # confirm github-copilot/...
+```
+
+Plus a fallback block in config. This is the lowest-friction way to get top-tier models into a self-hosted assistant without juggling four billing portals — same setup powering [my household assistant](/blog/synology-chat-multi-user-openclaw/) on a Synology NAS, paired with the [container networking fixes](/blog/synology-openclaw-container-networking/).
+
+## References
+
+- [OpenClaw — GitHub Copilot provider docs](https://docs.openclaw.ai/providers/github-copilot)
+- [OpenClaw — model selection](https://docs.openclaw.ai/concepts/model-providers)
+- [GitHub — Manage authorized OAuth apps](https://github.com/settings/applications)
+- [OpenClaw on GitHub](https://github.com/openclaw/openclaw)
