@@ -1,0 +1,23 @@
+---
+/**
+ * Note — a small italic helper line, designed to sit inside a <FakeDialog>
+ * (alongside <Field /> rows or below a <FakeTable />).
+ *
+ * Usage (in .mdx):
+ *   import Note from "@/components/Note.astro"
+ *   <Note>If no rules in “All interfaces” are matched, …</Note>
+ */
+---
+
+<div class="fake-note"><slot /></div>
+
+<style>
+  .fake-note {
+    color: var(--fd-ink-soft, #59636e);
+    font-size: 0.78rem;
+    font-style: italic;
+    margin: 6px 0 0;
+    line-height: 1.5;
+  }
+  .fake-note + .fake-note { margin-top: 2px; }
+</style>

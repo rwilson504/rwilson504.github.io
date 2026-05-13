@@ -1,0 +1,56 @@
+---
+/**
+ * Row — a single row inside <FakeTable>. Designed for "firewall rules"
+ * style tables (enabled checkbox, ports, protocol, source IP, action).
+ *
+ * Props:
+ *   enabled    (boolean)  Show the checked checkbox in the Enabled column
+ *   ports      (string)   Ports column text
+ *   protocol   (string)   Protocol column text
+ *   source     (string)   Source IP column text (rendered in monospace)
+ *   action     (string)   "Allow" or "Deny" — colored pill
+ *   highlight  (boolean)  Highlight this row (yellow tint, left border) — use
+ *                         to call attention to the rule the article is about
+ *   muted      (boolean)  De-emphasize this row (used for redacted/example rows)
+ */
+interface Props {
+  enabled?: boolean;
+  ports?: string;
+  protocol?: string;
+  source?: string;
+  action?: string;
+  highlight?: boolean;
+  muted?: boolean;
+}
+const { enabled, ports, protocol, source, action, highlight, muted } = Astro.props;
+
+const rowClasses = [
+  "fake-table__row",
+  highlight ? "fake-table__row--highlight" : "",
+  muted ? "fake-table__row--muted" : "",
+]
+  .filter(Boolean)
+  .join(" ");
+
+const actionClasses = [
+  "fake-table-action",
+  (action || "").toLowerCase() === "deny"
+    ? "fake-table-action--deny"
+    : "fake-table-action--allow",
+].join(" ");
+---
+
+<tr class={rowClasses}>
+  <td class="fake-table__col-toggle">≡</td>
+  <td>
+    {enabled ? (
+      <span class="fake-table-check" aria-label="enabled">✓</span>
+    ) : (
+      <span class="fake-table-uncheck" aria-label="not enabled" />
+    )}
+  </td>
+  <td>{ports}</td>
+  <td>{protocol}</td>
+  <td class="fake-table__src">{source}</td>
+  <td>{action && <span class={actionClasses}>{action}</span>}</td>
+</tr>
