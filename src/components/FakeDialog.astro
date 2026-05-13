@@ -1,0 +1,202 @@
+---
+/**
+ * FakeDialog — a styled mock "settings dialog" for tutorials.
+ *
+ * Renders a generic OS-agnostic window chrome (3 dots + title bar)
+ * around a slot of <Field /> rows. Doesn't imitate any specific OS,
+ * so it won't go stale when vendors redesign their UI.
+ *
+ * Usage (in .mdx):
+ *   import FakeDialog from "@/components/FakeDialog.astro"
+ *   import Field from "@/components/Field.astro"
+ *
+ *   <FakeDialog title="Outgoing Webhook — My Space">
+ *     <Field label="Customize Name" value="Ricky - Rick" mono />
+ *     <Field label="Trigger Words" placeholder="(leave blank)" />
+ *     <Field label="Token" mask action="Refresh Token" />
+ *   </FakeDialog>
+ */
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<figure class="fake-dialog">
+  <div class="fake-dialog__bar">
+    <span class="fake-dialog__dots" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+    <span class="fake-dialog__title">{title}</span>
+    <span class="fake-dialog__spacer" aria-hidden="true"></span>
+  </div>
+  <div class="fake-dialog__body">
+    <slot />
+  </div>
+</figure>
+
+<style>
+  .fake-dialog {
+    --fd-bg: #ffffff;
+    --fd-bar-from: #fafbfc;
+    --fd-bar-to: #f1f3f5;
+    --fd-ink: #1f2328;
+    --fd-ink-soft: #59636e;
+    --fd-line: #d0d7de;
+    --fd-line-soft: #e7ebef;
+    --fd-accent: #0969da;
+    --fd-readonly-bg: #f6f8fa;
+    --fd-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+    border: 1px solid var(--fd-line);
+    border-radius: 8px;
+    background: var(--fd-bg);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 8px 24px rgba(31, 35, 40, 0.06);
+    overflow: hidden;
+    margin: 1.2rem 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  /* Dark-mode flip — only swap a handful of tokens, layout stays the same. */
+  :global([data-theme="dark"]) .fake-dialog,
+  :global(.dark) .fake-dialog {
+    --fd-bg: #161b22;
+    --fd-bar-from: #1f242c;
+    --fd-bar-to: #14181d;
+    --fd-ink: #e6edf3;
+    --fd-ink-soft: #8b949e;
+    --fd-line: #30363d;
+    --fd-line-soft: #21262d;
+    --fd-readonly-bg: #0d1117;
+  }
+
+  .fake-dialog__bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, var(--fd-bar-from), var(--fd-bar-to));
+    border-bottom: 1px solid var(--fd-line);
+  }
+  .fake-dialog__dots {
+    display: inline-flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .fake-dialog__dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--fd-line);
+  }
+  .fake-dialog__dots span:nth-child(1) { background: #ff5f56; }
+  .fake-dialog__dots span:nth-child(2) { background: #ffbd2e; }
+  .fake-dialog__dots span:nth-child(3) { background: #27c93f; }
+
+  .fake-dialog__title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--fd-ink);
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+  .fake-dialog__spacer { width: 42px; flex-shrink: 0; }
+
+  .fake-dialog__body {
+    padding: 14px 18px 16px;
+    color: var(--fd-ink);
+  }
+
+  /* Field component pulls these tokens from its parent. */
+  .fake-dialog :global(.fake-dialog-row) {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--fd-line-soft);
+  }
+  .fake-dialog :global(.fake-dialog-row:last-child) {
+    border-bottom: none;
+  }
+  .fake-dialog :global(.fake-dialog-row__label) {
+    color: var(--fd-ink-soft);
+    font-weight: 500;
+    font-size: 0.82rem;
+  }
+  .fake-dialog :global(.fake-dialog-row__value) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+  .fake-dialog :global(.fake-dialog-input) {
+    flex: 1;
+    border: 1px solid var(--fd-line);
+    border-radius: 5px;
+    padding: 5px 8px;
+    background: var(--fd-bg);
+    font-size: 0.82rem;
+    color: var(--fd-ink);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .fake-dialog :global(.fake-dialog-input--mono) {
+    font-family: var(--fd-mono);
+  }
+  .fake-dialog :global(.fake-dialog-input--readonly) {
+    background: var(--fd-readonly-bg);
+    color: var(--fd-ink-soft);
+  }
+  .fake-dialog :global(.fake-dialog-input--placeholder) {
+    color: var(--fd-ink-soft);
+    font-style: italic;
+  }
+  .fake-dialog :global(.fake-dialog-check) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--fd-line);
+    border-radius: 3px;
+    background: var(--fd-accent);
+    color: #ffffff;
+    font-size: 0.7rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .fake-dialog :global(.fake-dialog-btn) {
+    border: 1px solid var(--fd-line);
+    background: linear-gradient(180deg, var(--fd-bg), var(--fd-readonly-bg));
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    color: var(--fd-ink);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .fake-dialog :global(.fake-dialog-select) {
+    flex: 1;
+    border: 1px solid var(--fd-line);
+    border-radius: 5px;
+    padding: 5px 24px 5px 8px;
+    font-size: 0.82rem;
+    background:
+      linear-gradient(45deg, transparent 50%, var(--fd-ink-soft) 50%) calc(100% - 14px) 50% / 5px 5px no-repeat,
+      linear-gradient(135deg, var(--fd-ink-soft) 50%, transparent 50%) calc(100% - 9px) 50% / 5px 5px no-repeat,
+      var(--fd-bg);
+    color: var(--fd-ink);
+    font-family: var(--fd-mono);
+  }
+  .fake-dialog :global(.fake-dialog-hint) {
+    color: var(--fd-ink-soft);
+    font-size: 0.74rem;
+    margin-left: 4px;
+    font-style: italic;
+  }
+</style>
