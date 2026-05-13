@@ -39,10 +39,9 @@ The only catch: it lives behind your LAN. So you also need [Tailscale](https://t
 
 Here's the shape of what I ended up with — a single OpenClaw container that the household talks to through three Synology Chat channels:
 
-```d2 animateInterval=1500
+```d2
 direction: down
 
-# ---------- Static scene ----------
 nas: "Synology NAS" {
   style: { fill: "#f6f8fa"; stroke: "#0969da"; stroke-width: 2 }
 
@@ -56,44 +55,24 @@ nas: "Synology NAS" {
     style: { fill: "#fff0e0"; stroke: "#bf3989" }
   }
 
-  chat -> oc: "outgoing webhook"
-  oc -> chat: "incoming webhook"
+  chat -> oc: "outgoing webhook\n(POST /webhook/synology-…)" {
+    style: { stroke: "#bf3989"; stroke-width: 3; animated: true }
+  }
+  oc -> chat: "incoming webhook\n(POST reply)" {
+    style: { stroke: "#1a7f37"; stroke-width: 3; animated: true }
+  }
 }
 
 rick:    "👤 Me"             { shape: person }
 spouse:  "👤 Spouse"         { shape: person }
 family:  "👤 Me + 👤 Spouse" { shape: person }
 
-rick   -> nas.chat: "My Space (DM)"
-spouse -> nas.chat: "My Space (DM)"
-family -> nas.chat: "Family channel"
-
-# ---------- Animation: trace one message round-trip ----------
-scenarios: {
-  "1. user types": {
-    rick -> nas.chat: "✨ 'what's on my calendar?'" {
-      style: { stroke: "#0969da"; stroke-width: 4; bold: true }
-    }
-  }
-  "2. outgoing webhook fires": {
-    nas.chat -> nas.oc: "✨ POST /webhook/synology" {
-      style: { stroke: "#bf3989"; stroke-width: 4; bold: true }
-    }
-  }
-  "3. openclaw replies": {
-    nas.oc -> nas.chat: "✨ incoming webhook POST" {
-      style: { stroke: "#1a7f37"; stroke-width: 4; bold: true }
-    }
-  }
-  "4. user sees reply": {
-    nas.chat -> rick: "✨ reply in My Space" {
-      style: { stroke: "#0969da"; stroke-width: 4; bold: true }
-    }
-  }
-}
+rick   <-> nas.chat: "My Space (DM)"     { style: { stroke: "#0969da"; animated: true } }
+spouse <-> nas.chat: "My Space (DM)"     { style: { stroke: "#0969da"; animated: true } }
+family <-> nas.chat: "Family channel"    { style: { stroke: "#0969da"; animated: true } }
 ```
 
-The animation traces a single round-trip: you type something in your My Space → Synology Chat fires the outgoing webhook → OpenClaw processes it and replies via the incoming webhook → the message appears in your My Space. Same loop happens for the family channel, just with a different `Customize Name`.
+The flowing dashes trace the round-trip: you type in your My Space → Synology Chat fires the outgoing webhook to OpenClaw → OpenClaw replies through the incoming webhook → the message lands back in your My Space. Same loop for the family channel — only the `Customize Name` changes.
 
 Two paths matter:
 
