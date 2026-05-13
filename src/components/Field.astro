@@ -1,0 +1,81 @@
+---
+/**
+ * Field — a single labeled row inside <FakeDialog>.
+ *
+ * Props:
+ *   label       (string, required)      The row label
+ *   value       (string)                 The displayed value (when not mask/check)
+ *   placeholder (string)                 Italic gray placeholder when value is empty
+ *   mono        (boolean)                Render value in monospace
+ *   readonly    (boolean)                Style as readonly (gray background)
+ *   mask        (boolean)                Render bullets instead of value
+ *   check       (boolean)                Render a checkbox row instead of an input
+ *   select      (boolean)                Render value as a select control
+ *   action      (string)                 Optional button next to the value
+ *   hint        (string)                 Small italic hint after the value
+ */
+interface Props {
+  label: string;
+  value?: string;
+  placeholder?: string;
+  mono?: boolean;
+  readonly?: boolean;
+  mask?: boolean;
+  check?: boolean;
+  select?: boolean;
+  action?: string;
+  hint?: string;
+}
+
+const {
+  label,
+  value,
+  placeholder,
+  mono,
+  readonly,
+  mask,
+  check,
+  select,
+  action,
+  hint,
+} = Astro.props;
+
+const inputClasses = [
+  "fake-dialog-input",
+  mono ? "fake-dialog-input--mono" : "",
+  readonly ? "fake-dialog-input--readonly" : "",
+  !value && placeholder ? "fake-dialog-input--placeholder" : "",
+]
+  .filter(Boolean)
+  .join(" ");
+
+const selectClasses = ["fake-dialog-select"].filter(Boolean).join(" ");
+
+const masked = "••••••••••••••••••••••••••";
+---
+
+<div class="fake-dialog-row">
+  <div class="fake-dialog-row__label">{label}</div>
+  <div class="fake-dialog-row__value">
+    {check && (
+      <>
+        <span class="fake-dialog-check" aria-label="checked">✓</span>
+        {hint && <span class="fake-dialog-hint">{hint}</span>}
+      </>
+    )}
+    {!check && select && (
+      <span class={selectClasses}>{value}</span>
+    )}
+    {!check && !select && (
+      <span class={inputClasses}>
+        {mask ? masked : value || placeholder}
+      </span>
+    )}
+    {!check && action && (
+      <span class="fake-dialog-btn">{action}</span>
+    )}
+    {!check && !select && hint && (
+      <span class="fake-dialog-hint">{hint}</span>
+    )}
+  </div>
+</div>
