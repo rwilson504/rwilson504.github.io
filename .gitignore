@@ -20,3 +20,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+# astro-d2 build output: generated at build time, not source
+public/d2/
