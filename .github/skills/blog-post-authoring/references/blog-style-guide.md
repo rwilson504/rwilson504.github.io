@@ -195,11 +195,20 @@ For migrated legacy posts, wrapped linked images appear in older content. New po
 
 Include `## References` when the post depends on official docs, tools, upstream repos, specs, or standards. Link to Microsoft Learn, GitHub, product docs, jwt.ms, XrmToolBox tools, or API specs as appropriate.
 
+Before publishing, check external internet links from the blog repo:
+
+```powershell
+.\.github\skills\blog-post-authoring\scripts\check-post-links.ps1 -Path .\src\content\blog\<slug>.md
+```
+
+Fix broken links before setting `draft: false`. If a site blocks automated requests but opens manually, record that in the handoff/final response instead of silently ignoring it.
+
 ## Quality Checklist
 
 - The post answers: what happened, who it affects, why it happens, how to fix/use it, and how to confirm success.
 - Security-sensitive examples avoid real secrets, tenant IDs, tokens, and private URLs.
 - Any temporary tracing or diagnostic step includes removal guidance.
+- External internet links have been checked, and broken or redirected stale URLs have been corrected.
 - The tags reinforce discoverability without drifting into unrelated subjects.
 - The description works as a search result snippet.
 - The article still makes sense if a reader lands directly from search.

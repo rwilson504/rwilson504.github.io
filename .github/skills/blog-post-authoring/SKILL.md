@@ -19,6 +19,7 @@ This skill's publishing target is always the blog repository:
 - Body image folder: `public/images/<post-slug>`
 - Schema file: `src/content.config.ts`
 - Build command: `npm run build`
+- External link checker: [check-post-links.ps1](./scripts/check-post-links.ps1)
 
 If this skill is invoked from another repository, treat that repository as the **source-context repo**, not the publishing destination. Draft from the local source context there, but move the final article into a clone of `rwilson504/rwilson504.github.io` for review, validation, and hero-image work.
 
@@ -41,7 +42,8 @@ Use this pattern when the topic context lives in another repo:
 5. Copy any article screenshots into `public/images/<slug>/` in the blog repo and update Markdown paths to `/images/<slug>/...`.
 6. Review the article inside the blog repo against [blog-style-guide.md](./references/blog-style-guide.md), existing related posts, and the Astro schema.
 7. After the article is written, use the **blog-hero-image-authoring** skill in the blog repo to review existing hero images and generate/wire a matching `heroImage` and `heroImageAlt`.
-8. Validate in the blog repo with `npm run build` before finishing.
+8. Check external internet links from the blog repo with [check-post-links.ps1](./scripts/check-post-links.ps1) before publishing.
+9. Validate in the blog repo with `npm run build` before finishing.
 
 ## Workflow
 
@@ -58,7 +60,13 @@ Use this pattern when the topic context lives in another repo:
 7. Start from [blog-post-template.md](./assets/blog-post-template.md) when creating a fresh article.
 8. After the article draft is stable, use the blog repo's hero image workflow to create or select a matching image. Place the public path in `heroImage` and write specific `heroImageAlt` text. If no hero exists yet, leave both fields out until the hero image is ready.
 9. Use Markdown headings, lists, callouts, screenshots, tables, and fenced code blocks in the same practical style as existing posts.
-10. Validate with `npm run build` after creating or editing content. Fix Astro schema, Markdown, or content errors before finishing.
+10. Check all external `http` and `https` links before publishing:
+
+```powershell
+.\.github\skills\blog-post-authoring\scripts\check-post-links.ps1 -Path .\src\content\blog\<slug>.md
+```
+
+11. Validate with `npm run build` after creating or editing content. Fix Astro schema, Markdown, or content errors before finishing.
 
 ## Frontmatter Rules
 
@@ -96,6 +104,18 @@ Write like an experienced practitioner documenting what actually worked. Be dire
 
 Avoid marketing fluff. The post should quickly give readers enough context to recognize their problem and enough concrete detail to try the fix or pattern themselves.
 
+## Link Checking
+
+Before publishing or flipping `draft` to `false`, verify every external internet link in the post. Local image paths are covered by content review and the site build, but external docs, GitHub, product pages, and reference links need an explicit check.
+
+Run:
+
+```powershell
+.\.github\skills\blog-post-authoring\scripts\check-post-links.ps1 -Path .\src\content\blog\<slug>.md
+```
+
+Treat broken links as publish blockers. Fix the URL, replace it with a current source, or remove the reference. If a valid site blocks automated checks but opens manually, mention that in the final response and include the exact URL that needed manual verification.
+
 ## Done Criteria
 
 - The post has valid frontmatter and an appropriate category.
@@ -106,4 +126,5 @@ Avoid marketing fluff. The post should quickly give readers enough context to re
 - Cross-repo drafts have been moved into the `rwilson504/rwilson504.github.io` clone before final validation.
 - Hero image review/generation has been handled from the blog repo using the blog hero image skill when a new hero is needed.
 - External references are included when the article depends on docs, tools, or upstream behavior.
+- External internet links have been checked with [check-post-links.ps1](./scripts/check-post-links.ps1), and any failures were fixed or explicitly called out.
 - `npm run build` completes successfully.
