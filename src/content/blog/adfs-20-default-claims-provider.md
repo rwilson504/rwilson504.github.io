@@ -18,13 +18,13 @@ In situation where you have multiple Claims Providers the HomeRealDiscovery.aspx
 
 As you can see here I have created a second claims provider called test. User may not know which one to use.
 
-[![image](/images/adfs-20-default-claims-provider/01-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjACANoBqGOWzim_QU6tAcvCG8vFUryaQlSTsteu8jvsZDwiYgyC5Rci1yffF5Fdxr35QUmXmgAEy6xxiUubmDpKhSrn-uSQcxEKVK-hONFW40setJga4eacCJ1jyMGLDani5iy8mfiWrg/s1600-h/image40.png)
+[![ADFS Home Realm Discovery page showing multiple claims providers including Active Directory and test](/images/adfs-20-default-claims-provider/01-img.png "ADFS Home Realm Discovery page showing multiple claims providers including Active Directory and test")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjACANoBqGOWzim_QU6tAcvCG8vFUryaQlSTsteu8jvsZDwiYgyC5Rci1yffF5Fdxr35QUmXmgAEy6xxiUubmDpKhSrn-uSQcxEKVK-hONFW40setJga4eacCJ1jyMGLDani5iy8mfiWrg/s1600-h/image40.png)
 
 **FIX 1** – Well not really a fix as much as a way to reduce this issue.
 
 One way to help with this confusion is by setting the **persistIdentityProviderInformation** enabled value to true and the lifetimeInDays value to something like 30 in the web.config located at **C:\inetpub\adfs\ls**.  This will allow users to only have to select their claim provider every 30 days.
 
-[![image](/images/adfs-20-default-claims-provider/02-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGB-rjPbe4EVSWSilKIHcioDLV2_QeoI8huSo8i39cKNxGkpAUzUqWgc2dYtsOLuQWXhLK6XJQbPrDo75ptNsokPXldsDl71Lajl3atkA6rxZiFpG6UiWY2EyqucaMGGnMiBgGtSVbbMA/s1600-h/image%25255B18%25255D.png)
+[![ADFS web.config setting persistIdentityProviderInformation enabled with a 30-day lifetime](/images/adfs-20-default-claims-provider/02-img.png "ADFS web.config setting persistIdentityProviderInformation enabled with a 30-day lifetime")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGB-rjPbe4EVSWSilKIHcioDLV2_QeoI8huSo8i39cKNxGkpAUzUqWgc2dYtsOLuQWXhLK6XJQbPrDo75ptNsokPXldsDl71Lajl3atkA6rxZiFpG6UiWY2EyqucaMGGnMiBgGtSVbbMA/s1600-h/image%25255B18%25255D.png)
 
 **FIX 2** – Update your web application to allow for WHR parameter
 
@@ -32,13 +32,13 @@ Another way to allows users to divert the HomeRealDiscovery page is by adding fu
 
 Add a reference to the Microsoft.IdentityModel in your web application
 
-[![image](/images/adfs-20-default-claims-provider/03-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7n9-Byk7C21wVHtwnQvhHAs6zAbt8oaxacd-BOP81viGb1mTCd13aUeMyqR2Xog7MxI6HPfxr2aVH-cN_B2JP0_U5FInf0dDjxO-hkoJXf5HqdQh_x26H_vF4GWjkuDLw4PLb9ytozx4/s1600-h/image%25255B2%25255D.png)
+[![Visual Studio Add Reference dialog selecting Microsoft.IdentityModel](/images/adfs-20-default-claims-provider/03-img.png "Visual Studio Add Reference dialog selecting Microsoft.IdentityModel")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7n9-Byk7C21wVHtwnQvhHAs6zAbt8oaxacd-BOP81viGb1mTCd13aUeMyqR2Xog7MxI6HPfxr2aVH-cN_B2JP0_U5FInf0dDjxO-hkoJXf5HqdQh_x26H_vF4GWjkuDLw4PLb9ytozx4/s1600-h/image%25255B2%25255D.png)
 
 If you don’t already have a Global.asax file in your web application add a new item and select Global Application Class.
 
 You will need to add an additional handler to the code behind of the Global.asax file.
 
-[![image](/images/adfs-20-default-claims-provider/05-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicctBR1YKaG0fDn8-y8hyphenhyphenqAtxpXvnt26zLTb-NxB_Wri0s2TejeHICQAZlmxb1LYnX-6_4rtMifhJlTtMokiMSwqIuP9UN0Ye8sGzM9OYecjpGZ2IjpwyXE4gnPx2hwfl5aj1n3830x3M/s1600-h/image41.png)
+[![Global.asax code-behind with the RedirectingToIdentityProvider handler](/images/adfs-20-default-claims-provider/05-img.png "Global.asax code-behind with the RedirectingToIdentityProvider handler")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicctBR1YKaG0fDn8-y8hyphenhyphenqAtxpXvnt26zLTb-NxB_Wri0s2TejeHICQAZlmxb1LYnX-6_4rtMifhJlTtMokiMSwqIuP9UN0Ye8sGzM9OYecjpGZ2IjpwyXE4gnPx2hwfl5aj1n3830x3M/s1600-h/image41.png)
 
 ```
 ```
@@ -97,4 +97,4 @@ My STS (ADFS) server will be located at:
   
 
 **NOTE**: Depending on your IE Version this page may come up blank.  If you do not see the XML on the page hit the compatibility view button in IE.  
-[![image](/images/adfs-20-default-claims-provider/06-img.png "image")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimp82UFUOxp6gYPy0Jc3Wl6gZG7PYR-L2GGOONSUuRHs_HGXubFVSqTR-IcgRH7Vx5DvFpRInRl4CYfuut4NrOrp_29Nh1b5gljHkp3CwWwvmLMti0bo3s0G_rBdAnUOJZTDJAQY84mt0/s1600-h/image%25255B25%25255D.png)
+[![ADFS FederationMetadata XML opened in Internet Explorer with compatibility view noted](/images/adfs-20-default-claims-provider/06-img.png "ADFS FederationMetadata XML opened in Internet Explorer with compatibility view noted")](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimp82UFUOxp6gYPy0Jc3Wl6gZG7PYR-L2GGOONSUuRHs_HGXubFVSqTR-IcgRH7Vx5DvFpRInRl4CYfuut4NrOrp_29Nh1b5gljHkp3CwWwvmLMti0bo3s0G_rBdAnUOJZTDJAQY84mt0/s1600-h/image%25255B25%25255D.png)

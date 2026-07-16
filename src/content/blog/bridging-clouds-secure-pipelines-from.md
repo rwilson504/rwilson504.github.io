@@ -88,10 +88,10 @@ This is the list of the placeholder for all of the azure resources and connectio
 1. In the **[Commercial Azure Portal](https://portal.azure.com/)**, go to **Azure DevOps → Project Settings → Service Connections**.
 2. Create a new **Azure Resource Manager** service connection.
 
-   ![image](/images/bridging-clouds-secure-pipelines-from/01-4c165ce2-54b1-443e-b8a0-018f481d9288.png)
+   ![Azure DevOps option to create an Azure Resource Manager service connection](/images/bridging-clouds-secure-pipelines-from/01-4c165ce2-54b1-443e-b8a0-018f481d9288.png)
 3. Configure the wizard as follows:
 
-   ![image](/images/bridging-clouds-secure-pipelines-from/02-55035c6c-c253-48f3-b577-349a71077fc8.png)
+   ![Azure DevOps service connection wizard configured for workload identity federation to Azure US Government](/images/bridging-clouds-secure-pipelines-from/02-55035c6c-c253-48f3-b577-349a71077fc8.png)
    - **Identity Type:** *App registration or Managed Identity (Manual)*
    - **Credential:** *Workload Identity Federation*
    - **Environment:** *Azure US Government*
@@ -101,12 +101,12 @@ This is the list of the placeholder for all of the azure resources and connectio
 
 1. From the ADO wizard (Commercial), copy the:
 
-   ![image](/images/bridging-clouds-secure-pipelines-from/03-835fd852-d0f3-4ccb-992b-53cc75e4045d.png)
+   ![Azure DevOps service connection wizard showing issuer URL and subject identifier values](/images/bridging-clouds-secure-pipelines-from/03-835fd852-d0f3-4ccb-992b-53cc75e4045d.png)
    - **Issuer URL** → `<<commercial-issuer-url-from-ADO>>`
    - **Subject Identifier** → `<<commercial-subject-id-from-ADO>>`
 2. In the **[GCC High Azure Portal](https://portal.azure.us/)** → **Managed Identity** (`<<gcc-managed-identity-name>>` in `<<gcc-resource-group-name>>`):
 
-   ![image](/images/bridging-clouds-secure-pipelines-from/04-7f27586e-b395-424a-90fe-e7a578218ea5.png)
+   ![Managed identity federated credential form configured with issuer, subject identifier, name, and audience](/images/bridging-clouds-secure-pipelines-from/04-7f27586e-b395-424a-90fe-e7a578218ea5.png)
    - Go to **Federated Credentials → Add Credential**
    - Scenario: **Other**
    - Issuer: `<<commercial-issuer-url-from-ADO>>`
