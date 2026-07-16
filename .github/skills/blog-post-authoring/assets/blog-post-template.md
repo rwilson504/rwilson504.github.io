@@ -14,6 +14,12 @@ draft: false
 
 <Open with the concrete situation: what you were doing, what failed or needed improvement, and why the reader should care.>
 
+## Bottom line
+
+- <The fix or answer in one sentence.>
+- <The exact setting, command, format, path, or rule that matters.>
+- <How to quickly confirm it worked.>
+
 ## What happened
 
 <Describe the symptom, goal, or scenario in enough detail for the reader to recognize it. Include product names, cloud/environment, versions, and where you first noticed it when relevant.>

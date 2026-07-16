@@ -90,6 +90,14 @@ Descriptions should be plain summaries of the scenario. They often start with th
 
 ## Structure Patterns
 
+Most posts should put the most useful information first. For troubleshooting and reference posts, use this top structure:
+
+1. Opening problem statement: what broke, where it happened, and what the reader is trying to accomplish.
+2. `## Bottom line`: the fix, answer, setting, command, or decision in one to three concise bullets or a short snippet.
+3. Supporting detail: evidence, screenshots, diagrams, explanation, and validation.
+
+The goal is BLUF: a returning reader should be able to find the fix in the first screen, then keep reading only if they want the deeper explanation.
+
 ### Troubleshooting Fix
 
 Use when the post is about an error, crash, confusing behavior, or operational gotcha.
@@ -97,6 +105,7 @@ Use when the post is about an error, crash, confusing behavior, or operational g
 Recommended sections:
 
 - Opening paragraph with symptom and context.
+- `## Bottom line`
 - `## What I observed`
 - `## The surprising trigger` or `## Why this happens`
 - `## Check your ...`
@@ -157,6 +166,7 @@ The voice is practical, experienced, and field-tested.
 Do:
 
 - Explain what prompted the post.
+- Put the fix or answer near the top before the deep dive.
 - Name the product, environment, and version when relevant.
 - Acknowledge confusing or misleading product behavior plainly.
 - Use first person sparingly but naturally.
@@ -274,6 +284,7 @@ Fix broken links before setting `draft: false`. If a site blocks automated reque
 ## Quality Checklist
 
 - The post answers: what happened, who it affects, why it happens, how to fix/use it, and how to confirm success.
+- Troubleshooting/reference posts have a near-top `## Bottom line` or equivalent BLUF section.
 - Security-sensitive examples avoid real secrets, tenant IDs, tokens, and private URLs.
 - Any temporary tracing or diagnostic step includes removal guidance.
 - Body images have meaningful alt text based on the image plus surrounding context, not generic words or filenames.

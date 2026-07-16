@@ -58,12 +58,13 @@ Use this pattern when the topic context lives in another repo:
    - How-to guide: introduction/context, prerequisites, numbered setup sections, validation, references.
    - Pattern or best-practice article: problem, pattern, why it works, implementation steps, tradeoffs, conclusion.
    - Product/tool announcement: what it is, why it matters, concrete usage scenarios, links, conclusion.
-5. Create the post file in `src/content/blog` using a lowercase kebab-case slug that matches the final title closely. Use `.mdx` instead of `.md` when the post includes D2 diagrams or Astro components.
-6. Use the frontmatter schema and style guidance in [blog-style-guide.md](./references/blog-style-guide.md).
-7. Start from [blog-post-template.md](./assets/blog-post-template.md) when creating a fresh article.
-8. After the article draft is stable, use the blog repo's hero image workflow to create or select a matching image. Place the public path in `heroImage` and write specific `heroImageAlt` text. If no hero exists yet, leave both fields out until the hero image is ready.
-9. Use Markdown headings, lists, callouts, screenshots, tables, diagrams, and fenced code blocks in the same practical style as existing posts.
-10. Check body image alt text for Section 508/WCAG accessibility before publishing:
+5. Put the most valuable information up front: start with a clear problem statement, then a short `## Bottom line` / BLUF section with the fix, command, setting, or decision before the deep dive.
+6. Create the post file in `src/content/blog` using a lowercase kebab-case slug that matches the final title closely. Use `.mdx` instead of `.md` when the post includes D2 diagrams or Astro components.
+7. Use the frontmatter schema and style guidance in [blog-style-guide.md](./references/blog-style-guide.md).
+8. Start from [blog-post-template.md](./assets/blog-post-template.md) when creating a fresh article.
+9. After the article draft is stable, use the blog repo's hero image workflow to create or select a matching image. Place the public path in `heroImage` and write specific `heroImageAlt` text. If no hero exists yet, leave both fields out until the hero image is ready.
+10. Use Markdown headings, lists, callouts, screenshots, tables, diagrams, and fenced code blocks in the same practical style as existing posts.
+11. Check body image alt text for Section 508/WCAG accessibility before publishing:
 
 ```powershell
 .\.github\skills\blog-post-authoring\scripts\check-post-image-alt.ps1 -Path .\src\content\blog\<slug>.md
@@ -71,13 +72,13 @@ Use this pattern when the topic context lives in another repo:
 
 For every missing or weak body image alt, inspect the image file and read the surrounding paragraph/list/heading before writing alt text. Describe the information the reader needs from the image in that article context, not every visual detail.
 
-11. Check all external `http` and `https` links before publishing:
+12. Check all external `http` and `https` links before publishing:
 
 ```powershell
 .\.github\skills\blog-post-authoring\scripts\check-post-links.ps1 -Path .\src\content\blog\<slug>.md
 ```
 
-12. Validate with `npm run build` after creating or editing content. Fix Astro schema, Markdown, or content errors before finishing.
+13. Validate with `npm run build` after creating or editing content. Fix Astro schema, Markdown, or content errors before finishing.
 
 ## Frontmatter Rules
 
@@ -114,6 +115,18 @@ Use `originalBloggerUrl` only for migrated Blogger posts or when intentionally p
 Write like an experienced practitioner documenting what actually worked. Be direct, specific, and useful. Prefer first-person context when it helps explain why the solution exists: "I ran into this while...", "In my testing...", "The confusing part was...".
 
 Avoid marketing fluff. The post should quickly give readers enough context to recognize their problem and enough concrete detail to try the fix or pattern themselves.
+
+## Up-Front Value / BLUF
+
+Most posts should be useful as a future reference, so put the payoff near the top. After the opening problem statement, add a short `## Bottom line` section before the detailed explanation.
+
+Use this pattern for troubleshooting, setup, and fix posts:
+
+1. Opening paragraph: what broke, where, and why the reader should recognize the scenario.
+2. `## Bottom line`: the fix or answer in one to three bullets, commands, settings, or a short code/config snippet.
+3. Deep dive: observations, why it happens, screenshots, diagrams, implementation details, and validation.
+
+The bottom line should be specific enough that a returning reader can solve the issue without rereading the full post. Avoid vague summaries like "check your configuration." Prefer concrete fixes like `Build FullPath as container/folder/file with forward slashes`.
 
 ## Link Checking
 
@@ -188,6 +201,7 @@ Guidelines:
 - The post has valid frontmatter and an appropriate category.
 - Tags are lowercase, practical, and consistent with existing vocabulary.
 - The first screen establishes the problem, scenario, or value without a generic preamble.
+- Troubleshooting/reference posts include a `## Bottom line` or equivalent BLUF section near the top with the fix or answer before the deep dive.
 - Code blocks are fenced and command examples are copyable.
 - Screenshots use paths under `/images/<slug>/...` and meaningful alt text where possible.
 - D2 diagrams are used when a process flow or architecture view would clarify the article, and the surrounding prose explains the diagram's key takeaway.
