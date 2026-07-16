@@ -99,6 +99,31 @@ const linkable = await getLinkableTags();
         closeButton.focus();
       };
 
+      const copyText = async (text) => {
+        if (navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (error) {
+            // Fall through to the textarea fallback below.
+          }
+        }
+
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.top = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        try {
+          return document.execCommand("copy");
+        } finally {
+          textarea.remove();
+        }
+      };
+
       content.querySelectorAll("img").forEach((image) => {
         image.classList.add("zoomable-image");
         const link = image.closest("a");
@@ -113,6 +138,43 @@ const linkable = await getLinkableTags();
         image.setAttribute("tabindex", "0");
         image.setAttribute("role", "button");
         image.setAttribute("aria-label", label);
+      });
+
+      content.querySelectorAll("pre").forEach((pre) => {
+        const code = pre.querySelector("code");
+        if (!code) return;
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "code-block";
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "code-copy";
+        button.textContent = "Copy";
+        button.setAttribute("aria-label", "Copy code block");
+
+        pre.parentNode?.insertBefore(wrapper, pre);
+        wrapper.appendChild(button);
+        wrapper.appendChild(pre);
+
+        button.addEventListener("click", async () => {
+          const text = code.textContent ?? "";
+          if (await copyText(text)) {
+            button.textContent = "Copied";
+            button.setAttribute("aria-label", "Code copied");
+            window.setTimeout(() => {
+              button.textContent = "Copy";
+              button.setAttribute("aria-label", "Copy code block");
+            }, 1600);
+            return;
+          }
+
+          button.textContent = "Failed";
+          button.setAttribute("aria-label", "Copy failed");
+          window.setTimeout(() => {
+            button.textContent = "Copy";
+            button.setAttribute("aria-label", "Copy code block");
+          }, 1600);
+        });
       });
 
       content.addEventListener("click", (event) => {
