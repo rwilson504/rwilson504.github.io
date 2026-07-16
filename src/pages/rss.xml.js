@@ -1,10 +1,9 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
+import { isPublishedPost, sortPostsNewestFirst } from "../utils/posts";
 
 export async function GET(context) {
-  const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-  );
+  const posts = sortPostsNewestFirst(await getCollection("blog", isPublishedPost));
   return rss({
     title: "Richard A. Wilson",
     description:

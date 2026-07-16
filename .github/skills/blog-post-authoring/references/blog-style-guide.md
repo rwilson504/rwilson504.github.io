@@ -11,6 +11,7 @@ Publishing target identity:
 - Public hero root: `public/heroes`
 - Public body image root: `public/images`
 - Diagram support: D2 fenced code blocks in `.mdx` posts, rendered by `astro-d2`
+- Scheduled publishing: `draft: false` plus a future `pubDate` keeps the post hidden until a scheduled rebuild after that date.
 
 When drafting from another repository, use that repo only for source context. Final article review, image path checks, hero image generation, and build validation belong in the `rwilson504/rwilson504.github.io` clone.
 
@@ -28,6 +29,12 @@ Required frontmatter:
 - `category`: one of the fixed category slugs.
 - `tags`: YAML array.
 - `draft`: `false` for publishable posts.
+
+Scheduling guidance:
+
+- `draft: true` means private/incomplete and should not publish, regardless of `pubDate`.
+- `draft: false` with a future `pubDate` means scheduled and ready. The site excludes it from article routes, home/blog lists, RSS, tag/category pages, search indexing, and legacy redirects until the date is due.
+- The GitHub Pages workflow runs daily at 06:00 UTC to publish newly due posts without a code push.
 
 Optional frontmatter:
 

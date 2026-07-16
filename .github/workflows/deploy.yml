@@ -5,8 +5,9 @@ on:
     branches: [main, master]
   workflow_dispatch:
   schedule:
-    # Daily at 06:00 UTC (~01:00-02:00 ET) so the GitHub stats card
-    # on /about/ stays current without needing a code push.
+    # Daily at 06:00 UTC (~01:00-02:00 ET) so scheduled posts whose
+    # pubDate has arrived go live, and the GitHub stats card on /about/
+    # stays current without needing a code push.
     - cron: "0 6 * * *"
 
 permissions:

@@ -1,4 +1,5 @@
 import { getCollection } from "astro:content";
+import { isPublishedPost } from "./posts";
 
 let cached: Set<string> | null = null;
 
@@ -10,7 +11,7 @@ let cached: Set<string> | null = null;
  */
 export async function getLinkableTags(): Promise<Set<string>> {
   if (cached) return cached;
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", isPublishedPost);
   const counts = new Map<string, number>();
   for (const p of posts) {
     for (const t of p.data.tags) counts.set(t, (counts.get(t) ?? 0) + 1);

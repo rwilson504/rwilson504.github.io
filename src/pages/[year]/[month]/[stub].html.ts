@@ -1,5 +1,6 @@
 import type { APIRoute, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
+import { isPublishedPost } from "../../../utils/posts";
 
 /**
  * Emits one HTML stub per legacy Blogger URL (e.g. /2020/03/azure-maps-pcf-control.html)
@@ -21,7 +22,7 @@ function parseLegacy(url: string): { year: string; month: string; stub: string }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", isPublishedPost);
   const paths: Array<{ params: { year: string; month: string; stub: string }; props: { slug: string; title: string } }> = [];
   for (const p of posts) {
     const legacy = p.data.originalBloggerUrl;

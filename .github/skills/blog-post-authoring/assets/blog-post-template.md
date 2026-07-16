@@ -9,6 +9,8 @@ tags:
   - "power-platform"
   - "dataverse"
   - "troubleshooting"
+# Set draft: false with a future pubDate to schedule a finished post.
+# Use draft: true only for incomplete/private drafts.
 draft: false
 ---
 

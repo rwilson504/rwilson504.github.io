@@ -3,8 +3,9 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { categories } from "../../content.config";
 import { categoryLabel } from "../../utils/categories";
+import { isPublishedPost } from "../../utils/posts";
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getCollection("blog", isPublishedPost);
 const counts = Object.fromEntries(
   categories.map((c) => [c, posts.filter((p) => p.data.category === c).length]),
 );

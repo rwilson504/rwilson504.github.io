@@ -4,10 +4,11 @@ import ThemeToggle from "./ThemeToggle.astro";
 import { getCollection } from "astro:content";
 import { categories } from "../content.config";
 import { categoryLabel } from "../utils/categories";
+import { isPublishedPost } from "../utils/posts";
 
 // Count posts per category at build time so the dropdown can show
 // "Power Apps (180)" style labels.
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", isPublishedPost);
 const counts = Object.fromEntries(
   categories.map((c) => [c, posts.filter((p) => p.data.category === c).length])
 );

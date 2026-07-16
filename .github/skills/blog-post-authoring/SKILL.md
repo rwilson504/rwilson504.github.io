@@ -20,6 +20,7 @@ This skill's publishing target is always the blog repository:
 - Diagram support: D2 diagrams in `.mdx` posts using fenced `d2` code blocks rendered by `astro-d2`
 - Schema file: `src/content.config.ts`
 - Build command: `npm run build`
+- Scheduled publishing: posts render only when `draft: false` and `pubDate` is not in the future; the GitHub Pages workflow rebuilds daily.
 - External link checker: [check-post-links.ps1](./scripts/check-post-links.ps1)
 - Image accessibility checker: [check-post-image-alt.ps1](./scripts/check-post-image-alt.ps1)
 
@@ -96,6 +97,12 @@ tags:
 draft: false
 ---
 ```
+
+Scheduled publishing rule:
+
+- Use `draft: true` for incomplete/private work that should never publish.
+- Use `draft: false` with a future `pubDate` to schedule a finished article. The site filters future dates out of pages, RSS, tags, categories, search index, and legacy redirects until a scheduled rebuild runs after the date arrives.
+- The GitHub Pages workflow rebuilds daily at 06:00 UTC, so a future-dated post normally appears on the next scheduled build after its `pubDate` is due.
 
 Allowed categories are `power-apps`, `ai`, `electronics`, `3d-printing`, `windows`, `dev-tools`, `personal`, and `misc`.
 
