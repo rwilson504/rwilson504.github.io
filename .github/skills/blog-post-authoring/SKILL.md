@@ -20,6 +20,7 @@ This skill's publishing target is always the blog repository:
 - Schema file: `src/content.config.ts`
 - Build command: `npm run build`
 - External link checker: [check-post-links.ps1](./scripts/check-post-links.ps1)
+- Image accessibility checker: [check-post-image-alt.ps1](./scripts/check-post-image-alt.ps1)
 
 If this skill is invoked from another repository, treat that repository as the **source-context repo**, not the publishing destination. Draft from the local source context there, but move the final article into a clone of `rwilson504/rwilson504.github.io` for review, validation, and hero-image work.
 
@@ -42,8 +43,9 @@ Use this pattern when the topic context lives in another repo:
 5. Copy any article screenshots into `public/images/<slug>/` in the blog repo and update Markdown paths to `/images/<slug>/...`.
 6. Review the article inside the blog repo against [blog-style-guide.md](./references/blog-style-guide.md), existing related posts, and the Astro schema.
 7. After the article is written, use the **blog-hero-image-authoring** skill in the blog repo to review existing hero images and generate/wire a matching `heroImage` and `heroImageAlt`.
-8. Check external internet links from the blog repo with [check-post-links.ps1](./scripts/check-post-links.ps1) before publishing.
-9. Validate in the blog repo with `npm run build` before finishing.
+8. Check body image alt text for 508/WCAG non-text content coverage with [check-post-image-alt.ps1](./scripts/check-post-image-alt.ps1).
+9. Check external internet links from the blog repo with [check-post-links.ps1](./scripts/check-post-links.ps1) before publishing.
+10. Validate in the blog repo with `npm run build` before finishing.
 
 ## Workflow
 
@@ -60,13 +62,21 @@ Use this pattern when the topic context lives in another repo:
 7. Start from [blog-post-template.md](./assets/blog-post-template.md) when creating a fresh article.
 8. After the article draft is stable, use the blog repo's hero image workflow to create or select a matching image. Place the public path in `heroImage` and write specific `heroImageAlt` text. If no hero exists yet, leave both fields out until the hero image is ready.
 9. Use Markdown headings, lists, callouts, screenshots, tables, and fenced code blocks in the same practical style as existing posts.
-10. Check all external `http` and `https` links before publishing:
+10. Check body image alt text for Section 508/WCAG accessibility before publishing:
+
+```powershell
+.\.github\skills\blog-post-authoring\scripts\check-post-image-alt.ps1 -Path .\src\content\blog\<slug>.md
+```
+
+For every missing or weak body image alt, inspect the image file and read the surrounding paragraph/list/heading before writing alt text. Describe the information the reader needs from the image in that article context, not every visual detail.
+
+11. Check all external `http` and `https` links before publishing:
 
 ```powershell
 .\.github\skills\blog-post-authoring\scripts\check-post-links.ps1 -Path .\src\content\blog\<slug>.md
 ```
 
-11. Validate with `npm run build` after creating or editing content. Fix Astro schema, Markdown, or content errors before finishing.
+12. Validate with `npm run build` after creating or editing content. Fix Astro schema, Markdown, or content errors before finishing.
 
 ## Frontmatter Rules
 
@@ -116,6 +126,32 @@ Run:
 
 Treat broken links as publish blockers. Fix the URL, replace it with a current source, or remove the reference. If a valid site blocks automated checks but opens manually, mention that in the final response and include the exact URL that needed manual verification.
 
+## 508 Image Accessibility
+
+Before publishing or flipping `draft` to `false`, check body image alt text. Hero images render their alt text from the article title, so this check focuses on Markdown body images and screenshots.
+
+Run:
+
+```powershell
+.\.github\skills\blog-post-authoring\scripts\check-post-image-alt.ps1 -Path .\src\content\blog\<slug>.md
+```
+
+Treat missing or weak body image alt text as a publish blocker. Weak alt text includes empty text, `image`, `screenshot`, `test`, timestamp/file-name style text, and `enter image description here`.
+
+When a body image needs alt text:
+
+1. Open or view the actual image from `public/images/<slug>/...`.
+2. Read the heading, paragraph, list item, or step immediately around the image.
+3. Write alt text that captures the image's purpose in context. For screenshots, identify the UI/page/dialog and the relevant state or setting.
+4. Avoid starting with "image of" or "screenshot of" unless the medium itself matters.
+5. Keep it concise, usually one sentence.
+
+Examples:
+
+- `Azure DevOps service connection wizard with Workload Identity Federation selected.`
+- `SSIS data flow path showing the Data Viewer indicator icon between two components.`
+- `KingswaySoft Azure Blob Destination editor showing the Blob Name field set to a folder path instead of a file path.`
+
 ## Done Criteria
 
 - The post has valid frontmatter and an appropriate category.
@@ -123,6 +159,7 @@ Treat broken links as publish blockers. Fix the URL, replace it with a current s
 - The first screen establishes the problem, scenario, or value without a generic preamble.
 - Code blocks are fenced and command examples are copyable.
 - Screenshots use paths under `/images/<slug>/...` and meaningful alt text where possible.
+- Body image alt text has been checked with [check-post-image-alt.ps1](./scripts/check-post-image-alt.ps1), and each missing or weak alt was replaced after evaluating the image and surrounding article context.
 - Cross-repo drafts have been moved into the `rwilson504/rwilson504.github.io` clone before final validation.
 - Hero image review/generation has been handled from the blog repo using the blog hero image skill when a new hero is needed.
 - External references are included when the article depends on docs, tools, or upstream behavior.

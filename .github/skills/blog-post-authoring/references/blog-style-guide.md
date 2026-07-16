@@ -183,11 +183,35 @@ Avoid:
 
 Newer posts use hero images when available, commonly at `/heroes/<slug>.png`. Body screenshots are stored under `/images/<slug>/` with a numeric prefix.
 
+Hero image alt text is rendered from the article title. Body images are different: screenshots, diagrams, and UI captures inside the article need useful alt text because they often carry step-by-step information.
+
 Use Markdown image syntax:
 
 ```markdown
 ![Short useful alt text](/images/example-slug/01-settings-page.png)
 ```
+
+Before publishing, run the body image accessibility check:
+
+```powershell
+.\.github\skills\blog-post-authoring\scripts\check-post-image-alt.ps1 -Path .\src\content\blog\<slug>.md
+```
+
+For every missing or weak alt, inspect both the image and its surrounding context before writing replacement text. The right alt text for a screenshot is usually the UI surface plus the important state/action, not a literal inventory of every visible control.
+
+Good body image alt examples:
+
+- `Right-click menu on an SSIS data flow path with Enable Data Viewer selected.`
+- `Azure DevOps service connection form showing Workload Identity Federation as the credential type.`
+- `Power Query preview showing the buffered query returning the expected four rows after merge.`
+
+Avoid:
+
+- `image`
+- `screenshot`
+- `test`
+- `enter image description here`
+- timestamp or filename-only alt text
 
 For migrated legacy posts, wrapped linked images appear in older content. New posts should prefer simple image syntax unless linking to the original full-size image is important.
 
@@ -208,6 +232,7 @@ Fix broken links before setting `draft: false`. If a site blocks automated reque
 - The post answers: what happened, who it affects, why it happens, how to fix/use it, and how to confirm success.
 - Security-sensitive examples avoid real secrets, tenant IDs, tokens, and private URLs.
 - Any temporary tracing or diagnostic step includes removal guidance.
+- Body images have meaningful alt text based on the image plus surrounding context, not generic words or filenames.
 - External internet links have been checked, and broken or redirected stale URLs have been corrected.
 - The tags reinforce discoverability without drifting into unrelated subjects.
 - The description works as a search result snippet.
