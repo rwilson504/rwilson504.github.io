@@ -1,7 +1,7 @@
 ---
 title: "KingswaySoft components missing from the SSIS Toolbox? Check your project's target version"
 description: "If the KingswaySoft Dataverse, Premium File, or Azure Blob components do not show up in the SSIS Toolbox, the usual cause is a project target version that does not match the SQL Server version the components were installed for. Here is how to check and fix it."
-pubDate: 2026-07-20
+pubDate: 2026-07-28
 heroImage: "/heroes/kingswaysoft-components-missing-from-ssis-toolbox.png"
 category: dev-tools
 tags:
