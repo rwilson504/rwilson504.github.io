@@ -39,14 +39,14 @@ In Azure Data Factory, you might instinctively define the Data Flow parameter as
 
 **Then you hit an error.**  
 And to make matters worse, the error message doesn’t clearly explain the real issue—it can be vague or misleading, which only adds to the confusion. This tripped me up for a while, as I assumed the problem was elsewhere.  
-![image](/images/passing-pipeline-trigger-time-to-data/01-abbb0756-0507-4d4d-8673-e6bd21bbdbc9.png)
+![Azure Data Factory error details showing a timestamp parameter incompatibility in a Dataverse data flow](/images/passing-pipeline-trigger-time-to-data/01-abbb0756-0507-4d4d-8673-e6bd21bbdbc9.png)
 
 ### The Solution
 
 1. **Define the Data Flow parameter as a `string`.**  
-   ![image](/images/passing-pipeline-trigger-time-to-data/02-5a88fdea-b987-4314-a75c-e30c609b7196.png)
+   ![Azure Data Factory data flow parameter defined as a string for trigger time](/images/passing-pipeline-trigger-time-to-data/02-5a88fdea-b987-4314-a75c-e30c609b7196.png)
 2. In the pipeline, pass the `@pipeline().TriggerTime` system variable directly into this parameter using a pipeline expression.  
-   ![image](/images/passing-pipeline-trigger-time-to-data/03-c53057c5-f92c-4adc-8f88-18ba8a11426a.png)
+   ![Azure Data Factory pipeline passing @pipeline().TriggerTime into the data flow string parameter](/images/passing-pipeline-trigger-time-to-data/03-c53057c5-f92c-4adc-8f88-18ba8a11426a.png)
 
 This small change ensures compatibility with the Dataverse connector and avoids the cryptic conversion error.
 
