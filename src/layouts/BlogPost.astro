@@ -62,6 +62,82 @@ const linkable = await getLinkableTags();
         />
       )}
     </header>
-    <slot />
+    <div class="post-content" data-zoomable-images>
+      <slot />
+    </div>
   </article>
+  <dialog class="image-zoom-dialog" aria-label="Image preview">
+    <button class="image-zoom-close" type="button" aria-label="Close image preview">x</button>
+    <img class="image-zoom-img" alt="" />
+  </dialog>
+  <script is:inline>
+    (() => {
+      const content = document.querySelector("[data-zoomable-images]");
+      const dialog = document.querySelector(".image-zoom-dialog");
+      const zoomedImage = document.querySelector(".image-zoom-img");
+      const closeButton = document.querySelector(".image-zoom-close");
+
+      if (!content || !dialog || !zoomedImage || !closeButton) return;
+
+      const getZoomImage = (target) => {
+        if (target instanceof HTMLImageElement && target.closest("[data-zoomable-images]")) {
+          return target;
+        }
+
+        if (target instanceof Element) {
+          const link = target.closest("a.zoomable-image-link");
+          const image = link?.querySelector("img.zoomable-image");
+          return image instanceof HTMLImageElement ? image : null;
+        }
+
+        return null;
+      };
+
+      const openImage = (image) => {
+        zoomedImage.src = image.currentSrc || image.src;
+        zoomedImage.alt = image.alt || "Expanded article image";
+        dialog.showModal();
+        closeButton.focus();
+      };
+
+      content.querySelectorAll("img").forEach((image) => {
+        image.classList.add("zoomable-image");
+        const link = image.closest("a");
+        const label = image.alt ? `Zoom image: ${image.alt}` : "Zoom article image";
+
+        if (link) {
+          link.classList.add("zoomable-image-link");
+          link.setAttribute("aria-label", label);
+          return;
+        }
+
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-label", label);
+      });
+
+      content.addEventListener("click", (event) => {
+        const image = getZoomImage(event.target);
+        if (!image) return;
+        event.preventDefault();
+        openImage(image);
+      });
+
+      content.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        const image = getZoomImage(event.target);
+        if (!image) return;
+        event.preventDefault();
+        openImage(image);
+      });
+
+      closeButton.addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener("close", () => {
+        zoomedImage.removeAttribute("src");
+      });
+    })();
+  </script>
 </BaseLayout>

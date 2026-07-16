@@ -727,6 +727,63 @@ hr {
   border-radius: var(--radius);
 }
 
+.post-content img.zoomable-image,
+.post-content a.zoomable-image-link {
+  cursor: zoom-in;
+}
+
+.post-content img.zoomable-image:focus-visible,
+.post-content a.zoomable-image-link:focus-visible img.zoomable-image {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.image-zoom-dialog {
+  width: min(96vw, 1400px);
+  max-width: none;
+  max-height: 92vh;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+.image-zoom-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(3px);
+}
+
+.image-zoom-img {
+  display: block;
+  width: 100%;
+  max-height: 92vh;
+  object-fit: contain;
+  background: #050608;
+}
+
+.image-zoom-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-zoom-close:focus-visible,
+.image-zoom-close:hover {
+  background: rgba(0, 0, 0, 0.85);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .post-meta {
   color: var(--color-muted);
   font-size: 0.88rem;
