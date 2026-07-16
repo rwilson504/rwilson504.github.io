@@ -1,0 +1,156 @@
+---
+title: "Fixing KingswaySoft's \"Cannot upload file directly to root\" Azure Blob error"
+description: "The KingswaySoft Azure Blob Storage Destination wants FullPath as container/folder/file with forward slashes, even though the connection manager already asks for a container. Here is the error, why it is misleading, and the one-line fix."
+pubDate: 2026-07-16
+category: dev-tools
+tags:
+  - "ssis"
+  - "kingswaysoft"
+  - "azurestorage"
+  - "etl"
+  - "troubleshooting"
+  - "dataverse"
+draft: false
+---
+
+I was moving data across environments with the KingswaySoft SSIS Integration Toolkit: stage each entity's records to local NDJSON files, then push those files up to an Azure Blob container with the **Azure Blob Storage Destination**. The extract ran clean and the files were on disk, but the upload kept failing with an error that had me editing the wrong thing for far too long:
+
+> Error: 0xC002F304 at Upload to Blob, Azure Blob Storage Destination: An error occurred with the following error message: "KingswaySoft.IntegrationToolkit.AzureBlobStorage.AzureBlobStorageServiceException: **Cannot upload file directly to root '\\'. FullPath must be in format of 'folder\\file'.**"
+
+Everything looked correct, so I "fixed" my expression a few times and got the exact same error each time. This post is the explanation I wish I had found: what the error really means, why the setup is misleading, and the one-line fix.
+
+## The data flow
+
+At a high level, the package is just a three-step pipeline: read staged files from disk, replace the local path with the blob path KingswaySoft expects, then upload the bytes to Azure Blob Storage.
+
+```d2
+direction: down
+
+task: "Data Flow Task\nPublish Files in Azure Storage" {
+  shape: rectangle
+  style: { fill: "#f6f8fa"; stroke: "#0969da"; stroke-width: 2 }
+
+  source: "Premium File System Source\nreads local NDJSON files\nemits FileContent + Name" {
+    shape: rectangle
+    style: { fill: "#dff7ec"; stroke: "#1a7f37" }
+  }
+
+  derived: "Premium Derived Column\nreplaces FullPath with\ncontainer/folder/file" {
+    shape: rectangle
+    style: { fill: "#fff8c5"; stroke: "#9a6700" }
+  }
+
+  destination: "Azure Blob Storage Destination\nwrites Blob - Block / Create" {
+    shape: rectangle
+    style: { fill: "#ddf4ff"; stroke: "#0969da" }
+  }
+
+  source -> derived: "FileContent, Name, Content-Type"
+  derived -> destination: "FullPath + FileContent + Content-Type"
+}
+```
+
+Three KingswaySoft components, a very common pattern for uploading files to blob:
+
+1. **Premium File System Source** lists the staged files on disk and, usefully, emits the file bytes directly as `FileContent` (a DT_IMAGE column) along with `FullPath`, `Name`, and `Content-Type`. No Import Column transform needed.
+2. **Premium Derived Column** builds the blob path for each file.
+3. **Azure Blob Storage Destination** (Blob - Block / Create) writes each row as a blob, with its **FullPath** field mapped from the derived column, **FileContent** from the source bytes, and **Content-Type** from the source.
+
+Here is how the **Premium File System Source** is set up. It points at a local folder and reads files only, not directories:
+
+![Premium File System Source General page reading files from a local folder](/images/kingswaysoft-azure-blob-cannot-upload-to-root/01-source-general.png)
+
+I filter to just the file types I care about so nothing else in the folder tags along:
+
+![Advanced Filtering set to json and jsonl extensions](/images/kingswaysoft-azure-blob-cannot-upload-to-root/02-source-filter.png)
+
+And on the Columns page, the key detail is that `FileContent` (the raw bytes) is available to select, which is why no Import Column transform is needed. Uncheck the ones you are not using:
+
+![Columns page showing FileContent and the other emitted fields](/images/kingswaysoft-azure-blob-cannot-upload-to-root/03-source-columns.png)
+
+On paper the mapping and the expression were correct, which is exactly why I kept editing them instead of looking at the data.
+
+## How I confirmed it was not my expression
+
+Rather than keep guessing, I dropped a **Data Viewer** on the path feeding the destination and watched the actual value. (I wrote up that technique separately in [Debugging SSIS Data Flows with the Data Viewer](/2026/07/debugging-ssis-data-flows-with-the-data-viewer.html).) The value flowing into `FullPath` was exactly what I intended, something like:
+
+```
+sample-records/Sample1.json
+```
+
+That was the turning point. The value was a perfectly good `folder/file`, so the problem was not my expression at all. It was the **destination's** idea of what `FullPath` should contain.
+
+## The actual rule: FullPath is `container/folder/file`
+
+Here is what the error does a poor job of explaining:
+
+- The KingswaySoft Azure Blob Storage Destination treats the **first path segment of `FullPath` as the container name**, not as the first folder inside a container.
+- **Use forward slashes (`/`).** The error text says `folder\file` with a backslash, but the blob-native separator is `/`, and that is what actually works.
+- A blob cannot be written at the container root, so a two-segment value like `sample-records/Sample1.json` is read as container `sample-records` with the file sitting at its root. That is exactly the "cannot upload file directly to root" condition.
+
+So the value needed the container up front, as a third segment:
+
+```
+your-container/sample-records/Sample1.json
+```
+
+container = `your-container`, folder = `sample-records`, file = `Sample1.json`.
+
+## Why I did not know to include the container
+
+This is the part that genuinely fooled me. When you configure the **Azure Blob Storage Connection Manager**, it asks you for a **Container** name. So I naturally assumed the destination's `FullPath` was relative to that container, and that I only needed to supply `folder/file`.
+
+![Azure Blob Storage Connection Manager General page with a Container field filled in](/images/kingswaysoft-azure-blob-cannot-upload-to-root/09-connection-manager-container.png)
+
+It is not relative. The connection manager's container is used for browse, list, and source operations, but the **destination write path ignores it**. You still have to repeat the container as the first segment of `FullPath`. That mismatch between "the connection manager already knows my container" and "the destination wants it again in the path" is the whole trap.
+
+## The fix
+
+I parameterized the container and the folder so the expression is reusable across entities. In the Premium Derived Column, the expression is simply container, folder, and file name joined with forward slashes:
+
+```
+@[$Package::BlobContainer] + "/" + @[$Package::EntityLogicalName] + "/" + [__PremiumFilePack.Name]
+```
+
+The important detail is that the derived column is set to **replace** the existing `__PremiumFilePack.FullPath` column rather than add a new one, so it flows straight into the destination's FullPath field:
+
+![Premium Derived Column replacing __PremiumFilePack.FullPath with the container/folder/file expression](/images/kingswaysoft-azure-blob-cannot-upload-to-root/04-derived-column-expression.png)
+
+With `BlobContainer = your-container` and `EntityLogicalName = sample-records`, that produces `your-container/sample-records/Sample1.json`, and the upload went green.
+
+You can watch the transformation happen with a Data Viewer. Before the derived column runs, `FullPath` is the local path the source read:
+
+![Data Viewer showing the original local FullPath before the derived column](/images/kingswaysoft-azure-blob-cannot-upload-to-root/05-dataviewer-before.png)
+
+After the derived column, the same `FullPath` column holds the blob key, container first:
+
+![Data Viewer showing the new container/folder/file FullPath after the derived column](/images/kingswaysoft-azure-blob-cannot-upload-to-root/06-dataviewer-after.png)
+
+The destination itself is simple once the path is right. Set the Blob Service Object to **Blob - Block** and the Action to **Create**:
+
+![Azure Blob Storage Destination General page set to Blob - Block and Create](/images/kingswaysoft-azure-blob-cannot-upload-to-root/07-destination-general.png)
+
+Then map just three fields, `FullPath`, `FileContent`, and `Content-Type`, and leave the rest as ignore:
+
+![Azure Blob Storage Destination Columns page mapping FullPath, FileContent, and Content-Type](/images/kingswaysoft-azure-blob-cannot-upload-to-root/08-destination-columns.png) A couple of things worth noting from the same session:
+
+- Package parameters referenced as `@[$Package::...]` **do** resolve inside a Premium Derived Column. I briefly assumed they did not; they do.
+- The Premium Derived Column escapes strings C# style, but once you switch to forward slashes you do not need any backslashes at all.
+
+## Quick troubleshooting checklist
+
+1. If you see `Cannot upload file directly to root '\'`, your `FullPath` is missing the container segment.
+2. Build `FullPath` as **`container/folder/file`** with **forward slashes**, container first.
+3. Do this **even though** the connection manager already has a Container set. The destination write path does not use it.
+4. Not sure what value is actually flowing? Put a **Data Viewer** on the path into the destination and read it before changing anything.
+5. You do not need an Import Column transform. The Premium File System Source already emits `FileContent` (DT_IMAGE), `FullPath`, `Name`, and `Content-Type`.
+
+## Wrap-up
+
+The fix was one expression change, but the lesson was two-fold: read the error literally (`FullPath must be in format of 'folder\file'` really does mean it wants a folder segment, and the container counts as the first one), and do not trust that the connection manager's container carries into the write path. When the value looks right but the component still complains, watch the row with a Data Viewer and then go read the component's own idea of the format.
+
+## References
+
+- [KingswaySoft: Azure Blob Storage Destination](https://www.kingswaysoft.com/products/ssis-integration-toolkit/help-manual/cloud-storage/azure-blob-storage-destination)
+- [KingswaySoft: Azure Blob Storage Connection Manager](https://www.kingswaysoft.com/products/ssis-integration-toolkit/help-manual/cloud-storage/azure-blob-storage-connection-manager)
+- [KingswaySoft: Premium Derived Column](https://www.kingswaysoft.com/products/ssis-integration-toolkit/help-manual/premium-data-flow-components/premium-derived-column)
