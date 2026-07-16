@@ -19,6 +19,12 @@ I was moving data across environments with the KingswaySoft SSIS Integration Too
 
 Everything looked correct, so I "fixed" my expression a few times and got the exact same error each time. This post is the explanation I wish I had found: what the error really means, why the setup is misleading, and the one-line fix.
 
+## Bottom line
+
+- Build the KingswaySoft Azure Blob Destination `FullPath` as **`container/folder/file`** with forward slashes.
+- Include the container as the first path segment even though the Azure Blob Storage Connection Manager already has a **Container** field.
+- In my package, the working Premium Derived Column expression was `@[$Package::BlobContainer] + "/" + @[$Package::EntityLogicalName] + "/" + [__PremiumFilePack.Name]`.
+
 ## The data flow
 
 At a high level, the package is just a three-step pipeline: read staged files from disk, replace the local path with the blob path KingswaySoft expects, then upload the bytes to Azure Blob Storage.

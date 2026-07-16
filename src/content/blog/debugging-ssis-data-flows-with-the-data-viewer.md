@@ -12,12 +12,18 @@ tags:
   - "etl"
   - "visual-studio"
   - "data"
-draft: true
+draft: false
 ---
 
 Recently I was staring at an SSIS data flow where a downstream component kept rejecting rows with an error that implied the incoming value was malformed. On paper the mapping and the expression looked correct, so I "fixed" the expression a few times, re-ran, and got the exact same error each time. Classic sign that I was debugging my assumptions instead of the data.
 
 What finally cracked it was not staring harder at the XML or the mappings. It was the **SSIS Data Viewer**, a built-in debugging tool I do not reach for often enough. This post is mostly a reminder to myself: when a data-flow value looks wrong, stop guessing and *watch the actual rows*. (The specific component gotcha that was actually to blame is a story of its own, and a separate post.)
+
+## Bottom line
+
+- If an SSIS data flow component is failing because of a value, put a **Data Viewer** on the path going into that component before changing expressions or mappings.
+- Treat it like a breakpoint for rows: run the package, inspect the actual runtime values, then decide whether the problem is upstream data or downstream component configuration.
+- Disable the Data Viewer when you are done so future runs do not pause unexpectedly.
 
 ## What I observed
 
