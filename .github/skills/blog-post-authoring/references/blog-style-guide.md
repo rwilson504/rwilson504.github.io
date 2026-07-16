@@ -2,6 +2,17 @@
 
 This guide summarizes the current article conventions in `rwilson504.github.io` based on the Astro schema and representative posts across the archive.
 
+Publishing target identity:
+
+- GitHub repository: `rwilson504/rwilson504.github.io`
+- Expected local clone folder: `rwilson504.github.io`
+- NPM package name: `richardawilson-com`
+- Blog content root: `src/content/blog`
+- Public hero root: `public/heroes`
+- Public body image root: `public/images`
+
+When drafting from another repository, use that repo only for source context. Final article review, image path checks, hero image generation, and build validation belong in the `rwilson504/rwilson504.github.io` clone.
+
 ## Content Model
 
 Posts live in `src/content/blog` as `.md` or `.mdx` files. The schema is defined in `src/content.config.ts`.
