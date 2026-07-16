@@ -24,7 +24,6 @@ const {
   category,
   tags,
   heroImage,
-  heroImageAlt,
   variant = "compact",
 } = Astro.props;
 const linkable = await getLinkableTags();
@@ -36,7 +35,7 @@ const linkable = await getLinkableTags();
       <img
         class="post-card-thumb"
         src={heroImage}
-        alt={heroImageAlt ?? ""}
+        alt={title}
         loading={variant === "featured" ? "eager" : "lazy"}
         decoding="async"
       />

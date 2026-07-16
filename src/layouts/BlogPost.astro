@@ -15,8 +15,7 @@ export interface Props {
   heroImageAlt?: string;
 }
 
-const { title, description, pubDate, updatedDate, category, tags, heroImage, heroImageAlt } =
-  Astro.props;
+const { title, description, pubDate, updatedDate, category, tags, heroImage } = Astro.props;
 const linkable = await getLinkableTags();
 ---
 
@@ -55,7 +54,7 @@ const linkable = await getLinkableTags();
       {heroImage && (
         <img
           src={heroImage}
-          alt={heroImageAlt ?? ""}
+          alt={title}
           loading="eager"
           decoding="async"
           class="post-hero"

@@ -129,16 +129,19 @@ Use:
 
 ```yaml
 heroImage: "/heroes/<slug>.png"
-heroImageAlt: "Illustrated technical banner showing <subject> with <key symbols> representing <concept>."
 ```
 
-Alt text should describe the visual. It can include the title only when the image itself is essentially title art.
+Rendered hero image alt text comes from the article title. This keeps cards, article headers, and OpenGraph-oriented hero art consistent, and it avoids a large backlog of weak hero alt values like `image` or timestamp strings.
 
-Examples:
+Do not add `heroImageAlt` for routine new hero images. Keep the hero image as title/header art and put any important explanatory detail in the article body, where body images can have specific alt text and surrounding prose.
 
-- `Illustrated technical banner showing an Azure DevOps pipeline connected through managed identity to secured GCC High storage.`
-- `Wide digital illustration of a stable glowing data path representing Power Query rows frozen before a merge with Table.Buffer.`
-- `Diagram-style banner showing a Logic App workflow protected by OAuth, managed identity, and a locked endpoint.`
+Good rendered hero alt examples:
+
+- `Bridging Clouds: Secure Pipelines from Azure DevOps to GCC High`
+- `Power Query: Driftless Merges using Table.Buffer`
+- `Debugging SSIS Data Flows with the Data Viewer`
+
+Body images are different: screenshots and diagrams inside the article still need specific alt text describing the useful information in the image.
 
 ## Prompt Checklist
 

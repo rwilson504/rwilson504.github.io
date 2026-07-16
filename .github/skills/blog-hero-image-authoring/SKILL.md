@@ -20,8 +20,9 @@ Use this skill when creating or reviewing blog header images for posts in `src/c
 
 ```yaml
 heroImage: "/heroes/<post-slug>.png"
-heroImageAlt: "Specific description of the visual, including the main subject and symbolic product elements."
 ```
+
+The site renders hero image alt text from the article title, so a separate `heroImageAlt` field is usually unnecessary.
 
 8. Validate the post with `npm run build` when the article frontmatter changes.
 
@@ -51,7 +52,13 @@ Avoid:
 
 ## Alt Text Pattern
 
-Write alt text as a description of the image, not a duplicate of the title unless the image is purely title art.
+For hero images, the rendered alt text is the article title. This matches the current blog convention because hero images are usually title/header art and the article title is also the clearest accessible label for cards and article headers.
+
+Do not spend time writing separate `heroImageAlt` frontmatter for routine blog hero images. Use the article title as the source of truth.
+
+If a future hero image carries meaning that is not represented by the title, reconsider the design first. Prefer moving that explanatory content into body text or a body image with meaningful alt text.
+
+For body images and screenshots, write alt text as a description of the useful information in the image, not a duplicate of the title.
 
 Good pattern:
 
@@ -68,7 +75,7 @@ Wide digital illustration of <scene>, featuring <main subject> and <supporting o
 ## Done Criteria
 
 - The image is stored under `public/heroes` with a slug-matching filename.
-- The post frontmatter points to `/heroes/<slug>.png` and includes useful `heroImageAlt`.
+- The post frontmatter points to `/heroes/<slug>.png`; rendered hero alt text comes from the article title.
 - The hero has one readable concept at card size.
 - It avoids sensitive data and unreadable generated UI text.
 - `npm run build` passes after frontmatter updates.
