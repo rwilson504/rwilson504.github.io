@@ -727,6 +727,27 @@ hr {
   border-radius: var(--radius);
 }
 
+.post-content img.zoomable-image {
+  display: block;
+  width: auto;
+  max-width: min(100%, 760px);
+  max-height: 70vh;
+  object-fit: contain;
+  margin: 1.25em auto;
+  border-radius: var(--radius);
+}
+
+.post-content a.zoomable-image-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.25em auto;
+}
+
+.post-content a.zoomable-image-link img.zoomable-image {
+  margin: 0 auto;
+}
+
 .post-content img.zoomable-image,
 .post-content a.zoomable-image-link {
   cursor: zoom-in;
