@@ -32,6 +32,20 @@ draft: false
 # Example command, if useful
 ```
 
+<!-- If the post needs a diagram or process flow, save this post as .mdx and use D2. -->
+<!--
+```d2
+direction: right
+
+source: "Source system"
+step: "Important step"
+result: "Expected result"
+
+source -> step: "input"
+step -> result: "output"
+```
+-->
+
 ## Things to watch for
 
 - <Caveat or environment-specific note.>

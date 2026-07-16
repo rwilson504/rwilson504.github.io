@@ -10,12 +10,15 @@ Publishing target identity:
 - Blog content root: `src/content/blog`
 - Public hero root: `public/heroes`
 - Public body image root: `public/images`
+- Diagram support: D2 fenced code blocks in `.mdx` posts, rendered by `astro-d2`
 
 When drafting from another repository, use that repo only for source context. Final article review, image path checks, hero image generation, and build validation belong in the `rwilson504/rwilson504.github.io` clone.
 
 ## Content Model
 
 Posts live in `src/content/blog` as `.md` or `.mdx` files. The schema is defined in `src/content.config.ts`.
+
+Use `.md` for normal Markdown posts. Use `.mdx` when a post imports Astro components or includes D2 diagrams/process flows.
 
 Required frontmatter:
 
@@ -173,6 +176,7 @@ Avoid:
 - Use numbered lists for procedures.
 - Use bullets for observations, cautions, and options.
 - Use fenced code blocks for commands, PowerShell, JSON, YAML, M, C#, and pipeline examples.
+- Use fenced `d2` blocks in `.mdx` posts for architecture diagrams and process flows.
 - Keep command blocks copyable; do not prefix commands with prompts unless the prompt is important.
 - Use bold text for product UI labels and key terms.
 - Use blockquotes for quoted errors or important notes.
@@ -215,6 +219,46 @@ Avoid:
 
 For migrated legacy posts, wrapped linked images appear in older content. New posts should prefer simple image syntax unless linking to the original full-size image is important.
 
+## Diagrams And Process Flows
+
+The site supports D2 diagrams through `astro-d2`, configured in `astro.config.mjs`. Diagrams render to static SVG during the Astro build.
+
+Use D2 when you need to show:
+
+- Process flow
+- Architecture or routing
+- Data movement
+- Request/response paths
+- State transitions
+- Ownership or relationship maps
+
+Use `.mdx` for posts with D2 blocks:
+
+````markdown
+```d2
+direction: right
+
+source: "Source system"
+flow: "Data flow task"
+viewer: "Data Viewer"
+destination: "Destination"
+
+source -> flow: "rows"
+flow -> viewer: "pause and inspect"
+viewer -> destination: "continue"
+```
+````
+
+Diagram guidelines:
+
+- Keep diagrams small and readable in the article column.
+- Use clear labels that explain the workflow without relying on color alone.
+- Explain the important takeaway in prose near the diagram for accessibility and skim readers.
+- Do not include secrets, tenant IDs, customer names, private hostnames, or production URLs.
+- Validate with `npm run build`; D2 syntax errors fail the build.
+
+Existing example: `src/content/blog/synology-chat-multi-user-openclaw.mdx`.
+
 ## References
 
 Include `## References` when the post depends on official docs, tools, upstream repos, specs, or standards. Link to Microsoft Learn, GitHub, product docs, jwt.ms, XrmToolBox tools, or API specs as appropriate.
@@ -233,6 +277,7 @@ Fix broken links before setting `draft: false`. If a site blocks automated reque
 - Security-sensitive examples avoid real secrets, tenant IDs, tokens, and private URLs.
 - Any temporary tracing or diagnostic step includes removal guidance.
 - Body images have meaningful alt text based on the image plus surrounding context, not generic words or filenames.
+- Diagrams/process flows, when used, are explained in nearby prose and validated by the build.
 - External internet links have been checked, and broken or redirected stale URLs have been corrected.
 - The tags reinforce discoverability without drifting into unrelated subjects.
 - The description works as a search result snippet.

@@ -1,6 +1,6 @@
 ---
 name: blog-post-authoring
-description: "Create, draft, edit, or review blog posts for rwilson504.github.io, including when invoked from another repo. Use when: writing a blog post, creating an article from repo context, converting notes into a post, choosing blog tags/categories, matching Richard Wilson's blog tone, Astro blog frontmatter, finding the rwilson504.github.io clone, hero image handoff, or technical article structure."
+description: "Create, draft, edit, or review blog posts for rwilson504.github.io, including when invoked from another repo. Use when: writing a blog post, creating an article from repo context, converting notes into a post, choosing blog tags/categories, matching Richard Wilson's blog tone, Astro blog frontmatter, D2 diagrams/process flows, finding the rwilson504.github.io clone, hero image handoff, or technical article structure."
 argument-hint: "Topic, notes, target audience, category, and any screenshots/code snippets"
 ---
 
@@ -17,6 +17,7 @@ This skill's publishing target is always the blog repository:
 - Blog post folder: `src/content/blog`
 - Hero image folder: `public/heroes`
 - Body image folder: `public/images/<post-slug>`
+- Diagram support: D2 diagrams in `.mdx` posts using fenced `d2` code blocks rendered by `astro-d2`
 - Schema file: `src/content.config.ts`
 - Build command: `npm run build`
 - External link checker: [check-post-links.ps1](./scripts/check-post-links.ps1)
@@ -39,7 +40,7 @@ Use this pattern when the topic context lives in another repo:
 1. In the source-context repo, inspect the relevant code, README files, screenshots, issues, scripts, or implementation notes.
 2. Draft the article from that evidence using the tone and structure in this skill. Keep secrets, private URLs, tenant IDs, customer names, and unreleased details out of the post.
 3. Locate and open the `rwilson504/rwilson504.github.io` clone.
-4. Create or update the final post under `src/content/blog/<slug>.md` or `.mdx` in the blog repo.
+4. Create or update the final post under `src/content/blog/<slug>.md` or `.mdx` in the blog repo. Use `.mdx` when the article includes D2 diagrams or imported Astro components.
 5. Copy any article screenshots into `public/images/<slug>/` in the blog repo and update Markdown paths to `/images/<slug>/...`.
 6. Review the article inside the blog repo against [blog-style-guide.md](./references/blog-style-guide.md), existing related posts, and the Astro schema.
 7. After the article is written, use the **blog-hero-image-authoring** skill in the blog repo to review existing hero images and generate/wire a matching `heroImage` and `heroImageAlt`.
@@ -57,11 +58,11 @@ Use this pattern when the topic context lives in another repo:
    - How-to guide: introduction/context, prerequisites, numbered setup sections, validation, references.
    - Pattern or best-practice article: problem, pattern, why it works, implementation steps, tradeoffs, conclusion.
    - Product/tool announcement: what it is, why it matters, concrete usage scenarios, links, conclusion.
-5. Create the post file in `src/content/blog` using a lowercase kebab-case slug that matches the final title closely.
+5. Create the post file in `src/content/blog` using a lowercase kebab-case slug that matches the final title closely. Use `.mdx` instead of `.md` when the post includes D2 diagrams or Astro components.
 6. Use the frontmatter schema and style guidance in [blog-style-guide.md](./references/blog-style-guide.md).
 7. Start from [blog-post-template.md](./assets/blog-post-template.md) when creating a fresh article.
 8. After the article draft is stable, use the blog repo's hero image workflow to create or select a matching image. Place the public path in `heroImage` and write specific `heroImageAlt` text. If no hero exists yet, leave both fields out until the hero image is ready.
-9. Use Markdown headings, lists, callouts, screenshots, tables, and fenced code blocks in the same practical style as existing posts.
+9. Use Markdown headings, lists, callouts, screenshots, tables, diagrams, and fenced code blocks in the same practical style as existing posts.
 10. Check body image alt text for Section 508/WCAG accessibility before publishing:
 
 ```powershell
@@ -152,6 +153,36 @@ Examples:
 - `SSIS data flow path showing the Data Viewer indicator icon between two components.`
 - `KingswaySoft Azure Blob Destination editor showing the Blob Name field set to a folder path instead of a file path.`
 
+## Diagrams And Process Flows
+
+The blog supports D2 diagrams through `astro-d2`. Use D2 when a concept is clearer as a process flow, architecture map, routing model, state transition, or relationship diagram than as prose or a screenshot.
+
+Use `.mdx` for posts that include diagrams. Add fenced D2 blocks directly in the article:
+
+````markdown
+```d2
+direction: right
+
+source: "Source system"
+transform: "Transform"
+viewer: "Data Viewer"
+destination: "Destination"
+
+source -> transform: "rows"
+transform -> viewer: "inspect runtime values"
+viewer -> destination: "continue package"
+```
+````
+
+Guidelines:
+
+- Keep diagrams small and purposeful: 4 to 8 nodes is usually enough.
+- Prefer clear labels over clever shapes.
+- Put the main takeaway in nearby prose before or after the diagram. This helps accessibility because generated SVG diagrams may not fully communicate structure to assistive technologies.
+- Do not encode secrets, tenant IDs, customer names, private hostnames, or production URLs in diagrams.
+- Validate with `npm run build`; D2 syntax errors surface at build time.
+- Existing examples live in `src/content/blog/synology-chat-multi-user-openclaw.mdx`.
+
 ## Done Criteria
 
 - The post has valid frontmatter and an appropriate category.
@@ -159,6 +190,7 @@ Examples:
 - The first screen establishes the problem, scenario, or value without a generic preamble.
 - Code blocks are fenced and command examples are copyable.
 - Screenshots use paths under `/images/<slug>/...` and meaningful alt text where possible.
+- D2 diagrams are used when a process flow or architecture view would clarify the article, and the surrounding prose explains the diagram's key takeaway.
 - Body image alt text has been checked with [check-post-image-alt.ps1](./scripts/check-post-image-alt.ps1), and each missing or weak alt was replaced after evaluating the image and surrounding article context.
 - Cross-repo drafts have been moved into the `rwilson504/rwilson504.github.io` clone before final validation.
 - Hero image review/generation has been handled from the blog repo using the blog hero image skill when a new hero is needed.
