@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FNIRSI 2C53T — Oscilloscope Screen SVG
+  ========================================
+  Editable oscilloscope display. Change text content and waveform
+  visibility via element IDs using JavaScript.
+
+  Editable elements (by ID):
+    === Top status bar ===
+    timebase-value   — Time base text (e.g. "H = 200nS", "H = 1mS")
+    run-status       — Run/stop text (e.g. "RUN", "STOP")
+    dpad-h-arrow     — Horizontal d-pad arrow (▶ or ◀)
+    dpad-v-arrow     — Vertical d-pad arrow (▼ or ▲)
+
+    === Measurement parameters (row 1 = CH1 yellow, row 2 = CH2 blue) ===
+    ch1-param1       — CH1 left param (e.g. "Freq:274.00KHz")
+    ch1-param2       — CH1 center param (e.g. "Duty+:7.88%")
+    ch1-param3       — CH1 right param (e.g. "Vp-p:0.82V")
+    ch2-param1       — CH2 left param (e.g. "Freq:41.67MHz")
+    ch2-param2       — CH2 center param (e.g. "Duty+:88.84%")
+    ch2-param3       — CH2 right param (e.g. "Vp-p:1.06V")
+
+    === Bottom status bar ===
+    ch1-sensitivity  — CH1 voltage/div (e.g. "10V")
+    ch1-probe        — CH1 probe ratio (e.g. "X1")
+    ch1-coupling     — CH1 coupling mode (e.g. "AC", "DC")
+    trigger-mode     — Trigger mode (e.g. "Auto", "Normal", "Single")
+    trigger-channel  — Trigger channel (e.g. "CH1", "CH2")
+    ch2-sensitivity  — CH2 voltage/div (e.g. "10mV")
+    ch2-probe        — CH2 probe ratio (e.g. "X1")
+    ch2-coupling     — CH2 coupling mode (e.g. "AC", "DC")
+
+    === Waveform visibility ===
+    waveform-ch1     — CH1 waveform group (set display:none to hide)
+    waveform-ch2     — CH2 waveform group (set display:none to hide)
+
+  Usage:
+    <object id="osc-screen" data="fnirsi-screen-oscilloscope.svg"
+            type="image/svg+xml" style="width:320px;"></object>
+    <script>
+      function configureOsc(opts) {
+        const svg = document.getElementById('osc-screen').contentDocument;
+        Object.entries(opts).forEach(([id, val]) => {
+          const el = svg.getElementById(id);
+          if (el) {
+            if (val === false) el.style.display = 'none';
+            else if (val === true) el.style.display = '';
+            else el.textContent = val;
+          }
+        });
+      }
+
+      // Example: single channel, DC voltage measurement
+      configureOsc({
+        'timebase-value': 'H = 1mS',
+        'run-status': 'RUN',
+        'ch1-param1': 'Freq:1.00KHz',
+        'ch1-param2': 'Duty+:50.00%',
+        'ch1-param3': 'Vp-p:3.30V',
+        'ch2-param1': '', 'ch2-param2': '', 'ch2-param3': '',
+        'ch1-sensitivity': '1V', 'ch1-probe': 'X1', 'ch1-coupling': 'DC',
+        'trigger-mode': 'Auto', 'trigger-channel': 'CH1',
+        'ch2-sensitivity': '10mV', 'ch2-probe': 'X1', 'ch2-coupling': 'AC',
+        'waveform-ch1': true, 'waveform-ch2': false
+      });
+    </script>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <title>FNIRSI 2C53T Oscilloscope Screen</title>
+
+  <defs>
+    <style>
+      .osc-bg      { fill: #0a0a0a; }
+      .grid-line   { stroke: #222; stroke-width: 0.3; stroke-dasharray: 2,4; }
+      .grid-center { stroke: #333; stroke-width: 0.4; stroke-dasharray: 2,3; }
+
+      /* Top bar */
+      .top-bar     { fill: #1a1a1a; }
+      .top-text    { fill: #aaa; font-family: 'Courier New', monospace; font-size: 10px; }
+      .run-text    { fill: #4c4; font-family: Arial, Helvetica, sans-serif;
+                     font-size: 12px; font-weight: bold; }
+      .stop-text   { fill: #c44; }
+      .wave-icon   { fill: none; stroke: #4a4; stroke-width: 1.5; }
+
+      /* Bottom bar */
+      .bot-bar     { fill: #1a1a1a; }
+      .ch1-text    { fill: #f0c040; font-family: 'Courier New', monospace; font-size: 9px; }
+      .ch2-text    { fill: #3af; font-family: 'Courier New', monospace; font-size: 9px; }
+      .trig-text   { fill: #aaa; font-family: Arial, Helvetica, sans-serif; font-size: 9px; }
+      .trig-icon   { fill: #4c4; font-family: Arial, Helvetica, sans-serif; font-size: 10px;
+                     font-weight: bold; }
+
+      /* Waveforms */
+      .wave-ch1    { fill: none; stroke: #f0c040; stroke-width: 1.8; stroke-linecap: round;
+                     stroke-linejoin: round; }
+      .wave-ch2    { fill: none; stroke: #3af; stroke-width: 1.8; stroke-linecap: round;
+                     stroke-linejoin: round; }
+
+      /* Channel markers */
+      .marker-ch1  { fill: #f0c040; }
+      .marker-ch2  { fill: #3af; }
+
+      /* Measurement params */
+      .param-ch1   { fill: #f0c040; font-family: 'Courier New', monospace; font-size: 8px; }
+      .param-ch2   { fill: #3af; font-family: 'Courier New', monospace; font-size: 8px; }
+
+      /* D-pad arrows */
+      .dpad-arrow-h { fill: #4c4; font-size: 10px; font-family: Arial, Helvetica, sans-serif; }
+      .dpad-arrow-v { fill: #4c4; font-size: 10px; font-family: Arial, Helvetica, sans-serif; }
+
+      /* Battery */
+      .batt-body   { fill: none; stroke: #4a4; stroke-width: 1; rx: 1; }
+      .batt-tip    { fill: #4a4; }
+      .batt-fill   { fill: #4a4; }
+
+      /* Trigger edge icon */
+      .trig-edge   { stroke: #4c4; stroke-width: 1.2; fill: none; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- BACKGROUND                                                    -->
+  <!-- ============================================================ -->
+  <rect width="320" height="240" class="osc-bg"/>
+
+  <!-- ============================================================ -->
+  <!-- TOP STATUS BAR                                                -->
+  <!-- ============================================================ -->
+  <rect x="0" y="0" width="320" height="20" class="top-bar"/>
+
+  <!-- ① Waveform type icon (sine wave) -->
+  <path class="wave-icon" d="M8,10 Q14,3 20,10 Q26,17 32,10"/>
+
+  <!-- ② Time base -->
+  <text x="80" y="14" id="timebase-value" class="top-text">H = 200nS</text>
+
+  <!-- ③ Run/Stop -->
+  <text x="168" y="14" id="run-status" class="run-text" text-anchor="middle">RUN</text>
+
+  <!-- ④ D-pad mode arrows -->
+  <text x="218" y="14" id="dpad-h-arrow" class="dpad-arrow-h">▶</text>
+  <text x="240" y="14" id="dpad-v-arrow" class="dpad-arrow-v">▼</text>
+
+  <!-- ⑤ Battery indicator -->
+  <g transform="translate(296, 10)">
+    <rect x="-12" y="-6" width="20" height="12" class="batt-body"/>
+    <rect x="8" y="-3" width="3" height="6" class="batt-tip" rx="0.5"/>
+    <rect x="-10" y="-4" width="16" height="8" class="batt-fill" opacity="0.7"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- GRID                                                          -->
+  <!-- ============================================================ -->
+  <g id="grid">
+    <!-- Horizontal grid lines (8 divisions) -->
+    <line x1="0" y1="47" x2="320" y2="47" class="grid-line"/>
+    <line x1="0" y1="74" x2="320" y2="74" class="grid-line"/>
+    <line x1="0" y1="101" x2="320" y2="101" class="grid-line"/>
+    <line x1="0" y1="128" x2="320" y2="128" class="grid-center"/>
+    <line x1="0" y1="155" x2="320" y2="155" class="grid-line"/>
+    <line x1="0" y1="182" x2="320" y2="182" class="grid-line"/>
+
+    <!-- Vertical grid lines (10 divisions) -->
+    <line x1="32" y1="20" x2="32" y2="200" class="grid-line"/>
+    <line x1="64" y1="20" x2="64" y2="200" class="grid-line"/>
+    <line x1="96" y1="20" x2="96" y2="200" class="grid-line"/>
+    <line x1="128" y1="20" x2="128" y2="200" class="grid-line"/>
+    <line x1="160" y1="20" x2="160" y2="200" class="grid-center"/>
+    <line x1="192" y1="20" x2="192" y2="200" class="grid-line"/>
+    <line x1="224" y1="20" x2="224" y2="200" class="grid-line"/>
+    <line x1="256" y1="20" x2="256" y2="200" class="grid-line"/>
+    <line x1="288" y1="20" x2="288" y2="200" class="grid-line"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- CHANNEL MARKERS (left edge arrows)                            -->
+  <!-- ============================================================ -->
+  <polygon points="0,80 8,76 8,84" class="marker-ch1"/>
+  <polygon points="0,160 8,156 8,164" class="marker-ch2"/>
+
+  <!-- Trigger level marker (right edge) -->
+  <polygon points="320,80 312,76 312,84" fill="#4c4"/>
+
+  <!-- ============================================================ -->
+  <!-- ⑥ CH1 WAVEFORM (yellow)                                      -->
+  <!-- ============================================================ -->
+  <g id="waveform-ch1">
+    <path class="wave-ch1" d="M0,80
+      Q10,40 20,80 Q30,120 40,80 Q50,40 60,80 Q70,120 80,80
+      Q90,40 100,80 Q110,120 120,80 Q130,40 140,80 Q150,120 160,80
+      Q170,40 180,80 Q190,120 200,80 Q210,40 220,80 Q230,120 240,80
+      Q250,40 260,80 Q270,120 280,80 Q290,40 300,80 Q310,120 320,80"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ⑦ CH2 WAVEFORM (blue)                                        -->
+  <!-- ============================================================ -->
+  <g id="waveform-ch2">
+    <path class="wave-ch2" d="M0,160
+      Q6,145 12,160 Q18,175 24,160 Q30,145 36,160 Q42,175 48,160
+      Q54,145 60,160 Q66,175 72,160 Q78,145 84,160 Q90,175 96,160
+      Q102,145 108,160 Q114,175 120,160 Q126,145 132,160 Q138,175 144,160
+      Q150,145 156,160 Q162,175 168,160 Q174,145 180,160 Q186,175 192,160
+      Q198,145 204,160 Q210,175 216,160 Q222,145 228,160 Q234,175 240,160
+      Q246,145 252,160 Q258,175 264,160 Q270,145 276,160 Q282,175 288,160
+      Q294,145 300,160 Q306,175 312,160 Q318,145 320,155"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ⑧ MEASUREMENT PARAMETERS                                     -->
+  <!-- ============================================================ -->
+  <!-- CH1 params (yellow) -->
+  <text x="10" y="198" id="ch1-param1" class="param-ch1">Freq:274.00KHz</text>
+  <text x="130" y="198" id="ch1-param2" class="param-ch1">Duty+:7.88%</text>
+  <text x="240" y="198" id="ch1-param3" class="param-ch1">Vp-p:0.82V</text>
+
+  <!-- CH2 params (blue) -->
+  <text x="10" y="210" id="ch2-param1" class="param-ch2">Freq:41.67MHz</text>
+  <text x="130" y="210" id="ch2-param2" class="param-ch2">Duty+:88.84%</text>
+  <text x="240" y="210" id="ch2-param3" class="param-ch2">Vp-p:1.06V</text>
+
+  <!-- ============================================================ -->
+  <!-- BOTTOM STATUS BAR                                             -->
+  <!-- ============================================================ -->
+  <rect x="0" y="218" width="320" height="22" class="bot-bar"/>
+
+  <!-- ⑨ CH1 settings (yellow) -->
+  <text x="8" y="234" id="ch1-sensitivity" class="ch1-text">10V</text>
+  <text x="42" y="234" id="ch1-probe" class="ch1-text">X1</text>
+  <text x="66" y="234" id="ch1-coupling" class="ch1-text">AC</text>
+
+  <!-- ⑩ Trigger info (center) -->
+  <!-- Trigger icon (green T in circle) -->
+  <circle cx="120" cy="230" r="7" fill="#4c4"/>
+  <text x="120" y="233" fill="#fff" font-family="Arial" font-size="9" font-weight="bold"
+        text-anchor="middle">T</text>
+
+  <text x="134" y="234" id="trigger-mode" class="trig-text">Auto</text>
+
+  <!-- Trigger edge icon (rising edge) -->
+  <g transform="translate(166, 225)">
+    <path class="trig-edge" d="M0,9 L0,2 L7,2 L7,9"/>
+    <polygon points="3,-1 0,3 6,3" fill="#4c4"/>
+  </g>
+
+  <text x="180" y="234" id="trigger-channel" class="trig-text">CH1</text>
+
+  <!-- ⑪ CH2 settings (blue/cyan) -->
+  <text x="212" y="234" id="ch2-sensitivity" class="ch2-text">10mV</text>
+  <text x="258" y="234" id="ch2-probe" class="ch2-text">X1</text>
+  <text x="286" y="234" id="ch2-coupling" class="ch2-text">AC</text>
+
+</svg>

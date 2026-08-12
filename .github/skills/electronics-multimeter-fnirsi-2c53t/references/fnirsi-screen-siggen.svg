@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FNIRSI 2C53T — Signal Generator Screen SVG
+  =============================================
+  Editable signal generator display. Change waveform selection,
+  parameters, and preview via element IDs using JavaScript.
+
+  Editable elements (by ID):
+    === Title bar ===
+    siggen-title     — Title text (default: "Signal Generator")
+
+    === Waveform list (add class="wave-active" to highlight) ===
+    wave-sine        — Sine Wave
+    wave-square      — Square Wave
+    wave-sawtooth    — Sawtooth Wave
+    wave-half        — Half-wave
+    wave-full        — Full Wave
+    wave-step        — Step Wave
+    wave-revstep     — Reverse Step Wave
+
+    === Waveform preview ===
+    wave-preview     — SVG path for the waveform shape (editable d attribute)
+
+    === Parameters ===
+    param-freq-value — Frequency digits (e.g. "01000")
+    param-freq-unit  — Frequency unit (e.g. "Hz", "KHz")
+    param-duty-value — Duty cycle value (e.g. "05.00")
+    param-duty-unit  — Duty cycle unit (e.g. "%")
+    param-amp-value  — Amplitude value (e.g. "3.0")
+    param-amp-unit   — Amplitude unit (e.g. "V")
+
+  Usage:
+    <object id="siggen-screen" data="fnirsi-screen-siggen.svg"
+            type="image/svg+xml" style="width:320px;"></object>
+    <script>
+      function configureSigGen(opts) {
+        const svg = document.getElementById('siggen-screen').contentDocument;
+        // Clear active waveform
+        svg.querySelectorAll('.wave-item').forEach(el => el.classList.remove('wave-active'));
+        if (opts.activeWave) {
+          const el = svg.getElementById('wave-' + opts.activeWave);
+          if (el) el.classList.add('wave-active');
+        }
+        // Set parameter values
+        if (opts.freq)     svg.getElementById('param-freq-value').textContent = opts.freq;
+        if (opts.freqUnit) svg.getElementById('param-freq-unit').textContent = opts.freqUnit;
+        if (opts.duty)     svg.getElementById('param-duty-value').textContent = opts.duty;
+        if (opts.amp)      svg.getElementById('param-amp-value').textContent = opts.amp;
+        if (opts.ampUnit)  svg.getElementById('param-amp-unit').textContent = opts.ampUnit;
+        // Update waveform preview path
+        if (opts.previewPath) svg.getElementById('wave-preview').setAttribute('d', opts.previewPath);
+      }
+
+      // Example: 1KHz square wave
+      configureSigGen({
+        activeWave: 'square',
+        freq: '01000', freqUnit: 'Hz',
+        duty: '50.00', amp: '3.0', ampUnit: 'V',
+        previewPath: 'M10,25 L10,75 L50,75 L50,25 L90,25 L90,75 L130,75 L130,25 L170,25'
+      });
+    </script>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <title>FNIRSI 2C53T Signal Generator Screen</title>
+
+  <defs>
+    <style>
+      .sg-bg       { fill: #0a0a0a; }
+
+      /* Title bar */
+      .title-bar   { fill: #181818; }
+      .title-text  { fill: #ccc; font-family: 'Courier New', monospace; font-size: 14px;
+                     text-anchor: middle; }
+      .wave-type   { fill: none; stroke: #ccc; stroke-width: 1.5; stroke-linecap: round; }
+      .batt-body   { fill: none; stroke: #888; stroke-width: 1; rx: 1; }
+      .batt-tip    { fill: #888; }
+      .batt-fill   { fill: #4a4; }
+
+      /* Waveform list (left column) */
+      .wave-item rect { fill: #1a1a1a; stroke: #2a2a2a; stroke-width: 0.5; }
+      .wave-item text { fill: #999; font-family: 'Courier New', monospace; font-size: 10px;
+                        dominant-baseline: central; }
+      .wave-item.wave-active rect { fill: #1a3050; stroke: #3af; stroke-width: 1; }
+      .wave-item.wave-active text { fill: #fff; font-weight: bold; }
+
+      /* Waveform preview */
+      .preview-bg  { fill: #0a1a0a; stroke: #333; stroke-width: 1; rx: 3; }
+      .preview-grid { stroke: #1a2a1a; stroke-width: 0.5; }
+      .preview-mid { stroke: #2a3a2a; stroke-width: 0.5; stroke-dasharray: 3,3; }
+      .preview-wave { fill: none; stroke: #f0c040; stroke-width: 2; stroke-linecap: round;
+                      stroke-linejoin: round; }
+
+      /* Parameters */
+      .param-box   { fill: #1a1a1a; stroke: #333; stroke-width: 1; rx: 3; }
+      .param-label-box { fill: #1a3050; stroke: #3af; stroke-width: 1; rx: 3; }
+      .param-label { fill: #3af; font-family: 'Courier New', monospace; font-size: 9px;
+                     text-anchor: middle; dominant-baseline: central; }
+      .param-value { fill: #f0c040; font-family: 'Courier New', monospace; font-size: 18px;
+                     dominant-baseline: central; }
+      .param-unit  { fill: #ccc; font-family: 'Courier New', monospace; font-size: 14px;
+                     dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- BACKGROUND                                                    -->
+  <!-- ============================================================ -->
+  <rect width="320" height="240" class="sg-bg"/>
+
+  <!-- ============================================================ -->
+  <!-- TITLE BAR                                                     -->
+  <!-- ============================================================ -->
+  <rect x="0" y="0" width="320" height="24" class="title-bar"/>
+
+  <!-- ① Waveform type icon (sine wave) -->
+  <path class="wave-type" d="M12,12 Q18,4 24,12 Q30,20 36,12"/>
+
+  <!-- Title -->
+  <text x="160" y="16" id="siggen-title" class="title-text">Signal Generator</text>
+
+  <!-- ② Battery indicator -->
+  <g transform="translate(296, 12)">
+    <rect x="-12" y="-6" width="20" height="12" class="batt-body"/>
+    <rect x="8" y="-3" width="3" height="6" class="batt-tip" rx="0.5"/>
+    <rect x="-10" y="-4" width="16" height="8" class="batt-fill" opacity="0.7"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ③ WAVEFORM LIST (left column)                                 -->
+  <!-- ============================================================ -->
+  <g id="wave-sine" class="wave-item">
+    <rect x="4" y="28" width="105" height="26"/>
+    <text x="56" y="41" text-anchor="middle">Sine Wave</text>
+  </g>
+
+  <g id="wave-square" class="wave-item">
+    <rect x="4" y="58" width="105" height="26"/>
+    <text x="56" y="71" text-anchor="middle">Square Wave</text>
+  </g>
+
+  <g id="wave-sawtooth" class="wave-item">
+    <rect x="4" y="88" width="105" height="26"/>
+    <text x="56" y="101" text-anchor="middle">Sawtooth Wave</text>
+  </g>
+
+  <g id="wave-half" class="wave-item wave-active">
+    <rect x="4" y="118" width="105" height="26"/>
+    <text x="56" y="131" text-anchor="middle">Half-wave</text>
+  </g>
+
+  <g id="wave-full" class="wave-item">
+    <rect x="4" y="148" width="105" height="26"/>
+    <text x="56" y="161" text-anchor="middle">Full Wave</text>
+  </g>
+
+  <g id="wave-step" class="wave-item">
+    <rect x="4" y="178" width="105" height="26"/>
+    <text x="56" y="191" text-anchor="middle">Step Wave</text>
+  </g>
+
+  <g id="wave-revstep" class="wave-item">
+    <rect x="4" y="208" width="105" height="26"/>
+    <text x="56" y="221" text-anchor="middle">Rev Step Wave</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ④ WAVEFORM PREVIEW (right panel, top)                         -->
+  <!-- ============================================================ -->
+  <rect x="115" y="28" width="200" height="108" class="preview-bg"/>
+
+  <!-- Grid lines -->
+  <g>
+    <line x1="115" y1="55" x2="315" y2="55" class="preview-grid"/>
+    <line x1="115" y1="82" x2="315" y2="82" class="preview-mid"/>
+    <line x1="115" y1="109" x2="315" y2="109" class="preview-grid"/>
+    <line x1="155" y1="28" x2="155" y2="136" class="preview-grid"/>
+    <line x1="195" y1="28" x2="195" y2="136" class="preview-grid"/>
+    <line x1="235" y1="28" x2="235" y2="136" class="preview-grid"/>
+    <line x1="275" y1="28" x2="275" y2="136" class="preview-grid"/>
+  </g>
+
+  <!-- Green fill zone (bottom half, represents 0V baseline) -->
+  <rect x="116" y="82" width="198" height="53" fill="#0a1a0a" opacity="0.5"/>
+
+  <!-- Waveform preview path (half-wave default) -->
+  <path id="wave-preview" class="preview-wave"
+        d="M125,120 Q140,120 155,120 Q165,120 175,80 Q185,38 195,38 Q205,38 215,80 Q225,120 235,120 Q250,120 265,120 Q275,120 285,80 Q295,38 305,38"/>
+
+  <!-- Preview border box (yellow outline) -->
+  <rect x="115" y="28" width="200" height="108" fill="none" stroke="#f0c040"
+        stroke-width="1.5" rx="3" opacity="0.4"/>
+
+  <!-- ============================================================ -->
+  <!-- ⑤ PARAMETERS (right panel, bottom)                            -->
+  <!-- ============================================================ -->
+
+  <!-- Frequency -->
+  <g transform="translate(115, 142)">
+    <rect x="0" y="0" width="200" height="30" class="param-box"/>
+    <rect x="2" y="2" width="58" height="26" class="param-label-box"/>
+    <text x="31" y="15" class="param-label">Frequen-</text>
+    <text x="31" y="24" class="param-label">cy</text>
+    <text x="72" y="20" id="param-freq-value" class="param-value">01000</text>
+    <text x="168" y="19" id="param-freq-unit" class="param-unit">Hz</text>
+  </g>
+
+  <!-- Duty Cycle -->
+  <g transform="translate(115, 176)">
+    <rect x="0" y="0" width="200" height="30" class="param-box"/>
+    <rect x="2" y="2" width="58" height="26" class="param-box" style="fill:#1a1a1a"/>
+    <text x="31" y="12" class="param-label" style="fill:#999;">Duty Cy-</text>
+    <text x="31" y="22" class="param-label" style="fill:#999;">cle</text>
+    <text x="72" y="20" id="param-duty-value" class="param-value">05.00</text>
+    <text x="168" y="19" id="param-duty-unit" class="param-unit">%</text>
+  </g>
+
+  <!-- Amplitude -->
+  <g transform="translate(115, 210)">
+    <rect x="0" y="0" width="200" height="30" class="param-box"/>
+    <rect x="2" y="2" width="58" height="26" class="param-box" style="fill:#1a1a1a"/>
+    <text x="31" y="12" class="param-label" style="fill:#999;">Amplitu-</text>
+    <text x="31" y="22" class="param-label" style="fill:#999;">de</text>
+    <text x="88" y="20" id="param-amp-value" class="param-value">3.0</text>
+    <text x="168" y="19" id="param-amp-unit" class="param-unit">V</text>
+  </g>
+
+</svg>

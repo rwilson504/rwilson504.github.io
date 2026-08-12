@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FNIRSI 2C53T — Settings Screen SVG
+  =====================================
+  Editable settings display. Change the selected menu item and
+  sub-option values via element IDs using JavaScript.
+
+  Editable elements (by ID):
+    === Title bar ===
+    settings-title   — Title text (default: "System Settings")
+
+    === Menu items (add class="setting-active" to highlight) ===
+    setting-language       — Language
+    setting-sound          — Sound and light
+    setting-startup        — Startup on Boot
+    setting-shutdown       — Auto Shutdown
+    setting-usb            — USB Sharing
+    setting-about          — About
+    setting-reset          — Factory Reset
+
+    === Right panel sub-options ===
+    sub-option-1-label     — First option text (e.g. "中文")
+    sub-option-1-check     — First option check indicator (hide/show)
+    sub-option-2-label     — Second option text (e.g. "English")
+    sub-option-2-check     — Second option check indicator (hide/show)
+    sub-option-3-label     — Third option text (e.g. extra option)
+    sub-option-3-check     — Third option check indicator (hide/show)
+    sub-option-4-label     — Fourth option text
+    sub-option-4-check     — Fourth option check indicator (hide/show)
+
+  Usage:
+    <object id="settings-screen" data="fnirsi-screen-settings.svg"
+            type="image/svg+xml" style="width:320px;"></object>
+    <script>
+      function configureSettings(opts) {
+        const svg = document.getElementById('settings-screen').contentDocument;
+        // Clear active states
+        svg.querySelectorAll('.setting-item').forEach(el => el.classList.remove('setting-active'));
+        // Activate selected setting
+        if (opts.active) {
+          const el = svg.getElementById('setting-' + opts.active);
+          if (el) el.classList.add('setting-active');
+        }
+        // Set sub-option labels
+        ['1','2','3','4'].forEach(n => {
+          const lbl = svg.getElementById('sub-option-' + n + '-label');
+          const chk = svg.getElementById('sub-option-' + n + '-check');
+          if (lbl) lbl.textContent = opts['opt' + n] || '';
+          if (chk) chk.style.display = opts['sel' + n] ? '' : 'none';
+        });
+      }
+
+      // Example: Language selected, English checked
+      configureSettings({
+        active: 'language',
+        opt1: '中文', sel1: false,
+        opt2: 'English', sel2: true,
+        opt3: '', sel3: false,
+        opt4: '', sel4: false
+      });
+    </script>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <title>FNIRSI 2C53T Settings Screen</title>
+
+  <defs>
+    <style>
+      .set-bg      { fill: #0a0a0a; }
+
+      /* Title bar */
+      .title-bar   { fill: #181818; }
+      .title-text  { fill: #ccc; font-family: Arial, Helvetica, sans-serif; font-size: 14px;
+                     font-style: italic; font-weight: bold; text-anchor: middle; }
+      .back-arrow  { fill: #4a9cd6; font-family: Arial, Helvetica, sans-serif; font-size: 16px;
+                     font-weight: bold; cursor: pointer; }
+      .batt-body   { fill: none; stroke: #888; stroke-width: 1; rx: 1; }
+      .batt-tip    { fill: #888; }
+      .batt-fill   { fill: #4a4; }
+
+      /* Menu items (left column) */
+      .setting-item rect { fill: #1a1a1a; stroke: #2a2a2a; stroke-width: 0.5; }
+      .setting-item text { fill: #999; font-family: 'Courier New', monospace; font-size: 10px;
+                           dominant-baseline: central; }
+      .setting-item.setting-active rect { fill: #1a3050; stroke: #3af; stroke-width: 1; }
+      .setting-item.setting-active text { fill: #fff; font-weight: bold; }
+
+      /* Right panel */
+      .panel-bg    { fill: #111; stroke: #222; stroke-width: 0.5; rx: 4; }
+      .option-row  { fill: #1a1a1a; rx: 4; }
+      .option-sel  { fill: #2a1800; stroke: #e07020; stroke-width: 1.5; rx: 4; }
+      .option-text { fill: #aaa; font-family: 'Courier New', monospace; font-size: 12px;
+                     dominant-baseline: central; }
+      .option-text-sel { fill: #e07020; font-family: 'Courier New', monospace; font-size: 12px;
+                         dominant-baseline: central; font-weight: bold; }
+      .check-circle { fill: none; stroke: #666; stroke-width: 1.2; }
+      .check-filled { fill: #e07020; stroke: #e07020; stroke-width: 1.2; }
+      .check-mark  { fill: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 10px;
+                     text-anchor: middle; dominant-baseline: central; }
+      .sel-bar     { fill: #e07020; rx: 1; }
+    </style>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- BACKGROUND                                                    -->
+  <!-- ============================================================ -->
+  <rect width="320" height="240" class="set-bg"/>
+
+  <!-- ============================================================ -->
+  <!-- TITLE BAR                                                     -->
+  <!-- ============================================================ -->
+  <rect x="0" y="0" width="320" height="24" class="title-bar"/>
+  <text x="16" y="16" class="back-arrow">◀</text>
+  <text x="160" y="16" id="settings-title" class="title-text">System Settings</text>
+  <!-- Battery -->
+  <g transform="translate(296, 12)">
+    <rect x="-12" y="-6" width="20" height="12" class="batt-body"/>
+    <rect x="8" y="-3" width="3" height="6" class="batt-tip" rx="0.5"/>
+    <rect x="-10" y="-4" width="16" height="8" class="batt-fill" opacity="0.7"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LEFT COLUMN — MENU ITEMS                                      -->
+  <!-- ============================================================ -->
+  <g id="setting-language" class="setting-item setting-active">
+    <rect x="4" y="28" width="120" height="26"/>
+    <text x="64" y="41" text-anchor="middle">Language</text>
+  </g>
+
+  <g id="setting-sound" class="setting-item">
+    <rect x="4" y="58" width="120" height="26"/>
+    <text x="64" y="71" text-anchor="middle">Sound and light</text>
+  </g>
+
+  <g id="setting-startup" class="setting-item">
+    <rect x="4" y="88" width="120" height="26"/>
+    <text x="64" y="101" text-anchor="middle">Startup on Boot</text>
+  </g>
+
+  <g id="setting-shutdown" class="setting-item">
+    <rect x="4" y="118" width="120" height="26"/>
+    <text x="64" y="131" text-anchor="middle">Auto Shutdown</text>
+  </g>
+
+  <g id="setting-usb" class="setting-item">
+    <rect x="4" y="148" width="120" height="26"/>
+    <text x="64" y="161" text-anchor="middle">USB Sharing</text>
+  </g>
+
+  <g id="setting-about" class="setting-item">
+    <rect x="4" y="178" width="120" height="26"/>
+    <text x="64" y="191" text-anchor="middle">About</text>
+  </g>
+
+  <g id="setting-reset" class="setting-item">
+    <rect x="4" y="208" width="120" height="26"/>
+    <text x="64" y="221" text-anchor="middle">Factory Reset</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT PANEL — SUB-OPTIONS                                     -->
+  <!-- ============================================================ -->
+  <rect x="130" y="28" width="186" height="206" class="panel-bg"/>
+
+  <!-- Option 1 (unselected by default) -->
+  <g id="sub-option-1">
+    <rect x="138" y="38" width="170" height="34" class="option-row"/>
+    <g id="sub-option-1-check" style="display:none">
+      <circle cx="156" cy="55" r="8" class="check-circle"/>
+    </g>
+    <g id="sub-option-1-nocheck">
+      <circle cx="156" cy="55" r="8" class="check-circle"/>
+    </g>
+    <text x="174" y="55" id="sub-option-1-label" class="option-text">中文</text>
+  </g>
+
+  <!-- Option 2 (selected by default — English) -->
+  <g id="sub-option-2">
+    <rect x="138" y="80" width="170" height="34" class="option-sel"/>
+    <rect x="138" y="80" width="4" height="34" class="sel-bar"/>
+    <g id="sub-option-2-check">
+      <circle cx="156" cy="97" r="8" class="check-filled"/>
+      <text x="156" y="98" class="check-mark">✓</text>
+    </g>
+    <text x="174" y="97" id="sub-option-2-label" class="option-text-sel">English</text>
+  </g>
+
+  <!-- Option 3 (hidden by default) -->
+  <g id="sub-option-3">
+    <rect x="138" y="122" width="170" height="34" class="option-row"/>
+    <g id="sub-option-3-check" style="display:none">
+      <circle cx="156" cy="139" r="8" class="check-filled"/>
+      <text x="156" y="140" class="check-mark">✓</text>
+    </g>
+    <circle cx="156" cy="139" r="8" class="check-circle" opacity="0.3"/>
+    <text x="174" y="139" id="sub-option-3-label" class="option-text"></text>
+  </g>
+
+  <!-- Option 4 (hidden by default) -->
+  <g id="sub-option-4">
+    <rect x="138" y="164" width="170" height="34" class="option-row"/>
+    <g id="sub-option-4-check" style="display:none">
+      <circle cx="156" cy="181" r="8" class="check-filled"/>
+      <text x="156" y="182" class="check-mark">✓</text>
+    </g>
+    <circle cx="156" cy="181" r="8" class="check-circle" opacity="0.3"/>
+    <text x="174" y="181" id="sub-option-4-label" class="option-text"></text>
+  </g>
+
+</svg>
