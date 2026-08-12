@@ -22,3 +22,5 @@ pnpm-debug.log*
 .idea/
 # astro-d2 build output: generated at build time, not source
 public/d2/
+# Marketplace sync cache (clone of agent-plugins-personal)
+.marketplace-cache/

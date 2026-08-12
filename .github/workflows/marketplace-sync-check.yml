@@ -1,0 +1,70 @@
+name: Marketplace sync check
+
+# Verifies that .github/agents/, .github/skills/, and .github/prompts/ in this
+# repo match the agent-plugins-personal marketplace. Fails if any of those
+# files have drifted from the marketplace's src/ tree.
+#
+# This is the CI backstop for the local pre-push git hook. The hook can be
+# bypassed with `git push --no-verify`; this workflow cannot.
+#
+# NOTE: The marketplace repo is private. This workflow uses a Personal Access
+# Token (PAT) stored in the repo secret MARKETPLACE_TOKEN to clone it. To set
+# up:
+#   1. Create a fine-grained PAT at https://github.com/settings/personal-access-tokens
+#      with read access to rwilson504/agent-plugins-personal (Contents: Read)
+#   2. Add it as a repo secret named MARKETPLACE_TOKEN in this repo's settings.
+# If the secret is missing, the workflow skips the check and emits a warning
+# (so the workflow doesn't break for forks/PRs that can't read it).
+#
+# Installed by: agent-plugins-personal/bootstrap.ps1
+
+on:
+  push:
+    paths:
+      - '.github/agents/**'
+      - '.github/skills/**'
+      - '.github/prompts/**'
+      - '.github/scripts/sync-agents.ps1'
+  pull_request:
+    paths:
+      - '.github/agents/**'
+      - '.github/skills/**'
+      - '.github/prompts/**'
+      - '.github/scripts/sync-agents.ps1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Skip if marketplace token not configured
+        id: token-check
+        shell: bash
+        run: |
+          if [ -z "${{ secrets.MARKETPLACE_TOKEN }}" ]; then
+            echo "::warning::MARKETPLACE_TOKEN secret not set; skipping marketplace sync check. See workflow file for setup."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout marketplace into cache
+        if: steps.token-check.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: rwilson504/agent-plugins-personal
+          token: ${{ secrets.MARKETPLACE_TOKEN }}
+          path: .marketplace-cache
+
+      - name: Verify marketplace sync
+        if: steps.token-check.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          if (-not (Test-Path '.github/scripts/sync-agents.ps1')) {
+            Write-Host '::warning::No sync-agents.ps1 found in this repo; skipping check.'
+            exit 0
+          }
+          pwsh .github/scripts/sync-agents.ps1 -Check
