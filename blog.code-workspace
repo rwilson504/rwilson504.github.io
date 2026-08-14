@@ -1,0 +1,15 @@
+{
+	// Second folder is the marketplace clone: the blog skills live there, and
+	// without it in the workspace its pending changes are invisible.
+	// The path is absolute, so it needs adjusting on another machine.
+	"folders": [
+		{
+			"name": "blog",
+			"path": "."
+		},
+		{
+			"name": "agent-plugins (skills & agents)",
+			"path": "D:/rwilson504/agent-plugins-personal"
+		}
+	]
+}
