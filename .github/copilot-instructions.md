@@ -26,30 +26,44 @@ machine.
 
 ### The rule (non-negotiable)
 
-The blog skills (`blog-post-authoring`, `blog-hero-image-authoring`) are
-published and live in the clone now. After **every** edit to a skill or
-agent, commit and push **in the clone**, in the same response:
+After **every** edit to a skill or agent, commit and push **in the clone**,
+in the same response, before moving on:
 
 ```powershell
 cd <clone>
+pwsh scripts/build-plugins.ps1   # only if plugins.yml changed
 pwsh scripts/lint.ps1
 git add -A
-git commit -m "skill(<name>): ..."
+git commit -m "skill(<name>): ..."   # or "agent: ..."
 git push origin main
 ```
 
-The clone is usually not open in any window, so an uncommitted edit there
-is invisible. **Always report the clone's `git status` when you finish
-editing a skill or agent.**
+An uncommitted edit in the clone is invisible - the clone is usually not
+open in any window, so nothing surfaces the change. **Always report the
+clone's `git status` when you finish editing a skill or agent.**
 
 Do NOT recreate `.github/skills/` or `.github/agents/` here. A workspace
-copy shadows the plugin one and goes stale unnoticed - and because this
-repo is **public**, a copy here republishes a private marketplace. That
-has happened once already.
+copy shadows the plugin one (workspace wins for skills; agents list twice),
+which reintroduces the drift this layout removed. If this repo is public,
+a copy also republishes a private marketplace - that has happened once.
 
 ### Reusable prompts are skills
 
 VS Code registers a plugin's `commands/` folder in the slash-command picker
-but never injects the command body, so plugin commands are unusable as
-prompts. Author reusable prompts as skills instead.
+but **never injects the command body**, so plugin commands are unusable as
+prompts. Author reusable prompts as skills instead - skills load their body
+on demand and also appear under `/`.
+
+A genuinely repo-specific prompt can still live in this repo's
+`.github/prompts/`, but nothing reusable belongs there.
+
+### New skills must be added to a plugin
+
+A skill missing from `<clone>/plugins.yml` still works on your own machine
+(the whole `src/skills` tree is hosted) but reaches nobody who installs a
+plugin. The lint warning is easy to skim past:
+
+```
+WARN skill '<name>' is not included in any plugin
+```
 <!-- END: marketplace-sync -->
