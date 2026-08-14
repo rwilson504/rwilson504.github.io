@@ -22,12 +22,7 @@ pnpm-debug.log*
 .idea/
 # astro-d2 build output: generated at build time, not source
 public/d2/
-# Marketplace sync cache (clone of agent-plugins-personal)
-.marketplace-cache/
 
-# Marketplace-synced content: pulled on demand, not committed.
-# This repo's OWN skills stay tracked - they are the source that gets published.
-.github/agents/
-.github/prompts/
-.github/skills/*
-!.github/skills/blog-*/
+# Agents and skills are not stored in this repo. They live in the
+# agent-plugins-personal clone, registered once per machine via
+# chat.pluginLocations. Nothing here to ignore, and nothing to leak.
