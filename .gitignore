@@ -24,3 +24,10 @@ pnpm-debug.log*
 public/d2/
 # Marketplace sync cache (clone of agent-plugins-personal)
 .marketplace-cache/
+
+# Marketplace-synced content: pulled on demand, not committed.
+# This repo's OWN skills stay tracked - they are the source that gets published.
+.github/agents/
+.github/prompts/
+.github/skills/*
+!.github/skills/blog-*/
