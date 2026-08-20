@@ -1,0 +1,4 @@
+# Normalize text files to LF in the repository, check them out native to the
+# platform. Committed here so the policy travels with the repo rather than
+# depending on each machine's core.autocrlf.
+* text=auto
