@@ -221,17 +221,30 @@ const nav: Array<
     padding-bottom: 0.5rem;
   }
 
-  /* On small screens the nav wraps; let the dropdown sit inline.
+  /* On small screens the menu overlays the page instead of sitting in flow.
+     It is anchored to the nav rather than the button so a wrapped nav item
+     cannot push it off the right edge.
      IMPORTANT: use display:none for the hidden state, not just
-     visibility/opacity. position:static keeps the menu in flow, and
-     visibility:hidden hides paint but not layout — which previously
-     reserved ~430px of nav height for the invisible menu items. */
+     visibility/opacity, so hover-open is genuinely disabled on touch. */
   @media (max-width: 640px) {
-    .dropdown-menu {
+    .site-nav {
+      position: relative;
+    }
+    .has-dropdown {
       position: static;
-      box-shadow: none;
+    }
+    .dropdown-menu {
+      top: calc(100% - 0.25rem);
+      left: var(--space);
+      right: var(--space);
       min-width: 0;
-      margin-top: 0.25rem;
+      /* Cap against real viewport space, not an arbitrary height, so the menu
+         only scrolls when it genuinely cannot fit. dvh accounts for mobile
+         browser chrome where supported. */
+      max-height: calc(100vh - 8rem);
+      max-height: calc(100dvh - 8rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
       transform: none;
       display: none;
     }
