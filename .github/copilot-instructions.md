@@ -15,3 +15,8 @@ changes appear in Source Control.
 This repo is **public**. Never create `.github/skills/` or `.github/agents/`
 here: a copy shadows the plugin one and republishes a private marketplace.
 That has happened once.
+
+For the same reason this repo keeps **no `SESSION_LOG.md`**, overriding the
+machine-level default. Working notes about the blog belong in the
+agent-plugins-personal clone's session log, not published here. Durable
+decisions may still be recorded in `decisions/`.

@@ -175,6 +175,13 @@ const nav: Array<
     border: 1px solid var(--color-border);
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    /* The menu opens ~53px down, so cap it against the space actually left
+       below that rather than a fixed height. Without this a short desktop
+       window runs the list past the fold with no way to scroll it. */
+    max-height: calc(100vh - 5rem);
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4px);
