@@ -176,6 +176,50 @@ pre code {
   padding: 0;
 }
 
+/* Markdown tables ship as bare <table>, so these are element-level styles. */
+.table-scroll {
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.94em;
+  line-height: 1.5;
+}
+
+.table-scroll > table {
+  margin: 0;
+  min-width: 34rem;
+}
+
+th,
+td {
+  padding: 0.6em 0.85em;
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  font-weight: 600;
+  background: var(--color-code-bg);
+  border-bottom: 2px solid
+    color-mix(in oklab, var(--color-accent) 40%, var(--color-border));
+}
+
+/* Some migrated posts open with a blank header row; hide it rather than
+   render an empty header strip. */
+thead:not(:has(th:not(:empty))) {
+  display: none;
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in oklab, var(--color-code-bg) 55%, transparent);
+}
+
 .code-block {
   position: relative;
   margin: 1.5em 0;

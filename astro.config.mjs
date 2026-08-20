@@ -5,6 +5,29 @@ import mdx from "@astrojs/mdx";
 import rehypeExternalLinks from "rehype-external-links";
 import astroD2 from "astro-d2";
 
+// Markdown emits a bare <table>, which overflows narrow screens instead of
+// scrolling. Wrapping it lets the CSS confine the overflow to the table.
+function rehypeWrapTables() {
+  return (tree) => {
+    const wrap = (node) => {
+      if (!Array.isArray(node.children)) return;
+      node.children = node.children.map((child) => {
+        wrap(child);
+        if (child.type === "element" && child.tagName === "table") {
+          return {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["table-scroll"] },
+            children: [child],
+          };
+        }
+        return child;
+      });
+    };
+    wrap(tree);
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.richardawilson.com",
@@ -48,6 +71,7 @@ export default defineConfig({
           protocols: ["http", "https"],
         },
       ],
+      rehypeWrapTables,
     ],
   },
   build: {
