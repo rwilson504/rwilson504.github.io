@@ -22,3 +22,7 @@ pnpm-debug.log*
 .idea/
 # astro-d2 build output: generated at build time, not source
 public/d2/
+
+# Agents and skills are not stored in this repo. They live in the
+# agent-plugins-personal clone, registered once per machine via
+# chat.pluginLocations. Nothing here to ignore, and nothing to leak.
