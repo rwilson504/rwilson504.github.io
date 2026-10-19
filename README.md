@@ -56,6 +56,31 @@ Any push to `main` triggers `.github/workflows/deploy.yml`, which builds and
 publishes to GitHub Pages. The site is served at `www.richardawilson.com`
 via the `public/CNAME` file.
 
+### Scheduled builds and repository keepalive
+
+The deployment workflow also runs daily at 06:00 UTC to publish scheduled posts
+and refresh the GitHub stats card. GitHub disables scheduled workflows in public
+repositories after 60 days without repository activity; successful scheduled
+builds alone do not prevent that cutoff.
+
+[The keepalive workflow](.github/workflows/keepalive.yml) checks the default
+branch every Monday at 07:17 UTC. If its latest commit is at least 45 days old,
+it commits a UTC timestamp to `.github/last-keepalive`. Otherwise, it makes no
+changes. This leaves a buffer before the 60-day cutoff without adding a commit
+every week.
+
+The workflow uses the built-in `GITHUB_TOKEN` with `contents: write`; no extra
+secret is required. Branch protection or repository policies must allow that
+bot push. A rejected push fails the workflow rather than bypassing protection.
+Heartbeat pushes made with `GITHUB_TOKEN` do not trigger another deployment;
+the daily deployment schedule remains responsible for rebuilding the site.
+
+After merging the workflow into the default branch, it can also be run from
+**Actions -> Keep scheduled workflows active -> Run workflow**. Manual runs use
+the same 45-day check. If GitHub has already disabled either scheduled workflow,
+re-enable it from its Actions page first; a disabled workflow cannot revive
+itself.
+
 ## Project layout
 
 ```
