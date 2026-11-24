@@ -142,6 +142,8 @@ The lettering was a good example of something I noticed by looking at the result
 
 I made an OpenSCAD version so someone on MakerWorld could enter those choices in the browser instead of setting up my Python tools. I kept the Python version as my reference and compared the files the two tools produced. One combination even failed when Python tried to join a clip to the body, while OpenSCAD produced a part. I reran the Python case on its own and got the same failure. Being able to export one version didn't prove the other worked, and checking either on my computer didn't prove all the sizes fit in real life.
 
+You can download or customize the finished model here: [Side-Entry Dog Collar Holder for Google Pixel Tag - Free 3D Print Model - MakerWorld](https://makerworld.com/en/models/3676294-side-entry-dog-collar-holder-for-google-pixel-tag#profileId-4221231).
+
 ![Six views of the Python and OpenSCAD exports, showing the lettering face, collar-facing pocket, side profiles, and both clip openings.](/images/ai-assisted-pixel-tag-holder/six-view-comparison.png)
 
 Two-color text was another one of those “it looks right, so it must be right” moments. The file had separate colors, but when I actually sliced it, Bambu Studio planned to use one filament. I had to keep the letters lined up with the body and tell the slicer which filament belonged to each. Only then did I check that both colors would go onto the holder itself, not just into waste.
