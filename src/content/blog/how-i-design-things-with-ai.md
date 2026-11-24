@@ -21,6 +21,8 @@ AI gave me a way back into CAD through tools I already knew: code and VS Code. A
 
 A Pixel Tag holder for my dog's collar is a good example of where that process has gotten me. I couldn't thread the sewn collar through the closed loops on existing holders. I needed something that could go onto the webbing from the side. That was the idea. Getting from there to a part on the collar took measurements, a couple of small fit tests, some broken clips, and a few tools that each answered a different question.
 
+If you just want the holder, you can download it or customize it for your collar on MakerWorld: [Side-Entry Dog Collar Holder for Google Pixel Tag](https://makerworld.com/en/models/3676294-side-entry-dog-collar-holder-for-google-pixel-tag#profileId-4221231).
+
 ## Bottom line
 
 I don't ask AI to design the whole thing and then hit Print. I show it what I'm trying to do, ask for something small enough to check, and bring back what I find. Sometimes that's a measurement. Sometimes it's a picture with a circle around the part that doesn't look right. And sometimes it's a clip that broke in my hand.
@@ -29,17 +31,19 @@ The part I wish I'd figured out earlier: once we solve something, I ask the agen
 
 ## The tools I use and what I use them for
 
-In GitHub Copilot, I used GPT-6.2 Sol for most of the collar-holder project. That's the model I used for this example, not a requirement for following the process.
+I used GPT-6.2 Sol in GitHub Copilot for most of this project; the process doesn't depend on it.
 
 | Tool | Where it fits in my process |
 | --- | --- |
 | **[GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview)** | Turn a description, sketch, or marked-up screenshot into a design change. Edit the model code, run the rebuild, and review the results with me. |
-| **Measuring tools:** [digital calipers](https://www.amazon.com/dp/B087N5N45G) or graph paper and a camera | I use calipers for direct measurements, or a photo on graph paper with a known grid size to give AI a scale for estimates. The caliper link is a non-affiliate example of an inexpensive 6-inch (150 mm) set; similar sets work fine. |
+| **Measuring tools:** [digital calipers](https://www.amazon.com/dp/B087N5N45G) or graph paper and a camera | I use calipers for direct measurements, or a photo on graph paper with a known grid size to give AI a scale for estimates. |
 | **[Python](https://www.python.org/downloads/) and [build123d](https://build123d.readthedocs.io/en/latest/)** | Model the part with named dimensions. I can change one parameter and regenerate an STL instead of redrawing the part or scaling the whole thing. |
-| **[Blender](https://www.blender.org/) with [blendquery](https://github.com/uki-dev/blendquery)** | Import build123d geometry into a separate 3D package for stronger renders and animations when the STL viewer isn't enough. |
 | **[STL Viewer by Slevesque](https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-3dviewer) in VS Code** | Quickly inspect the exported part without switching apps. When the outside view isn't enough, generate a cross-section from CAD. |
+| **[Blender](https://www.blender.org/), run from Python** | Render the exported model when I want a presentation image rather than a check, like this post's header and the clip test render below. |
 | **[Bambu Studio](https://github.com/bambulab/BambuStudio/releases) and a [Bambu Lab P2S](https://wiki.bambulab.com/en/p2s)** | Check orientation, supports, and filament use in the slicer, then print the test. The [Bambu Studio command line](https://github.com/bambulab/BambuStudio/wiki/Command-Line-Usage) helps me repeat slice checks without doing the same clicks every time. |
 | **[OpenSCAD](https://openscad.org/) and [MakerWorld's Parametric Model Maker](https://makerworld.com/en/makerlab/parametricModelMaker?pageType=home)** | Give someone else a way to change fit and lettering in the browser instead of asking them to run my Python project. |
+
+The caliper link is a non-affiliate example of an inexpensive 6-inch (150 mm) set; similar sets work fine.
 
 ## I start with the thing in my hand
 
@@ -49,13 +53,17 @@ This is where I reach for the calipers. The collar was nominally 20 mm, but the 
 
 ![Measurement diagram showing where to measure the strap width face-on and its thickness edge-on without compressing the webbing.](/images/ai-assisted-pixel-tag-holder/measure-collar.png)
 
-**No calipers? Try graph paper.** Set the part on paper with a known grid size, such as 5 mm squares, and take a photo straight down with several squares visible around it. Tell the AI the square size and ask it to use the grid to estimate the part's width and length. For thickness, take a separate side-on photo with the grid behind the edge you're measuring, as close to the same plane as possible.
+> **No calipers? Try graph paper.** Set the part on paper with a known grid size, such as 5 mm squares, and take a photo straight down with several squares visible around it. Tell the AI the square size and ask it to use the grid to estimate the part's width and length. For thickness, take a separate side-on photo with the grid behind the edge you're measuring, as close to the same plane as possible.
+>
+> You can print graph paper, too. Select **Actual size** or **100%** instead of **Fit to page**, then check several squares with a ruler before using the grid as your scale. I treat the measurements from a photo as a starting point. A tilted camera or a raised edge can throw them off, so for a snug fit I'd still print a small test piece before committing to the whole part.
 
-You can print graph paper, too. Select **Actual size** or **100%** instead of **Fit to page**, then check several squares with a ruler before using the grid as your scale. I treat the measurements from a photo as a starting point. A tilted camera or a raised edge can throw them off, so for a snug fit I'd still print a small test piece before committing to the whole part.
+Here's the order things happened in, because the next few sections jump around: small clip and pocket tests came first, then full holders. The push-out fix and the broken clip both came from printing full versions, and version 28, printed in ASA, is the one on the collar.
 
 The design changed as I got my hands on it. An early version had a separate screw-on bezel. We moved to one piece that loads the tag from the back. When the little bumps inside the pocket held the tag firmly, I thought we'd solved that part. Then I tried getting the tag back out.
 
 I could have asked the AI to make the pocket looser. But I liked how securely the tag sat. The problem was that I had nowhere to push it from the other side. We left the little bumps alone and extended the speaker opening so I could push the tag out through it. I wouldn't have thought to ask for that on the first pass. I had to try using the holder to find out what was missing.
+
+## I check changes before I print them
 
 Those are the kinds of changes I want to be able to make without starting over. With the dimensions in code, I can ask, “Keep the part that holds the tag the same, but make this fit a wider collar.” When I spotted a notch where a rail met a clip, I circled it in a screenshot so the AI knew exactly where to look. That gave us something specific to fix without changing the rest of the holder.
 
@@ -124,6 +132,10 @@ I did the pocket test for the same reason. I wanted to know how much the tag mov
 
 Printing face-down looked like the easier option in the slicer. It could use shorter supports, and the print was quicker on paper. Then a clip snapped along a layer as I removed the supports.
 
+![Two early PLA test holders: a yellow one without a tag, and a blue one with the Pixel Tag seated and one corner clip snapped off where it meets the body.](/images/ai-assisted-pixel-tag-holder/broken-clip.jpg)
+
+That blue print shows where the clips kept breaking: right at the root, where the arm meets the body.
+
 “Make it stronger” could have sent us in a dozen directions. What helped was telling the AI which piece broke and when: it was one of the arms holding the collar, not one of the little bumps holding the tag, and it happened during cleanup. That gave us a reason to look at which way the layers ran, not just how thick the clip was.
 
 I smoothed and reinforced the places where the clips join the body and stood the holder on a short end instead of laying it face-down. The next PLA print felt noticeably stronger in hand. I changed both the shape and the print direction, so I can't tell you how much credit each change deserves. But I knew which combination I wanted to carry into the ASA print.
@@ -142,17 +154,17 @@ The lettering was a good example of something I noticed by looking at the result
 
 I made an OpenSCAD version so someone on MakerWorld could enter those choices in the browser instead of setting up my Python tools. I kept the Python version as my reference and compared the files the two tools produced. One combination even failed when Python tried to join a clip to the body, while OpenSCAD produced a part. I reran the Python case on its own and got the same failure. Being able to export one version didn't prove the other worked, and checking either on my computer didn't prove all the sizes fit in real life.
 
-You can download or customize the finished model here: [Side-Entry Dog Collar Holder for Google Pixel Tag - Free 3D Print Model - MakerWorld](https://makerworld.com/en/models/3676294-side-entry-dog-collar-holder-for-google-pixel-tag#profileId-4221231).
+![Python and OpenSCAD exports of the same 40 mm holder shown side by side in three views: the lettering face, the collar-facing pocket, and the end profile with both clip openings.](/images/ai-assisted-pixel-tag-holder/six-view-comparison.png)
 
-![Six views of the Python and OpenSCAD exports, showing the lettering face, collar-facing pocket, side profiles, and both clip openings.](/images/ai-assisted-pixel-tag-holder/six-view-comparison.png)
+For the 40 mm size shown here, the two exports match in every view. The comparison mattered for the combinations where they didn't.
 
-Two-color text was another one of those “it looks right, so it must be right” moments. The file had separate colors, but when I actually sliced it, Bambu Studio planned to use one filament. I had to keep the letters lined up with the body and tell the slicer which filament belonged to each. Only then did I check that both colors would go onto the holder itself, not just into waste.
+Two-color text was another one of those “it looks right, so it must be right” moments. The file had separate colors, but when I actually sliced it, Bambu Studio planned to use one filament. I had to keep the letters lined up with the body and tell the slicer which filament belonged to each. Then I checked that both colors would go onto the holder itself, not just into waste.
 
 The next surprise was the estimate: about eight hours and 226 filament swaps for one little holder on my single-nozzle setup. That was a slicer estimate, not a print I ran. I still like the two-color look, but seeing the cost made the default an easy decision: engraved text in one color, with the inlay there if someone wants it.
 
 The same idea applies to sharing the design. I prepared a MakerWorld listing with real photos and rich text, and kept the fixed ASA profile separate from the customizable model. One gives someone a known set of slicer settings for a fixed size; the other generates geometry for measurements they enter. Reopening the saved draft checks what the site actually kept. It doesn't tell me whether every Customizer download will slice or fit.
 
-## 5. Save what I'd otherwise have to explain again
+## Save what I'd otherwise have to explain again
 
 If you're wondering what I mean by **agents** and **skills**, I think of an agent as the job I'm asking for and a skill as the instructions it can pull out to do that job. I go to my CAD Builder when the clip needs to change shape. I go to my 3D Print Operator when I want to know whether I can print that shape the way I intended. I don't need either one to do everything, and neither replaces me trying the part on the collar.
 
